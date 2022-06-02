@@ -1,22 +1,21 @@
 ﻿using System;
-using System.Linq;
 
 namespace Quera {
     public static class Program {
         public static void Main() =>
             Console.ReadLine()
-                .ConvertToSingleDigit()
-                .Print();
+                .PrintTable();
 
-        private static int ConvertToSingleDigit(this string input) {
-            while (input.Length > 1) {
-                input = input.Select(digit=> digit - '0')
-                    .Sum().ToString();
+        private static void PrintTable(this string str) {
+            var number = Convert.ToInt32(str);
+            for (var row = 1; row <= number; row++) {
+                for (var column = 1; column <= number; column++) {
+                    Console.Write(row * column);
+                    Console.Write(" ");
+                }
+
+                Console.WriteLine();
             }
-
-            return Convert.ToInt32(input);
         }
-
-        private static void Print(this int input) => Console.WriteLine(input);
     }
 }
