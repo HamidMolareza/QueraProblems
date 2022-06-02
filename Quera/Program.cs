@@ -1,22 +1,22 @@
 ﻿using System;
-using System.Collections.Generic;
 using System.Linq;
 
 namespace Quera {
     public static class Program {
-        public static void Main() {
+        public static void Main() =>
             Console.ReadLine()
-                .Trim()
-                .Split(' ')
-                .Select(number => Convert.ToInt32(number))
-                .ToList()
-                .IsTriangle()
+                .ConvertToSingleDigit()
                 .Print();
+
+        private static int ConvertToSingleDigit(this string input) {
+            while (input.Length > 1) {
+                input = input.Select(digit=> digit - '0')
+                    .Sum().ToString();
+            }
+
+            return Convert.ToInt32(input);
         }
 
-        private static bool IsTriangle(this IReadOnlyCollection<int> numbers) =>
-            numbers.Sum() == 180 && numbers.All(num => num > 0);
-
-        private static void Print(this bool @this) => Console.WriteLine(@this ? "Yes" : "No");
+        private static void Print(this int input) => Console.WriteLine(input);
     }
 }
