@@ -6,12 +6,12 @@ namespace Quera {
             var input = Console.ReadLine();
             var n = Convert.ToInt32(input);
 
-            Console.Write("W");
-            for (var i = 0; i < n; i++) {
-                Console.Write("o");
+            var result = 1;
+            for (var i= n; i > 1; i--) {
+                result *= i;
             }
 
-            Console.Write("w!");
+            Console.WriteLine(result);
         }
     }
 }
