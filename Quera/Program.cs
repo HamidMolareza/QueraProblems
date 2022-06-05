@@ -5,18 +5,30 @@ using System.Linq;
 namespace Quera {
     public static class Program {
         public static void Main() {
-            Console.ReadLine()
-                .Trim()
-                .Split(' ')
-                .Select(number => Convert.ToInt32(number))
-                .ToList()
-                .IsTriangle()
-                .Print();
+            var score = GetNumbers(2)
+                .CalculateScore();
+            Console.WriteLine(score);
         }
 
-        private static bool IsTriangle(this IReadOnlyCollection<int> numbers) =>
-            numbers.Sum() == 180 && numbers.All(num => num > 0);
+        private static List<int> GetNumbers(int count) {
+            var result = new List<int>(count);
+            for (var i = 0; i < count; i++) {
+                result.Add(Convert.ToInt32(Console.ReadLine()));
+            }
 
-        private static void Print(this bool @this) => Console.WriteLine(@this ? "Yes" : "No");
+            return result;
+        }
+
+        private static int CalculateScore(this IReadOnlyList<int> numbers) {
+            switch (numbers[1]) {
+                case 0:
+                    return 20;
+                case 7:
+                    return numbers[0];
+                default:
+                    var result = numbers[0] - numbers[1];
+                    return result >= 0 ? result : 0;
+            }
+        }
     }
 }
