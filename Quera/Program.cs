@@ -6,10 +6,10 @@ namespace Quera {
         public static void Main() {
         }
 
-        private static List<int> GetNumbers(int count) {
-            var result = new List<int>(count);
+        private static List<T> GetInputs<T>(int count) {
+            var result = new List<T>(count);
             for (var i = 0; i < count; i++) {
-                result.Add(Convert.ToInt32(Console.ReadLine()));
+                result.Add((T) Convert.ChangeType(Console.ReadLine(), typeof(T)));
             }
 
             return result;
