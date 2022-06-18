@@ -5,14 +5,33 @@ using System.Linq;
 namespace Quera {
     public static class Program {
         public static void Main() {
-            var input = GetInputs<string>(1).Single();
-            Console.WriteLine(input);
+            GetInputs<int>(1).Single()
+                .PrintTriangles(2);
+        }
 
-            for (var i = 1; i < input.Length; i++) {
-                var targetChar = Convert.ToChar(input.Substring(i, 1));
-                var text = new string(targetChar, i); //Repeat char i times.
-                text += input.Substring(i); //Adds remain chars
-                Console.WriteLine(text);
+        private static void PrintTriangles(this int n, int repeat) {
+            for (var i = 1; i <= n; i++) {
+                var middle = Math.Ceiling(n * 1.0 / 2);
+                var numOfStar = (int)(n - (Math.Abs(middle - i) * 2));
+                var numOfSpaces = n - numOfStar;
+
+                for (var j = 0; j < repeat; j++) {
+                    Print(numOfStar, numOfSpaces);
+                }
+                Console.WriteLine();
+            }
+        }
+
+        private static void Print(int numOfStar, int numOfSpaces) {
+            var space = numOfSpaces / 2;
+            Print(' ', space);
+            Print('*', numOfStar);
+            Print(' ', space);
+        }
+
+        private static void Print(char c, int count) {
+            for (var i = 0; i < count; i++) {
+                Console.Write(c);
             }
         }
 
