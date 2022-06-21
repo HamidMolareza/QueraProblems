@@ -18,7 +18,8 @@ namespace Quera {
         
         private static List<T> GetInputs<T>(char separator) =>
             Console.ReadLine()
-                ?.Split(separator)
+                ?.Trim()
+                .Split(separator)
                 .Select(item => (T) Convert.ChangeType(item, typeof(T))).ToList();
         
         private static void AddRange<T>(this ISet<T> hashList, IEnumerable<T> list) {
