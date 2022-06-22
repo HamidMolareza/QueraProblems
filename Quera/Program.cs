@@ -5,6 +5,13 @@ using System.Linq;
 namespace Quera {
     public static class Program {
         public static void Main() {
+            var numOfNames = GetInputs<int>(1).Single();
+            
+            var maximumChar = GetInputs<string>(numOfNames)
+                .Select(name => name.GroupBy(c => c).Count())
+                .Max();
+            
+            Console.WriteLine(maximumChar);
         }
 
         private static List<T> GetInputs<T>(int count) {
@@ -14,18 +21,6 @@ namespace Quera {
             }
 
             return result;
-        }
-        
-        private static List<T> GetInputs<T>(char separator) =>
-            Console.ReadLine()
-                ?.Trim()
-                .Split(separator)
-                .Select(item => (T) Convert.ChangeType(item, typeof(T))).ToList();
-        
-        private static void AddRange<T>(this ISet<T> hashList, IEnumerable<T> list) {
-            foreach (var item in list) {
-                hashList.Add(item);
-            }
         }
     }
 }
