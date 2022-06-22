@@ -5,6 +5,36 @@ using System.Linq;
 namespace Quera {
     public static class Program {
         public static void Main() {
+            GetInputs<int>(2)
+                .GetPrimeNumbers()
+                .Print();
+        }
+
+        private static IEnumerable<int> GetPrimeNumbers(this IReadOnlyList<int> range) {
+            var result = new List<int>();
+            for (var i = range[0] + 1; i < range[1]; i++) {
+                if (IsPrime(i)) {
+                    result.Add(i);
+                }
+            }
+
+            return result;
+        }
+
+        private static bool IsPrime(int number) {
+            if (number < 2) return false; // ... 0 1
+            if (number < 4) return true; //2 3
+
+            for (var i = 2; i < Math.Sqrt(number) + 1; i++) {
+                if (number % i == 0)
+                    return false;
+            }
+
+            return true;
+        }
+
+        private static void Print(this IEnumerable<int> result) {
+            Console.WriteLine(string.Join(",", result));
         }
 
         private static List<T> GetInputs<T>(int count) {
@@ -14,18 +44,6 @@ namespace Quera {
             }
 
             return result;
-        }
-        
-        private static List<T> GetInputs<T>(char separator) =>
-            Console.ReadLine()
-                ?.Trim()
-                .Split(separator)
-                .Select(item => (T) Convert.ChangeType(item, typeof(T))).ToList();
-        
-        private static void AddRange<T>(this ISet<T> hashList, IEnumerable<T> list) {
-            foreach (var item in list) {
-                hashList.Add(item);
-            }
         }
     }
 }
