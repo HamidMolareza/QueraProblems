@@ -5,6 +5,14 @@ using System.Linq;
 namespace Quera {
     public static class Program {
         public static void Main() {
+            var input = GetInputs<int>(' ');
+            var numOfBottle = input[0];
+            var liquidVolume = input[1];
+
+            var bottleVolumes = GetInputs<int>(numOfBottle);
+            var sumOfBottleVolumes = bottleVolumes.Sum();
+
+            Console.WriteLine(liquidVolume <= sumOfBottleVolumes ? "YES" : "NO");
         }
 
         private static List<T> GetInputs<T>(int count) {
@@ -15,17 +23,11 @@ namespace Quera {
 
             return result;
         }
-        
+
         private static List<T> GetInputs<T>(char separator) =>
             Console.ReadLine()
                 ?.Trim()
                 .Split(separator)
                 .Select(item => (T) Convert.ChangeType(item, typeof(T))).ToList();
-        
-        private static void AddRange<T>(this ISet<T> hashList, IEnumerable<T> list) {
-            foreach (var item in list) {
-                hashList.Add(item);
-            }
-        }
     }
 }
