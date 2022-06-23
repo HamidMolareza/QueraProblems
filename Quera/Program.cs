@@ -5,6 +5,37 @@ using System.Linq;
 namespace Quera {
     public static class Program {
         public static void Main() {
+            GetInputs<int>(1).Single()
+                .Calculate()
+                .Print();
+        }
+
+        private static List<int> Calculate(this int n) {
+            var result = new List<int>();
+            for (var i = 1; i <= n; i++) {
+                result.AddRange(Divisor(i));
+            }
+
+            return result;
+        }
+
+        private static IEnumerable<int> Divisor(int number) {
+            if (number < 1) return new List<int>();
+            if (number < 2) return new List<int> {1};
+
+            var result = new List<int> {1, number};
+            for (var i = 2; i < (number / 2) + 1; i++) {
+                if (number % i == 0) {
+                    result.Add(i);
+                }
+            }
+
+            return result;
+        }
+
+        private static void Print(this IReadOnlyCollection<int> numbers) {
+            var sum = numbers.Sum();
+            Console.WriteLine($"{numbers.Count} {sum}");
         }
 
         private static List<T> GetInputs<T>(int count) {
@@ -14,18 +45,6 @@ namespace Quera {
             }
 
             return result;
-        }
-        
-        private static List<T> GetInputs<T>(char separator) =>
-            Console.ReadLine()
-                ?.Trim()
-                .Split(separator)
-                .Select(item => (T) Convert.ChangeType(item, typeof(T))).ToList();
-        
-        private static void AddRange<T>(this ISet<T> hashList, IEnumerable<T> list) {
-            foreach (var item in list) {
-                hashList.Add(item);
-            }
         }
     }
 }
