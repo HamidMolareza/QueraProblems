@@ -5,6 +5,23 @@ using System.Linq;
 namespace Quera {
     public static class Program {
         public static void Main() {
+            var n = GetInputs<int>(1).Single();
+            var maximumStar = (2 * n) + 1;
+
+            for (var i = 0; i < maximumStar; i++) {
+                var standardDeviation = Math.Abs(n - i);
+                var numOfStar = maximumStar - (standardDeviation * 2);
+                PrintLine(maximumStar, numOfStar);
+            }
+        }
+
+        private static void PrintLine(int maximumStar, int numOfStar) {
+            var space = (maximumStar - numOfStar) / 2;
+            var spaceStr = new string(' ', space);
+
+            Console.Write(spaceStr);
+            Console.Write(new string('*', numOfStar));
+            Console.WriteLine(spaceStr);
         }
 
         private static List<T> GetInputs<T>(int count) {
@@ -14,18 +31,6 @@ namespace Quera {
             }
 
             return result;
-        }
-        
-        private static List<T> GetInputs<T>(char separator) =>
-            Console.ReadLine()
-                ?.Trim()
-                .Split(separator)
-                .Select(item => (T) Convert.ChangeType(item, typeof(T))).ToList();
-        
-        private static void AddRange<T>(this ISet<T> hashList, IEnumerable<T> list) {
-            foreach (var item in list) {
-                hashList.Add(item);
-            }
         }
     }
 }
