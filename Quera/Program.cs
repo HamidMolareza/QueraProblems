@@ -27,7 +27,7 @@ namespace Quera {
             
             /*
              * If n = 2 --> 2 + 2 = 2(2)
-             * But if n is odd like n = 3 ---> 2 + 2 + 3 = (2 * 5) -3
+             * But if n is odd like n = 3 ---> 2 + 2 + 3 = (2 * 5) - 3
              */
             if (n.IsOdd())
                 result -= sequenceValue;
@@ -36,6 +36,7 @@ namespace Quera {
         }
 
         private static int GetSequenceValue(int n) {
+            //Sequence: 2,2,3,3,4,4,5,5,...
             if (n < 1) return 0;
             if (!n.IsOdd())
                 n -= 1;
