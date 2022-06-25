@@ -5,27 +5,33 @@ using System.Linq;
 namespace Quera {
     public static class Program {
         public static void Main() {
+            var inputs = GetInputs<int>(' ');
+
+            Mirror(inputs[0], inputs[1])
+                .Print();
         }
 
-        private static List<T> GetInputs<T>(int count) {
-            var result = new List<T>(count);
-            for (var i = 0; i < count; i++) {
-                result.Add((T) Convert.ChangeType(Console.ReadLine(), typeof(T)));
-            }
+        private static Clock Mirror(int hour, int minute) =>
+            new Clock((12 - hour) % 12, (60 - minute) % 60);
 
-            return result;
+        private static void Print(this Clock clock) {
+            Console.WriteLine($"{clock.Hour:D2}:{clock.Minute:D2}");
         }
-        
+
         private static List<T> GetInputs<T>(char separator) =>
             Console.ReadLine()
                 ?.Trim()
                 .Split(separator)
                 .Select(item => (T) Convert.ChangeType(item, typeof(T))).ToList();
-        
-        private static void AddRange<T>(this ISet<T> hashList, IEnumerable<T> list) {
-            foreach (var item in list) {
-                hashList.Add(item);
-            }
+    }
+
+    public class Clock {
+        public Clock(int hour, int minute) {
+            Hour = hour;
+            Minute = minute;
         }
+
+        public int Hour { get; set; }
+        public int Minute { get; set; }
     }
 }
