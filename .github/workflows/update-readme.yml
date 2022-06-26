@@ -17,6 +17,12 @@ jobs:
 
       - name: Build
         run: dotnet build
+        
+      - name: git fetch
+        run: git fetch --all
+        
+      - name: ls
+        run: ls -la
 
       - name: Run
         run: dotnet run --project Quera/Quera.csproj .
