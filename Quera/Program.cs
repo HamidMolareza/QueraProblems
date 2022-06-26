@@ -11,8 +11,8 @@ using Quera.Models;
 
 namespace Quera {
     public static class Program {
-        public static async Task Main() {
-            var outputDir = GetOutputDir();
+        public static async Task Main(string[] args) {
+            var outputDir = GetOutputDir(args);
 
             var branches = await GetBranchesAsync();
             var readme = await CreateReadmeAsync(branches);
@@ -23,15 +23,15 @@ namespace Quera {
         private static Task SaveDataAsync(string outputDir, string readme) =>
             File.WriteAllTextAsync(Path.Combine(outputDir, Configs.ReadmeFileName), readme);
 
-        private static string GetOutputDir() {
+        private static string GetOutputDir(IReadOnlyList<string> args) {
+            if (args.Any())
+                return args[0];
+
             do {
                 try {
                     Console.WriteLine($"Current Directory: {Directory.GetCurrentDirectory()}");
                     Console.Write("Output directory: ");
                     var outputDir = Console.ReadLine();
-                    if (!Directory.Exists(outputDir)) {
-                        Directory.CreateDirectory(outputDir!);
-                    }
 
                     return outputDir;
                 }
