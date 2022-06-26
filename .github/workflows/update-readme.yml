@@ -20,7 +20,7 @@ jobs:
 
       - name: git fetch
         run: |
-          git branch -r | grep -v '\->' | sed "s,\x1B\[[0-9;]*[a-zA-Z],,g" | while read remote; do git branch --track "${remote#origin/}" "$remote" 2>/dev/null; done
+          git branch -r | grep -v '\->' | sed "s,\x1B\[[0-9;]*[a-zA-Z],,g" | while read remote; do git branch --track "${remote#origin/}" "$remote" 2>/dev/null; done || true
           git fetch --all
           git pull --all
 
