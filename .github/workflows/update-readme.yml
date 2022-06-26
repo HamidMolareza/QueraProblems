@@ -2,10 +2,11 @@ name: CI
 
 # Controls when the workflow will run
 on:
-  create
+  [create, delete]
 
 jobs:
   build_run_commit:
+    if: github.event.ref_type == 'branch'
     # The type of runner that the job will run on
     runs-on: ubuntu-latest
     steps:
