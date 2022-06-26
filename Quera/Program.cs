@@ -17,8 +17,11 @@ namespace Quera {
             var branches = await GetBranchesAsync();
             var readme = await CreateReadmeAsync(branches);
 
-            await File.WriteAllTextAsync(Path.Combine(outputDir, Configs.ReadmeFileName), readme);
+            await SaveDataAsync(outputDir, readme);
         }
+
+        private static Task SaveDataAsync(string outputDir, string readme) =>
+            File.WriteAllTextAsync(Path.Combine(outputDir, Configs.ReadmeFileName), readme);
 
         private static string GetOutputDir() {
             do {
