@@ -1,0 +1,43 @@
+name: CI
+
+# Controls when the workflow will run
+on:
+  create
+
+jobs:
+  build_run_commit:
+    # The type of runner that the job will run on
+    runs-on: ubuntu-latest
+    steps:
+      # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
+      - uses: actions/checkout@v3
+        with:
+          ref: master
+
+      - name: Build
+        run: dotnet build
+
+      - name: Run
+        run: dotnet run --project Quera/Quera.csproj .
+        
+      - uses: stefanzweifel/git-auto-commit-action@v4
+        with:
+          # Optional. Commit message for the created commit.
+          # Defaults to "Apply automatic changes"
+          commit_message: Updates README.md
+
+          # Optional. Local and remote branch name where commit is going to be pushed
+          #  to. Defaults to the current branch.
+          #  You might need to set `create_branch: true` if the branch does not exist.
+          branch: master
+
+          # Optional. Options used by `git-commit`.
+          # See https://git-scm.com/docs/git-commit#_options
+          commit_options: '--no-verify --signoff'
+
+          # Optional glob pattern of files which should be added to the commit
+          # Defaults to all (.)
+          # See the `pathspec`-documentation for git
+          # - https://git-scm.com/docs/git-add#Documentation/git-add.txt-ltpathspecgt82308203
+          # - https://git-scm.com/docs/gitglossary#Documentation/gitglossary.txt-aiddefpathspecapathspec
+          file_pattern: README.md
