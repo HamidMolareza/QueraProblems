@@ -2,6 +2,15 @@
 The answer to some [Quera](https://quera.org) problems in C#.
 
 ## List of problems
+### 595
+Title: مثلث خیام
+
+Last commit: 6/26/2022 7:22:22 PM
+
+Question Link: https://quera.org/problemset/595/
+
+Solution: [595](https://github.com/HamidMolareza/QueraProblems/blob/595/Quera/Program.cs)
+
 ### 2794
 Title: دوربین مداربسته
 
