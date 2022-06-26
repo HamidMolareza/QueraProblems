@@ -44,10 +44,21 @@ jobs:
           # Optional. Options used by `git-commit`.
           # See https://git-scm.com/docs/git-commit#_options
           commit_options: '--no-verify --signoff'
-
+          
           # Optional glob pattern of files which should be added to the commit
           # Defaults to all (.)
           # See the `pathspec`-documentation for git
           # - https://git-scm.com/docs/git-add#Documentation/git-add.txt-ltpathspecgt82308203
           # - https://git-scm.com/docs/gitglossary#Documentation/gitglossary.txt-aiddefpathspecapathspec
           file_pattern: README.md
+          
+          # Optional. Option used by `git-status` to determine if the repository is 
+          # dirty. See https://git-scm.com/docs/git-status#_options
+          status_options: '--untracked-files=no'
+
+          # Optional. Options used by `git-push`.
+          # See https://git-scm.com/docs/git-push#_options
+          push_options: '--force'
+
+          # Optional. Skip internal call to `git fetch`
+          skip_fetch: true
