@@ -1,3 +1,5 @@
+using System;
+
 namespace Quera.Models {
     public class GitBranch {
         public GitBranch(string name, bool isCurrentBranch) {
@@ -6,6 +8,7 @@ namespace Quera.Models {
         }
         
         public string Name { get; set; }
+        public DateTime LastCommitDate { get; set; }
         public bool IsCurrentBranch { get; set; }
     }
 }

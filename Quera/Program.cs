@@ -14,7 +14,7 @@ namespace Quera {
         public static async Task Main() {
             var outputDir = GetOutputDir();
 
-            var readme = (await GetBranches())
+            var readme = (await GetBranchesAsync())
                 .Where(branch => branch.Name != "master"
                                  && branch.Name != "Utility")
                 .CreateReadme();
@@ -46,17 +46,17 @@ namespace Quera {
         private static string CreateReadme(this IEnumerable<GitBranch> branches) {
             var result = new StringBuilder();
 
-            foreach (var branch in branches) {
+            foreach (var branch in branches.OrderByDescending(branch => branch.LastCommitDate)) {
                 Console.Write($"Processing branch {branch.Name}...");
 
                 var link = string.Format(Configs.QueraQuestionsUrlFormat, branch.Name);
                 var title = GetQuestionTitle(link);
                 var solutionUrl = string.Format(Configs.SolutionUrlFormat, branch.Name);
-                
+
                 result.AppendLine($"### {branch.Name}")
                     .AppendLine($"Title: {title}\n")
-                    .AppendLine($"Question Link: {link}")
-                    .AppendLine()
+                    .AppendLine($"Last commit: {branch.LastCommitDate}\n")
+                    .AppendLine($"Question Link: {link}\n")
                     .AppendLine($"Solution: [{branch.Name}]({solutionUrl})")
                     .AppendLine();
 
@@ -78,19 +78,31 @@ namespace Quera {
                 .InnerText;
         }
 
-        private static async Task<List<GitBranch>> GetBranches() {
+        private static async Task<List<GitBranch>> GetBranchesAsync() {
             var cmd = await Cli.Wrap("git")
                 .WithArguments("branch")
                 .ExecuteBufferedAsync();
 
-            return cmd.StandardOutput
+            var resultTasks = cmd.StandardOutput
                 .Split('\n')
                 .Where(branch => !string.IsNullOrWhiteSpace(branch))
                 .Select(ParseBranchName)
-                .ToList();
+                .ToArray();
+
+            Task.WaitAll(resultTasks);
+            return resultTasks.Select(task => task.Result).ToList();
         }
 
-        private static GitBranch ParseBranchName(this string branch) {
+        private static async Task<DateTime> GetLastBranchCommitDateAsync(string branchName) {
+            var cmd = await (Cli.Wrap("git").WithArguments($"log -1 --date=iso {branchName}")
+                             | Cli.Wrap("grep").WithArguments("^Date"))
+                .ExecuteBufferedAsync();
+
+            var result = cmd.StandardOutput.Remove(0, 8);
+            return DateTime.Parse(result[..^7]);
+        }
+
+        private static async Task<GitBranch> ParseBranchName(this string branch) {
             var result = new GitBranch(branch, false);
             if (branch.StartsWith("*")) {
                 result.Name = result.Name.Remove(0, 1);
@@ -98,6 +110,7 @@ namespace Quera {
             }
 
             result.Name = result.Name.Trim();
+            result.LastCommitDate = await GetLastBranchCommitDateAsync(result.Name);
             return result;
         }
     }
