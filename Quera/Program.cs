@@ -81,22 +81,27 @@ namespace Quera {
         }
 
         private static async Task<List<GitBranch>> GetBranchesAsync() {
+            //Get branches from git command
             var cmd = await Cli.Wrap("git")
                 .WithArguments("branch")
                 .ExecuteBufferedAsync();
 
+            //Parse Data
             var resultTasks = cmd.StandardOutput
                 .Split('\n')
                 .Where(branch => !string.IsNullOrWhiteSpace(branch))
                 .Select(ParseBranchName)
                 .ToArray();
 
+            //Filter and return
             Task.WaitAll(resultTasks);
             return resultTasks.Select(task => task.Result)
-                .Where(branch => branch.Name != "master"
-                                 && branch.Name != "Utility")
-                .ToList();
+                .FilterGitBranches();
         }
+
+        private static List<GitBranch> FilterGitBranches(this IEnumerable<GitBranch> gitBranches) =>
+            gitBranches.Where(branch => Configs.IgnoreBranchList.All(ignore => ignore != branch.Name))
+                .ToList();
 
         private static async Task<DateTime> GetLastBranchCommitDateAsync(string branchName) {
             var cmd = await (Cli.Wrap("git").WithArguments($"log -1 --date=iso {branchName}")
