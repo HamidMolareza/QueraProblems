@@ -11,10 +11,10 @@ namespace Quera {
         public const string ReadmeFileName = "README.md";
         public static readonly List<string> IgnoreBranchList = new() {"master", "Utility"};
 
-        public const string ReadmeTemplate = @"# QueraProblems
+        public const string ReadmeTemplate = @"# Quera Problems
 The answer to some [Quera](https://quera.org) problems in C#.
 
-## List of problems
+## List of problems-solutions
 {__REPLACE_FROM_PROGRAM_0__}
 
 ## Contributing
@@ -28,7 +28,7 @@ For example, to solve question 1234 (https://quera.org/problemset/1234), Checkou
 Thank you :)
 
 ## About Readme.md
-This file is generated automatically. You can see the source of this program in the master branch.
+This file is generated [automatically](blob/master/.github/workflows/update-readme.yml). You can see the source of this program in the master branch.
 
 If you like this project, please give it a star.
 

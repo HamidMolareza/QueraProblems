@@ -1,268 +1,37 @@
-# QueraProblems
+# Quera Problems
 The answer to some [Quera](https://quera.org) problems in C#.
 
-## List of problems
-### 146469
-Title: ددلاین در واندرلند
-
-Last commit: 06/26/2022 22:43:20
-
-Question Link: https://quera.org/problemset/146469/
-
-Solution: [146469](https://github.com/HamidMolareza/QueraProblems/blob/146469/Quera/Program.cs)
-
-### 4067
-Title: سراب
-
-Last commit: 06/26/2022 20:52:07
-
-Question Link: https://quera.org/problemset/4067/
-
-Solution: [4067](https://github.com/HamidMolareza/QueraProblems/blob/4067/Quera/Program.cs)
-
-### 595
-Title: مثلث خیام
-
-Last commit: 06/26/2022 19:22:22
-
-Question Link: https://quera.org/problemset/595/
-
-Solution: [595](https://github.com/HamidMolareza/QueraProblems/blob/595/Quera/Program.cs)
-
-### 2794
-Title: دوربین مداربسته
-
-Last commit: 06/26/2022 16:07:26
-
-Question Link: https://quera.org/problemset/2794/
-
-Solution: [2794](https://github.com/HamidMolareza/QueraProblems/blob/2794/Quera/Program.cs)
-
-### 3540
-Title: گردو شکستم
-
-Last commit: 06/26/2022 16:07:11
-
-Question Link: https://quera.org/problemset/3540/
-
-Solution: [3540](https://github.com/HamidMolareza/QueraProblems/blob/3540/Quera/Program.cs)
-
-### 9773
-Title: لوزی‌های ستاره‌ای
-
-Last commit: 06/26/2022 16:07:00
-
-Question Link: https://quera.org/problemset/9773/
-
-Solution: [9773](https://github.com/HamidMolareza/QueraProblems/blob/9773/Quera/Program.cs)
-
-### 10326
-Title: استارت-آپ باکلاس
-
-Last commit: 06/26/2022 16:06:47
-
-Question Link: https://quera.org/problemset/10326/
-
-Solution: [10326](https://github.com/HamidMolareza/QueraProblems/blob/10326/Quera/Program.cs)
-
-### 33045
-Title: مقسوم‌علیه‌های دردسرساز
-
-Last commit: 06/26/2022 16:06:35
-
-Question Link: https://quera.org/problemset/33045/
-
-Solution: [33045](https://github.com/HamidMolareza/QueraProblems/blob/33045/Quera/Program.cs)
-
-### 35253
-Title: هندونه‌خوری
-
-Last commit: 06/26/2022 16:06:19
-
-Question Link: https://quera.org/problemset/35253/
-
-Solution: [35253](https://github.com/HamidMolareza/QueraProblems/blob/35253/Quera/Program.cs)
-
-### 51865
-Title: بهداشت و سلامت
-
-Last commit: 06/26/2022 16:06:05
-
-Question Link: https://quera.org/problemset/51865/
-
-Solution: [51865](https://github.com/HamidMolareza/QueraProblems/blob/51865/Quera/Program.cs)
-
-### 80651
-Title: تیم کشی
-
-Last commit: 06/26/2022 16:05:49
-
-Question Link: https://quera.org/problemset/80651/
-
-Solution: [80651](https://github.com/HamidMolareza/QueraProblems/blob/80651/Quera/Program.cs)
-
-### 3410
-Title: مثلث خیام پاسکال
-
-Last commit: 06/26/2022 16:03:15
-
-Question Link: https://quera.org/problemset/3410/
-
-Solution: [3410](https://github.com/HamidMolareza/QueraProblems/blob/3410/Quera/Program.cs)
-
-### 2529
-Title: اسم‌ها
-
-Last commit: 06/26/2022 15:54:21
-
-Question Link: https://quera.org/problemset/2529/
-
-Solution: [2529](https://github.com/HamidMolareza/QueraProblems/blob/2529/Quera/Program.cs)
-
-### 34081
-Title: دایره عجیب
-
-Last commit: 06/26/2022 15:54:21
-
-Question Link: https://quera.org/problemset/34081/
-
-Solution: [34081](https://github.com/HamidMolareza/QueraProblems/blob/34081/Quera/Program.cs)
-
-### 3538
-Title: آخ جون طرف نیست!
-
-Last commit: 06/26/2022 15:54:21
-
-Question Link: https://quera.org/problemset/3538/
-
-Solution: [3538](https://github.com/HamidMolareza/QueraProblems/blob/3538/Quera/Program.cs)
-
-### 618
-Title: چاپ لوزی
-
-Last commit: 06/26/2022 15:54:21
-
-Question Link: https://quera.org/problemset/618/
-
-Solution: [618](https://github.com/HamidMolareza/QueraProblems/blob/618/Quera/Program.cs)
-
-### 10230
-Title: مشق امشب باقر
-
-Last commit: 06/26/2022 15:53:30
-
-Question Link: https://quera.org/problemset/10230/
-
-Solution: [10230](https://github.com/HamidMolareza/QueraProblems/blob/10230/Quera/Program.cs)
-
-### 17675
-Title: رشته فیبوناچی
-
-Last commit: 06/26/2022 15:53:30
-
-Question Link: https://quera.org/problemset/17675/
-
-Solution: [17675](https://github.com/HamidMolareza/QueraProblems/blob/17675/Quera/Program.cs)
-
-### 2637
-Title: جاده کشی
-
-Last commit: 06/26/2022 15:53:30
-
-Question Link: https://quera.org/problemset/2637/
-
-Solution: [2637](https://github.com/HamidMolareza/QueraProblems/blob/2637/Quera/Program.cs)
-
-### 2886
-Title: یک ساعت
-
-Last commit: 06/26/2022 15:53:30
-
-Question Link: https://quera.org/problemset/2886/
-
-Solution: [2886](https://github.com/HamidMolareza/QueraProblems/blob/2886/Quera/Program.cs)
-
-### 3406
-Title: صدگان خسته
-
-Last commit: 06/26/2022 15:53:30
-
-Question Link: https://quera.org/problemset/3406/
-
-Solution: [3406](https://github.com/HamidMolareza/QueraProblems/blob/3406/Quera/Program.cs)
-
-### 3409
-Title: جدول ضرب گنده
-
-Last commit: 06/26/2022 15:53:30
-
-Question Link: https://quera.org/problemset/3409/
-
-Solution: [3409](https://github.com/HamidMolareza/QueraProblems/blob/3409/Quera/Program.cs)
-
-### 3430
-Title: بلندگو
-
-Last commit: 06/26/2022 15:53:30
-
-Question Link: https://quera.org/problemset/3430/
-
-Solution: [3430](https://github.com/HamidMolareza/QueraProblems/blob/3430/Quera/Program.cs)
-
-### 3537
-Title: سوال زرد
-
-Last commit: 06/26/2022 15:53:30
-
-Question Link: https://quera.org/problemset/3537/
-
-Solution: [3537](https://github.com/HamidMolareza/QueraProblems/blob/3537/Quera/Program.cs)
-
-### 3539
-Title: تک‌رقمی
-
-Last commit: 06/26/2022 15:53:30
-
-Question Link: https://quera.org/problemset/3539/
-
-Solution: [3539](https://github.com/HamidMolareza/QueraProblems/blob/3539/Quera/Program.cs)
-
-### 49535
-Title: گزارش کار
-
-Last commit: 06/26/2022 15:53:30
-
-Question Link: https://quera.org/problemset/49535/
-
-Solution: [49535](https://github.com/HamidMolareza/QueraProblems/blob/49535/Quera/Program.cs)
-
-### 589
-Title: فاکتوریل
-
-Last commit: 06/26/2022 15:53:30
-
-Question Link: https://quera.org/problemset/589/
-
-Solution: [589](https://github.com/HamidMolareza/QueraProblems/blob/589/Quera/Program.cs)
-
-### 649
-Title: اول‌بینی
-
-Last commit: 06/26/2022 15:53:30
-
-Question Link: https://quera.org/problemset/649/
-
-Solution: [649](https://github.com/HamidMolareza/QueraProblems/blob/649/Quera/Program.cs)
-
-### 280
-Title: اعداد فیثاغورثی
-
-Last commit: 06/26/2022 15:42:35
-
-Question Link: https://quera.org/problemset/280/
-
-Solution: [280](https://github.com/HamidMolareza/QueraProblems/blob/280/Quera/Program.cs)
-
+## List of problems-solutions
+| Question | Title | Solution | Last commit |
+| ----- | ----- | ----- | ----- |
+| [4067](https://quera.org/problemset/4067/) | سراب | [4067](https://github.com/HamidMolareza/QueraProblems/blob/4067/Quera/Program.cs) | 6/26/2022 8:52:07 PM |
+| [595](https://quera.org/problemset/595/) | مثلث خیام | [595](https://github.com/HamidMolareza/QueraProblems/blob/595/Quera/Program.cs) | 6/26/2022 7:22:22 PM |
+| [2794](https://quera.org/problemset/2794/) | دوربین مداربسته | [2794](https://github.com/HamidMolareza/QueraProblems/blob/2794/Quera/Program.cs) | 6/26/2022 4:07:26 PM |
+| [3540](https://quera.org/problemset/3540/) | گردو شکستم | [3540](https://github.com/HamidMolareza/QueraProblems/blob/3540/Quera/Program.cs) | 6/26/2022 4:07:11 PM |
+| [9773](https://quera.org/problemset/9773/) | لوزی‌های ستاره‌ای | [9773](https://github.com/HamidMolareza/QueraProblems/blob/9773/Quera/Program.cs) | 6/26/2022 4:07:00 PM |
+| [10326](https://quera.org/problemset/10326/) | استارت-آپ باکلاس | [10326](https://github.com/HamidMolareza/QueraProblems/blob/10326/Quera/Program.cs) | 6/26/2022 4:06:47 PM |
+| [33045](https://quera.org/problemset/33045/) | مقسوم‌علیه‌های دردسرساز | [33045](https://github.com/HamidMolareza/QueraProblems/blob/33045/Quera/Program.cs) | 6/26/2022 4:06:35 PM |
+| [35253](https://quera.org/problemset/35253/) | هندونه‌خوری | [35253](https://github.com/HamidMolareza/QueraProblems/blob/35253/Quera/Program.cs) | 6/26/2022 4:06:19 PM |
+| [51865](https://quera.org/problemset/51865/) | بهداشت و سلامت | [51865](https://github.com/HamidMolareza/QueraProblems/blob/51865/Quera/Program.cs) | 6/26/2022 4:06:05 PM |
+| [80651](https://quera.org/problemset/80651/) | تیم کشی | [80651](https://github.com/HamidMolareza/QueraProblems/blob/80651/Quera/Program.cs) | 6/26/2022 4:05:49 PM |
+| [3410](https://quera.org/problemset/3410/) | مثلث خیام پاسکال | [3410](https://github.com/HamidMolareza/QueraProblems/blob/3410/Quera/Program.cs) | 6/26/2022 4:03:15 PM |
+| [2529](https://quera.org/problemset/2529/) | اسم‌ها | [2529](https://github.com/HamidMolareza/QueraProblems/blob/2529/Quera/Program.cs) | 6/26/2022 3:54:21 PM |
+| [34081](https://quera.org/problemset/34081/) | دایره عجیب | [34081](https://github.com/HamidMolareza/QueraProblems/blob/34081/Quera/Program.cs) | 6/26/2022 3:54:21 PM |
+| [3538](https://quera.org/problemset/3538/) | آخ جون طرف نیست! | [3538](https://github.com/HamidMolareza/QueraProblems/blob/3538/Quera/Program.cs) | 6/26/2022 3:54:21 PM |
+| [618](https://quera.org/problemset/618/) | چاپ لوزی | [618](https://github.com/HamidMolareza/QueraProblems/blob/618/Quera/Program.cs) | 6/26/2022 3:54:21 PM |
+| [10230](https://quera.org/problemset/10230/) | مشق امشب باقر | [10230](https://github.com/HamidMolareza/QueraProblems/blob/10230/Quera/Program.cs) | 6/26/2022 3:53:30 PM |
+| [17675](https://quera.org/problemset/17675/) | رشته فیبوناچی | [17675](https://github.com/HamidMolareza/QueraProblems/blob/17675/Quera/Program.cs) | 6/26/2022 3:53:30 PM |
+| [2637](https://quera.org/problemset/2637/) | جاده کشی | [2637](https://github.com/HamidMolareza/QueraProblems/blob/2637/Quera/Program.cs) | 6/26/2022 3:53:30 PM |
+| [2886](https://quera.org/problemset/2886/) | یک ساعت | [2886](https://github.com/HamidMolareza/QueraProblems/blob/2886/Quera/Program.cs) | 6/26/2022 3:53:30 PM |
+| [3406](https://quera.org/problemset/3406/) | صدگان خسته | [3406](https://github.com/HamidMolareza/QueraProblems/blob/3406/Quera/Program.cs) | 6/26/2022 3:53:30 PM |
+| [3409](https://quera.org/problemset/3409/) | جدول ضرب گنده | [3409](https://github.com/HamidMolareza/QueraProblems/blob/3409/Quera/Program.cs) | 6/26/2022 3:53:30 PM |
+| [3430](https://quera.org/problemset/3430/) | بلندگو | [3430](https://github.com/HamidMolareza/QueraProblems/blob/3430/Quera/Program.cs) | 6/26/2022 3:53:30 PM |
+| [3537](https://quera.org/problemset/3537/) | سوال زرد | [3537](https://github.com/HamidMolareza/QueraProblems/blob/3537/Quera/Program.cs) | 6/26/2022 3:53:30 PM |
+| [3539](https://quera.org/problemset/3539/) | تک‌رقمی | [3539](https://github.com/HamidMolareza/QueraProblems/blob/3539/Quera/Program.cs) | 6/26/2022 3:53:30 PM |
+| [49535](https://quera.org/problemset/49535/) | گزارش کار | [49535](https://github.com/HamidMolareza/QueraProblems/blob/49535/Quera/Program.cs) | 6/26/2022 3:53:30 PM |
+| [589](https://quera.org/problemset/589/) | فاکتوریل | [589](https://github.com/HamidMolareza/QueraProblems/blob/589/Quera/Program.cs) | 6/26/2022 3:53:30 PM |
+| [649](https://quera.org/problemset/649/) | اول‌بینی | [649](https://github.com/HamidMolareza/QueraProblems/blob/649/Quera/Program.cs) | 6/26/2022 3:53:30 PM |
+| [280](https://quera.org/problemset/280/) | اعداد فیثاغورثی | [280](https://github.com/HamidMolareza/QueraProblems/blob/280/Quera/Program.cs) | 6/26/2022 3:42:35 PM |
 
 
 ## Contributing

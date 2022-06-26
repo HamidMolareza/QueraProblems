@@ -46,6 +46,8 @@ namespace Quera {
 
         private static async Task<string> CreateReadmeAsync(IEnumerable<GitBranch> branches) {
             var result = new StringBuilder();
+            result.AppendLine("| Question | Title | Solution | Last commit |")
+                .AppendLine("| ----- | ----- | ----- | ----- |");
 
             foreach (var branch in branches.OrderByDescending(branch => branch.LastCommitDate)) {
                 Console.Write($"Processing branch {branch.Name}...");
@@ -54,12 +56,8 @@ namespace Quera {
                 var title = GetQuestionTitle(link);
                 var solutionUrl = string.Format(Configs.SolutionUrlFormat, branch.Name);
 
-                result.AppendLine($"### {branch.Name}")
-                    .AppendLine($"Title: {title}\n")
-                    .AppendLine($"Last commit: {branch.LastCommitDate}\n")
-                    .AppendLine($"Question Link: {link}\n")
-                    .AppendLine($"Solution: [{branch.Name}]({solutionUrl})")
-                    .AppendLine();
+                result.AppendLine(
+                    $"| [{branch.Name}]({link}) | {title} | [link]({solutionUrl}) | {branch.LastCommitDate} |");
 
                 Console.WriteLine("Done");
                 await Task.Delay(Configs.DelayToRequestQueraInMilliSeconds);
