@@ -19,10 +19,15 @@ jobs:
         run: dotnet build
         
       - name: git fetch
-        run: git fetch --all
+        run: |
+          git fetch --all && for branch in $(git branch | sed '/*/{$q;h;d};$G' | tr -d '*')
+          git pull
         
       - name: ls
         run: ls -la
+        
+      - name: branches
+        run: git branch
 
       - name: Run
         run: dotnet run --project Quera/Quera.csproj .
