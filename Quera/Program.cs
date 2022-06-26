@@ -14,10 +14,8 @@ namespace Quera {
         public static async Task Main() {
             var outputDir = GetOutputDir();
 
-            var readme = (await GetBranchesAsync())
-                .Where(branch => branch.Name != "master"
-                                 && branch.Name != "Utility")
-                .CreateReadme();
+            var branches = await GetBranchesAsync();
+            var readme = await CreateReadmeAsync(branches);
 
             await File.WriteAllTextAsync(Path.Combine(outputDir, Configs.ReadmeFileName), readme);
         }
@@ -43,7 +41,7 @@ namespace Quera {
             } while (true);
         }
 
-        private static string CreateReadme(this IEnumerable<GitBranch> branches) {
+        private static async Task<string> CreateReadmeAsync(IEnumerable<GitBranch> branches) {
             var result = new StringBuilder();
 
             foreach (var branch in branches.OrderByDescending(branch => branch.LastCommitDate)) {
@@ -61,6 +59,7 @@ namespace Quera {
                     .AppendLine();
 
                 Console.WriteLine("Done");
+                await Task.Delay(Configs.DelayToRequestQueraInMilliSeconds);
             }
 
             return Configs.ReadmeTemplate.Replace("{__REPLACE_FROM_PROGRAM_0__}", result.ToString());
@@ -90,7 +89,10 @@ namespace Quera {
                 .ToArray();
 
             Task.WaitAll(resultTasks);
-            return resultTasks.Select(task => task.Result).ToList();
+            return resultTasks.Select(task => task.Result)
+                .Where(branch => branch.Name != "master"
+                                 && branch.Name != "Utility")
+                .ToList();
         }
 
         private static async Task<DateTime> GetLastBranchCommitDateAsync(string branchName) {
