@@ -2,15 +2,6 @@
 The answer to some [Quera](https://quera.org) problems in C#.
 
 ## List of problems
-### 146469
-Title: ددلاین در واندرلند
-
-Last commit: 06/26/2022 22:43:20
-
-Question Link: https://quera.org/problemset/146469/
-
-Solution: [146469](https://github.com/HamidMolareza/QueraProblems/blob/146469/Quera/Program.cs)
-
 ### 4067
 Title: سراب
 
