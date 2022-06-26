@@ -17,21 +17,22 @@ jobs:
 
       - name: Build
         run: dotnet build
-        
+
       - name: git fetch
         run: |
-          git fetch --all && for branch in $(git branch | sed '/*/{$q;h;d};$G' | tr -d '*')
-          git pull
-        
+          git branch -r | grep -v '\->' | sed "s,\x1B\[[0-9;]*[a-zA-Z],,g" | while read remote; do git branch --track "${remote#origin/}" "$remote"; done
+          git fetch --all
+          git pull --all
+
       - name: ls
         run: ls -la
-        
+
       - name: branches
         run: git branch
 
       - name: Run
         run: dotnet run --project Quera/Quera.csproj .
-        
+
       - uses: stefanzweifel/git-auto-commit-action@v4
         with:
           # Optional. Commit message for the created commit.
