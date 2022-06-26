@@ -21,11 +21,5 @@ namespace Quera {
                 ?.Trim()
                 .Split(separator)
                 .Select(item => (T) Convert.ChangeType(item, typeof(T))).ToList();
-        
-        private static void AddRange<T>(this ISet<T> hashList, IEnumerable<T> list) {
-            foreach (var item in list) {
-                hashList.Add(item);
-            }
-        }
     }
 }
