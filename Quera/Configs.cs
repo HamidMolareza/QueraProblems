@@ -1,6 +1,6 @@
 namespace Quera {
     public static class Configs {
-        public const string GithubBranchUrlFormat = "https://github.com/HamidMolareza/QueraProblems/tree/{0}";
+        public const string SolutionUrlFormat = "https://github.com/HamidMolareza/QueraProblems/blob/{0}/Quera/Program.cs";
         public const string QueraQuestionsUrlFormat = "https://quera.org/problemset/{0}/";
         public const string ReadmeFileName = "README.md";
         public const string ReadmeTemplate = @"# QueraProblems
