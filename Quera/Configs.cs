@@ -1,5 +1,6 @@
 namespace Quera {
     public static class Configs {
+        public const string GithubProjectName = "QueraProblems";
         public const string QueraQuestionsUrlFormat = "https://quera.org/problemset/{0}/";
         public const string ReadmeFileName = "README.md";
         public const string ReadmeTemplate = @"# QueraProblems
@@ -23,7 +24,7 @@ This file is generated automatically. You can see the source of this program in 
 
 If you like this project, please give it a star.
 
-##License
+## License
 [GPLv3](LICENSE.md)";
     }
 }

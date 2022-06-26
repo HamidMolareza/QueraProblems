@@ -51,10 +51,11 @@ namespace Quera {
 
                 var link = string.Format(Configs.QueraQuestionsUrlFormat, branch.Name);
                 var title = GetQuestionTitle(link);
-                result.AppendLine($"### {title} - {branch.Name}")
+                result.AppendLine($"### {branch.Name}")
+                    .AppendLine($"Title: {title}")
                     .AppendLine($"Question Link: {link}")
                     .AppendLine()
-                    .AppendLine($"Solution: [{branch.Name}](tree/{branch.Name})")
+                    .AppendLine($"Solution: [{branch.Name}]({Configs.GithubProjectName}/tree/{branch.Name})")
                     .AppendLine();
 
                 Console.WriteLine("Done");
