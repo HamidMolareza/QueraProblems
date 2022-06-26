@@ -2,7 +2,7 @@ using System.Collections.Generic;
 
 namespace Quera {
     public static class Configs {
-        public const int DelayToRequestQueraInMilliSeconds = 400;
+        public const int DelayToRequestQueraInMilliSeconds = 100;
 
         public const string SolutionUrlFormat =
             "https://github.com/HamidMolareza/QueraProblems/blob/{0}/Quera/Program.cs";
