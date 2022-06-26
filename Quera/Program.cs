@@ -19,7 +19,7 @@ namespace Quera {
                                  && branch.Name != "Utility")
                 .CreateReadme();
 
-            await File.AppendAllTextAsync(Path.Combine(outputDir, Configs.ReadmeFileName), readme);
+            await File.WriteAllTextAsync(Path.Combine(outputDir, Configs.ReadmeFileName), readme);
         }
 
         private static string GetOutputDir() {
@@ -51,11 +51,13 @@ namespace Quera {
 
                 var link = string.Format(Configs.QueraQuestionsUrlFormat, branch.Name);
                 var title = GetQuestionTitle(link);
+                var branchUrl = string.Format(Configs.GithubBranchUrlFormat, branch.Name);
+                
                 result.AppendLine($"### {branch.Name}")
-                    .AppendLine($"Title: {title}")
+                    .AppendLine($"Title: {title}\n")
                     .AppendLine($"Question Link: {link}")
                     .AppendLine()
-                    .AppendLine($"Solution: [{branch.Name}]({Configs.GithubProjectName}/tree/{branch.Name})")
+                    .AppendLine($"Solution: [{branch.Name}]({branchUrl})")
                     .AppendLine();
 
                 Console.WriteLine("Done");
