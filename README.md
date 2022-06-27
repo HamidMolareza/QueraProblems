@@ -1,9 +1,14 @@
 # Quera Problems
-The answer to some [Quera](https://quera.org) problems in C#.
+The solutions to some [Quera](https://quera.org) problems in C#.
+
+All the solutions that are here, get full score (100) in Quera.
+But that does not necessarily mean the best answer.
 
 ## List of problems-solutions
 | Question | Title | Solution | Last commit |
 | ----- | ----- | ----- | ----- |
+| [3029](https://quera.org/problemset/3029/) | بازگشت از بوستان | [link](https://github.com/HamidMolareza/QueraProblems/blob/3029/Quera/Program.cs) | 06/28/2022 02:56:53 |
+| [49028](https://quera.org/problemset/49028/) | کلید چراغ | [link](https://github.com/HamidMolareza/QueraProblems/blob/49028/Quera/Program.cs) | 06/28/2022 02:45:58 |
 | [108665](https://quera.org/problemset/108665/) | کلمه کلمه | [link](https://github.com/HamidMolareza/QueraProblems/blob/108665/Quera/Program.cs) | 06/27/2022 14:40:19 |
 | [4067](https://quera.org/problemset/4067/) | سراب | [link](https://github.com/HamidMolareza/QueraProblems/blob/4067/Quera/Program.cs) | 06/26/2022 20:52:07 |
 | [595](https://quera.org/problemset/595/) | مثلث خیام | [link](https://github.com/HamidMolareza/QueraProblems/blob/595/Quera/Program.cs) | 06/26/2022 19:22:22 |
