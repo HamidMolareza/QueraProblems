@@ -28,7 +28,7 @@ For example, to solve question 1234 (https://quera.org/problemset/1234), Checkou
 Thank you :)
 
 ## About Readme.md
-This file is generated [automatically](blob/master/.github/workflows/update-readme.yml). You can see the source of this program in the master branch.
+This file is generated [automatically](.github/workflows/update-readme.yml). You can see the source of this program in the master branch.
 
 If you like this project, please give it a star.
 
