@@ -12,7 +12,10 @@ namespace Quera {
         public static readonly List<string> IgnoreBranchList = new() {"master", "Utility"};
 
         public const string ReadmeTemplate = @"# Quera Problems
-The answer to some [Quera](https://quera.org) problems in C#.
+The solutions to some [Quera](https://quera.org) problems in C#.
+
+All the solutions that are here, get full score (100) in Quera.
+But that does not necessarily mean the best answer.
 
 ## List of problems-solutions
 {__REPLACE_FROM_PROGRAM_0__}
