@@ -5,7 +5,14 @@ using System.Linq;
 namespace Quera {
     public static class Program {
         public static void Main() {
+            var vowelChars = GetInputs<string>(1).Single()
+                .Count(IsVowel);
+
+            Console.WriteLine(Math.Pow(2, vowelChars));
         }
+
+        private static bool IsVowel(char c) =>
+            c == 'a' || c == 'e' || c == 'i' || c == 'o' || c == 'u';
 
         private static List<T> GetInputs<T>(int count) {
             var result = new List<T>(count);
@@ -15,11 +22,5 @@ namespace Quera {
 
             return result;
         }
-        
-        private static List<T> GetInputs<T>(char separator) =>
-            Console.ReadLine()
-                ?.Trim()
-                .Split(separator)
-                .Select(item => (T) Convert.ChangeType(item, typeof(T))).ToList();
     }
 }
