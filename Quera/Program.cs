@@ -5,17 +5,13 @@ using System.Linq;
 namespace Quera {
     public static class Program {
         public static void Main() {
+            var man1 = GetInputs<int>(' ');
+            var man2 = GetInputs<int>(' ');
+
+            // X2 > X1 ? "Right" : "Left"
+            Console.WriteLine(man2[0] > man1[0] ? "Right" : "Left");
         }
 
-        private static List<T> GetInputs<T>(int count) {
-            var result = new List<T>(count);
-            for (var i = 0; i < count; i++) {
-                result.Add((T) Convert.ChangeType(Console.ReadLine(), typeof(T)));
-            }
-
-            return result;
-        }
-        
         private static List<T> GetInputs<T>(char separator) =>
             Console.ReadLine()
                 ?.Trim()
