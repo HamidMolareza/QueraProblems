@@ -5,6 +5,19 @@ using System.Linq;
 namespace Quera {
     public static class Program {
         public static void Main() {
+            var n = GetInputs<int>(1).Single();
+            var states = GetInputs<int>(n);
+
+            var lastState = states.First();
+            var numOfChanges = 0;
+            for (var i = 1; i < states.Count; i++) {
+                if (lastState == states[i])
+                    continue;
+                lastState = states[i];
+                numOfChanges++;
+            }
+
+            Console.WriteLine(numOfChanges);
         }
 
         private static List<T> GetInputs<T>(int count) {
@@ -15,11 +28,5 @@ namespace Quera {
 
             return result;
         }
-        
-        private static List<T> GetInputs<T>(char separator) =>
-            Console.ReadLine()
-                ?.Trim()
-                .Split(separator)
-                .Select(item => (T) Convert.ChangeType(item, typeof(T))).ToList();
     }
 }
