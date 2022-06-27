@@ -4,6 +4,8 @@ The answer to some [Quera](https://quera.org) problems in C#.
 ## List of problems-solutions
 | Question | Title | Solution | Last commit |
 | ----- | ----- | ----- | ----- |
+| [108665](https://quera.org/problemset/108665/) | کلمه کلمه | [link](https://github.com/HamidMolareza/QueraProblems/blob/108665/Quera/Program.cs) | 06/27/2022 14:40:19 |
+| [146468](https://quera.org/problemset/146468/) | قارچ صفر | [link](https://github.com/HamidMolareza/QueraProblems/blob/146468/Quera/Program.cs) | 06/26/2022 22:53:08 |
 | [4067](https://quera.org/problemset/4067/) | سراب | [link](https://github.com/HamidMolareza/QueraProblems/blob/4067/Quera/Program.cs) | 06/26/2022 20:52:07 |
 | [595](https://quera.org/problemset/595/) | مثلث خیام | [link](https://github.com/HamidMolareza/QueraProblems/blob/595/Quera/Program.cs) | 06/26/2022 19:22:22 |
 | [2794](https://quera.org/problemset/2794/) | دوربین مداربسته | [link](https://github.com/HamidMolareza/QueraProblems/blob/2794/Quera/Program.cs) | 06/26/2022 16:07:26 |
@@ -45,7 +47,7 @@ For example, to solve question 1234 (https://quera.org/problemset/1234), Checkou
 Thank you :)
 
 ## About Readme.md
-This file is generated [automatically](blob/master/.github/workflows/update-readme.yml). You can see the source of this program in the master branch.
+This file is generated [automatically](.github/workflows/update-readme.yml). You can see the source of this program in the master branch.
 
 If you like this project, please give it a star.
 
