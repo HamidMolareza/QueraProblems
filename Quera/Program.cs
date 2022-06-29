@@ -5,6 +5,12 @@ using System.Linq;
 namespace Quera {
     public static class Program {
         public static void Main() {
+            var _ = GetInputs<int>(1).Single(); //numOfQuestions - Ignore
+            var numOfNafasGir = GetInputs<int>(' ');
+            var numOfSolver = GetInputs<int>(' ');
+
+            var sum = numOfNafasGir.Select((t, i) => t * numOfSolver[i]).Sum();
+            Console.WriteLine(sum);
         }
 
         private static List<T> GetInputs<T>(int count) {
@@ -15,7 +21,7 @@ namespace Quera {
 
             return result;
         }
-        
+
         private static List<T> GetInputs<T>(char separator) =>
             Console.ReadLine()
                 ?.Trim()
