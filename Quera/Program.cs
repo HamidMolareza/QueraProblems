@@ -5,17 +5,18 @@ using System.Linq;
 namespace Quera {
     public static class Program {
         public static void Main() {
-        }
+            var inputs = GetInputs<int>(' ');
+            var p = inputs[0];
+            var d = inputs[1];
 
-        private static List<T> GetInputs<T>(int count) {
-            var result = new List<T>(count);
-            for (var i = 0; i < count; i++) {
-                result.Add((T) Convert.ChangeType(Console.ReadLine(), typeof(T)));
+            var result = d;
+            while (result % p > p / 2) {
+                result += d;
             }
 
-            return result;
+            Console.WriteLine(result);
         }
-        
+
         private static List<T> GetInputs<T>(char separator) =>
             Console.ReadLine()
                 ?.Trim()
