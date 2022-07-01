@@ -11,18 +11,9 @@ namespace Quera {
           Console.WriteLine(IsSuitable(sizeOfTShirts, sizeOfTHumans) ? "yes" : "no");
         }
 
-        private static bool IsSuitable(List<int> sizeOfTShirts, List<int> sizeOfTHumans) =>
+        private static bool IsSuitable(IEnumerable<int> sizeOfTShirts, IReadOnlyList<int> sizeOfTHumans) =>
             !sizeOfTShirts.Where((tShirts, index) => tShirts < sizeOfTHumans[index]).Any();
 
-        private static List<T> GetInputs<T>(int count) {
-            var result = new List<T>(count);
-            for (var i = 0; i < count; i++) {
-                result.Add((T) Convert.ChangeType(Console.ReadLine(), typeof(T)));
-            }
-
-            return result;
-        }
-        
         private static List<T> GetInputs<T>(char separator) =>
             Console.ReadLine()
                 ?.Trim()
