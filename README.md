@@ -7,6 +7,7 @@ But that does not necessarily mean the best answer.
 ## List of problems-solutions
 | Question | Title | Solution | Last commit |
 | ----- | ----- | ----- | ----- |
+| [8938](https://quera.org/problemset/8938/) | اسنپ در شکرستان | [link](https://github.com/HamidMolareza/QueraProblems/blob/8938/Quera/Program.cs) | 07/02/2022 00:43:08 |
 | [147193](https://quera.org/problemset/147193/) | معادله خط | [link](https://github.com/HamidMolareza/QueraProblems/blob/147193/Quera/Program.cs) | 07/01/2022 18:19:14 |
 | [3107](https://quera.org/problemset/3107/) | تی‌شرت برنده | [link](https://github.com/HamidMolareza/QueraProblems/blob/3107/Quera/Program.cs) | 07/01/2022 14:09:47 |
 | [20249](https://quera.org/problemset/20249/) | مربّاها و مشکلات اقتصادی | [link](https://github.com/HamidMolareza/QueraProblems/blob/20249/Quera/Program.cs) | 07/01/2022 13:56:20 |
