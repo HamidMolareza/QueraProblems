@@ -5,17 +5,19 @@ using System.Linq;
 namespace Quera {
     public static class Program {
         public static void Main() {
-        }
+            // ax + b = 0
+            var inputs = GetInputs<int>(' ');
+            var a = inputs[0];
+            var b = inputs[1];
 
-        private static List<T> GetInputs<T>(int count) {
-            var result = new List<T>(count);
-            for (var i = 0; i < count; i++) {
-                result.Add((T) Convert.ChangeType(Console.ReadLine(), typeof(T)));
+            if (b == 0) {
+                Console.WriteLine(a == 0 ? "infinite" : "unique");
             }
-
-            return result;
+            else {
+                Console.WriteLine(a == 0 ? "invalid" : "unique");
+            }
         }
-        
+
         private static List<T> GetInputs<T>(char separator) =>
             Console.ReadLine()
                 ?.Trim()
