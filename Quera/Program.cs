@@ -5,7 +5,14 @@ using System.Linq;
 namespace Quera {
     public static class Program {
         public static void Main() {
+          var sizeOfTShirts =  GetInputs<int>(' ');
+          var sizeOfTHumans =  GetInputs<int>(' ');
+
+          Console.WriteLine(IsSuitable(sizeOfTShirts, sizeOfTHumans) ? "yes" : "no");
         }
+
+        private static bool IsSuitable(List<int> sizeOfTShirts, List<int> sizeOfTHumans) =>
+            !sizeOfTShirts.Where((tShirts, index) => tShirts < sizeOfTHumans[index]).Any();
 
         private static List<T> GetInputs<T>(int count) {
             var result = new List<T>(count);
