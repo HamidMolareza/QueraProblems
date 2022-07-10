@@ -1,14 +1,15 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Linq;
 
 namespace Quera {
     public static class Program {
         public static void Main() {
-            var inputs = GetInputs<decimal>(2);
-            var biggerNumber = inputs[0] > inputs[1] ? inputs[0] : inputs[1];
-            var smallerNumber = inputs[0] > inputs[1] ? inputs[1] : inputs[0];
+            var inputs = GetInputs<decimal>(2)
+                .OrderByDescending(n => n)
+                .ToList();
 
-            var gcd = GCD(biggerNumber, smallerNumber);
+            var gcd = GCD(inputs[0], inputs[1]);
 
             Console.WriteLine(gcd);
         }
