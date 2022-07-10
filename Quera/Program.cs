@@ -5,17 +5,28 @@ using System.Linq;
 namespace Quera {
     public static class Program {
         public static void Main() {
+            var inputs = GetInputs<decimal>(' ')
+                .OrderByDescending(n => n)
+                .ToList();
+
+            var gcd = Gcd(inputs[0], inputs[1]);
+            var lcm = Lcm(inputs[0], inputs[1], gcd);
+
+            Console.WriteLine($"{gcd} {lcm}");
         }
 
-        private static List<T> GetInputs<T>(int count) {
-            var result = new List<T>(count);
-            for (var i = 0; i < count; i++) {
-                result.Add((T) Convert.ChangeType(Console.ReadLine(), typeof(T)));
+        private static decimal Lcm(decimal a, decimal b, decimal gcd) =>
+            (a * b) / gcd;
+
+        private static decimal Gcd(decimal a, decimal b) {
+            while (true) {
+                var remain = a % b;
+                if (remain == 0) return b;
+                a = b;
+                b = remain;
             }
-
-            return result;
         }
-        
+
         private static List<T> GetInputs<T>(char separator) =>
             Console.ReadLine()
                 ?.Trim()
