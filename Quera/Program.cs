@@ -5,6 +5,14 @@ using System.Linq;
 namespace Quera {
     public static class Program {
         public static void Main() {
+            var n = GetInputs<int>(1).Single();
+            var columns = GetInputs<int>(n);
+
+            var average = columns.Average();
+            var result = columns.Where(column => column > average)
+                .Sum(column => column - average);
+
+            Console.WriteLine(result);
         }
 
         private static List<T> GetInputs<T>(int count) {
@@ -15,11 +23,5 @@ namespace Quera {
 
             return result;
         }
-        
-        private static List<T> GetInputs<T>(char separator) =>
-            Console.ReadLine()
-                ?.Trim()
-                .Split(separator)
-                .Select(item => (T) Convert.ChangeType(item, typeof(T))).ToList();
     }
 }
