@@ -5,12 +5,6 @@ using System.Linq;
 namespace Quera {
     public static class Program {
         public static void Main() {
-            var numOfProblematicLetters = GetInputs<string>(1).Single()
-                .Count(c => c is 'T' or 'D' or 'L' or 'F');
-
-            var result = Math.Pow(2, numOfProblematicLetters);
-
-            Console.WriteLine(result);
         }
 
         private static List<T> GetInputs<T>(int count) {
@@ -21,5 +15,11 @@ namespace Quera {
 
             return result;
         }
+        
+        private static List<T> GetInputs<T>(char separator) =>
+            Console.ReadLine()
+                ?.Trim()
+                .Split(separator)
+                .Select(item => (T) Convert.ChangeType(item, typeof(T))).ToList();
     }
 }
