@@ -4,18 +4,18 @@ using System.Linq;
 
 namespace Quera {
     public static class Program {
+        private const int MaximumGroupMember = 3;
+
         public static void Main() {
-        }
+            var _ = Console.ReadLine(); //Ignore
+            var numOfGroupMembers = GetInputs<int>(' ');
 
-        private static List<T> GetInputs<T>(int count) {
-            var result = new List<T>(count);
-            for (var i = 0; i < count; i++) {
-                result.Add((T) Convert.ChangeType(Console.ReadLine(), typeof(T)));
+            foreach (var numOfGroupMember in numOfGroupMembers) {
+                Console.WriteLine(new string('*',
+                    numOfGroupMember <= MaximumGroupMember ? numOfGroupMember : 1));
             }
-
-            return result;
         }
-        
+
         private static List<T> GetInputs<T>(char separator) =>
             Console.ReadLine()
                 ?.Trim()
