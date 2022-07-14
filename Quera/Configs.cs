@@ -1,15 +1,13 @@
 using System.Collections.Generic;
 
 namespace Quera {
-    public static class Configs {
-        public const int DelayToRequestQueraInMilliSeconds = 1500;
-
-        public const string SolutionUrlFormat =
-            "https://github.com/HamidMolareza/QueraProblems/blob/{0}/Quera/Program.cs";
-
-        public const string QueraQuestionsUrlFormat = "https://quera.org/problemset/{0}/";
-        public const string ReadmeFileName = "README.md";
-        public static readonly List<string> IgnoreBranchList = new() {"master", "Utility"};
-        public const string ReadmeTemplateName = "ReadmeTemplate.md";
+    public class Configs {
+        public const string ConfigFile = @"Data/configs.json";
+        public int DelayToRequestQueraInMilliSeconds { get; set; }
+        public string SolutionUrlFormat { get; set; }
+        public string QueraQuestionsUrlFormat { get; set; }
+        public string ReadmeFileName { get; set; }
+        public string ReadmeTemplateName { get; set; }
+        public List<string> IgnoreBranchList { get; set; } = new();
     }
 }
