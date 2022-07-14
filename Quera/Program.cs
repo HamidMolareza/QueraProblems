@@ -63,7 +63,8 @@ namespace Quera {
                 await Task.Delay(Configs.DelayToRequestQueraInMilliSeconds);
             }
 
-            return Configs.ReadmeTemplate.Replace("{__REPLACE_FROM_PROGRAM_0__}", result.ToString());
+            var readmeTemplate = await File.ReadAllTextAsync(Configs.ReadmeTemplateName);
+            return readmeTemplate.Replace("{__REPLACE_FROM_PROGRAM_0__}", result.ToString());
         }
 
         private static string GetQuestionTitle(string link) {
