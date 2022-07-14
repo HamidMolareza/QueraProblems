@@ -1,19 +1,10 @@
-<div align="center">
-  Quera Problems
-  <br />
-
-<a href="https://github.com/HamidMolareza/QueraProblems/issues/new?assignees=&labels=bug&template=02_SOLVE_REQUEST.md&title=bug%3A+">Request to solve a new question</a>
-
+# Quera Problems
+<a href="https://github.com/HamidMolareza/QueraProblems/issues/new?assignees=&labels=help%20wanted&template=02_SOLVE_REQUEST.md&title=solve%20request%3A+">Request to solve a new question</a> -
 <a href="https://github.com/HamidMolareza/QueraProblems/issues/new?assignees=&labels=question&template=04_SUPPORT_QUESTION.md&title=support%3A+">Ask a Question</a>
-</div>
 
-<div align="center">
-<br />
 
 ![GitHub](https://img.shields.io/github/license/HamidMolareza/QueraProblems)
 [![Pull Requests welcome](https://img.shields.io/badge/PRs-welcome-ff69b4.svg?style=flat-square)](https://github.com/HamidMolareza/QueraProblems/issues?q=is%3Aissue+is%3Aopen+label%3A%22help+wanted%22)
-
-</div>
 
 ## About
 

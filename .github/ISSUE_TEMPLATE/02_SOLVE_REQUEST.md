@@ -6,7 +6,7 @@ labels: "enhancement"
 assignees: ""
 ---
 
-# Feature Request
+# Solve Request
 
 **Quera question index:**
 
