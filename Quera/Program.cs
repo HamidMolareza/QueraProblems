@@ -5,17 +5,23 @@ using System.Linq;
 namespace Quera {
     public static class Program {
         public static void Main() {
+            var _ = Console.ReadLine(); //Ignore
+            var inputs = GetInputs<int>(' ');
+
+            var orderedBaseCount = inputs.GroupBy(n => n)
+                .OrderBy(g => g.Count())
+                .ToList();
+            var minimumCount = orderedBaseCount.First().Count();
+
+            var orderedBaseKey = orderedBaseCount
+                .Where(g => g.Count() == minimumCount)
+                .OrderBy(g => g.Key);
+
+            var target = orderedBaseKey.First().Key;
+
+            Console.WriteLine(target);
         }
 
-        private static List<T> GetInputs<T>(int count) {
-            var result = new List<T>(count);
-            for (var i = 0; i < count; i++) {
-                result.Add((T) Convert.ChangeType(Console.ReadLine(), typeof(T)));
-            }
-
-            return result;
-        }
-        
         private static List<T> GetInputs<T>(char separator) =>
             Console.ReadLine()
                 ?.Trim()
