@@ -7,6 +7,7 @@ But that does not necessarily mean the best answer.
 ## List of problems-solutions
 | Question | Title | Solution | Last commit |
 | ----- | ----- | ----- | ----- |
+| [9109](https://quera.org/problemset/9109/) | مجید و ماژیک‌هاش | [link](https://github.com/HamidMolareza/QueraProblems/blob/9109/Quera/Program.cs) | 07/14/2022 13:06:50 |
 | [15124](https://quera.org/problemset/15124/) | خواب پوپک | [link](https://github.com/HamidMolareza/QueraProblems/blob/15124/Quera/Program.cs) | 07/14/2022 12:16:52 |
 | [52542](https://quera.org/problemset/52542/) | کاکتوس‌های پردردسر | [link](https://github.com/HamidMolareza/QueraProblems/blob/52542/Quera/Program.cs) | 07/13/2022 12:33:03 |
 | [2530](https://quera.org/problemset/2530/) | لکنت | [link](https://github.com/HamidMolareza/QueraProblems/blob/2530/Quera/Program.cs) | 07/13/2022 12:26:41 |
