@@ -8,7 +8,7 @@
 
 ## About
 
-The solutions to some Quera problems in C#.
+The solutions to some [Quera](https://quera.org) problems in C#.
 
 All the solutions that are here, get full score (100) in Quera. But that does not necessarily mean the best answer.
 
