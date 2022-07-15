@@ -12,6 +12,8 @@ The solutions to some Quera problems in C#.
 
 All the solutions that are here, get full score (100) in Quera. But that does not necessarily mean the best answer.
 
+🌟 If you like this project, please give it a star.
+
 ### Built With
 
 C# .NET 5
@@ -71,9 +73,10 @@ The original setup of this repository is by [Hamid Molareza](https://github.com/
 
 ## About Readme.md
 
-This file is generated [automatically](.github/workflows/update-readme.yml). You can see the source of this program in the master branch.
+This file is generated [automatically](.github/workflows/update-readme.yml).
+You can see the source of this program in the master branch.
 
-If you like this project, please give it a star.
+This project uses [Payadel README template](https://github.com/Payadel/Readme/).
 
 ## License
 
