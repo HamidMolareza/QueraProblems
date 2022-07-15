@@ -92,5 +92,6 @@ Here are some related projects:
 - [bestmahdi2 solutions](https://github.com/bestmahdi2/QueraSolutions)
 - [modos solutions](https://github.com/modos/quera-answers)
 - [MohammadNPak solutions](https://github.com/MohammadNPak/quera.ir)
+- [myp79 solutions](https://github.com/myp79/Quera-Problem-Solution)
 
 > If you want your repository to be added, send me the link in the issues.
