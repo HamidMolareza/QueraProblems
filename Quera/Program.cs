@@ -5,17 +5,24 @@ using System.Linq;
 namespace Quera {
     public static class Program {
         public static void Main() {
+            var inputs = GetInputs<int>(' ');
+            var n = inputs[0];
+            var m = inputs[1];
+
+            var xFilled = new string('X', m);
+            var dotFilled = new string('.', m);
+
+            var line = xFilled + dotFilled + xFilled;
+            var middleLine = dotFilled + xFilled + dotFilled;
+
+            for (var row = 0; row < n; row++)
+                Console.WriteLine(line);
+            for (var middleRow = 0; middleRow < n; middleRow++)
+                Console.WriteLine(middleLine);
+            for (var row = 0; row < n; row++)
+                Console.WriteLine(line);
         }
 
-        private static List<T> GetInputs<T>(int count) {
-            var result = new List<T>(count);
-            for (var i = 0; i < count; i++) {
-                result.Add((T) Convert.ChangeType(Console.ReadLine(), typeof(T)));
-            }
-
-            return result;
-        }
-        
         private static List<T> GetInputs<T>(char separator) =>
             Console.ReadLine()
                 ?.Trim()
