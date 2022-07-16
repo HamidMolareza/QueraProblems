@@ -1,10 +1,30 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Text;
 
 namespace Quera {
     public static class Program {
         public static void Main() {
+            var numOfKeys = GetInputs<int>(1).Single();
+
+            var result = GetInputs<string>(numOfKeys)
+                .GetNameFromKeys(numOfKeys);
+
+            Console.WriteLine(result);
+        }
+
+        private static string GetNameFromKeys(this List<string> keys, int numOfKeys) {
+            var result = new StringBuilder(numOfKeys);
+            var isCapsLock = false;
+            foreach (var key in keys) {
+                if (key == "CAPS")
+                    isCapsLock = !isCapsLock;
+                else
+                    result.Append(isCapsLock ? key.ToUpper() : key);
+            }
+
+            return result.ToString();
         }
 
         private static List<T> GetInputs<T>(int count) {
@@ -15,11 +35,5 @@ namespace Quera {
 
             return result;
         }
-        
-        private static List<T> GetInputs<T>(char separator) =>
-            Console.ReadLine()
-                ?.Trim()
-                .Split(separator)
-                .Select(item => (T) Convert.ChangeType(item, typeof(T))).ToList();
     }
 }
