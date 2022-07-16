@@ -22,6 +22,7 @@ C# .NET 5
 
 | Question | Title | Solution | Last commit |
 | ----- | ----- | ----- | ----- |
+| [7998](https://quera.org/problemset/7998/) | صفحه‌کلید انتخاباتی | [link](https://github.com/HamidMolareza/QueraProblems/blob/7998/Quera/Program.cs) | 07/16/2022 11:06:44 |
 | [28948](https://quera.org/problemset/28948/) | بتایپ | [link](https://github.com/HamidMolareza/QueraProblems/blob/28948/Quera/Program.cs) | 07/15/2022 13:31:27 |
 | [64434](https://quera.org/problemset/64434/) | چاپگر | [link](https://github.com/HamidMolareza/QueraProblems/blob/64434/Quera/Program.cs) | 07/15/2022 11:14:00 |
 | [9109](https://quera.org/problemset/9109/) | مجید و ماژیک‌هاش | [link](https://github.com/HamidMolareza/QueraProblems/blob/9109/Quera/Program.cs) | 07/14/2022 13:06:50 |
