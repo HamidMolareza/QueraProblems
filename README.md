@@ -22,6 +22,7 @@ C# .NET 5
 
 | Question | Title | Solution | Last commit |
 | ----- | ----- | ----- | ----- |
+| [303](https://quera.org/problemset/303/) | دنباله‌ی فیبوناچی | [link](https://github.com/HamidMolareza/QueraProblems/blob/303/Quera/Program.cs) | 07/19/2022 11:50:59 |
 | [283](https://quera.org/problemset/283/) | مربع توخالی | [link](https://github.com/HamidMolareza/QueraProblems/blob/283/Quera/Program.cs) | 07/19/2022 11:43:34 |
 | [10232](https://quera.org/problemset/10232/) | باقر خسته‌ست ولی بی‌فرهنگ نه | [link](https://github.com/HamidMolareza/QueraProblems/blob/10232/Quera/Program.cs) | 07/18/2022 12:16:37 |
 | [31021](https://quera.org/problemset/31021/) | سلام سلام خداحافظ | [link](https://github.com/HamidMolareza/QueraProblems/blob/31021/Quera/Program.cs) | 07/18/2022 11:35:32 |
