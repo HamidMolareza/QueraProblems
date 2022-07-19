@@ -5,6 +5,16 @@ using System.Linq;
 namespace Quera {
     public static class Program {
         public static void Main() {
+            var inputs = GetInputs<int>(2);
+
+            ShowFibNth(inputs[0], inputs[1]);
+        }
+
+        private static void ShowFibNth(long n1, long n2) {
+            if (n1 == 0)
+                return;
+            Console.WriteLine(n1);
+            ShowFibNth(n2 - n1, n1);
         }
 
         private static List<T> GetInputs<T>(int count) {
@@ -15,11 +25,5 @@ namespace Quera {
 
             return result;
         }
-        
-        private static List<T> GetInputs<T>(char separator) =>
-            Console.ReadLine()
-                ?.Trim()
-                .Split(separator)
-                .Select(item => (T) Convert.ChangeType(item, typeof(T))).ToList();
     }
 }
