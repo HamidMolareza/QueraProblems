@@ -4,7 +4,13 @@ using System.Linq;
 
 namespace Quera {
     public static class Program {
+        private const string Text = "codecup6";
+
         public static void Main() {
+            var n = GetInputs<int>(1).Single(); //start from 1
+
+            var remain = n % Text.Length;
+            Console.WriteLine(remain == 0 ? Text.Last() : Text[remain - 1]);
         }
 
         private static List<T> GetInputs<T>(int count) {
@@ -15,11 +21,5 @@ namespace Quera {
 
             return result;
         }
-        
-        private static List<T> GetInputs<T>(char separator) =>
-            Console.ReadLine()
-                ?.Trim()
-                .Split(separator)
-                .Select(item => (T) Convert.ChangeType(item, typeof(T))).ToList();
     }
 }
