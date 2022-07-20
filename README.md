@@ -22,6 +22,7 @@ C# .NET 5
 
 | Question | Title | Solution | Last commit |
 | ----- | ----- | ----- | ----- |
+| [597](https://quera.org/problemset/597/) | حلزون مختصاتی | [link](https://github.com/HamidMolareza/QueraProblems/blob/597/Quera/Program.cs) | 07/21/2022 02:48:17 |
 | [127289](https://quera.org/problemset/127289/) | تکرار کدکاپی | [link](https://github.com/HamidMolareza/QueraProblems/blob/127289/Quera/Program.cs) | 07/20/2022 12:57:54 |
 | [4066](https://quera.org/problemset/4066/) | پیشگویی خر | [link](https://github.com/HamidMolareza/QueraProblems/blob/4066/Quera/Program.cs) | 07/19/2022 12:16:11 |
 | [303](https://quera.org/problemset/303/) | دنباله‌ی فیبوناچی | [link](https://github.com/HamidMolareza/QueraProblems/blob/303/Quera/Program.cs) | 07/19/2022 11:50:59 |
