@@ -22,6 +22,7 @@ C# .NET 5
 
 | Question | Title | Solution | Last commit |
 | ----- | ----- | ----- | ----- |
+| [10233](https://quera.org/problemset/10233/) | باقر مخالف است | [link](https://github.com/HamidMolareza/QueraProblems/blob/10233/Quera/Program.cs) | 07/22/2022 04:58:12 |
 | [10166](https://quera.org/problemset/10166/) | سیکل گرفتن در برره | [link](https://github.com/HamidMolareza/QueraProblems/blob/10166/Quera/Program.cs) | 07/21/2022 03:22:10 |
 | [597](https://quera.org/problemset/597/) | حلزون مختصاتی | [link](https://github.com/HamidMolareza/QueraProblems/blob/597/Quera/Program.cs) | 07/21/2022 02:48:17 |
 | [127289](https://quera.org/problemset/127289/) | تکرار کدکاپی | [link](https://github.com/HamidMolareza/QueraProblems/blob/127289/Quera/Program.cs) | 07/20/2022 12:57:54 |
