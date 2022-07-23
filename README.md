@@ -22,6 +22,8 @@ C# .NET 5
 
 | Question | Title | Solution | Last commit |
 | ----- | ----- | ----- | ----- |
+| [8901](https://quera.org/problemset/8901/) | لیوان بازی | [link](https://github.com/HamidMolareza/QueraProblems/blob/8901/Quera/Program.cs) | 07/23/2022 10:40:39 |
+| [66864](https://quera.org/problemset/66864/) | کلاس کد! | [link](https://github.com/HamidMolareza/QueraProblems/blob/66864/Quera/Program.cs) | 07/23/2022 10:26:54 |
 | [10233](https://quera.org/problemset/10233/) | باقر مخالف است | [link](https://github.com/HamidMolareza/QueraProblems/blob/10233/Quera/Program.cs) | 07/22/2022 04:58:12 |
 | [10166](https://quera.org/problemset/10166/) | سیکل گرفتن در برره | [link](https://github.com/HamidMolareza/QueraProblems/blob/10166/Quera/Program.cs) | 07/21/2022 03:22:10 |
 | [597](https://quera.org/problemset/597/) | حلزون مختصاتی | [link](https://github.com/HamidMolareza/QueraProblems/blob/597/Quera/Program.cs) | 07/21/2022 02:48:17 |
