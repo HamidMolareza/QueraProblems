@@ -22,6 +22,7 @@ C# .NET 5
 
 | Question | Title | Solution | Last commit |
 | ----- | ----- | ----- | ----- |
+| [6580](https://quera.org/problemset/6580/) | تعمیر دیوار | [link](https://github.com/HamidMolareza/QueraProblems/blob/6580/Quera/Program.cs) | 07/24/2022 13:27:44 |
 | [104588](https://quera.org/problemset/104588/) | نوبرانه | [link](https://github.com/HamidMolareza/QueraProblems/blob/104588/Quera/Program.cs) | 07/24/2022 13:13:57 |
 | [8901](https://quera.org/problemset/8901/) | لیوان بازی | [link](https://github.com/HamidMolareza/QueraProblems/blob/8901/Quera/Program.cs) | 07/23/2022 10:40:39 |
 | [66864](https://quera.org/problemset/66864/) | کلاس کد! | [link](https://github.com/HamidMolareza/QueraProblems/blob/66864/Quera/Program.cs) | 07/23/2022 10:26:54 |
