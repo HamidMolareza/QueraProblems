@@ -22,6 +22,7 @@ C# .NET 5
 
 | Question | Title | Solution | Last commit |
 | ----- | ----- | ----- | ----- |
+| [61038](https://quera.org/problemset/61038/) | مدرسه شبانه روزی | [link](https://github.com/HamidMolareza/QueraProblems/blob/61038/Quera/Program.cs) | 07/26/2022 04:15:39 |
 | [3412](https://quera.org/problemset/3412/) | وسط صندلی عقب | [link](https://github.com/HamidMolareza/QueraProblems/blob/3412/Quera/Program.cs) | 07/26/2022 03:17:24 |
 | [9110](https://quera.org/problemset/9110/) | مجید، میلاد، رشته‌سازی | [link](https://github.com/HamidMolareza/QueraProblems/blob/9110/Quera/Program.cs) | 07/25/2022 17:09:45 |
 | [110014](https://quera.org/problemset/110014/) | هندزفری‌ها | [link](https://github.com/HamidMolareza/QueraProblems/blob/110014/Quera/Program.cs) | 07/25/2022 16:57:20 |
