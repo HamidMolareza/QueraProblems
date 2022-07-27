@@ -50,11 +50,14 @@ namespace Quera {
         }
 
         private static async Task<string> CreateReadmeAsync(IEnumerable<GitBranch> branches) {
+            var branchesLIst = branches.ToList();
             var result = new StringBuilder();
+
+            result.AppendLine($"Number of questions solved: {branchesLIst.Count}\n");
             result.AppendLine("| Question | Title | Solution | Last commit |")
                 .AppendLine("| ----- | ----- | ----- | ----- |");
 
-            foreach (var branch in branches.OrderByDescending(branch => branch.LastCommitDate)) {
+            foreach (var branch in branchesLIst.OrderByDescending(branch => branch.LastCommitDate)) {
                 Console.Write($"Processing branch {branch.Name}...");
 
                 var link = string.Format(_configs.QueraQuestionsUrlFormat, branch.Name);
