@@ -78,6 +78,25 @@ You can see the source of this program in the master branch.
 
 This project uses [Payadel README template](https://github.com/Payadel/Readme/).
 
+### Why readme is auto generate?
+
+I didn't want to manually update the table in this file every time a problem was solved.
+This is repetitive work and programmers hate repetitive work!
+
+### How readme generate?
+
+Each problem is solved in a separate branch. This [GitHub action](.github/workflows/update-readme.yml) starts when the branch is committed for the first time.
+In the action, the list of all branches is taken and then the auto readme generation program is executed. Finally, the created file is committed.
+
+Use [this link](Quera) to see the program source code.
+
+The program uses [this format](ReadmeTemplate.md) and adds the table of solved questions to it.
+
+### How does the program generate the table of solved questions?
+
+First, it takes the list of all the branches by the git command, except the branches specified in [config file](Data/configs.json) (such as `master`).
+After that, takes the title of each problem from Quera website and uses it to create the table.
+
 ## License
 
 This project is licensed under the **GPLv3**.
