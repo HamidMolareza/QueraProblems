@@ -20,10 +20,11 @@ C# .NET 5
 
 ## List of problems-solutions
 
-Number of questions solved: 76
+Number of questions solved: 77
 
 | Question | Title | Solution | Last commit |
 | ----- | ----- | ----- | ----- |
+| [69903](https://quera.org/problemset/69903/) | داستان زندگی من | [link](https://github.com/HamidMolareza/QueraProblems/blob/69903/Quera/Program.cs) | 08/03/2022 13:35:31 |
 | [651](https://quera.org/problemset/651/) | مبنای آینه‌ای | [link](https://github.com/HamidMolareza/QueraProblems/blob/651/Quera/Program.cs) | 07/28/2022 02:03:52 |
 | [61038](https://quera.org/problemset/61038/) | مدرسه شبانه روزی | [link](https://github.com/HamidMolareza/QueraProblems/blob/61038/Quera/Program.cs) | 07/26/2022 04:15:39 |
 | [3412](https://quera.org/problemset/3412/) | وسط صندلی عقب | [link](https://github.com/HamidMolareza/QueraProblems/blob/3412/Quera/Program.cs) | 07/26/2022 03:17:24 |
