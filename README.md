@@ -20,10 +20,11 @@ C# .NET 5
 
 ## List of problems-solutions
 
-Number of questions solved: 83
+Number of questions solved: 84
 
 | Question | Title | Solution | Last commit |
 | ----- | ----- | ----- | ----- |
+| [62451](https://quera.org/problemset/62451/) | در جستجوی ترب | [link](https://github.com/HamidMolareza/QueraProblems/blob/62451/Quera/Program.cs) | 08/07/2022 12:35:29 |
 | [7609](https://quera.org/problemset/7609/) | نامه‌ی بد | [link](https://github.com/HamidMolareza/QueraProblems/blob/7609/Quera/Program.cs) | 08/07/2022 12:09:46 |
 | [640](https://quera.org/problemset/640/) | نردبونی | [link](https://github.com/HamidMolareza/QueraProblems/blob/640/Quera/Program.cs) | 08/05/2022 22:35:16 |
 | [637](https://quera.org/problemset/637/) | جمع اعداد | [link](https://github.com/HamidMolareza/QueraProblems/blob/637/Quera/Program.cs) | 08/05/2022 13:41:50 |
