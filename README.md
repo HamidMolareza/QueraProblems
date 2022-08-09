@@ -20,10 +20,11 @@ Mostly with C# .NET 5
 
 ## List of problems-solutions
 
-Number of questions solved: 87
+Number of questions solved: 88
 
 | Question | Title | Solution | Last commit |
 | ----- | ----- | ----- | ----- |
+| [33043](https://quera.org/problemset/33043/) | صفحه‌ی پاسخگو | [link](https://github.com/HamidMolareza/QueraProblems/blob/33043/Quera) | 08/09/2022 12:50:59 |
 | [52545](https://quera.org/problemset/52545/) | محاسبه | [link](https://github.com/HamidMolareza/QueraProblems/blob/52545/Quera) | 08/09/2022 12:23:40 |
 | [104589](https://quera.org/problemset/104589/) | جشنواره | [link](https://github.com/HamidMolareza/QueraProblems/blob/104589/Quera) | 08/08/2022 03:51:42 |
 | [80645](https://quera.org/problemset/80645/) | چوب خط‌های نامتناهی | [link](https://github.com/HamidMolareza/QueraProblems/blob/80645/Quera) | 08/08/2022 03:45:33 |
