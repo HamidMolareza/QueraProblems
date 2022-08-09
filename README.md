@@ -20,8 +20,22 @@ C# .NET 5
 
 ## List of problems-solutions
 
+Number of questions solved: 87
+
 | Question | Title | Solution | Last commit |
 | ----- | ----- | ----- | ----- |
+| [52545](https://quera.org/problemset/52545/) | محاسبه | [link](https://github.com/HamidMolareza/QueraProblems/blob/52545/Quera/Program.cs) | 08/09/2022 12:23:40 |
+| [104589](https://quera.org/problemset/104589/) | جشنواره | [link](https://github.com/HamidMolareza/QueraProblems/blob/104589/Quera/Program.cs) | 08/08/2022 03:51:42 |
+| [80645](https://quera.org/problemset/80645/) | چوب خط‌های نامتناهی | [link](https://github.com/HamidMolareza/QueraProblems/blob/80645/Quera/Program.cs) | 08/08/2022 03:45:33 |
+| [62451](https://quera.org/problemset/62451/) | در جستجوی ترب | [link](https://github.com/HamidMolareza/QueraProblems/blob/62451/Quera/Program.cs) | 08/07/2022 12:35:29 |
+| [7609](https://quera.org/problemset/7609/) | نامه‌ی بد | [link](https://github.com/HamidMolareza/QueraProblems/blob/7609/Quera/Program.cs) | 08/07/2022 12:09:46 |
+| [640](https://quera.org/problemset/640/) | نردبونی | [link](https://github.com/HamidMolareza/QueraProblems/blob/640/Quera/Program.cs) | 08/05/2022 22:35:16 |
+| [637](https://quera.org/problemset/637/) | جمع اعداد | [link](https://github.com/HamidMolareza/QueraProblems/blob/637/Quera/Program.cs) | 08/05/2022 13:41:50 |
+| [3407](https://quera.org/problemset/3407/) | بمب بازی | [link](https://github.com/HamidMolareza/QueraProblems/blob/3407/Quera/Program.cs) | 08/04/2022 12:26:42 |
+| [91713](https://quera.org/problemset/91713/) | شماره رند | [link](https://github.com/HamidMolareza/QueraProblems/blob/91713/Quera/Program.cs) | 08/04/2022 11:47:26 |
+| [658](https://quera.org/problemset/658/) | فرزاد کارکن | [link](https://github.com/HamidMolareza/QueraProblems/blob/658/Quera/Program.cs) | 08/03/2022 17:08:53 |
+| [69903](https://quera.org/problemset/69903/) | داستان زندگی من | [link](https://github.com/HamidMolareza/QueraProblems/blob/69903/Quera/Program.cs) | 08/03/2022 13:35:31 |
+| [651](https://quera.org/problemset/651/) | مبنای آینه‌ای | [link](https://github.com/HamidMolareza/QueraProblems/blob/651/Quera/Program.cs) | 07/28/2022 02:03:52 |
 | [61038](https://quera.org/problemset/61038/) | مدرسه شبانه روزی | [link](https://github.com/HamidMolareza/QueraProblems/blob/61038/Quera/Program.cs) | 07/26/2022 04:15:39 |
 | [3412](https://quera.org/problemset/3412/) | وسط صندلی عقب | [link](https://github.com/HamidMolareza/QueraProblems/blob/3412/Quera/Program.cs) | 07/26/2022 03:17:24 |
 | [9110](https://quera.org/problemset/9110/) | مجید، میلاد، رشته‌سازی | [link](https://github.com/HamidMolareza/QueraProblems/blob/9110/Quera/Program.cs) | 07/25/2022 17:09:45 |
@@ -154,6 +168,25 @@ This file is generated [automatically](.github/workflows/update-readme.yml).
 You can see the source of this program in the master branch.
 
 This project uses [Payadel README template](https://github.com/Payadel/Readme/).
+
+### Why readme is auto generate?
+
+I didn't want to manually update the table in this file every time a problem was solved.
+This is repetitive work and programmers hate repetitive work!
+
+### How readme generate?
+
+Each problem is solved in a separate branch. This [GitHub action](.github/workflows/update-readme.yml) starts when the branch is committed for the first time.
+In the action, the list of all branches is taken and then the auto readme generation program is executed. Finally, the created file is committed.
+
+Use [this link](Quera) to see the program source code.
+
+The program uses [this format](ReadmeTemplate.md) and adds the table of solved questions to it.
+
+### How does the program generate the table of solved questions?
+
+First, it takes the list of all the branches by the git command, except the branches specified in [config file](Data/configs.json) (such as `master`).
+After that, takes the title of each problem from Quera website and uses it to create the table.
 
 ## License
 
