@@ -6,6 +6,7 @@
   "ReadmeTemplateName": "ReadmeTemplate.md",
   "IgnoreBranchList": [
     "master",
-    "Utility"
+    "Utility",
+    "SolutionFormat"
   ]
 }
