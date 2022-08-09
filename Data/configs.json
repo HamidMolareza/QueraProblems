@@ -1,6 +1,6 @@
 {
   "DelayToRequestQueraInMilliSeconds": 100,
-  "SolutionUrlFormat": "https://github.com/HamidMolareza/QueraProblems/blob/{0}/Quera/Program.cs",
+  "SolutionUrlFormat": "https://github.com/HamidMolareza/QueraProblems/blob/{0}/Quera",
   "QueraQuestionsUrlFormat": "https://quera.org/problemset/{0}/",
   "ReadmeFileName": "README.md",
   "ReadmeTemplateName": "ReadmeTemplate.md",

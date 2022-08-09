@@ -8,7 +8,7 @@
 
 ## About
 
-The solutions to some [Quera](https://quera.org) problems in C#.
+The solutions to some [Quera](https://quera.org) problems.
 
 All the solutions that are here, get full score (100) in Quera. But that does not necessarily mean the best answer.
 
@@ -16,7 +16,7 @@ All the solutions that are here, get full score (100) in Quera. But that does no
 
 ### Built With
 
-C# .NET 5
+Mostly with C# .NET 5
 
 ## List of problems-solutions
 
