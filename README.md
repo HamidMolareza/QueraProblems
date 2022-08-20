@@ -20,10 +20,11 @@ Mostly with C# .NET 5
 
 ## List of problems-solutions
 
-Number of questions solved: 109
+Number of questions solved: 110
 
 | Question | Title | Solution | Last commit |
 | ----- | ----- | ----- | ----- |
+| [3415](https://quera.org/problemset/3415/) | بازار موبایل | [link](https://github.com/HamidMolareza/QueraProblems/blob/3415/Quera) | 08/20/2022 15:09:32 |
 | [14581](https://quera.org/problemset/14581/) | کِوین و قدرت شالاپ | [link](https://github.com/HamidMolareza/QueraProblems/blob/14581/Quera) | 08/20/2022 14:49:53 |
 | [72875](https://quera.org/problemset/72875/) | جوج | [link](https://github.com/HamidMolareza/QueraProblems/blob/72875/Quera) | 08/19/2022 01:45:30 |
 | [31026](https://quera.org/problemset/31026/) | اکبر در درخت کبیر | [link](https://github.com/HamidMolareza/QueraProblems/blob/31026/Quera) | 08/19/2022 00:19:22 |
