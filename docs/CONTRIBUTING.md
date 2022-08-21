@@ -22,6 +22,9 @@ Do you want a solution to a new question, do you know a better solution or did y
    [Pull Requests](https://github.com/HamidMolareza/QueraProblems/pulls)
    that relate to your submission. You don't want to duplicate effort.
 3. Fork the project
-4. Create your branch (`git checkout -b QUERA-QUESTION-NUMBER`)
-5. Commit your changes (`git commit -m 'Solve question'`)
-6. Open a Pull Request
+4. Create your branch from `Utility` branch (if your solution is base C#) or `SolutionFormat` (if your solution is not base C#) 
+5. Solve problem
+6. Commit your changes
+7. Open a Pull Request
+
+> **Important:** We use github action to generate/update README file. So it is important that create your branch from `Utility` or `SolutionFormat`. Otherwise, GitHub action will not work.
