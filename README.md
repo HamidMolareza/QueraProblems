@@ -20,11 +20,12 @@ Mostly with C# .NET 5
 
 ## List of problems-solutions
 
-Number of questions solved: 113
+Number of questions solved: 114
 
 | Question | Title | Solution | Last commit |
 | ----- | ----- | ----- | ----- |
-| [3109](https://quera.org/problemset/3109/) | سنگ برنده | [link](https://github.com/HamidMolareza/QueraProblems/blob/3109/Quera) | 08/22/2022 02:32:27 |
+| [18850](https://quera.org/problemset/18850/) | جدول‌بازی | [link](https://github.com/HamidMolareza/QueraProblems/blob/18850/Quera) | 08/22/2022 02:48:51 |
+| [3109](https://quera.org/problemset/3109/) | سنگ برنده | [link](https://github.com/HamidMolareza/QueraProblems/blob/3109/Quera) | 08/22/2022 02:34:06 |
 | [17245](https://quera.org/problemset/17245/) | تکسلنگ | [link](https://github.com/HamidMolareza/QueraProblems/blob/17245/Quera) | 08/21/2022 17:17:42 |
 | [6375](https://quera.org/problemset/6375/) | حرکت روی ظروف | [link](https://github.com/HamidMolareza/QueraProblems/blob/6375/Quera) | 08/21/2022 16:35:09 |
 | [3415](https://quera.org/problemset/3415/) | بازار موبایل | [link](https://github.com/HamidMolareza/QueraProblems/blob/3415/Quera) | 08/20/2022 15:09:32 |
