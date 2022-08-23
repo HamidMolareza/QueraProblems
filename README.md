@@ -1,7 +1,9 @@
 # Quera Problems
-<a href="https://github.com/HamidMolareza/QueraProblems/issues/new?assignees=&labels=help%20wanted&template=02_SOLVE_REQUEST.md&title=solve%20request%3A+">Request to solve a new question</a> -
-<a href="https://github.com/HamidMolareza/QueraProblems/issues/new?assignees=&labels=question&template=04_SUPPORT_QUESTION.md&title=support%3A+">Ask a Question</a>
 
+<a href="https://github.com/HamidMolareza/QueraProblems/issues/new?assignees=&labels=help%20wanted&template=02_SOLVE_REQUEST.md&title=solve%20request%3A+">
+Request to solve a new question</a> -
+<a href="https://github.com/HamidMolareza/QueraProblems/issues/new?assignees=&labels=question&template=04_SUPPORT_QUESTION.md&title=support%3A+">
+Ask a Question</a>
 
 ![GitHub](https://img.shields.io/github/license/HamidMolareza/QueraProblems)
 [![Pull Requests welcome](https://img.shields.io/badge/PRs-welcome-ff69b4.svg?style=flat-square)](https://github.com/HamidMolareza/QueraProblems/issues?q=is%3Aissue+is%3Aopen+label%3A%22help+wanted%22)
@@ -139,14 +141,14 @@ Number of questions solved: 114
 | [649](https://quera.org/problemset/649/) | اول‌بینی | [link](https://github.com/HamidMolareza/QueraProblems/blob/649/Quera) | 06/26/2022 15:53:30 |
 | [280](https://quera.org/problemset/280/) | اعداد فیثاغورثی | [link](https://github.com/HamidMolareza/QueraProblems/blob/280/Quera) | 06/26/2022 15:42:35 |
 
-
 ## Usage
 
 In Quera, structure of the questions link is as follows: https://quera.org/problemset/{Question-Index-As-Number}/
 
 We solve each question in a separate branch. The name of that branch is the {question index} in Quera link.
 
-For example: To see the solution to problem 280 (https://quera.org/problemset/280), checkout to branch [280](https://github.com/HamidMolareza/QueraProblems/tree/280).
+For example: To see the solution to problem 280 (https://quera.org/problemset/280), checkout to
+branch [280](https://github.com/HamidMolareza/QueraProblems/tree/280).
 
 In the master branch, there are codes related to automatic readme generation.
 
@@ -154,8 +156,8 @@ In the master branch, there are codes related to automatic readme generation.
 
 Codes usually do not need additional explanations. We try to make the codes clean, readable and with comments.
 
-In some cases, more explanations are needed, which you can read in the readme file of question branch. for example see [this readme](https://github.com/HamidMolareza/QueraProblems/tree/2551)
-
+In some cases, more explanations are needed, which you can read in the readme file of question branch. for example
+see [this readme](https://github.com/HamidMolareza/QueraProblems/tree/2551)
 
 ## Known issues
 
@@ -169,9 +171,11 @@ Please see [this list](https://github.com/HamidMolareza/QueraProblems/issues) an
 
 ## Roadmap
 
-See the [open issues](https://github.com/HamidMolareza/QueraProblems/issues) for a list of proposed features (and known issues).
+See the [open issues](https://github.com/HamidMolareza/QueraProblems/issues) for a list of proposed features (and known
+issues).
 
-- [Top Question Requests](https://github.com/HamidMolareza/QueraProblems/issues?q=label%3Aenhancement+is%3Aopen+sort%3Areactions-%2B1-desc) (Add your votes using the 👍 reaction)
+- [Top Question Requests](https://github.com/HamidMolareza/QueraProblems/issues?q=label%3Aenhancement+is%3Aopen+sort%3Areactions-%2B1-desc) (
+  Add your votes using the 👍 reaction)
 
 ## Support
 
@@ -181,7 +185,9 @@ Reach out to the maintainer at one of the following places:
 
 ## Contributing
 
-First off, thanks for taking the time to contribute! Contributions are what make the free/open-source community such an amazing place to learn, inspire, and create. Any contributions you make will benefit everybody else and are **greatly appreciated**.
+First off, thanks for taking the time to contribute! Contributions are what make the free/open-source community such an
+amazing place to learn, inspire, and create. Any contributions you make will benefit everybody else and are **greatly
+appreciated**.
 
 Please read [our contribution guidelines](docs/CONTRIBUTING.md), and thank you for being involved!
 
@@ -191,20 +197,21 @@ The original setup of this repository is by [Hamid Molareza](https://github.com/
 
 ## About Readme.md
 
-This file is generated [automatically](.github/workflows/update-readme.yml).
-You can see the source of this program in the master branch.
+This file is generated [automatically](.github/workflows/update-readme.yml). You can see the source of this program in
+the master branch.
 
 This project uses [Payadel README template](https://github.com/Payadel/Readme/).
 
 ### Why readme is auto generate?
 
-I didn't want to manually update the table in this file every time a problem was solved.
-This is repetitive work and programmers hate repetitive work!
+I didn't want to manually update the table in this file every time a problem was solved. This is repetitive work and
+programmers hate repetitive work!
 
 ### How readme generate?
 
-Each problem is solved in a separate branch. This [GitHub action](.github/workflows/update-readme.yml) starts when the branch is committed for the first time.
-In the action, the list of all branches is taken and then the auto readme generation program is executed. Finally, the created file is committed.
+Each problem is solved in a separate branch. This [GitHub action](.github/workflows/update-readme.yml) starts when the
+branch is committed for the first time. In the action, the list of all branches is taken and then the auto readme
+generation program is executed. Finally, the created file is committed.
 
 Use [this link](Quera) to see the program source code.
 
@@ -212,8 +219,9 @@ The program uses [this format](ReadmeTemplate.md) and adds the table of solved q
 
 ### How does the program generate the table of solved questions?
 
-First, it takes the list of all the branches by the git command, except the branches specified in [config file](Data/configs.json) (such as `master`).
-After that, takes the title of each problem from Quera website and uses it to create the table.
+First, it takes the list of all the branches by the git command, except the branches specified
+in [config file](Data/configs.json) (such as `master`). After that, takes the title of each problem from Quera website
+and uses it to create the table.
 
 ## License
 

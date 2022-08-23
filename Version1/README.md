@@ -17,8 +17,8 @@ You can see the **old README file** from [this link](old-readme.md).
 
 ## Version 2
 
-In version 2 of the program, we decided to keep all the solutions in the `master` branch. In the folder named `Solutions`.
-For this, it was necessary to checkout the branch of each solution and then copy the solutions. For this reason, we wrote
-the shell code `move.sh`.
+In version 2 of the program, we decided to keep all the solutions in the `master` branch. In the folder
+named `Solutions`. For this, it was necessary to checkout the branch of each solution and then copy the solutions. For
+this reason, we wrote the shell code `move.sh`.
 
 You can see this shell code from [this link](MoveBranches/move.sh).

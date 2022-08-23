@@ -6,8 +6,8 @@
     </PropertyGroup>
 
     <ItemGroup>
-      <PackageReference Include="CliWrap" Version="3.4.4" />
-      <PackageReference Include="HtmlAgilityPack" Version="1.11.42" />
+        <PackageReference Include="CliWrap" Version="3.4.4"/>
+        <PackageReference Include="HtmlAgilityPack" Version="1.11.42"/>
     </ItemGroup>
 
 </Project>
