@@ -1,12 +1,7 @@
 {
-  "DelayToRequestQueraInMilliSeconds": 100,
-  "SolutionUrlFormat": "https://github.com/HamidMolareza/QueraProblems/blob/{0}/Quera",
+  "DelayToRequestQueraInMilliSeconds": 200,
+  "SolutionUrlFormat": "https://github.com/HamidMolareza/QueraProblems/blob/master/Solutions/{0}",
   "QueraQuestionsUrlFormat": "https://quera.org/problemset/{0}/",
   "ReadmeFileName": "README.md",
-  "ReadmeTemplateName": "ReadmeTemplate.md",
-  "IgnoreBranchList": [
-    "master",
-    "Utility",
-    "SolutionFormat"
-  ]
+  "ReadmeTemplateName": "ReadmeGenerator/Data/ReadmeTemplate.md"
 }
