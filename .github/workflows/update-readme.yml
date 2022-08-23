@@ -5,6 +5,8 @@ on:
   push:
     paths:
       - 'Solutions/**'
+      - '.github/workflows/update-readme.yml'
+      - 'ReadmeGenerator/**'
 
 jobs:
   build_run_commit:
