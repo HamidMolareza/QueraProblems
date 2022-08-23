@@ -20,7 +20,7 @@ jobs:
           ref: master
 
       - name: Build
-        run: dotnet build
+        run: dotnet build ReadmeGenerator/Quera.csproj
 
       - name: Run
         run: dotnet run --project ReadmeGenerator/Quera.csproj .
