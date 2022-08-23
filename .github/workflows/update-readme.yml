@@ -2,11 +2,12 @@ name: Update-Readme
 
 # Controls when the workflow will run
 on:
-  [create, delete]
+  push:
+    paths:
+      - 'Solutions/**'
 
 jobs:
   build_run_commit:
-#    if: github.event.ref_type == 'branch'
     
     # The type of runner that the job will run on
     runs-on: ubuntu-latest
@@ -18,15 +19,6 @@ jobs:
 
       - name: Build
         run: dotnet build
-
-      - name: git fetch
-        run: |
-          git fetch --all
-          git branch -r | grep -v '\->' | sed "s,\x1B\[[0-9;]*[a-zA-Z],,g" | while read remote; do git branch --track "${remote#origin/}" "$remote"; done || true
-          git pull --all
-
-      - name: branches
-        run: git branch
 
       - name: Run
         run: dotnet run --project Quera/Quera.csproj .
