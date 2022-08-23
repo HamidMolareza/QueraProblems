@@ -28,12 +28,12 @@ namespace Quera {
         private static Task<List<Problem>> GetProblemsAsync() {
             var problemDirs = Directory.GetDirectories("Solutions"); //TODO: Get from input
             return problemDirs.Select(async queraId => {
-                var languages = Directory.GetDirectories(queraId);
+                var languageDirectories = Directory.GetDirectories(queraId);
                 var problem = new Problem {
                     QueraId = new FileInfo(queraId).Name,
-                    Solutions = await languages.Select(async language => new Solution {
-                        LanguageName = language,
-                        LastCommitDate = await GetLastCommitDateAsync(language)
+                    Solutions = await languageDirectories.Select(async languageDir => new Solution {
+                        LanguageName = new FileInfo(languageDir).Name,
+                        LastCommitDate = await GetLastCommitDateAsync(languageDir)
                     }).MapTasks()
                 };
                 problem.LastSolutionsCommit = problem.Solutions.Select(solution => solution.LastCommitDate)
@@ -101,7 +101,7 @@ namespace Quera {
 
                     return $"[{new FileInfo(solution.LanguageName).Name}]({solutionUrl})";
                 });
-                var solutionLinks = string.Join(" | ", solutions);
+                var solutionLinks = string.Join(" - ", solutions);
 
                 result.AppendLine(
                     $"| [{problem.QueraId}]({link}) | {title} | {solutionLinks} | {problem.LastSolutionsCommit} |");
