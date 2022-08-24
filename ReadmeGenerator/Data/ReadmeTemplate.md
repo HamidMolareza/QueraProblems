@@ -55,7 +55,7 @@ For see default templates, you can see [this section](Templates).
 Codes usually do not need additional explanations. We try to make the codes clean, readable and with comments.
 
 In some cases, more explanations are needed, which are included in the solution `README` file. for example
-see [this readme](Solutions/2551/README.md).
+see [this readme](Solutions/2551/csharp/README.md).
 
 ## Known issues
 
@@ -110,7 +110,7 @@ programmers hate repetitive work!
 ### How readme generate?
 
 In summary, the list of problems and solutions is read from the [Solutions](Solutions) folder and the processed
-information is placed in [this format](ReadmeTemplate.md).
+information is placed in [this format](ReadmeGenerator/Data/ReadmeTemplate.md).
 
 ## License
 
