@@ -16,9 +16,8 @@ All the solutions that are here, get full score (100) in Quera. But that does no
 
 🌟 If you like this project, please give it a star.
 
-### Built With
-
-Mostly with C# .NET 5
+In [this section](#list-of-problems-solutions) you can see the solutions, And if you want, you
+can [send your solution](#contributing) (in any language).
 
 ## List of problems-solutions
 
@@ -26,21 +25,37 @@ Mostly with C# .NET 5
 
 ## Usage
 
-In Quera, structure of the questions link is as follows: https://quera.org/problemset/{Question-Index-As-Number}/
+All solutions are in the [Solutions](Solutions) folder.
 
-We solve each question in a separate branch. The name of that branch is the {question index} in Quera link.
+In Quera, structure of the questions link is as follows: https://quera.org/problemset/{Problem-ID-As-Number}
 
-For example: To see the solution to problem 280 (https://quera.org/problemset/280), checkout to
-branch [280](https://github.com/HamidMolareza/QueraProblems/tree/280).
+We keep all problem solutions in a folder called `Quera ID`. For example, the solutions
+to [this problem](https://quera.org/problemset/10163/) with id `10163` are located in folder `10163`
+inside [Solutions](Solutions) folder.
 
-In the master branch, there are codes related to automatic readme generation.
+Every problem can be solved with different languages. For example, `C#`, `Python`, etc. To separate the languages, we
+save each language in a folder with its own name. For example, for `C#`, the solution is placed in a folder
+called `csharp`.
+
+For example, the tree structure of a problem can look like this:
+
+- Solutions
+    - 10163
+        - csharp
+        - python
+    - 10166
+        - javascript
+        - php
+        - csharp
+
+For see default templates, you can see [this section](Templates).
 
 ### Documentation
 
 Codes usually do not need additional explanations. We try to make the codes clean, readable and with comments.
 
-In some cases, more explanations are needed, which you can read in the readme file of question branch. for example
-see [this readme](https://github.com/HamidMolareza/QueraProblems/tree/2551)
+In some cases, more explanations are needed, which are included in the solution `README` file. for example
+see [this readme](Solutions/2551/README.md).
 
 ## Known issues
 
@@ -51,6 +66,8 @@ Please see [this list](https://github.com/HamidMolareza/QueraProblems/issues) an
 - Automatic readme generation
 - Clean code
 - Documentation
+- Our structure support multi language
+- CI/CD with github action
 
 ## Roadmap
 
@@ -81,7 +98,7 @@ The original setup of this repository is by [Hamid Molareza](https://github.com/
 ## About Readme.md
 
 This file is generated [automatically](.github/workflows/update-readme.yml). You can see the source of this program in
-the master branch.
+the [Readme Generator](ReadmeGenerator) directory.
 
 This project uses [Payadel README template](https://github.com/Payadel/Readme/).
 
@@ -92,19 +109,8 @@ programmers hate repetitive work!
 
 ### How readme generate?
 
-Each problem is solved in a separate branch. This [GitHub action](.github/workflows/update-readme.yml) starts when the
-branch is committed for the first time. In the action, the list of all branches is taken and then the auto readme
-generation program is executed. Finally, the created file is committed.
-
-Use [this link](Quera) to see the program source code.
-
-The program uses [this format](ReadmeTemplate.md) and adds the table of solved questions to it.
-
-### How does the program generate the table of solved questions?
-
-First, it takes the list of all the branches by the git command, except the branches specified
-in [config file](Data/configs.json) (such as `master`). After that, takes the title of each problem from Quera website
-and uses it to create the table.
+In summary, the list of problems and solutions is read from the [Solutions](Solutions) folder and the processed
+information is placed in [this format](ReadmeTemplate.md).
 
 ## License
 
