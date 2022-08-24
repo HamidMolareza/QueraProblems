@@ -14,7 +14,10 @@ Including:
 - and so on
 
 You can see the **old README file** from [this link](old-readme.md).
-You can see old source code in [this link](https://github.com/HamidMolareza/QueraProblems/blob/b0527ff40a6e63a6e90be6da8a5bf0731c8fa158/Quera/Program.cs).
+
+You can see old source code
+in [this link](https://github.com/HamidMolareza/QueraProblems/blob/b0527ff40a6e63a6e90be6da8a5bf0731c8fa158/Quera/Program.cs)
+.
 
 ## Version 2
 
@@ -23,3 +26,5 @@ named `Solutions`. For this, it was necessary to checkout the branch of each sol
 this reason, we wrote the shell code `move.sh`.
 
 You can see this shell code from [this link](MoveBranches/move.sh).
+
+We also used [this shell code](MoveBranches/delete-branches.sh) to delete previous branches.
