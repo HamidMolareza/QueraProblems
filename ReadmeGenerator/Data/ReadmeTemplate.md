@@ -42,11 +42,19 @@ For example, the tree structure of a problem can look like this:
 - Solutions
     - 10163
         - csharp
+          - program.cs
+          - README.md
         - python
+          - program.py
+          - README.md
     - 10166
         - javascript
-        - php
+          - program.js
+          - README.md
         - csharp
+          - solution1.cs
+          - solution2.cs
+          - README.md
 
 For see default templates, you can see [this section](Templates).
 
