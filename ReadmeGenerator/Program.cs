@@ -27,7 +27,10 @@ namespace Quera {
         public static Task Main(string[] args) =>
             InnerMainAsync(args)
                 .OnSuccess(() => Console.WriteLine("The operation was completed successfully."))
-                .OnFail(result => result.Detail.Log());
+                .OnFail(result => {
+                    result.Detail.Log();
+                    Environment.ExitCode = -1;
+                });
 
         private static Task<Result> InnerMainAsync(IReadOnlyCollection<string> args) =>
             LoadOrGetArguments(args)
