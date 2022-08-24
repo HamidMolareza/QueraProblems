@@ -2,78 +2,96 @@
 using System.Collections.Generic;
 using System.IO;
 using System.Linq;
+using System.Net;
 using System.Text;
 using System.Text.Json;
 using System.Threading.Tasks;
 using CliWrap;
 using CliWrap.Buffered;
 using HtmlAgilityPack;
+using OnRail;
+using OnRail.Extensions.Map;
+using OnRail.Extensions.OnFail;
+using OnRail.Extensions.OnSuccess;
+using OnRail.Extensions.SelectResults;
+using OnRail.Extensions.ThrowException;
+using OnRail.Extensions.Try;
+using Quera.ErrorDetails;
 using Quera.Models;
 
 namespace Quera {
     public static class Program {
         private static Configs _configs;
+        private static Arguments _arguments;
 
-        public static async Task Main(string[] args) {
-            _configs = JsonSerializer.Deserialize<Configs>(await File.ReadAllTextAsync(Configs.ConfigFile));
+        public static Task Main(string[] args) =>
+            InnerMainAsync(args)
+                .OnSuccess(() => Console.WriteLine("The operation was completed successfully."))
+                .OnFail(result => result.Detail.Log());
 
-            var outputDir = GetOutputDir(args);
+        private static Task<Result> InnerMainAsync(IReadOnlyCollection<string> args) =>
+            LoadOrGetArguments(args)
+                .OnSuccess(() => LoadConfigFileAsync())
+                .OnSuccess(GetProblemsAsync)
+                .OnSuccess(CreateReadmeAsync)
+                .OnSuccess(readme => SaveDataAsync(_arguments.OutputDirectory, readme, _configs.NumOfTry));
 
-            var problems = await GetProblemsAsync();
-            var readme = await CreateReadmeAsync(problems);
+        private static Result LoadOrGetArguments(IReadOnlyCollection<string> args) =>
+            Arguments.GetProgramDirectory(args.FirstOrDefault())
+                .OnSuccess(programDirectory => Arguments.GetOutputDirectory(args.Skip(1).FirstOrDefault())
+                    .OnSuccess(outputDirectory => Arguments.GetSolutionsDirectory(args.Skip(2).FirstOrDefault())
+                        .OnSuccess(solutionsDirectory => _arguments = new Arguments {
+                            ProgramDirectory = programDirectory,
+                            OutputDirectory = outputDirectory,
+                            SolutionsDirectory = solutionsDirectory
+                        })).Map());
 
-            await SaveDataAsync(outputDir, readme);
+        private static async Task<Result> LoadConfigFileAsync(int numOfTry = 2) {
+            var result = await TryExtensions
+                .Try(() => Path.Combine(_arguments.ProgramDirectory, Configs.ConfigFile))
+                .OnSuccess(configFile => File.ReadAllTextAsync(configFile), numOfTry)
+                .OnSuccess(configFile => JsonSerializer.Deserialize<Configs>(configFile))
+                .OnSuccess(configs => _configs = configs);
+            //TODO: Use .Map() in new version of OnRail
+            return result.IsSuccess
+                ? Result.Ok()
+                : Result.Fail(result.Detail);
         }
 
-        private static Task<List<Problem>> GetProblemsAsync() {
-            var problemDirs = Directory.GetDirectories("Solutions"); //TODO: Get from input
-            return problemDirs.Select(async queraId => {
-                var languageDirectories = Directory.GetDirectories(queraId);
-                var problem = new Problem {
-                    QueraId = new FileInfo(queraId).Name,
-                    Solutions = await languageDirectories.Select(async languageDir => new Solution {
+        private static Task<Result<List<Problem>>> GetProblemsAsync() =>
+            TryExtensions.Try(() => Directory.GetDirectories(_arguments.SolutionsDirectory), _configs.NumOfTry)
+                .OnSuccess(problemDirs => problemDirs.SelectResultsAsync(GetProblemAsync));
+
+        private static Task<Result<Problem>> GetProblemAsync(string problemDir) =>
+            TryExtensions.Try(() => Directory.GetDirectories(problemDir), _configs.NumOfTry)
+                .OnSuccessFailWhen(solutionsDir => !solutionsDir.Any(),
+                    new ProblemDirectoryIsEmptyError(title: "ProblemDir is not valid",
+                        message: "There is no solution in the problem folder."))
+                .OnSuccess(GetSolutionsAsync)
+                .OnSuccess(solutions => new Problem {
+                    QueraId = new FileInfo(problemDir).Name,
+                    Solutions = solutions,
+                    LastSolutionsCommit = solutions.GetLastCommitDateTime()
+                }).OnFail(new {problemDir});
+
+        private static Task<Result<List<Solution>>> GetSolutionsAsync(string[] languageDirs) =>
+            languageDirs.SelectResultsAsync(async languageDir =>
+                await GetLastCommitDateAsync(languageDir)
+                    .OnSuccess(lastCommitDate => new Solution {
                         LanguageName = new FileInfo(languageDir).Name,
-                        LastCommitDate = await GetLastCommitDateAsync(languageDir)
-                    }).MapTasks()
-                };
-                problem.LastSolutionsCommit = problem.Solutions.Select(solution => solution.LastCommitDate)
-                    .OrderByDescending(dateTime => dateTime)
-                    .Last();
-                return problem;
-            }).MapTasks();
-        }
+                        LastCommitDate = lastCommitDate
+                    })
+            );
 
-        private static async Task<List<T>> MapTasks<T>(this IEnumerable<Task<T>> source) {
-            var result = new List<T>();
-            foreach (var task in source)
-                result.Add(await task);
+        private static DateTime GetLastCommitDateTime(this IEnumerable<Solution> solutions) =>
+            solutions.Select(solution => solution.LastCommitDate)
+                .OrderByDescending(dateTime => dateTime)
+                .Last();
 
-            return result;
-        }
-
-        private static Task SaveDataAsync(string outputDir, string readme) =>
-            File.WriteAllTextAsync(Path.Combine(outputDir, _configs.ReadmeFileName), readme);
-
-        private static string GetOutputDir(IReadOnlyList<string> args) {
-            if (args.Any())
-                return args[0];
-
-            do {
-                try {
-                    Console.WriteLine($"Current Directory: {Directory.GetCurrentDirectory()}");
-                    Console.Write("Output directory: ");
-                    var outputDir = Console.ReadLine();
-
-                    return outputDir;
-                }
-                catch (Exception e) {
-                    Console.WriteLine(e);
-                    Console.WriteLine("Press any key to try again...");
-                    Console.ReadKey();
-                    Console.Clear();
-                }
-            } while (true);
-        }
+        private static Task SaveDataAsync(string outputDir, string readme, int numOfTry) =>
+            TryExtensions.Try(() =>
+                    File.WriteAllTextAsync(Path.Combine(outputDir, _configs.ReadmeFileName), readme), numOfTry)
+                .OnFail(new {outputDir});
 
         private static async Task<string> CreateReadmeAsync(IEnumerable<Problem> problems) {
             var problemsList = problems.ToList();
@@ -89,50 +107,72 @@ namespace Quera {
             result.AppendLine("| Question | Title | Solutions | Last commit |")
                 .AppendLine("| ----- | ----- | ----- | ----- |");
 
-            foreach (var problem in problemsList.OrderByDescending(problem => problem.LastSolutionsCommit)) {
-                Console.Write($"Processing problem {problem.QueraId}...");
+            foreach (var problem in problemsList.OrderByDescending(problem => problem.LastSolutionsCommit)
+                         .ThenBy(problem => problem.QueraId)) {
+                Console.Write($"Processing problem {problem.QueraId}... ");
 
-                var link = string.Format(_configs.QueraQuestionsUrlFormat, problem.QueraId);
-                var title = GetQuestionTitle(link);
-
-                var solutions = problem.Solutions.Select(solution => {
-                    var solutionUrl = string.Format(_configs.SolutionUrlFormat, problem.QueraId);
-                    solutionUrl = Path.Combine(solutionUrl, solution.LanguageName);
-
-                    return $"[{new FileInfo(solution.LanguageName).Name}]({solutionUrl})";
-                });
-                var solutionLinks = string.Join(" - ", solutions);
-
-                result.AppendLine(
-                    $"| [{problem.QueraId}]({link}) | {title} | {solutionLinks} | {problem.LastSolutionsCommit} |");
+                await result.AppendProblemData(problem)
+                    .OnFailOperateWhen(failedResult => failedResult.Detail is TooManyRequestErrorDetail,
+                        failedResult => {
+                            Console.WriteLine(
+                                $"Warning: Too many request detected: {nameof(TooManyRequestErrorDetail)} error received from server. It is better if the delay be longer.");
+                            return failedResult;
+                        })
+                    .OnFail(failedResult => failedResult.ThrowExceptionOnFail());
 
                 Console.WriteLine("Done");
                 await Task.Delay(_configs.DelayToRequestQueraInMilliSeconds);
             }
 
-            var readmeTemplate = await File.ReadAllTextAsync(_configs.ReadmeTemplateName);
+            var readmeTemplate =
+                await File.ReadAllTextAsync(Path.Combine(_arguments.ProgramDirectory, _configs.ReadmeTemplateName));
             return readmeTemplate.Replace("{__REPLACE_FROM_PROGRAM_0__}", result.ToString());
         }
 
-        private static string GetQuestionTitle(string link) {
-            var web = new HtmlWeb();
-            var doc = web.Load(link);
+        private static Task<Result> AppendProblemData(this StringBuilder source, Problem problem) =>
+            TryExtensions.Try(() => string.Format(_configs.QueraQuestionsUrlFormat, problem.QueraId))
+                .OnSuccess(link => GetQuestionTitleAsync(link, _configs.NumOfTry)
+                    .OnSuccess(title => {
+                        var solutions = problem.Solutions.Select(solution => {
+                            var solutionUrl = string.Format(_configs.SolutionUrlFormat, problem.QueraId);
+                            solutionUrl = Path.Combine(solutionUrl, solution.LanguageName);
 
-            return doc.DocumentNode
-                .Descendants("div")
-                .Single(div => div.GetAttributeValue("class", "") == "ui segment qu-problem-segment")
-                .Descendants("h1")
-                .First()
-                .InnerText;
-        }
+                            return $"[{new FileInfo(solution.LanguageName).Name}]({solutionUrl})";
+                        });
+                        var solutionLinks = string.Join(" - ", solutions);
 
-        private static async Task<DateTime> GetLastCommitDateAsync(string path) {
-            var cmd = await (Cli.Wrap("git").WithArguments($"log -1 --date=iso {path}")
-                             | Cli.Wrap("grep").WithArguments("^Date"))
-                .ExecuteBufferedAsync();
+                        source.AppendLine(
+                            $"| [{problem.QueraId}]({link}) | {title} | {solutionLinks} | {problem.LastSolutionsCommit} |");
+                    }));
 
-            var result = cmd.StandardOutput.Remove(0, 8);
-            return DateTime.Parse(result[..^7]);
-        }
+        private static Task<Result<string>> GetQuestionTitleAsync(string link, int numOfTry,
+            bool delayInTooManyRequest = true) =>
+            TryExtensions.Try(() => new HtmlWeb())
+                .OnSuccess(async web => {
+                        if (web.StatusCode == HttpStatusCode.TooManyRequests && delayInTooManyRequest) {
+                            await Task.Delay(_configs.DelayToRequestQueraInMilliSeconds);
+                            return Result<string>.Fail(new TooManyRequestErrorDetail());
+                        }
+
+                        var title = web.Load(link)
+                            .DocumentNode
+                            .Descendants("div")
+                            .Single(div => div.GetAttributeValue("class", "") == "ui segment qu-problem-segment")
+                            .Descendants("h1")
+                            .First()
+                            .InnerText;
+                        return Result<string>.Ok(title);
+                    },
+                    numOfTry)
+                .OnFail(new {link, numOfTry});
+
+        private static Task<Result<DateTime>> GetLastCommitDateAsync(string path) =>
+            TryExtensions.Try(async () => await (Cli.Wrap("git").WithArguments($"log -1 --date=iso {path}")
+                                                 | Cli.Wrap("grep").WithArguments("^Date"))
+                    .ExecuteBufferedAsync())
+                .OnSuccess(cmd => {
+                    var result = cmd.StandardOutput.Remove(0, 8);
+                    return DateTime.Parse(result[..^7]);
+                }).OnFail(new {path});
     }
 }
