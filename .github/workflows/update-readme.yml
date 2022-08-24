@@ -23,7 +23,7 @@ jobs:
         run: dotnet build ReadmeGenerator/Quera.csproj
 
       - name: Run
-        run: dotnet run --project ReadmeGenerator/Quera.csproj .
+        run: dotnet run --project ReadmeGenerator/Quera.csproj "ReadmeGenerator" "." "Solutions"
 
       - uses: stefanzweifel/git-auto-commit-action@v4
         with:
