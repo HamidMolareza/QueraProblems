@@ -1,7 +1,5 @@
 ---
-name: Bug Report
-about: Create a report to help QueraProblems to improve
-title: "bug: "
+name: Bug Report about: Create a report to help QueraProblems to improve title: "bug: "
 labels: "bug"
 assignees: ""
 ---

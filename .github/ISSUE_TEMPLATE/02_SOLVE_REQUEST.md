@@ -1,7 +1,5 @@
 ---
-name: Solve Request
-about: Request to solve a specific question
-title: "feat: "
+name: Solve Request about: Request to solve a specific question title: "feat: "
 labels: "enhancement"
 assignees: ""
 ---
