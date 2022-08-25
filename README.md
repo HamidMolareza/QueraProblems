@@ -21,127 +21,128 @@ can [send your solution](#contributing) (in any language).
 
 ## List of problems-solutions
 
-Number of questions solved: 117
+Number of questions solved: 118
 
 | Question | Title | Solutions | Last commit |
 | ----- | ----- | ----- | ----- |
-| [10163](https://quera.org/problemset/10163/) | تیم ملی نخودخوری در برره | [csharp](https://github.com/HamidMolareza/QueraProblems/blob/master/Solutions/10163/csharp) | 08/24/2022 20:05:52 |
-| [10166](https://quera.org/problemset/10166/) | سیکل گرفتن در برره | [csharp](https://github.com/HamidMolareza/QueraProblems/blob/master/Solutions/10166/csharp) | 08/24/2022 20:05:52 |
-| [102261](https://quera.org/problemset/102261/) | رامین و مسئله‌ی ریاضی | [csharp](https://github.com/HamidMolareza/QueraProblems/blob/master/Solutions/102261/csharp) | 08/24/2022 20:05:52 |
-| [10230](https://quera.org/problemset/10230/) | مشق امشب باقر | [csharp](https://github.com/HamidMolareza/QueraProblems/blob/master/Solutions/10230/csharp) | 08/24/2022 20:05:52 |
-| [10232](https://quera.org/problemset/10232/) | باقر خسته‌ست ولی بی‌فرهنگ نه | [csharp](https://github.com/HamidMolareza/QueraProblems/blob/master/Solutions/10232/csharp) | 08/24/2022 20:05:52 |
-| [10233](https://quera.org/problemset/10233/) | باقر مخالف است | [csharp](https://github.com/HamidMolareza/QueraProblems/blob/master/Solutions/10233/csharp) | 08/24/2022 20:05:52 |
-| [10326](https://quera.org/problemset/10326/) | استارت-آپ باکلاس | [csharp](https://github.com/HamidMolareza/QueraProblems/blob/master/Solutions/10326/csharp) | 08/24/2022 20:05:52 |
-| [104588](https://quera.org/problemset/104588/) | نوبرانه | [csharp](https://github.com/HamidMolareza/QueraProblems/blob/master/Solutions/104588/csharp) | 08/24/2022 20:05:52 |
-| [104589](https://quera.org/problemset/104589/) | جشنواره | [csharp](https://github.com/HamidMolareza/QueraProblems/blob/master/Solutions/104589/csharp) | 08/24/2022 20:05:52 |
-| [106796](https://quera.org/problemset/106796/) | رشته‌ی رمزی | [csharp](https://github.com/HamidMolareza/QueraProblems/blob/master/Solutions/106796/csharp) | 08/24/2022 20:05:52 |
-| [108665](https://quera.org/problemset/108665/) | کلمه کلمه | [csharp](https://github.com/HamidMolareza/QueraProblems/blob/master/Solutions/108665/csharp) | 08/24/2022 20:05:52 |
-| [110014](https://quera.org/problemset/110014/) | هندزفری‌ها | [csharp](https://github.com/HamidMolareza/QueraProblems/blob/master/Solutions/110014/csharp) | 08/24/2022 20:05:52 |
-| [110015](https://quera.org/problemset/110015/) | نمایشگاه مجازی | [csharp](https://github.com/HamidMolareza/QueraProblems/blob/master/Solutions/110015/csharp) | 08/24/2022 20:05:52 |
-| [127289](https://quera.org/problemset/127289/) | تکرار کدکاپی | [csharp](https://github.com/HamidMolareza/QueraProblems/blob/master/Solutions/127289/csharp) | 08/24/2022 20:05:52 |
-| [145008](https://quera.org/problemset/145008/) | قاشق و چنگال | [csharp](https://github.com/HamidMolareza/QueraProblems/blob/master/Solutions/145008/csharp) | 08/24/2022 20:05:52 |
-| [14580](https://quera.org/problemset/14580/) | باب و کلید تلویزیون | [csharp](https://github.com/HamidMolareza/QueraProblems/blob/master/Solutions/14580/csharp) | 08/24/2022 20:05:52 |
-| [14581](https://quera.org/problemset/14581/) | کِوین و قدرت شالاپ | [csharp](https://github.com/HamidMolareza/QueraProblems/blob/master/Solutions/14581/csharp) | 08/24/2022 20:05:52 |
-| [147193](https://quera.org/problemset/147193/) | معادله خط | [csharp](https://github.com/HamidMolareza/QueraProblems/blob/master/Solutions/147193/csharp) | 08/24/2022 20:05:52 |
-| [147635](https://quera.org/problemset/147635/) | کولر یا بخاری | [csharp](https://github.com/HamidMolareza/QueraProblems/blob/master/Solutions/147635/csharp) | 08/24/2022 20:05:52 |
-| [148099](https://quera.org/problemset/148099/) | اعداد یکتا | [csharp](https://github.com/HamidMolareza/QueraProblems/blob/master/Solutions/148099/csharp) | 08/24/2022 20:05:52 |
-| [148638](https://quera.org/problemset/148638/) | جمع فوتبالی | [csharp](https://github.com/HamidMolareza/QueraProblems/blob/master/Solutions/148638/csharp) | 08/24/2022 20:05:52 |
-| [148640](https://quera.org/problemset/148640/) | آزمون تستی | [csharp](https://github.com/HamidMolareza/QueraProblems/blob/master/Solutions/148640/csharp) | 08/24/2022 20:05:52 |
-| [15124](https://quera.org/problemset/15124/) | خواب پوپک | [csharp](https://github.com/HamidMolareza/QueraProblems/blob/master/Solutions/15124/csharp) | 08/24/2022 20:05:52 |
-| [17245](https://quera.org/problemset/17245/) | تکسلنگ | [csharp](https://github.com/HamidMolareza/QueraProblems/blob/master/Solutions/17245/csharp) | 08/24/2022 20:05:52 |
-| [17675](https://quera.org/problemset/17675/) | رشته فیبوناچی | [csharp](https://github.com/HamidMolareza/QueraProblems/blob/master/Solutions/17675/csharp) | 08/24/2022 20:05:52 |
-| [18850](https://quera.org/problemset/18850/) | جدول‌بازی | [web](https://github.com/HamidMolareza/QueraProblems/blob/master/Solutions/18850/web) | 08/24/2022 20:05:52 |
-| [20249](https://quera.org/problemset/20249/) | مربّاها و مشکلات اقتصادی | [csharp](https://github.com/HamidMolareza/QueraProblems/blob/master/Solutions/20249/csharp) | 08/24/2022 20:05:52 |
-| [2529](https://quera.org/problemset/2529/) | اسم‌ها | [csharp](https://github.com/HamidMolareza/QueraProblems/blob/master/Solutions/2529/csharp) | 08/24/2022 20:05:52 |
-| [2530](https://quera.org/problemset/2530/) | لکنت | [csharp](https://github.com/HamidMolareza/QueraProblems/blob/master/Solutions/2530/csharp) | 08/24/2022 20:05:52 |
-| [2534](https://quera.org/problemset/2534/) | چیدمان | [csharp](https://github.com/HamidMolareza/QueraProblems/blob/master/Solutions/2534/csharp) | 08/24/2022 20:05:52 |
-| [2551](https://quera.org/problemset/2551/) | جمع بزرگان | [csharp](https://github.com/HamidMolareza/QueraProblems/blob/master/Solutions/2551/csharp) | 08/24/2022 20:05:52 |
-| [2596](https://quera.org/problemset/2596/) | حدس عدد | [csharp](https://github.com/HamidMolareza/QueraProblems/blob/master/Solutions/2596/csharp) | 08/24/2022 20:05:52 |
-| [2637](https://quera.org/problemset/2637/) | جاده کشی | [csharp](https://github.com/HamidMolareza/QueraProblems/blob/master/Solutions/2637/csharp) | 08/24/2022 20:05:52 |
-| [26651](https://quera.org/problemset/26651/) | سوال نفس‌گیر | [csharp](https://github.com/HamidMolareza/QueraProblems/blob/master/Solutions/26651/csharp) | 08/24/2022 20:05:52 |
-| [2705](https://quera.org/problemset/2705/) | بدخواه پویان | [csharp](https://github.com/HamidMolareza/QueraProblems/blob/master/Solutions/2705/csharp) | 08/24/2022 20:05:52 |
-| [2755](https://quera.org/problemset/2755/) | خریدار ناشی | [csharp](https://github.com/HamidMolareza/QueraProblems/blob/master/Solutions/2755/csharp) | 08/24/2022 20:05:52 |
-| [279](https://quera.org/problemset/279/) | محاسبه‌ی پیچیده | [csharp](https://github.com/HamidMolareza/QueraProblems/blob/master/Solutions/279/csharp) | 08/24/2022 20:05:52 |
-| [2794](https://quera.org/problemset/2794/) | دوربین مداربسته | [csharp](https://github.com/HamidMolareza/QueraProblems/blob/master/Solutions/2794/csharp) | 08/24/2022 20:05:52 |
-| [280](https://quera.org/problemset/280/) | اعداد فیثاغورثی | [csharp](https://github.com/HamidMolareza/QueraProblems/blob/master/Solutions/280/csharp) | 08/24/2022 20:05:52 |
-| [283](https://quera.org/problemset/283/) | مربع توخالی | [csharp](https://github.com/HamidMolareza/QueraProblems/blob/master/Solutions/283/csharp) | 08/24/2022 20:05:52 |
-| [2886](https://quera.org/problemset/2886/) | یک ساعت | [csharp](https://github.com/HamidMolareza/QueraProblems/blob/master/Solutions/2886/csharp) | 08/24/2022 20:05:52 |
-| [28948](https://quera.org/problemset/28948/) | بتایپ | [csharp](https://github.com/HamidMolareza/QueraProblems/blob/master/Solutions/28948/csharp) | 08/24/2022 20:05:52 |
-| [292](https://quera.org/problemset/292/) | کار با اعداد اعشاری | [csharp](https://github.com/HamidMolareza/QueraProblems/blob/master/Solutions/292/csharp) | 08/24/2022 20:05:52 |
-| [3029](https://quera.org/problemset/3029/) | بازگشت از بوستان | [csharp](https://github.com/HamidMolareza/QueraProblems/blob/master/Solutions/3029/csharp) | 08/24/2022 20:05:52 |
-| [303](https://quera.org/problemset/303/) | دنباله‌ی فیبوناچی | [csharp](https://github.com/HamidMolareza/QueraProblems/blob/master/Solutions/303/csharp) | 08/24/2022 20:05:52 |
-| [305](https://quera.org/problemset/305/) | ب.م.م | [csharp](https://github.com/HamidMolareza/QueraProblems/blob/master/Solutions/305/csharp) | 08/24/2022 20:05:52 |
-| [31020](https://quera.org/problemset/31020/) | سپیده | [csharp](https://github.com/HamidMolareza/QueraProblems/blob/master/Solutions/31020/csharp) | 08/24/2022 20:05:52 |
-| [31021](https://quera.org/problemset/31021/) | سلام سلام خداحافظ | [csharp](https://github.com/HamidMolareza/QueraProblems/blob/master/Solutions/31021/csharp) | 08/24/2022 20:05:52 |
-| [31026](https://quera.org/problemset/31026/) | اکبر در درخت کبیر | [csharp](https://github.com/HamidMolareza/QueraProblems/blob/master/Solutions/31026/csharp) | 08/24/2022 20:05:52 |
-| [3107](https://quera.org/problemset/3107/) | تی‌شرت برنده | [csharp](https://github.com/HamidMolareza/QueraProblems/blob/master/Solutions/3107/csharp) | 08/24/2022 20:05:52 |
-| [3109](https://quera.org/problemset/3109/) | سنگ برنده | [csharp](https://github.com/HamidMolareza/QueraProblems/blob/master/Solutions/3109/csharp) | 08/24/2022 20:05:52 |
-| [33023](https://quera.org/problemset/33023/) | زینی | [csharp](https://github.com/HamidMolareza/QueraProblems/blob/master/Solutions/33023/csharp) | 08/24/2022 20:05:52 |
-| [33043](https://quera.org/problemset/33043/) | صفحه‌ی پاسخگو | [web](https://github.com/HamidMolareza/QueraProblems/blob/master/Solutions/33043/web) | 08/24/2022 20:05:52 |
-| [33045](https://quera.org/problemset/33045/) | مقسوم‌علیه‌های دردسرساز | [csharp](https://github.com/HamidMolareza/QueraProblems/blob/master/Solutions/33045/csharp) | 08/24/2022 20:05:52 |
-| [3406](https://quera.org/problemset/3406/) | صدگان خسته | [csharp](https://github.com/HamidMolareza/QueraProblems/blob/master/Solutions/3406/csharp) | 08/24/2022 20:05:52 |
-| [3407](https://quera.org/problemset/3407/) | بمب بازی | [csharp](https://github.com/HamidMolareza/QueraProblems/blob/master/Solutions/3407/csharp) | 08/24/2022 20:05:52 |
-| [34081](https://quera.org/problemset/34081/) | دایره عجیب | [csharp](https://github.com/HamidMolareza/QueraProblems/blob/master/Solutions/34081/csharp) | 08/24/2022 20:05:52 |
-| [3409](https://quera.org/problemset/3409/) | جدول ضرب گنده | [csharp](https://github.com/HamidMolareza/QueraProblems/blob/master/Solutions/3409/csharp) | 08/24/2022 20:05:52 |
-| [3410](https://quera.org/problemset/3410/) | مثلث خیام پاسکال | [csharp](https://github.com/HamidMolareza/QueraProblems/blob/master/Solutions/3410/csharp) | 08/24/2022 20:05:52 |
-| [3412](https://quera.org/problemset/3412/) | وسط صندلی عقب | [csharp](https://github.com/HamidMolareza/QueraProblems/blob/master/Solutions/3412/csharp) | 08/24/2022 20:05:52 |
-| [3415](https://quera.org/problemset/3415/) | بازار موبایل | [csharp](https://github.com/HamidMolareza/QueraProblems/blob/master/Solutions/3415/csharp) | 08/24/2022 20:05:52 |
-| [3430](https://quera.org/problemset/3430/) | بلندگو | [csharp](https://github.com/HamidMolareza/QueraProblems/blob/master/Solutions/3430/csharp) | 08/24/2022 20:05:52 |
-| [35253](https://quera.org/problemset/35253/) | هندونه‌خوری | [csharp](https://github.com/HamidMolareza/QueraProblems/blob/master/Solutions/35253/csharp) | 08/24/2022 20:05:52 |
-| [35254](https://quera.org/problemset/35254/) | پاکسازی | [csharp](https://github.com/HamidMolareza/QueraProblems/blob/master/Solutions/35254/csharp) | 08/24/2022 20:05:52 |
-| [3537](https://quera.org/problemset/3537/) | سوال زرد | [csharp](https://github.com/HamidMolareza/QueraProblems/blob/master/Solutions/3537/csharp) | 08/24/2022 20:05:52 |
-| [3538](https://quera.org/problemset/3538/) | آخ جون طرف نیست! | [csharp](https://github.com/HamidMolareza/QueraProblems/blob/master/Solutions/3538/csharp) | 08/24/2022 20:05:52 |
-| [3539](https://quera.org/problemset/3539/) | تک‌رقمی | [csharp](https://github.com/HamidMolareza/QueraProblems/blob/master/Solutions/3539/csharp) | 08/24/2022 20:05:52 |
-| [3540](https://quera.org/problemset/3540/) | گردو شکستم | [csharp](https://github.com/HamidMolareza/QueraProblems/blob/master/Solutions/3540/csharp) | 08/24/2022 20:05:52 |
-| [3558](https://quera.org/problemset/3558/) | ارسال سنگین | [csharp](https://github.com/HamidMolareza/QueraProblems/blob/master/Solutions/3558/csharp) | 08/24/2022 20:05:52 |
-| [4066](https://quera.org/problemset/4066/) | پیشگویی خر | [csharp](https://github.com/HamidMolareza/QueraProblems/blob/master/Solutions/4066/csharp) | 08/24/2022 20:05:52 |
-| [4067](https://quera.org/problemset/4067/) | سراب | [csharp](https://github.com/HamidMolareza/QueraProblems/blob/master/Solutions/4067/csharp) | 08/24/2022 20:05:52 |
-| [49028](https://quera.org/problemset/49028/) | کلید چراغ | [csharp](https://github.com/HamidMolareza/QueraProblems/blob/master/Solutions/49028/csharp) | 08/24/2022 20:05:52 |
-| [49535](https://quera.org/problemset/49535/) | گزارش کار | [csharp](https://github.com/HamidMolareza/QueraProblems/blob/master/Solutions/49535/csharp) | 08/24/2022 20:05:52 |
-| [51865](https://quera.org/problemset/51865/) | بهداشت و سلامت | [csharp](https://github.com/HamidMolareza/QueraProblems/blob/master/Solutions/51865/csharp) | 08/24/2022 20:05:52 |
-| [52542](https://quera.org/problemset/52542/) | کاکتوس‌های پردردسر | [csharp](https://github.com/HamidMolareza/QueraProblems/blob/master/Solutions/52542/csharp) | 08/24/2022 20:05:52 |
-| [52543](https://quera.org/problemset/52543/) | بازی | [csharp](https://github.com/HamidMolareza/QueraProblems/blob/master/Solutions/52543/csharp) | 08/24/2022 20:05:52 |
-| [52545](https://quera.org/problemset/52545/) | محاسبه | [csharp](https://github.com/HamidMolareza/QueraProblems/blob/master/Solutions/52545/csharp) | 08/24/2022 20:05:52 |
-| [589](https://quera.org/problemset/589/) | فاکتوریل | [csharp](https://github.com/HamidMolareza/QueraProblems/blob/master/Solutions/589/csharp) | 08/24/2022 20:05:52 |
-| [590](https://quera.org/problemset/590/) | ب.م.م و ک.م.م | [csharp](https://github.com/HamidMolareza/QueraProblems/blob/master/Solutions/590/csharp) | 08/24/2022 20:05:52 |
-| [593](https://quera.org/problemset/593/) | یافتن عدد اول | [csharp](https://github.com/HamidMolareza/QueraProblems/blob/master/Solutions/593/csharp) | 08/24/2022 20:05:52 |
-| [594](https://quera.org/problemset/594/) | مبنا | [csharp](https://github.com/HamidMolareza/QueraProblems/blob/master/Solutions/594/csharp) | 08/24/2022 20:05:52 |
-| [595](https://quera.org/problemset/595/) | مثلث خیام | [csharp](https://github.com/HamidMolareza/QueraProblems/blob/master/Solutions/595/csharp) | 08/24/2022 20:05:52 |
-| [597](https://quera.org/problemset/597/) | حلزون مختصاتی | [csharp](https://github.com/HamidMolareza/QueraProblems/blob/master/Solutions/597/csharp) | 08/24/2022 20:05:52 |
-| [607](https://quera.org/problemset/607/) | ضرب ماتریس‌ها | [csharp](https://github.com/HamidMolareza/QueraProblems/blob/master/Solutions/607/csharp) | 08/24/2022 20:05:52 |
-| [61038](https://quera.org/problemset/61038/) | مدرسه شبانه روزی | [csharp](https://github.com/HamidMolareza/QueraProblems/blob/master/Solutions/61038/csharp) | 08/24/2022 20:05:52 |
-| [618](https://quera.org/problemset/618/) | چاپ لوزی | [csharp](https://github.com/HamidMolareza/QueraProblems/blob/master/Solutions/618/csharp) | 08/24/2022 20:05:52 |
-| [6192](https://quera.org/problemset/6192/) | مسئله‌ی آب | [csharp](https://github.com/HamidMolareza/QueraProblems/blob/master/Solutions/6192/csharp) | 08/24/2022 20:05:52 |
-| [6193](https://quera.org/problemset/6193/) | مسئله‌ی امنیتی | [csharp](https://github.com/HamidMolareza/QueraProblems/blob/master/Solutions/6193/csharp) | 08/24/2022 20:05:52 |
-| [62451](https://quera.org/problemset/62451/) | در جستجوی ترب | [csharp](https://github.com/HamidMolareza/QueraProblems/blob/master/Solutions/62451/csharp) | 08/24/2022 20:05:52 |
-| [637](https://quera.org/problemset/637/) | جمع اعداد | [csharp](https://github.com/HamidMolareza/QueraProblems/blob/master/Solutions/637/csharp) | 08/24/2022 20:05:52 |
-| [6375](https://quera.org/problemset/6375/) | حرکت روی ظروف | [csharp](https://github.com/HamidMolareza/QueraProblems/blob/master/Solutions/6375/csharp) | 08/24/2022 20:05:52 |
-| [6395](https://quera.org/problemset/6395/) | شیرکاکائو | [csharp](https://github.com/HamidMolareza/QueraProblems/blob/master/Solutions/6395/csharp) | 08/24/2022 20:05:52 |
-| [640](https://quera.org/problemset/640/) | نردبونی | [csharp](https://github.com/HamidMolareza/QueraProblems/blob/master/Solutions/640/csharp) | 08/24/2022 20:05:52 |
-| [64434](https://quera.org/problemset/64434/) | چاپگر | [csharp](https://github.com/HamidMolareza/QueraProblems/blob/master/Solutions/64434/csharp) | 08/24/2022 20:05:52 |
-| [647](https://quera.org/problemset/647/) | سیگماگیر | [csharp](https://github.com/HamidMolareza/QueraProblems/blob/master/Solutions/647/csharp) | 08/24/2022 20:05:52 |
-| [649](https://quera.org/problemset/649/) | اول‌بینی | [csharp](https://github.com/HamidMolareza/QueraProblems/blob/master/Solutions/649/csharp) | 08/24/2022 20:05:52 |
-| [651](https://quera.org/problemset/651/) | مبنای آینه‌ای | [csharp](https://github.com/HamidMolareza/QueraProblems/blob/master/Solutions/651/csharp) | 08/24/2022 20:05:52 |
-| [655](https://quera.org/problemset/655/) | فرزاد فیلم‌بین | [csharp](https://github.com/HamidMolareza/QueraProblems/blob/master/Solutions/655/csharp) | 08/24/2022 20:05:52 |
-| [658](https://quera.org/problemset/658/) | فرزاد کارکن | [csharp](https://github.com/HamidMolareza/QueraProblems/blob/master/Solutions/658/csharp) | 08/24/2022 20:05:52 |
-| [6580](https://quera.org/problemset/6580/) | تعمیر دیوار | [csharp](https://github.com/HamidMolareza/QueraProblems/blob/master/Solutions/6580/csharp) | 08/24/2022 20:05:52 |
-| [66861](https://quera.org/problemset/66861/) | عدد خوب | [csharp](https://github.com/HamidMolareza/QueraProblems/blob/master/Solutions/66861/csharp) | 08/24/2022 20:05:52 |
-| [66864](https://quera.org/problemset/66864/) | کلاس کد! | [csharp](https://github.com/HamidMolareza/QueraProblems/blob/master/Solutions/66864/csharp) | 08/24/2022 20:05:52 |
-| [69903](https://quera.org/problemset/69903/) | داستان زندگی من | [csharp](https://github.com/HamidMolareza/QueraProblems/blob/master/Solutions/69903/csharp) | 08/24/2022 20:05:52 |
-| [72875](https://quera.org/problemset/72875/) | جوج | [csharp](https://github.com/HamidMolareza/QueraProblems/blob/master/Solutions/72875/csharp) | 08/24/2022 20:05:52 |
-| [72877](https://quera.org/problemset/72877/) | پشمال‌آقا | [csharp](https://github.com/HamidMolareza/QueraProblems/blob/master/Solutions/72877/csharp) | 08/24/2022 20:05:52 |
-| [72882](https://quera.org/problemset/72882/) | پرگوشت | [csharp](https://github.com/HamidMolareza/QueraProblems/blob/master/Solutions/72882/csharp) | 08/24/2022 20:05:52 |
-| [7609](https://quera.org/problemset/7609/) | نامه‌ی بد | [csharp](https://github.com/HamidMolareza/QueraProblems/blob/master/Solutions/7609/csharp) | 08/24/2022 20:05:52 |
-| [7998](https://quera.org/problemset/7998/) | صفحه‌کلید انتخاباتی | [csharp](https://github.com/HamidMolareza/QueraProblems/blob/master/Solutions/7998/csharp) | 08/24/2022 20:05:52 |
-| [80645](https://quera.org/problemset/80645/) | چوب خط‌های نامتناهی | [csharp](https://github.com/HamidMolareza/QueraProblems/blob/master/Solutions/80645/csharp) | 08/24/2022 20:05:52 |
-| [80651](https://quera.org/problemset/80651/) | تیم کشی | [csharp](https://github.com/HamidMolareza/QueraProblems/blob/master/Solutions/80651/csharp) | 08/24/2022 20:05:52 |
-| [8901](https://quera.org/problemset/8901/) | لیوان بازی | [csharp](https://github.com/HamidMolareza/QueraProblems/blob/master/Solutions/8901/csharp) | 08/24/2022 20:05:52 |
-| [8938](https://quera.org/problemset/8938/) | اسنپ در شکرستان | [csharp](https://github.com/HamidMolareza/QueraProblems/blob/master/Solutions/8938/csharp) | 08/24/2022 20:05:52 |
-| [9109](https://quera.org/problemset/9109/) | مجید و ماژیک‌هاش | [csharp](https://github.com/HamidMolareza/QueraProblems/blob/master/Solutions/9109/csharp) | 08/24/2022 20:05:52 |
-| [9110](https://quera.org/problemset/9110/) | مجید، میلاد، رشته‌سازی | [csharp](https://github.com/HamidMolareza/QueraProblems/blob/master/Solutions/9110/csharp) | 08/24/2022 20:05:52 |
-| [91712](https://quera.org/problemset/91712/) | سوراخ موش | [csharp](https://github.com/HamidMolareza/QueraProblems/blob/master/Solutions/91712/csharp) | 08/24/2022 20:05:52 |
-| [91713](https://quera.org/problemset/91713/) | شماره رند | [csharp](https://github.com/HamidMolareza/QueraProblems/blob/master/Solutions/91713/csharp) | 08/24/2022 20:05:52 |
-| [9773](https://quera.org/problemset/9773/) | لوزی‌های ستاره‌ای | [csharp](https://github.com/HamidMolareza/QueraProblems/blob/master/Solutions/9773/csharp) | 08/24/2022 20:05:52 |
+| [10163](https://quera.org/problemset/10163/) | تیم ملی نخودخوری در برره | [csharp](https://github.com/HamidMolareza/QueraProblems/blob/master/Solutions/10163/csharp) | 08/25/2022 00:42:03 |
+| [10166](https://quera.org/problemset/10166/) | سیکل گرفتن در برره | [csharp](https://github.com/HamidMolareza/QueraProblems/blob/master/Solutions/10166/csharp) | 08/25/2022 00:42:03 |
+| [102261](https://quera.org/problemset/102261/) | رامین و مسئله‌ی ریاضی | [csharp](https://github.com/HamidMolareza/QueraProblems/blob/master/Solutions/102261/csharp) | 08/25/2022 00:42:03 |
+| [10230](https://quera.org/problemset/10230/) | مشق امشب باقر | [csharp](https://github.com/HamidMolareza/QueraProblems/blob/master/Solutions/10230/csharp) | 08/25/2022 00:42:03 |
+| [10232](https://quera.org/problemset/10232/) | باقر خسته‌ست ولی بی‌فرهنگ نه | [csharp](https://github.com/HamidMolareza/QueraProblems/blob/master/Solutions/10232/csharp) | 08/25/2022 00:42:03 |
+| [10233](https://quera.org/problemset/10233/) | باقر مخالف است | [csharp](https://github.com/HamidMolareza/QueraProblems/blob/master/Solutions/10233/csharp) | 08/25/2022 00:42:03 |
+| [10326](https://quera.org/problemset/10326/) | استارت-آپ باکلاس | [csharp](https://github.com/HamidMolareza/QueraProblems/blob/master/Solutions/10326/csharp) | 08/25/2022 00:42:03 |
+| [104588](https://quera.org/problemset/104588/) | نوبرانه | [csharp](https://github.com/HamidMolareza/QueraProblems/blob/master/Solutions/104588/csharp) | 08/25/2022 00:42:03 |
+| [104589](https://quera.org/problemset/104589/) | جشنواره | [csharp](https://github.com/HamidMolareza/QueraProblems/blob/master/Solutions/104589/csharp) | 08/25/2022 00:42:03 |
+| [106796](https://quera.org/problemset/106796/) | رشته‌ی رمزی | [csharp](https://github.com/HamidMolareza/QueraProblems/blob/master/Solutions/106796/csharp) | 08/25/2022 00:42:03 |
+| [108665](https://quera.org/problemset/108665/) | کلمه کلمه | [csharp](https://github.com/HamidMolareza/QueraProblems/blob/master/Solutions/108665/csharp) | 08/25/2022 00:42:03 |
+| [110014](https://quera.org/problemset/110014/) | هندزفری‌ها | [csharp](https://github.com/HamidMolareza/QueraProblems/blob/master/Solutions/110014/csharp) | 08/25/2022 00:42:03 |
+| [110015](https://quera.org/problemset/110015/) | نمایشگاه مجازی | [csharp](https://github.com/HamidMolareza/QueraProblems/blob/master/Solutions/110015/csharp) | 08/25/2022 00:42:03 |
+| [127289](https://quera.org/problemset/127289/) | تکرار کدکاپی | [csharp](https://github.com/HamidMolareza/QueraProblems/blob/master/Solutions/127289/csharp) | 08/25/2022 00:42:03 |
+| [145008](https://quera.org/problemset/145008/) | قاشق و چنگال | [csharp](https://github.com/HamidMolareza/QueraProblems/blob/master/Solutions/145008/csharp) | 08/25/2022 00:42:03 |
+| [14580](https://quera.org/problemset/14580/) | باب و کلید تلویزیون | [csharp](https://github.com/HamidMolareza/QueraProblems/blob/master/Solutions/14580/csharp) | 08/25/2022 00:42:03 |
+| [14581](https://quera.org/problemset/14581/) | کِوین و قدرت شالاپ | [csharp](https://github.com/HamidMolareza/QueraProblems/blob/master/Solutions/14581/csharp) | 08/25/2022 00:42:03 |
+| [147193](https://quera.org/problemset/147193/) | معادله خط | [csharp](https://github.com/HamidMolareza/QueraProblems/blob/master/Solutions/147193/csharp) | 08/25/2022 00:42:03 |
+| [147635](https://quera.org/problemset/147635/) | کولر یا بخاری | [csharp](https://github.com/HamidMolareza/QueraProblems/blob/master/Solutions/147635/csharp) | 08/25/2022 00:42:03 |
+| [148099](https://quera.org/problemset/148099/) | اعداد یکتا | [csharp](https://github.com/HamidMolareza/QueraProblems/blob/master/Solutions/148099/csharp) | 08/25/2022 00:42:03 |
+| [148638](https://quera.org/problemset/148638/) | جمع فوتبالی | [csharp](https://github.com/HamidMolareza/QueraProblems/blob/master/Solutions/148638/csharp) | 08/25/2022 00:42:03 |
+| [148640](https://quera.org/problemset/148640/) | آزمون تستی | [csharp](https://github.com/HamidMolareza/QueraProblems/blob/master/Solutions/148640/csharp) | 08/25/2022 00:42:03 |
+| [15124](https://quera.org/problemset/15124/) | خواب پوپک | [csharp](https://github.com/HamidMolareza/QueraProblems/blob/master/Solutions/15124/csharp) | 08/25/2022 00:42:03 |
+| [17245](https://quera.org/problemset/17245/) | تکسلنگ | [csharp](https://github.com/HamidMolareza/QueraProblems/blob/master/Solutions/17245/csharp) | 08/25/2022 00:42:03 |
+| [17675](https://quera.org/problemset/17675/) | رشته فیبوناچی | [csharp](https://github.com/HamidMolareza/QueraProblems/blob/master/Solutions/17675/csharp) | 08/25/2022 00:42:03 |
+| [18850](https://quera.org/problemset/18850/) | جدول‌بازی | [web](https://github.com/HamidMolareza/QueraProblems/blob/master/Solutions/18850/web) | 08/25/2022 00:42:03 |
+| [20249](https://quera.org/problemset/20249/) | مربّاها و مشکلات اقتصادی | [csharp](https://github.com/HamidMolareza/QueraProblems/blob/master/Solutions/20249/csharp) | 08/25/2022 00:42:03 |
+| [2529](https://quera.org/problemset/2529/) | اسم‌ها | [csharp](https://github.com/HamidMolareza/QueraProblems/blob/master/Solutions/2529/csharp) | 08/25/2022 00:42:03 |
+| [2530](https://quera.org/problemset/2530/) | لکنت | [csharp](https://github.com/HamidMolareza/QueraProblems/blob/master/Solutions/2530/csharp) | 08/25/2022 00:42:03 |
+| [2534](https://quera.org/problemset/2534/) | چیدمان | [csharp](https://github.com/HamidMolareza/QueraProblems/blob/master/Solutions/2534/csharp) | 08/25/2022 00:42:03 |
+| [2551](https://quera.org/problemset/2551/) | جمع بزرگان | [csharp](https://github.com/HamidMolareza/QueraProblems/blob/master/Solutions/2551/csharp) | 08/25/2022 00:42:03 |
+| [2596](https://quera.org/problemset/2596/) | حدس عدد | [csharp](https://github.com/HamidMolareza/QueraProblems/blob/master/Solutions/2596/csharp) | 08/25/2022 00:42:03 |
+| [2637](https://quera.org/problemset/2637/) | جاده کشی | [csharp](https://github.com/HamidMolareza/QueraProblems/blob/master/Solutions/2637/csharp) | 08/25/2022 00:42:03 |
+| [26651](https://quera.org/problemset/26651/) | سوال نفس‌گیر | [csharp](https://github.com/HamidMolareza/QueraProblems/blob/master/Solutions/26651/csharp) | 08/25/2022 00:42:03 |
+| [2705](https://quera.org/problemset/2705/) | بدخواه پویان | [csharp](https://github.com/HamidMolareza/QueraProblems/blob/master/Solutions/2705/csharp) | 08/25/2022 00:42:03 |
+| [2755](https://quera.org/problemset/2755/) | خریدار ناشی | [csharp](https://github.com/HamidMolareza/QueraProblems/blob/master/Solutions/2755/csharp) | 08/25/2022 00:42:03 |
+| [279](https://quera.org/problemset/279/) | محاسبه‌ی پیچیده | [csharp](https://github.com/HamidMolareza/QueraProblems/blob/master/Solutions/279/csharp) | 08/25/2022 00:42:03 |
+| [2794](https://quera.org/problemset/2794/) | دوربین مداربسته | [csharp](https://github.com/HamidMolareza/QueraProblems/blob/master/Solutions/2794/csharp) | 08/25/2022 00:42:03 |
+| [280](https://quera.org/problemset/280/) | اعداد فیثاغورثی | [csharp](https://github.com/HamidMolareza/QueraProblems/blob/master/Solutions/280/csharp) | 08/25/2022 00:42:03 |
+| [283](https://quera.org/problemset/283/) | مربع توخالی | [csharp](https://github.com/HamidMolareza/QueraProblems/blob/master/Solutions/283/csharp) | 08/25/2022 00:42:03 |
+| [2886](https://quera.org/problemset/2886/) | یک ساعت | [csharp](https://github.com/HamidMolareza/QueraProblems/blob/master/Solutions/2886/csharp) | 08/25/2022 00:42:03 |
+| [28948](https://quera.org/problemset/28948/) | بتایپ | [csharp](https://github.com/HamidMolareza/QueraProblems/blob/master/Solutions/28948/csharp) | 08/25/2022 00:42:03 |
+| [292](https://quera.org/problemset/292/) | کار با اعداد اعشاری | [csharp](https://github.com/HamidMolareza/QueraProblems/blob/master/Solutions/292/csharp) | 08/25/2022 00:42:03 |
+| [3029](https://quera.org/problemset/3029/) | بازگشت از بوستان | [csharp](https://github.com/HamidMolareza/QueraProblems/blob/master/Solutions/3029/csharp) | 08/25/2022 00:42:03 |
+| [303](https://quera.org/problemset/303/) | دنباله‌ی فیبوناچی | [csharp](https://github.com/HamidMolareza/QueraProblems/blob/master/Solutions/303/csharp) | 08/25/2022 00:42:03 |
+| [305](https://quera.org/problemset/305/) | ب.م.م | [csharp](https://github.com/HamidMolareza/QueraProblems/blob/master/Solutions/305/csharp) | 08/25/2022 00:42:03 |
+| [31020](https://quera.org/problemset/31020/) | سپیده | [csharp](https://github.com/HamidMolareza/QueraProblems/blob/master/Solutions/31020/csharp) | 08/25/2022 00:42:03 |
+| [31021](https://quera.org/problemset/31021/) | سلام سلام خداحافظ | [csharp](https://github.com/HamidMolareza/QueraProblems/blob/master/Solutions/31021/csharp) | 08/25/2022 00:42:03 |
+| [31026](https://quera.org/problemset/31026/) | اکبر در درخت کبیر | [csharp](https://github.com/HamidMolareza/QueraProblems/blob/master/Solutions/31026/csharp) | 08/25/2022 00:42:03 |
+| [3107](https://quera.org/problemset/3107/) | تی‌شرت برنده | [csharp](https://github.com/HamidMolareza/QueraProblems/blob/master/Solutions/3107/csharp) | 08/25/2022 00:42:03 |
+| [3109](https://quera.org/problemset/3109/) | سنگ برنده | [csharp](https://github.com/HamidMolareza/QueraProblems/blob/master/Solutions/3109/csharp) | 08/25/2022 00:42:03 |
+| [33023](https://quera.org/problemset/33023/) | زینی | [csharp](https://github.com/HamidMolareza/QueraProblems/blob/master/Solutions/33023/csharp) | 08/25/2022 00:42:03 |
+| [33043](https://quera.org/problemset/33043/) | صفحه‌ی پاسخگو | [web](https://github.com/HamidMolareza/QueraProblems/blob/master/Solutions/33043/web) | 08/25/2022 00:42:03 |
+| [33045](https://quera.org/problemset/33045/) | مقسوم‌علیه‌های دردسرساز | [csharp](https://github.com/HamidMolareza/QueraProblems/blob/master/Solutions/33045/csharp) | 08/25/2022 00:42:03 |
+| [3406](https://quera.org/problemset/3406/) | صدگان خسته | [csharp](https://github.com/HamidMolareza/QueraProblems/blob/master/Solutions/3406/csharp) | 08/25/2022 00:42:03 |
+| [3407](https://quera.org/problemset/3407/) | بمب بازی | [csharp](https://github.com/HamidMolareza/QueraProblems/blob/master/Solutions/3407/csharp) | 08/25/2022 00:42:03 |
+| [34081](https://quera.org/problemset/34081/) | دایره عجیب | [csharp](https://github.com/HamidMolareza/QueraProblems/blob/master/Solutions/34081/csharp) | 08/25/2022 00:42:03 |
+| [3409](https://quera.org/problemset/3409/) | جدول ضرب گنده | [csharp](https://github.com/HamidMolareza/QueraProblems/blob/master/Solutions/3409/csharp) | 08/25/2022 00:42:03 |
+| [3410](https://quera.org/problemset/3410/) | مثلث خیام پاسکال | [csharp](https://github.com/HamidMolareza/QueraProblems/blob/master/Solutions/3410/csharp) | 08/25/2022 00:42:03 |
+| [3412](https://quera.org/problemset/3412/) | وسط صندلی عقب | [csharp](https://github.com/HamidMolareza/QueraProblems/blob/master/Solutions/3412/csharp) | 08/25/2022 00:42:03 |
+| [3415](https://quera.org/problemset/3415/) | بازار موبایل | [csharp](https://github.com/HamidMolareza/QueraProblems/blob/master/Solutions/3415/csharp) | 08/25/2022 00:42:03 |
+| [3430](https://quera.org/problemset/3430/) | بلندگو | [csharp](https://github.com/HamidMolareza/QueraProblems/blob/master/Solutions/3430/csharp) | 08/25/2022 00:42:03 |
+| [35253](https://quera.org/problemset/35253/) | هندونه‌خوری | [csharp](https://github.com/HamidMolareza/QueraProblems/blob/master/Solutions/35253/csharp) | 08/25/2022 00:42:03 |
+| [35254](https://quera.org/problemset/35254/) | پاکسازی | [csharp](https://github.com/HamidMolareza/QueraProblems/blob/master/Solutions/35254/csharp) | 08/25/2022 00:42:03 |
+| [3537](https://quera.org/problemset/3537/) | سوال زرد | [csharp](https://github.com/HamidMolareza/QueraProblems/blob/master/Solutions/3537/csharp) | 08/25/2022 00:42:03 |
+| [3538](https://quera.org/problemset/3538/) | آخ جون طرف نیست! | [csharp](https://github.com/HamidMolareza/QueraProblems/blob/master/Solutions/3538/csharp) | 08/25/2022 00:42:03 |
+| [3539](https://quera.org/problemset/3539/) | تک‌رقمی | [csharp](https://github.com/HamidMolareza/QueraProblems/blob/master/Solutions/3539/csharp) | 08/25/2022 00:42:03 |
+| [3540](https://quera.org/problemset/3540/) | گردو شکستم | [csharp](https://github.com/HamidMolareza/QueraProblems/blob/master/Solutions/3540/csharp) | 08/25/2022 00:42:03 |
+| [3558](https://quera.org/problemset/3558/) | ارسال سنگین | [csharp](https://github.com/HamidMolareza/QueraProblems/blob/master/Solutions/3558/csharp) | 08/25/2022 00:42:03 |
+| [4066](https://quera.org/problemset/4066/) | پیشگویی خر | [csharp](https://github.com/HamidMolareza/QueraProblems/blob/master/Solutions/4066/csharp) | 08/25/2022 00:42:03 |
+| [4067](https://quera.org/problemset/4067/) | سراب | [csharp](https://github.com/HamidMolareza/QueraProblems/blob/master/Solutions/4067/csharp) | 08/25/2022 00:42:03 |
+| [49028](https://quera.org/problemset/49028/) | کلید چراغ | [csharp](https://github.com/HamidMolareza/QueraProblems/blob/master/Solutions/49028/csharp) | 08/25/2022 00:42:03 |
+| [49535](https://quera.org/problemset/49535/) | گزارش کار | [csharp](https://github.com/HamidMolareza/QueraProblems/blob/master/Solutions/49535/csharp) | 08/25/2022 00:42:03 |
+| [51865](https://quera.org/problemset/51865/) | بهداشت و سلامت | [csharp](https://github.com/HamidMolareza/QueraProblems/blob/master/Solutions/51865/csharp) | 08/25/2022 00:42:03 |
+| [52542](https://quera.org/problemset/52542/) | کاکتوس‌های پردردسر | [csharp](https://github.com/HamidMolareza/QueraProblems/blob/master/Solutions/52542/csharp) | 08/25/2022 00:42:03 |
+| [52543](https://quera.org/problemset/52543/) | بازی | [csharp](https://github.com/HamidMolareza/QueraProblems/blob/master/Solutions/52543/csharp) | 08/25/2022 00:42:03 |
+| [52545](https://quera.org/problemset/52545/) | محاسبه | [csharp](https://github.com/HamidMolareza/QueraProblems/blob/master/Solutions/52545/csharp) | 08/25/2022 00:42:03 |
+| [589](https://quera.org/problemset/589/) | فاکتوریل | [csharp](https://github.com/HamidMolareza/QueraProblems/blob/master/Solutions/589/csharp) | 08/25/2022 00:42:03 |
+| [590](https://quera.org/problemset/590/) | ب.م.م و ک.م.م | [csharp](https://github.com/HamidMolareza/QueraProblems/blob/master/Solutions/590/csharp) | 08/25/2022 00:42:03 |
+| [593](https://quera.org/problemset/593/) | یافتن عدد اول | [csharp](https://github.com/HamidMolareza/QueraProblems/blob/master/Solutions/593/csharp) | 08/25/2022 00:42:03 |
+| [594](https://quera.org/problemset/594/) | مبنا | [csharp](https://github.com/HamidMolareza/QueraProblems/blob/master/Solutions/594/csharp) | 08/25/2022 00:42:03 |
+| [595](https://quera.org/problemset/595/) | مثلث خیام | [csharp](https://github.com/HamidMolareza/QueraProblems/blob/master/Solutions/595/csharp) | 08/25/2022 00:42:03 |
+| [597](https://quera.org/problemset/597/) | حلزون مختصاتی | [csharp](https://github.com/HamidMolareza/QueraProblems/blob/master/Solutions/597/csharp) | 08/25/2022 00:42:03 |
+| [607](https://quera.org/problemset/607/) | ضرب ماتریس‌ها | [csharp](https://github.com/HamidMolareza/QueraProblems/blob/master/Solutions/607/csharp) | 08/25/2022 00:42:03 |
+| [61038](https://quera.org/problemset/61038/) | مدرسه شبانه روزی | [csharp](https://github.com/HamidMolareza/QueraProblems/blob/master/Solutions/61038/csharp) | 08/25/2022 00:42:03 |
+| [618](https://quera.org/problemset/618/) | چاپ لوزی | [csharp](https://github.com/HamidMolareza/QueraProblems/blob/master/Solutions/618/csharp) | 08/25/2022 00:42:03 |
+| [6192](https://quera.org/problemset/6192/) | مسئله‌ی آب | [csharp](https://github.com/HamidMolareza/QueraProblems/blob/master/Solutions/6192/csharp) | 08/25/2022 00:42:03 |
+| [6193](https://quera.org/problemset/6193/) | مسئله‌ی امنیتی | [csharp](https://github.com/HamidMolareza/QueraProblems/blob/master/Solutions/6193/csharp) | 08/25/2022 00:42:03 |
+| [62451](https://quera.org/problemset/62451/) | در جستجوی ترب | [csharp](https://github.com/HamidMolareza/QueraProblems/blob/master/Solutions/62451/csharp) | 08/25/2022 00:42:03 |
+| [637](https://quera.org/problemset/637/) | جمع اعداد | [csharp](https://github.com/HamidMolareza/QueraProblems/blob/master/Solutions/637/csharp) | 08/25/2022 00:42:03 |
+| [6375](https://quera.org/problemset/6375/) | حرکت روی ظروف | [csharp](https://github.com/HamidMolareza/QueraProblems/blob/master/Solutions/6375/csharp) | 08/25/2022 00:42:03 |
+| [6395](https://quera.org/problemset/6395/) | شیرکاکائو | [csharp](https://github.com/HamidMolareza/QueraProblems/blob/master/Solutions/6395/csharp) | 08/25/2022 00:42:03 |
+| [640](https://quera.org/problemset/640/) | نردبونی | [csharp](https://github.com/HamidMolareza/QueraProblems/blob/master/Solutions/640/csharp) | 08/25/2022 00:42:03 |
+| [6402](https://quera.org/problemset/6402/) | در بند در ماندم | [csharp](https://github.com/HamidMolareza/QueraProblems/blob/master/Solutions/6402/csharp) | 08/25/2022 00:42:03 |
+| [64434](https://quera.org/problemset/64434/) | چاپگر | [csharp](https://github.com/HamidMolareza/QueraProblems/blob/master/Solutions/64434/csharp) | 08/25/2022 00:42:03 |
+| [647](https://quera.org/problemset/647/) | سیگماگیر | [csharp](https://github.com/HamidMolareza/QueraProblems/blob/master/Solutions/647/csharp) | 08/25/2022 00:42:03 |
+| [649](https://quera.org/problemset/649/) | اول‌بینی | [csharp](https://github.com/HamidMolareza/QueraProblems/blob/master/Solutions/649/csharp) | 08/25/2022 00:42:03 |
+| [651](https://quera.org/problemset/651/) | مبنای آینه‌ای | [csharp](https://github.com/HamidMolareza/QueraProblems/blob/master/Solutions/651/csharp) | 08/25/2022 00:42:03 |
+| [655](https://quera.org/problemset/655/) | فرزاد فیلم‌بین | [csharp](https://github.com/HamidMolareza/QueraProblems/blob/master/Solutions/655/csharp) | 08/25/2022 00:42:03 |
+| [658](https://quera.org/problemset/658/) | فرزاد کارکن | [csharp](https://github.com/HamidMolareza/QueraProblems/blob/master/Solutions/658/csharp) | 08/25/2022 00:42:03 |
+| [6580](https://quera.org/problemset/6580/) | تعمیر دیوار | [csharp](https://github.com/HamidMolareza/QueraProblems/blob/master/Solutions/6580/csharp) | 08/25/2022 00:42:03 |
+| [66861](https://quera.org/problemset/66861/) | عدد خوب | [csharp](https://github.com/HamidMolareza/QueraProblems/blob/master/Solutions/66861/csharp) | 08/25/2022 00:42:03 |
+| [66864](https://quera.org/problemset/66864/) | کلاس کد! | [csharp](https://github.com/HamidMolareza/QueraProblems/blob/master/Solutions/66864/csharp) | 08/25/2022 00:42:03 |
+| [69903](https://quera.org/problemset/69903/) | داستان زندگی من | [csharp](https://github.com/HamidMolareza/QueraProblems/blob/master/Solutions/69903/csharp) | 08/25/2022 00:42:03 |
+| [72875](https://quera.org/problemset/72875/) | جوج | [csharp](https://github.com/HamidMolareza/QueraProblems/blob/master/Solutions/72875/csharp) | 08/25/2022 00:42:03 |
+| [72877](https://quera.org/problemset/72877/) | پشمال‌آقا | [csharp](https://github.com/HamidMolareza/QueraProblems/blob/master/Solutions/72877/csharp) | 08/25/2022 00:42:03 |
+| [72882](https://quera.org/problemset/72882/) | پرگوشت | [csharp](https://github.com/HamidMolareza/QueraProblems/blob/master/Solutions/72882/csharp) | 08/25/2022 00:42:03 |
+| [7609](https://quera.org/problemset/7609/) | نامه‌ی بد | [csharp](https://github.com/HamidMolareza/QueraProblems/blob/master/Solutions/7609/csharp) | 08/25/2022 00:42:03 |
+| [7998](https://quera.org/problemset/7998/) | صفحه‌کلید انتخاباتی | [csharp](https://github.com/HamidMolareza/QueraProblems/blob/master/Solutions/7998/csharp) | 08/25/2022 00:42:03 |
+| [80645](https://quera.org/problemset/80645/) | چوب خط‌های نامتناهی | [csharp](https://github.com/HamidMolareza/QueraProblems/blob/master/Solutions/80645/csharp) | 08/25/2022 00:42:03 |
+| [80651](https://quera.org/problemset/80651/) | تیم کشی | [csharp](https://github.com/HamidMolareza/QueraProblems/blob/master/Solutions/80651/csharp) | 08/25/2022 00:42:03 |
+| [8901](https://quera.org/problemset/8901/) | لیوان بازی | [csharp](https://github.com/HamidMolareza/QueraProblems/blob/master/Solutions/8901/csharp) | 08/25/2022 00:42:03 |
+| [8938](https://quera.org/problemset/8938/) | اسنپ در شکرستان | [csharp](https://github.com/HamidMolareza/QueraProblems/blob/master/Solutions/8938/csharp) | 08/25/2022 00:42:03 |
+| [9109](https://quera.org/problemset/9109/) | مجید و ماژیک‌هاش | [csharp](https://github.com/HamidMolareza/QueraProblems/blob/master/Solutions/9109/csharp) | 08/25/2022 00:42:03 |
+| [9110](https://quera.org/problemset/9110/) | مجید، میلاد، رشته‌سازی | [csharp](https://github.com/HamidMolareza/QueraProblems/blob/master/Solutions/9110/csharp) | 08/25/2022 00:42:03 |
+| [91712](https://quera.org/problemset/91712/) | سوراخ موش | [csharp](https://github.com/HamidMolareza/QueraProblems/blob/master/Solutions/91712/csharp) | 08/25/2022 00:42:03 |
+| [91713](https://quera.org/problemset/91713/) | شماره رند | [csharp](https://github.com/HamidMolareza/QueraProblems/blob/master/Solutions/91713/csharp) | 08/25/2022 00:42:03 |
+| [9773](https://quera.org/problemset/9773/) | لوزی‌های ستاره‌ای | [csharp](https://github.com/HamidMolareza/QueraProblems/blob/master/Solutions/9773/csharp) | 08/25/2022 00:42:03 |
 
 
 ## Usage
