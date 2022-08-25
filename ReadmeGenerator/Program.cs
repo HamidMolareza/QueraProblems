@@ -107,11 +107,10 @@ namespace Quera {
             if (numOfQuestionsSolved != numOfSolutions)
                 result.AppendLine($"Number of solutions: {numOfSolutions}\n");
 
-            result.AppendLine("| Question | Title | Solutions | Last commit |")
-                .AppendLine("| ----- | ----- | ----- | ----- |");
-
-            foreach (var problem in problemsList.OrderByDescending(problem => problem.LastSolutionsCommit)
-                         .ThenBy(problem => problem.QueraId)) {
+            result.AppendLine("| Question | Title | Solutions |")
+                .AppendLine("| ----- | ----- | ----- |");
+            
+            foreach (var problem in problemsList.OrderBy(problem => problem.QueraId)) {
                 Console.Write($"Processing problem {problem.QueraId}... ");
 
                 await result.AppendProblemData(problem)
@@ -145,7 +144,7 @@ namespace Quera {
                         var solutionLinks = string.Join(" - ", solutions);
 
                         source.AppendLine(
-                            $"| [{problem.QueraId}]({link}) | {title} | {solutionLinks} | {problem.LastSolutionsCommit} |");
+                            $"| [{problem.QueraId}]({link}) | {title} | {solutionLinks} |");
                     }));
 
         private static Task<Result<string>> GetQuestionTitleAsync(string link, int numOfTry,
