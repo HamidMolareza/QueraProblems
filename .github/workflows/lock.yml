@@ -3,7 +3,7 @@ name: Lock
 
 on:
   schedule:
-    - cron: "* * 1 * *"
+    - cron: '40 14 * * 6'
   workflow_dispatch:
 
 jobs:

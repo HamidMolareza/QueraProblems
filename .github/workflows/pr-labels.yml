@@ -15,6 +15,12 @@ jobs:
         with:
           github-token: "${{ secrets.GITHUB_TOKEN }}"
           valid-labels: >-
-            breaking-change, bugfix, documentation, enhancement,
-            refactor, performance, new-feature, maintenance, ci, dependencies
+            priority-critical, priority-high, priority-medium, priority-low
+            scope-documentation, scope-enhancement, scope-bug, scope-performance,
+            scope-new-feature, scope-security
+          invalid-labels: >-
+            version-major, version-minor, version-patch,
+            status-duplicate, status-in-progress, status-stale, 
+            status-incomplete, status-invalid, status-wontfix,
+            good first issue, help-wanted
           disable-reviews: true
