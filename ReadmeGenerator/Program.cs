@@ -72,7 +72,7 @@ namespace Quera {
                         message: "There is no solution in the problem folder."))
                 .OnSuccess(GetSolutionsAsync)
                 .OnSuccess(solutions => new Problem {
-                    QueraId = new FileInfo(problemDir).Name,
+                    QueraId = new FileInfo(problemDir).Name.ConvertTo<string, long>(),
                     Solutions = solutions,
                     LastSolutionsCommit = solutions.GetLastCommitDateTime()
                 }).OnFail(new {problemDir});
@@ -109,7 +109,7 @@ namespace Quera {
 
             result.AppendLine("| Question | Title | Solutions |")
                 .AppendLine("| ----- | ----- | ----- |");
-            
+
             foreach (var problem in problemsList.OrderBy(problem => problem.QueraId)) {
                 Console.Write($"Processing problem {problem.QueraId}... ");
 
