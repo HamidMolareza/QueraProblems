@@ -21,7 +21,7 @@ can [send your solution](#contributing) (in any language).
 
 ## List of problems-solutions
 
-Number of questions solved: 118
+Number of questions solved: 120
 
 | Question | Title | Solutions |
 | ----- | ----- | ----- |
@@ -29,6 +29,7 @@ Number of questions solved: 118
 | [280](https://quera.org/problemset/280/) | اعداد فیثاغورثی | [csharp](https://github.com/HamidMolareza/QueraProblems/blob/master/Solutions/280/csharp) |
 | [283](https://quera.org/problemset/283/) | مربع توخالی | [csharp](https://github.com/HamidMolareza/QueraProblems/blob/master/Solutions/283/csharp) |
 | [292](https://quera.org/problemset/292/) | کار با اعداد اعشاری | [csharp](https://github.com/HamidMolareza/QueraProblems/blob/master/Solutions/292/csharp) |
+| [297](https://quera.org/problemset/297/) | تابع نمایی | [csharp](https://github.com/HamidMolareza/QueraProblems/blob/master/Solutions/297/csharp) |
 | [303](https://quera.org/problemset/303/) | دنباله‌ی فیبوناچی | [csharp](https://github.com/HamidMolareza/QueraProblems/blob/master/Solutions/303/csharp) |
 | [305](https://quera.org/problemset/305/) | ب.م.م | [csharp](https://github.com/HamidMolareza/QueraProblems/blob/master/Solutions/305/csharp) |
 | [589](https://quera.org/problemset/589/) | فاکتوریل | [csharp](https://github.com/HamidMolareza/QueraProblems/blob/master/Solutions/589/csharp) |
@@ -108,6 +109,7 @@ Number of questions solved: 118
 | [33043](https://quera.org/problemset/33043/) | صفحه‌ی پاسخگو | [web](https://github.com/HamidMolareza/QueraProblems/blob/master/Solutions/33043/web) |
 | [33045](https://quera.org/problemset/33045/) | مقسوم‌علیه‌های دردسرساز | [csharp](https://github.com/HamidMolareza/QueraProblems/blob/master/Solutions/33045/csharp) |
 | [34081](https://quera.org/problemset/34081/) | دایره عجیب | [csharp](https://github.com/HamidMolareza/QueraProblems/blob/master/Solutions/34081/csharp) |
+| [34082](https://quera.org/problemset/34082/) | حسنی نگو عکاس بگو | [csharp](https://github.com/HamidMolareza/QueraProblems/blob/master/Solutions/34082/csharp) |
 | [35253](https://quera.org/problemset/35253/) | هندونه‌خوری | [csharp](https://github.com/HamidMolareza/QueraProblems/blob/master/Solutions/35253/csharp) |
 | [35254](https://quera.org/problemset/35254/) | پاکسازی | [csharp](https://github.com/HamidMolareza/QueraProblems/blob/master/Solutions/35254/csharp) |
 | [49028](https://quera.org/problemset/49028/) | کلید چراغ | [csharp](https://github.com/HamidMolareza/QueraProblems/blob/master/Solutions/49028/csharp) |
