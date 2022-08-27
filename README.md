@@ -21,7 +21,7 @@ can [send your solution](#contributing) (in any language).
 
 ## List of problems-solutions
 
-Number of questions solved: 120
+Number of questions solved: 121
 
 | Question | Title | Solutions |
 | ----- | ----- | ----- |
@@ -67,6 +67,7 @@ Number of questions solved: 120
 | [3412](https://quera.org/problemset/3412/) | وسط صندلی عقب | [csharp](https://github.com/HamidMolareza/QueraProblems/blob/master/Solutions/3412/csharp) |
 | [3415](https://quera.org/problemset/3415/) | بازار موبایل | [csharp](https://github.com/HamidMolareza/QueraProblems/blob/master/Solutions/3415/csharp) |
 | [3430](https://quera.org/problemset/3430/) | بلندگو | [csharp](https://github.com/HamidMolareza/QueraProblems/blob/master/Solutions/3430/csharp) |
+| [3431](https://quera.org/problemset/3431/) | اوقات فراغت | [csharp](https://github.com/HamidMolareza/QueraProblems/blob/master/Solutions/3431/csharp) |
 | [3537](https://quera.org/problemset/3537/) | سوال زرد | [csharp](https://github.com/HamidMolareza/QueraProblems/blob/master/Solutions/3537/csharp) |
 | [3538](https://quera.org/problemset/3538/) | آخ جون طرف نیست! | [csharp](https://github.com/HamidMolareza/QueraProblems/blob/master/Solutions/3538/csharp) |
 | [3539](https://quera.org/problemset/3539/) | تک‌رقمی | [csharp](https://github.com/HamidMolareza/QueraProblems/blob/master/Solutions/3539/csharp) |
