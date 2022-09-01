@@ -1,0 +1,26 @@
+@font-face {
+  font-family: Samim;
+  src: url('./assets/fonts/Samim.woff') format('woff');
+  font-style: normal;
+}
+
+body {
+  font-family: Samim;
+  background: rgb(248, 249, 251);
+}
+
+a {
+  margin: 8px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-decoration: none;
+}
+
+img {
+  border-radius: 8px;
+}
+
+.banners {
+  flex-wrap: wrap;
+}
