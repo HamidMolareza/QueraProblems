@@ -12,18 +12,18 @@ exit_if_operation_failed() {
 # Get Inputs
 target="$1"
 if [ -z "$target" ]; then
-    printf "Target file or directory: "
-    read -r target
+  printf "Target file or directory: "
+  read -r target
 fi
 
-if [ ! -f "$target" ] || [ ! -d "$target" ]; then
-    echo "File or directory path is not valid."
-    exit 1
+if [ ! -f "$target" ] && [ ! -d "$target" ]; then
+  echo "File or directory path is not valid."
+  exit 1
 fi
 
 output="$2"
 if [ -z "$output" ]; then
-    output="output.zip"
+  output="output.zip"
 fi
 #===========================================================
 
