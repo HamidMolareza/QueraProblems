@@ -75,12 +75,16 @@ wait
 
 #download template from link
 if [ -z "$downloadLink" ]; then
-    echo "The download link is not given, so skip download step."
+  echo "The download link is not given, so skip download step."
 else
   projectFile="$resultDir/project.zip"
-  curl --silent --output "$projectFile" "$downloadLink"
-  warning_if_operation_failed "$?" "Can not download project from '$downloadLink' to '$projectFile'"
-  wait
+  if [ -f "$projectFile" ]; then
+    echo "The project file already exists."
+  else
+    curl --silent --output "$projectFile" "$downloadLink"
+    warning_if_operation_failed "$?" "Can not download project from '$downloadLink' to '$projectFile'"
+    wait
+  fi
 fi
 
 echo "Directory is ready: $resultDir"
