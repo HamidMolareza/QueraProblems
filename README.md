@@ -21,7 +21,7 @@ can [send your solution](#contributing) (in any language).
 
 ## List of problems-solutions
 
-Number of questions solved: 123
+Number of questions solved: 124
 
 | Question | Title | Solutions |
 | ----- | ----- | ----- |
@@ -138,6 +138,7 @@ Number of questions solved: 123
 | [104589](https://quera.org/problemset/104589/) | جشنواره | [csharp](https://github.com/HamidMolareza/QueraProblems/blob/master/Solutions/104589/csharp) |
 | [106796](https://quera.org/problemset/106796/) | رشته‌ی رمزی | [csharp](https://github.com/HamidMolareza/QueraProblems/blob/master/Solutions/106796/csharp) |
 | [108665](https://quera.org/problemset/108665/) | کلمه کلمه | [csharp](https://github.com/HamidMolareza/QueraProblems/blob/master/Solutions/108665/csharp) |
+| [109570](https://quera.org/problemset/109570/) | اسنپ‌شاپ | [web](https://github.com/HamidMolareza/QueraProblems/blob/master/Solutions/109570/web) |
 | [110014](https://quera.org/problemset/110014/) | هندزفری‌ها | [csharp](https://github.com/HamidMolareza/QueraProblems/blob/master/Solutions/110014/csharp) |
 | [110015](https://quera.org/problemset/110015/) | نمایشگاه مجازی | [csharp](https://github.com/HamidMolareza/QueraProblems/blob/master/Solutions/110015/csharp) |
 | [127289](https://quera.org/problemset/127289/) | تکرار کدکاپی | [csharp](https://github.com/HamidMolareza/QueraProblems/blob/master/Solutions/127289/csharp) |
