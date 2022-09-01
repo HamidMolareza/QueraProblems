@@ -21,7 +21,7 @@ can [send your solution](#contributing) (in any language).
 
 ## List of problems-solutions
 
-Number of questions solved: 121
+Number of questions solved: 123
 
 | Question | Title | Solutions |
 | ----- | ----- | ----- |
@@ -99,6 +99,7 @@ Number of questions solved: 121
 | [15124](https://quera.org/problemset/15124/) | خواب پوپک | [csharp](https://github.com/HamidMolareza/QueraProblems/blob/master/Solutions/15124/csharp) |
 | [17245](https://quera.org/problemset/17245/) | تکسلنگ | [csharp](https://github.com/HamidMolareza/QueraProblems/blob/master/Solutions/17245/csharp) |
 | [17675](https://quera.org/problemset/17675/) | رشته فیبوناچی | [csharp](https://github.com/HamidMolareza/QueraProblems/blob/master/Solutions/17675/csharp) |
+| [18212](https://quera.org/problemset/18212/) | ۷ سگمنت | [csharp](https://github.com/HamidMolareza/QueraProblems/blob/master/Solutions/18212/csharp) |
 | [18850](https://quera.org/problemset/18850/) | جدول‌بازی | [web](https://github.com/HamidMolareza/QueraProblems/blob/master/Solutions/18850/web) |
 | [20249](https://quera.org/problemset/20249/) | مربّاها و مشکلات اقتصادی | [csharp](https://github.com/HamidMolareza/QueraProblems/blob/master/Solutions/20249/csharp) |
 | [26651](https://quera.org/problemset/26651/) | سوال نفس‌گیر | [csharp](https://github.com/HamidMolareza/QueraProblems/blob/master/Solutions/26651/csharp) |
@@ -140,6 +141,7 @@ Number of questions solved: 121
 | [110014](https://quera.org/problemset/110014/) | هندزفری‌ها | [csharp](https://github.com/HamidMolareza/QueraProblems/blob/master/Solutions/110014/csharp) |
 | [110015](https://quera.org/problemset/110015/) | نمایشگاه مجازی | [csharp](https://github.com/HamidMolareza/QueraProblems/blob/master/Solutions/110015/csharp) |
 | [127289](https://quera.org/problemset/127289/) | تکرار کدکاپی | [csharp](https://github.com/HamidMolareza/QueraProblems/blob/master/Solutions/127289/csharp) |
+| [141570](https://quera.org/problemset/141570/) | سیبل تیراندازی | [csharp](https://github.com/HamidMolareza/QueraProblems/blob/master/Solutions/141570/csharp) |
 | [145008](https://quera.org/problemset/145008/) | قاشق و چنگال | [csharp](https://github.com/HamidMolareza/QueraProblems/blob/master/Solutions/145008/csharp) |
 | [147193](https://quera.org/problemset/147193/) | معادله خط | [csharp](https://github.com/HamidMolareza/QueraProblems/blob/master/Solutions/147193/csharp) |
 | [147635](https://quera.org/problemset/147635/) | کولر یا بخاری | [csharp](https://github.com/HamidMolareza/QueraProblems/blob/master/Solutions/147635/csharp) |
