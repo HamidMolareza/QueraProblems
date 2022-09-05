@@ -21,7 +21,7 @@ can [send your solution](#contributing) (in any language).
 
 ## List of problems-solutions
 
-Number of questions solved: 124
+Number of questions solved: 125
 
 | Question | Title | Solutions |
 | ----- | ----- | ----- |
@@ -100,6 +100,7 @@ Number of questions solved: 124
 | [17245](https://quera.org/problemset/17245/) | تکسلنگ | [csharp](https://github.com/HamidMolareza/QueraProblems/blob/master/Solutions/17245/csharp) |
 | [17675](https://quera.org/problemset/17675/) | رشته فیبوناچی | [csharp](https://github.com/HamidMolareza/QueraProblems/blob/master/Solutions/17675/csharp) |
 | [18212](https://quera.org/problemset/18212/) | ۷ سگمنت | [csharp](https://github.com/HamidMolareza/QueraProblems/blob/master/Solutions/18212/csharp) |
+| [18310](https://quera.org/problemset/18310/) | Joos | [csharp](https://github.com/HamidMolareza/QueraProblems/blob/master/Solutions/18310/csharp) |
 | [18850](https://quera.org/problemset/18850/) | جدول‌بازی | [web](https://github.com/HamidMolareza/QueraProblems/blob/master/Solutions/18850/web) |
 | [20249](https://quera.org/problemset/20249/) | مربّاها و مشکلات اقتصادی | [csharp](https://github.com/HamidMolareza/QueraProblems/blob/master/Solutions/20249/csharp) |
 | [26651](https://quera.org/problemset/26651/) | سوال نفس‌گیر | [csharp](https://github.com/HamidMolareza/QueraProblems/blob/master/Solutions/26651/csharp) |
