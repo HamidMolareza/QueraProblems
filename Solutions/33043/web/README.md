@@ -4,15 +4,6 @@ This solution has scored 100 in [Quera](https://quera.org/).
 
 🌟 If you like this solution, please give it a star.
 
-## Built With
-
-C# .NET 5
-
-## Usage
-
-1. In the directory, run `dotnet build`
-2. `dotnet run`
-
 ## Support
 
 Reach out to the maintainer at one of the following places:
