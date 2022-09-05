@@ -27,7 +27,7 @@ can [send your solution](#contributing) (in any language).
 
 All solutions are in the [Solutions](Solutions) folder.
 
-In Quera, structure of the questions link is as follows: https://quera.org/problemset/{Problem-ID-As-Number}
+In Quera, the structure of the questions link is as follows: https://quera.org/problemset/{Problem-ID-As-Number}
 
 We keep all problem solutions in a folder called `Quera ID`. For example, the solutions
 to [this problem](https://quera.org/problemset/10163/) with id `10163` are located in folder `10163`
@@ -60,7 +60,7 @@ For see default templates, you can see [this section](Templates).
 
 ### Documentation
 
-Codes usually do not need additional explanations. We try to make the codes clean, readable and with comments.
+Codes usually do not need additional explanations. We try to make the codes clean, readable, and with comments.
 
 In some cases, more explanations are needed, which are included in the solution `README` file. for example
 see [this readme](Solutions/2551/csharp/README.md).
@@ -74,8 +74,8 @@ Please see [this list](https://github.com/HamidMolareza/QueraProblems/issues) an
 - Automatic readme generation
 - Clean code
 - Documentation
-- Our structure support multi language
-- CI/CD with github action
+- Our structure support multi-language
+- CI/CD with GitHub action
 
 ## Roadmap
 
@@ -93,7 +93,7 @@ Reach out to the maintainer at one of the following places:
 
 ## Contributing
 
-First off, thanks for taking the time to contribute! Contributions are what make the free/open-source community such an
+First off, thanks for taking the time to contribute! Contributions make the free/open-source community such an
 amazing place to learn, inspire, and create. Any contributions you make will benefit everybody else and are **greatly
 appreciated**.
 
@@ -108,16 +108,16 @@ The original setup of this repository is by [Hamid Molareza](https://github.com/
 This file is generated [automatically](.github/workflows/update-readme.yml). You can see the source of this program in
 the [Readme Generator](ReadmeGenerator) directory.
 
-This project uses [Payadel README template](https://github.com/Payadel/Readme/).
+This project uses [the Payadel README template](https://github.com/Payadel/Readme/).
 
-### Why readme is auto generate?
+### Why readme is auto-generated?
 
 I didn't want to manually update the table in this file every time a problem was solved. This is repetitive work and
 programmers hate repetitive work!
 
-### How readme generate?
+### How does readme generated?
 
-In summary, the list of problems and solutions is read from the [Solutions](Solutions) folder and the processed
+In summary, the list of problems and solutions is read from the [Solutions](Solutions) folder, and the processed
 information is placed in [this format](ReadmeGenerator/Data/ReadmeTemplate.md).
 
 ## License
