@@ -21,7 +21,7 @@ can [send your solution](#contributing) (in any language).
 
 ## List of problems-solutions
 
-Number of questions solved: 125
+Number of questions solved: 126
 
 | Question | Title | Solutions |
 | ----- | ----- | ----- |
@@ -81,6 +81,7 @@ Number of questions solved: 125
 | [6395](https://quera.org/problemset/6395/) | شیرکاکائو | [csharp](https://github.com/HamidMolareza/QueraProblems/blob/master/Solutions/6395/csharp) |
 | [6402](https://quera.org/problemset/6402/) | در بند در ماندم | [csharp](https://github.com/HamidMolareza/QueraProblems/blob/master/Solutions/6402/csharp) |
 | [6580](https://quera.org/problemset/6580/) | تعمیر دیوار | [csharp](https://github.com/HamidMolareza/QueraProblems/blob/master/Solutions/6580/csharp) |
+| [6581](https://quera.org/problemset/6581/) | صدف فلزی | [csharp](https://github.com/HamidMolareza/QueraProblems/blob/master/Solutions/6581/csharp) |
 | [7609](https://quera.org/problemset/7609/) | نامه‌ی بد | [csharp](https://github.com/HamidMolareza/QueraProblems/blob/master/Solutions/7609/csharp) |
 | [7998](https://quera.org/problemset/7998/) | صفحه‌کلید انتخاباتی | [csharp](https://github.com/HamidMolareza/QueraProblems/blob/master/Solutions/7998/csharp) |
 | [8901](https://quera.org/problemset/8901/) | لیوان بازی | [csharp](https://github.com/HamidMolareza/QueraProblems/blob/master/Solutions/8901/csharp) |
