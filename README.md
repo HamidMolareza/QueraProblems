@@ -21,7 +21,7 @@ can [send your solution](#contributing) (in any language).
 
 ## List of problems-solutions
 
-Number of questions solved: 126
+Number of questions solved: 127
 
 | Question | Title | Solutions |
 | ----- | ----- | ----- |
@@ -143,6 +143,7 @@ Number of questions solved: 126
 | [109570](https://quera.org/problemset/109570/) | اسنپ‌شاپ | [web](https://github.com/HamidMolareza/QueraProblems/blob/master/Solutions/109570/web) |
 | [110014](https://quera.org/problemset/110014/) | هندزفری‌ها | [csharp](https://github.com/HamidMolareza/QueraProblems/blob/master/Solutions/110014/csharp) |
 | [110015](https://quera.org/problemset/110015/) | نمایشگاه مجازی | [csharp](https://github.com/HamidMolareza/QueraProblems/blob/master/Solutions/110015/csharp) |
+| [123801](https://quera.org/problemset/123801/) | اتاق فرار | [csharp](https://github.com/HamidMolareza/QueraProblems/blob/master/Solutions/123801/csharp) |
 | [127289](https://quera.org/problemset/127289/) | تکرار کدکاپی | [csharp](https://github.com/HamidMolareza/QueraProblems/blob/master/Solutions/127289/csharp) |
 | [141570](https://quera.org/problemset/141570/) | سیبل تیراندازی | [csharp](https://github.com/HamidMolareza/QueraProblems/blob/master/Solutions/141570/csharp) |
 | [145008](https://quera.org/problemset/145008/) | قاشق و چنگال | [csharp](https://github.com/HamidMolareza/QueraProblems/blob/master/Solutions/145008/csharp) |
