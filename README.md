@@ -21,10 +21,11 @@ can [send your solution](#contributing) (in any language).
 
 ## List of problems-solutions
 
-Number of questions solved: 127
+Number of questions solved: 128
 
 | Question | Title | Solutions | Last commit |
 | ----- | ----- | ----- | ----- |
+| [2887](https://quera.org/problemset/2887/) | سطح اعتیاد | [csharp](https://github.com/HamidMolareza/QueraProblems/blob/master/Solutions/2887/csharp) | 11-09-2022 |
 | [123801](https://quera.org/problemset/123801/) | اتاق فرار | [csharp](https://github.com/HamidMolareza/QueraProblems/blob/master/Solutions/123801/csharp) | 07-09-2022 |
 | [6581](https://quera.org/problemset/6581/) | صدف فلزی | [csharp](https://github.com/HamidMolareza/QueraProblems/blob/master/Solutions/6581/csharp) | 06-09-2022 |
 | [18850](https://quera.org/problemset/18850/) | جدول‌بازی | [web](https://github.com/HamidMolareza/QueraProblems/blob/master/Solutions/18850/web) | 05-09-2022 |
