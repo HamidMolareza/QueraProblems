@@ -160,8 +160,9 @@ namespace Quera {
                         });
                         var solutionLinks = string.Join(" - ", solutions);
 
+                        var lastCommitFormatted = problem.LastSolutionsCommit.ToString("dd-MM-yyyy");
                         source.AppendLine(
-                            $"| [{problem.QueraId}]({link}) | {title} | {solutionLinks} | {problem.LastSolutionsCommit} |");
+                            $"| [{problem.QueraId}]({link}) | {title} | {solutionLinks} | {lastCommitFormatted} |");
                     }));
 
         private static Task<Result<string>> GetQuestionTitleAsync(string link, int numOfTry,
