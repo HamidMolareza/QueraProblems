@@ -7,7 +7,6 @@ namespace Quera.Models {
 
         public List<Solution> Solutions { get; set; }
 
-        //TODO: https://github.com/HamidMolareza/QueraProblems/issues/8
         public DateTime LastSolutionsCommit { get; set; }
     }
 }

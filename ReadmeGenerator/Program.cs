@@ -63,18 +63,24 @@ namespace Quera {
 
         private static Task<Result<List<Problem>>> GetProblemsAsync() =>
             TryExtensions.Try(() => Directory.GetDirectories(_arguments.SolutionsDirectory), _configs.NumOfTry)
-                .OnSuccess(problemDirs => problemDirs.SelectResultsAsync(GetProblemAsync));
+                .OnSuccess(problemDirs => problemDirs.SelectResultsAsync(GetProblemAsync))
+                .OnSuccess(problems => problems.Where(problem => problem is not null).ToList())!;
 
-        private static Task<Result<Problem>> GetProblemAsync(string problemDir) =>
+        private static Task<Result<Problem?>> GetProblemAsync(string problemDir) =>
             TryExtensions.Try(() => Directory.GetDirectories(problemDir), _configs.NumOfTry)
                 .OnSuccessFailWhen(solutionsDir => !solutionsDir.Any(),
                     new ProblemDirectoryIsEmptyError(title: "ProblemDir is not valid",
                         message: "There is no solution in the problem folder."))
                 .OnSuccess(GetSolutionsAsync)
-                .OnSuccess(solutions => new Problem {
-                    QueraId = new FileInfo(problemDir).Name.ConvertTo<string, long>(),
-                    Solutions = solutions,
-                    LastSolutionsCommit = solutions.GetLastCommitDateTime()
+                .OnSuccess(solutions => {
+                    if (!solutions.Any())
+                        return null;
+
+                    return new Problem {
+                        QueraId = new FileInfo(problemDir).Name.ConvertTo<string, long>(),
+                        Solutions = solutions,
+                        LastSolutionsCommit = solutions.GetLastCommitDateTime()
+                    };
                 }).OnFail(new {problemDir});
 
         private static Task<Result<List<Solution>>> GetSolutionsAsync(string[] languageDirs) =>
@@ -83,8 +89,15 @@ namespace Quera {
                     .OnSuccess(lastCommitDate => new Solution {
                         LanguageName = new FileInfo(languageDir).Name,
                         LastCommitDate = lastCommitDate
+                    }).OnFail(e => {
+                        Console.WriteLine($"Warning! Error while get last commit of {languageDir}");
+                        Console.WriteLine($"More Data: {e.Detail.GetHeaderOfError()}");
+                        Console.WriteLine("We skipped this error.\n");
+                        return Result<Solution>.Ok(new Solution());
                     })
-            );
+            ).OnSuccess(solutions =>
+                solutions.Where(solution => !string.IsNullOrEmpty(solution.LanguageName))
+                    .ToList());
 
         private static DateTime GetLastCommitDateTime(this IEnumerable<Solution> solutions) =>
             solutions.Select(solution => solution.LastCommitDate)
@@ -107,10 +120,14 @@ namespace Quera {
             if (numOfQuestionsSolved != numOfSolutions)
                 result.AppendLine($"Number of solutions: {numOfSolutions}\n");
 
-            result.AppendLine("| Question | Title | Solutions |")
-                .AppendLine("| ----- | ----- | ----- |");
+            result.AppendLine("| Question | Title | Solutions | Last commit |")
+                .AppendLine("| ----- | ----- | ----- | ----- |");
 
-            foreach (var problem in problemsList.OrderBy(problem => problem.QueraId)) {
+            problemsList = problemsList.OrderByDescending(problem => problem.LastSolutionsCommit)
+                .ThenBy(problem => problem.QueraId)
+                .ToList();
+
+            foreach (var problem in problemsList) {
                 Console.Write($"Processing problem {problem.QueraId}... ");
 
                 await result.AppendProblemData(problem)
@@ -144,7 +161,7 @@ namespace Quera {
                         var solutionLinks = string.Join(" - ", solutions);
 
                         source.AppendLine(
-                            $"| [{problem.QueraId}]({link}) | {title} | {solutionLinks} |");
+                            $"| [{problem.QueraId}]({link}) | {title} | {solutionLinks} | {problem.LastSolutionsCommit} |");
                     }));
 
         private static Task<Result<string>> GetQuestionTitleAsync(string link, int numOfTry,

@@ -20,18 +20,6 @@ jobs:
         with:
           ref: master
           fetch-depth: 0
-          
-      - name: git log
-        run: |
-          git log -1 --date=iso Solutions/3431
-          git log -1 --date=iso Solutions/66861
-          
-      - name: git log with fetch
-        run: |
-          git fetch --all
-          git pull --all
-          git log -1 --date=iso Solutions/3431
-          git log -1 --date=iso Solutions/66861
 
       - name: Build
         run: dotnet build ReadmeGenerator/Quera.csproj
