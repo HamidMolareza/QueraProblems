@@ -9,7 +9,9 @@ namespace Quera {
         private static List<T> GetInputs<T>(int count) {
             var result = new List<T>(count);
             for (var i = 0; i < count; i++) {
-                result.Add((T) Convert.ChangeType(Console.ReadLine(), typeof(T)));
+                var item = Convert.ChangeType(Console.ReadLine(), typeof(T)) ?? throw new ArgumentException(
+                    $"Can not convert the input of the {i + 1}th line to the requested type ({typeof(T)}).");
+                result.Add((T) item);
             }
 
             return result;
@@ -19,7 +21,8 @@ namespace Quera {
             Console.ReadLine()
                 ?.Trim()
                 .Split(separator)
-                .Select(item => (T) Convert.ChangeType(item, typeof(T))).ToList();
+                .Select(item => (T) Convert.ChangeType(item, typeof(T))).ToList()
+            ?? new List<T>();
 
         private static void PrintLine<T>(this T source) => Console.WriteLine(source);
 
