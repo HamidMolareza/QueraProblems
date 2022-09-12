@@ -19,6 +19,9 @@ All the solutions that are here, get full score (100) in Quera. But that does no
 In [this section](#list-of-problems-solutions) you can see the solutions, And if you want, you
 can [send your solution](#contributing) (in any language).
 
+Are you interested in **[LeetCode](leetcode.com)** site problems?
+See [this repository](https://github.com/HamidMolareza/LeetCode)
+
 ## List of problems-solutions
 
 {__REPLACE_FROM_PROGRAM_0__}
