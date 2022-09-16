@@ -24,12 +24,14 @@ See [this repository](https://github.com/HamidMolareza/LeetCode)
 
 ## List of problems-solutions
 
-Number of questions solved: 130
+Number of questions solved: 132
 
-Number of solutions: 131
+Number of solutions: 133
 
 | Question | Title | Solutions | Last commit |
 | ----- | ----- | ----- | ----- |
+| [2636](https://quera.org/problemset/2636/) | شطرنج حرفه‌ای | [python3](https://github.com/HamidMolareza/QueraProblems/blob/master/Solutions/2636/python3) | 16-09-2022 |
+| [17244](https://quera.org/problemset/17244/) | شارژ موبایل | [python3](https://github.com/HamidMolareza/QueraProblems/blob/master/Solutions/17244/python3) | 16-09-2022 |
 | [87176](https://quera.org/problemset/87176/) | بازی تفاضل | [python3](https://github.com/HamidMolareza/QueraProblems/blob/master/Solutions/87176/python3) | 16-09-2022 |
 | [72878](https://quera.org/problemset/72878/) | الاغ گاونما | [csharp](https://github.com/HamidMolareza/QueraProblems/blob/master/Solutions/72878/csharp) - [python3](https://github.com/HamidMolareza/QueraProblems/blob/master/Solutions/72878/python3) | 16-09-2022 |
 | [2887](https://quera.org/problemset/2887/) | سطح اعتیاد | [csharp](https://github.com/HamidMolareza/QueraProblems/blob/master/Solutions/2887/csharp) | 11-09-2022 |
