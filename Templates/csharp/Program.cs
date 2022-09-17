@@ -33,4 +33,8 @@ namespace Quera {
             Func<TSource, TResult> func
         ) => Console.WriteLine(func(source));
     }
+    
+    public static class Solution {
+        //TODO: Complete this section
+    }
 }
