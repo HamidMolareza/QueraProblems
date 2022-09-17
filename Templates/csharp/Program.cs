@@ -4,7 +4,9 @@ using System.Linq;
 
 namespace Quera {
     public static class Program {
-        public static void Main() { }
+        public static void Main() {
+            //TODO: Use Solution class
+        }
 
         private static List<T> GetInputs<T>(int count) {
             var result = new List<T>(count);

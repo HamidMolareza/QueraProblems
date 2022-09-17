@@ -6,7 +6,7 @@ This solution has scored 100 in [Quera](https://quera.org/).
 
 ## Built With
 
-C# .NET 5
+C# .NET 6
 
 # Usage
 
