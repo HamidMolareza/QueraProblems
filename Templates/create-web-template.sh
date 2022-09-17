@@ -19,72 +19,108 @@ create_dir_if_is_not_exist() {
     mkdir "$1"
   fi
 }
+
+ensure_quera_id_is_valid() {
+  quera_id="$1"
+  
+  printf "Validating Quera Id... "
+  status_code=$(curl -s -o /dev/null -w "%{http_code}" https://quera.org/problemset/"$quera_id"/)
+  if [ "$status_code" != "200" ]; then
+    echo "Error! It seems that the ID is not valid. (Id: $quera_id, status code: $status_code)"
+    exit 1
+  fi
+  echo "done."
+}
+
+ensure_ide_is_valid() {
+  ide="$1"
+  if ! command -v "$ide" &>/dev/null; then
+    echo "the ide command could not be found. (Ide: $ide)"
+    exit 1
+  fi
+}
 #===========================================================
 # Get Inputs
-queraId="$1"
-if [ -z "$queraId" ]; then
+quera_id="$1"
+if [ -z "$quera_id" ]; then
   printf "Quera Id: "
-  read -r queraId
+  read -r quera_id
 fi
 
-solutionsDir="$2"
-if [ -z "$solutionsDir" ]; then
-  solutionsDir="../Solutions"
-  if [ ! -d "$solutionsDir" ]; then
-    printf "Solutions directory: "
-    read -r solutionsDir
-  fi
-fi
-if [ ! -d "$solutionsDir" ]; then
-  echo "Error! Can not find solutions dir in $solutionsDir"
-  exit 1
-fi
-
-webTemplateDir="$3"
-if [ -z "$webTemplateDir" ]; then
-  webTemplateDir="web"
-  if [ ! -d "$webTemplateDir" ]; then
+web_template_dir="$2"
+if [ -z "$web_template_dir" ]; then
+  web_template_dir="web"
+  if [ ! -d "$web_template_dir" ]; then
     printf "web template directory: "
-    read -r webTemplateDir
+    read -r web_template_dir
   fi
 fi
-if [ ! -d "$webTemplateDir" ]; then
-  echo "Error! Can not find web template dir in $webTemplateDir"
+if [ ! -d "$web_template_dir" ]; then
+  echo "Error! Can not find web template dir in $web_template_dir"
   exit 1
 fi
 
-downloadLink="$4"
-if [ -z "$downloadLink" ]; then
+download_link="$3"
+if [ -z "$download_link" ]; then
   printf "Download link for base project (Optional): "
-  read -r downloadLink
+  read -r download_link
+fi
+
+ide="$4"
+if [ -z "$ide" ]; then
+  printf "Ide (like code, rider, etc): "
+  read -r ide
+fi
+ensure_ide_is_valid "$ide"
+
+solutions_dir="$5"
+if [ -z "$solutions_dir" ]; then
+  solutions_dir="../Solutions"
+  if [ ! -d "$solutions_dir" ]; then
+    printf "Solutions directory: "
+    read -r solutions_dir
+  fi
+fi
+if [ ! -d "$solutions_dir" ]; then
+  echo "Error! Can not find solutions dir in $solutions_dir"
+  exit 1
 fi
 #===========================================================
 
 #checkout
-git checkout -b "$queraId"
-exit_if_operation_failed "$?" "Can not checkout to $queraId"
+git checkout -b "$quera_id"
+exit_if_operation_failed "$?" "Can not checkout to $quera_id"
 
 #create solution dir
-create_dir_if_is_not_exist "$solutionsDir/$queraId"
+create_dir_if_is_not_exist "$solutions_dir/$quera_id"
 
 #copy template to solution dir
-resultDir="$solutionsDir/$queraId"
-cp -r "$webTemplateDir" "$resultDir"
-exit_if_operation_failed "$?" "Can not copy template from $webTemplateDir to $resultDir"
+result_dir="$solutions_dir/$quera_id"
+cp -r "$web_template_dir" "$result_dir"
+exit_if_operation_failed "$?" "Can not copy template from $web_template_dir to $result_dir"
 wait
 
 #download template from link
-if [ -z "$downloadLink" ]; then
+if [ -z "$download_link" ]; then
   echo "The download link is not given, so skip download step."
 else
-  projectFile="$resultDir/project.zip"
+  projectFile="$result_dir/project.zip"
   if [ -f "$projectFile" ]; then
     echo "The project file already exists."
   else
-    curl --silent --output "$projectFile" "$downloadLink"
-    warning_if_operation_failed "$?" "Can not download project from '$downloadLink' to '$projectFile'"
+    curl --silent --output "$projectFile" "$download_link"
+    warning_if_operation_failed "$?" "Can not download project from '$download_link' to '$projectFile'"
     wait
   fi
 fi
 
-echo "Directory is ready: $resultDir"
+echo "Directory is ready: $result_dir"
+$ide "$result_dir" >/dev/null
+warning_if_operation_failed "$?" "Can not open your ide for $result_dir"
+
+echo ""
+printf "Do you want merge this branch to master branch?(y/N) "
+read -r merge_confirm
+if [ "$merge_confirm" = 'y' ] || [ "$merge_confirm" = 'Y' ]; then
+  ./merge-into-master-branch.sh "$quera_id" "y"
+fi
