@@ -24,13 +24,14 @@ See [this repository](https://github.com/HamidMolareza/LeetCode)
 
 ## List of problems-solutions
 
-Number of questions solved: 132
+Number of questions solved: 133
 
-Number of solutions: 134
+Number of solutions: 135
 
 | Question | Title | Solutions | Last commit |
 | ----- | ----- | ----- | ----- |
-| [2637](https://quera.org/problemset/2637/) | جاده کشی | [csharp](https://github.com/HamidMolareza/QueraProblems/blob/master/Solutions/2637/csharp) - [python3](https://github.com/HamidMolareza/QueraProblems/blob/master/Solutions/2637/python3) | 17-09-2022 |
+| [2637](https://quera.org/problemset/2637/) | جاده کشی | [csharp](https://github.com/HamidMolareza/QueraProblems/blob/master/Solutions/2637/csharp) - [python3](https://github.com/HamidMolareza/QueraProblems/blob/master/Solutions/2637/python3) | 18-09-2022 |
+| [3403](https://quera.org/problemset/3403/) | ساده تر | [python3](https://github.com/HamidMolareza/QueraProblems/blob/master/Solutions/3403/python3) | 17-09-2022 |
 | [2636](https://quera.org/problemset/2636/) | شطرنج حرفه‌ای | [python3](https://github.com/HamidMolareza/QueraProblems/blob/master/Solutions/2636/python3) | 16-09-2022 |
 | [17244](https://quera.org/problemset/17244/) | شارژ موبایل | [python3](https://github.com/HamidMolareza/QueraProblems/blob/master/Solutions/17244/python3) | 16-09-2022 |
 | [87176](https://quera.org/problemset/87176/) | بازی تفاضل | [python3](https://github.com/HamidMolareza/QueraProblems/blob/master/Solutions/87176/python3) | 16-09-2022 |
