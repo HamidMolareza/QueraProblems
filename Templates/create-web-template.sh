@@ -46,6 +46,7 @@ if [ -z "$quera_id" ]; then
   printf "Quera Id: "
   read -r quera_id
 fi
+ensure_quera_id_is_valid "$quera_id"
 
 web_template_dir="$2"
 if [ -z "$web_template_dir" ]; then
