@@ -24,12 +24,13 @@ See [this repository](https://github.com/HamidMolareza/LeetCode)
 
 ## List of problems-solutions
 
-Number of questions solved: 134
+Number of questions solved: 135
 
-Number of solutions: 137
+Number of solutions: 138
 
 | Question | Title | Solutions | Last commit |
 | ----- | ----- | ----- | ----- |
+| [140035](https://quera.org/problemset/140035/) | زوجیت | [python3](https://github.com/HamidMolareza/QueraProblems/blob/master/Solutions/140035/python3) | 20-09-2022 |
 | [3429](https://quera.org/problemset/3429/) | یخدارچی | [python3](https://github.com/HamidMolareza/QueraProblems/blob/master/Solutions/3429/python3) | 18-09-2022 |
 | [2886](https://quera.org/problemset/2886/) | یک ساعت | [csharp](https://github.com/HamidMolareza/QueraProblems/blob/master/Solutions/2886/csharp) - [python3](https://github.com/HamidMolareza/QueraProblems/blob/master/Solutions/2886/python3) | 18-09-2022 |
 | [2637](https://quera.org/problemset/2637/) | جاده کشی | [csharp](https://github.com/HamidMolareza/QueraProblems/blob/master/Solutions/2637/csharp) - [python3](https://github.com/HamidMolareza/QueraProblems/blob/master/Solutions/2637/python3) | 18-09-2022 |
