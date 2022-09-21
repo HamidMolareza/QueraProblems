@@ -24,12 +24,16 @@ See [this repository](https://github.com/HamidMolareza/LeetCode)
 
 ## List of problems-solutions
 
-Number of questions solved: 135
+Number of questions solved: 137
 
-Number of solutions: 138
+Number of solutions: 142
 
 | Question | Title | Solutions | Last commit |
 | ----- | ----- | ----- | ----- |
+| [3029](https://quera.org/problemset/3029/) | بازگشت از بوستان | [csharp](https://github.com/HamidMolareza/QueraProblems/blob/master/Solutions/3029/csharp) - [python3](https://github.com/HamidMolareza/QueraProblems/blob/master/Solutions/3029/python3) | 21-09-2022 |
+| [3406](https://quera.org/problemset/3406/) | صدگان خسته | [csharp](https://github.com/HamidMolareza/QueraProblems/blob/master/Solutions/3406/csharp) - [python3](https://github.com/HamidMolareza/QueraProblems/blob/master/Solutions/3406/python3) | 21-09-2022 |
+| [20256](https://quera.org/problemset/20256/) | رژیم سخت | [python3](https://github.com/HamidMolareza/QueraProblems/blob/master/Solutions/20256/python3) | 21-09-2022 |
+| [3414](https://quera.org/problemset/3414/) | دو نقطه خط | [python3](https://github.com/HamidMolareza/QueraProblems/blob/master/Solutions/3414/python3) | 21-09-2022 |
 | [140035](https://quera.org/problemset/140035/) | زوجیت | [python3](https://github.com/HamidMolareza/QueraProblems/blob/master/Solutions/140035/python3) | 20-09-2022 |
 | [3429](https://quera.org/problemset/3429/) | یخدارچی | [python3](https://github.com/HamidMolareza/QueraProblems/blob/master/Solutions/3429/python3) | 18-09-2022 |
 | [2886](https://quera.org/problemset/2886/) | یک ساعت | [csharp](https://github.com/HamidMolareza/QueraProblems/blob/master/Solutions/2886/csharp) - [python3](https://github.com/HamidMolareza/QueraProblems/blob/master/Solutions/2886/python3) | 18-09-2022 |
@@ -82,10 +86,8 @@ Number of solutions: 138
 | [2596](https://quera.org/problemset/2596/) | حدس عدد | [csharp](https://github.com/HamidMolareza/QueraProblems/blob/master/Solutions/2596/csharp) | 23-08-2022 |
 | [2705](https://quera.org/problemset/2705/) | بدخواه پویان | [csharp](https://github.com/HamidMolareza/QueraProblems/blob/master/Solutions/2705/csharp) | 23-08-2022 |
 | [2794](https://quera.org/problemset/2794/) | دوربین مداربسته | [csharp](https://github.com/HamidMolareza/QueraProblems/blob/master/Solutions/2794/csharp) | 23-08-2022 |
-| [3029](https://quera.org/problemset/3029/) | بازگشت از بوستان | [csharp](https://github.com/HamidMolareza/QueraProblems/blob/master/Solutions/3029/csharp) | 23-08-2022 |
 | [3107](https://quera.org/problemset/3107/) | تی‌شرت برنده | [csharp](https://github.com/HamidMolareza/QueraProblems/blob/master/Solutions/3107/csharp) | 23-08-2022 |
 | [3109](https://quera.org/problemset/3109/) | سنگ برنده | [csharp](https://github.com/HamidMolareza/QueraProblems/blob/master/Solutions/3109/csharp) | 23-08-2022 |
-| [3406](https://quera.org/problemset/3406/) | صدگان خسته | [csharp](https://github.com/HamidMolareza/QueraProblems/blob/master/Solutions/3406/csharp) | 23-08-2022 |
 | [3407](https://quera.org/problemset/3407/) | بمب بازی | [csharp](https://github.com/HamidMolareza/QueraProblems/blob/master/Solutions/3407/csharp) | 23-08-2022 |
 | [3409](https://quera.org/problemset/3409/) | جدول ضرب گنده | [csharp](https://github.com/HamidMolareza/QueraProblems/blob/master/Solutions/3409/csharp) | 23-08-2022 |
 | [3410](https://quera.org/problemset/3410/) | مثلث خیام پاسکال | [csharp](https://github.com/HamidMolareza/QueraProblems/blob/master/Solutions/3410/csharp) | 23-08-2022 |
