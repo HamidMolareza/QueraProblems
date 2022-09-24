@@ -26,10 +26,12 @@ See [this repository](https://github.com/HamidMolareza/LeetCode)
 
 Number of questions solved: 137
 
-Number of solutions: 145
+Number of solutions: 147
 
 | Question | Title | Solutions | Last commit |
 | ----- | ----- | ----- | ----- |
+| [3409](https://quera.org/problemset/3409/) | جدول ضرب گنده | [csharp](https://github.com/HamidMolareza/QueraProblems/blob/master/Solutions/3409/csharp) - [python3](https://github.com/HamidMolareza/QueraProblems/blob/master/Solutions/3409/python3) | 24-09-2022 |
+| [52542](https://quera.org/problemset/52542/) | کاکتوس‌های پردردسر | [csharp](https://github.com/HamidMolareza/QueraProblems/blob/master/Solutions/52542/csharp) - [python3](https://github.com/HamidMolareza/QueraProblems/blob/master/Solutions/52542/python3) | 24-09-2022 |
 | [589](https://quera.org/problemset/589/) | فاکتوریل | [csharp](https://github.com/HamidMolareza/QueraProblems/blob/master/Solutions/589/csharp) - [python3](https://github.com/HamidMolareza/QueraProblems/blob/master/Solutions/589/python3) | 22-09-2022 |
 | [3537](https://quera.org/problemset/3537/) | سوال زرد | [csharp](https://github.com/HamidMolareza/QueraProblems/blob/master/Solutions/3537/csharp) - [python3](https://github.com/HamidMolareza/QueraProblems/blob/master/Solutions/3537/python3) | 22-09-2022 |
 | [2794](https://quera.org/problemset/2794/) | دوربین مداربسته | [csharp](https://github.com/HamidMolareza/QueraProblems/blob/master/Solutions/2794/csharp) - [python3](https://github.com/HamidMolareza/QueraProblems/blob/master/Solutions/2794/python3) | 22-09-2022 |
@@ -90,7 +92,6 @@ Number of solutions: 145
 | [3107](https://quera.org/problemset/3107/) | تی‌شرت برنده | [csharp](https://github.com/HamidMolareza/QueraProblems/blob/master/Solutions/3107/csharp) | 23-08-2022 |
 | [3109](https://quera.org/problemset/3109/) | سنگ برنده | [csharp](https://github.com/HamidMolareza/QueraProblems/blob/master/Solutions/3109/csharp) | 23-08-2022 |
 | [3407](https://quera.org/problemset/3407/) | بمب بازی | [csharp](https://github.com/HamidMolareza/QueraProblems/blob/master/Solutions/3407/csharp) | 23-08-2022 |
-| [3409](https://quera.org/problemset/3409/) | جدول ضرب گنده | [csharp](https://github.com/HamidMolareza/QueraProblems/blob/master/Solutions/3409/csharp) | 23-08-2022 |
 | [3410](https://quera.org/problemset/3410/) | مثلث خیام پاسکال | [csharp](https://github.com/HamidMolareza/QueraProblems/blob/master/Solutions/3410/csharp) | 23-08-2022 |
 | [3412](https://quera.org/problemset/3412/) | وسط صندلی عقب | [csharp](https://github.com/HamidMolareza/QueraProblems/blob/master/Solutions/3412/csharp) | 23-08-2022 |
 | [3415](https://quera.org/problemset/3415/) | بازار موبایل | [csharp](https://github.com/HamidMolareza/QueraProblems/blob/master/Solutions/3415/csharp) | 23-08-2022 |
@@ -138,7 +139,6 @@ Number of solutions: 145
 | [49028](https://quera.org/problemset/49028/) | کلید چراغ | [csharp](https://github.com/HamidMolareza/QueraProblems/blob/master/Solutions/49028/csharp) | 23-08-2022 |
 | [49535](https://quera.org/problemset/49535/) | گزارش کار | [csharp](https://github.com/HamidMolareza/QueraProblems/blob/master/Solutions/49535/csharp) | 23-08-2022 |
 | [51865](https://quera.org/problemset/51865/) | بهداشت و سلامت | [csharp](https://github.com/HamidMolareza/QueraProblems/blob/master/Solutions/51865/csharp) | 23-08-2022 |
-| [52542](https://quera.org/problemset/52542/) | کاکتوس‌های پردردسر | [csharp](https://github.com/HamidMolareza/QueraProblems/blob/master/Solutions/52542/csharp) | 23-08-2022 |
 | [52543](https://quera.org/problemset/52543/) | بازی | [csharp](https://github.com/HamidMolareza/QueraProblems/blob/master/Solutions/52543/csharp) | 23-08-2022 |
 | [52545](https://quera.org/problemset/52545/) | محاسبه | [csharp](https://github.com/HamidMolareza/QueraProblems/blob/master/Solutions/52545/csharp) | 23-08-2022 |
 | [61038](https://quera.org/problemset/61038/) | مدرسه شبانه روزی | [csharp](https://github.com/HamidMolareza/QueraProblems/blob/master/Solutions/61038/csharp) | 23-08-2022 |
