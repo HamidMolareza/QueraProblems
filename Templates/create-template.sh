@@ -22,7 +22,7 @@ create_dir_if_is_not_exist() {
 
 ensure_quera_id_is_valid() {
   quera_id="$1"
-  
+
   printf "Validating Quera Id... "
   status_code=$(curl -s -o /dev/null -w "%{http_code}" https://quera.org/problemset/"$quera_id"/)
   if [ "$status_code" != "200" ]; then
@@ -103,4 +103,11 @@ printf "Do you want merge this branch to master branch?(y/N) "
 read -r merge_confirm
 if [ "$merge_confirm" = 'y' ] || [ "$merge_confirm" = 'Y' ]; then
   ./merge-into-master-branch.sh "$quera_id" "y"
+fi
+
+printf "Do you want push master branch?(y/N) "
+read -r push_confirm
+if [ "$push_confirm" = 'y' ] || [ "$push_confirm" = 'Y' ]; then
+  git pull --rebase
+  git push
 fi
