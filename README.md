@@ -26,10 +26,11 @@ See [this repository](https://github.com/HamidMolareza/LeetCode)
 
 Number of questions solved: 138
 
-Number of solutions: 150
+Number of solutions: 151
 
 | Question | Title | Solutions | Last commit |
 | ----- | ----- | ----- | ----- |
+| [66861](https://quera.org/problemset/66861/) | عدد خوب | [python3](https://github.com/HamidMolareza/QueraProblems/blob/master/Solutions/66861/python3) - [csharp](https://github.com/HamidMolareza/QueraProblems/blob/master/Solutions/66861/csharp) | 27-09-2022 |
 | [293](https://quera.org/problemset/293/) | اعداد اول | [python3](https://github.com/HamidMolareza/QueraProblems/blob/master/Solutions/293/python3) | 26-09-2022 |
 | [15124](https://quera.org/problemset/15124/) | خواب پوپک | [python3](https://github.com/HamidMolareza/QueraProblems/blob/master/Solutions/15124/python3) - [csharp](https://github.com/HamidMolareza/QueraProblems/blob/master/Solutions/15124/csharp) | 26-09-2022 |
 | [3539](https://quera.org/problemset/3539/) | تک‌رقمی | [python3](https://github.com/HamidMolareza/QueraProblems/blob/master/Solutions/3539/python3) - [csharp](https://github.com/HamidMolareza/QueraProblems/blob/master/Solutions/3539/csharp) | 26-09-2022 |
@@ -145,7 +146,6 @@ Number of solutions: 150
 | [61038](https://quera.org/problemset/61038/) | مدرسه شبانه روزی | [csharp](https://github.com/HamidMolareza/QueraProblems/blob/master/Solutions/61038/csharp) | 23-08-2022 |
 | [62451](https://quera.org/problemset/62451/) | در جستجوی ترب | [csharp](https://github.com/HamidMolareza/QueraProblems/blob/master/Solutions/62451/csharp) | 23-08-2022 |
 | [64434](https://quera.org/problemset/64434/) | چاپگر | [csharp](https://github.com/HamidMolareza/QueraProblems/blob/master/Solutions/64434/csharp) | 23-08-2022 |
-| [66861](https://quera.org/problemset/66861/) | عدد خوب | [csharp](https://github.com/HamidMolareza/QueraProblems/blob/master/Solutions/66861/csharp) | 23-08-2022 |
 | [66864](https://quera.org/problemset/66864/) | کلاس کد! | [csharp](https://github.com/HamidMolareza/QueraProblems/blob/master/Solutions/66864/csharp) | 23-08-2022 |
 | [69903](https://quera.org/problemset/69903/) | داستان زندگی من | [csharp](https://github.com/HamidMolareza/QueraProblems/blob/master/Solutions/69903/csharp) | 23-08-2022 |
 | [72875](https://quera.org/problemset/72875/) | جوج | [csharp](https://github.com/HamidMolareza/QueraProblems/blob/master/Solutions/72875/csharp) | 23-08-2022 |
