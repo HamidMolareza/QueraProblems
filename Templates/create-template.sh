@@ -20,14 +20,14 @@ create_dir_if_is_not_exist() {
   fi
 }
 
-ensure_quera_id_is_valid() {
+validate_quera_id() {
   quera_id="$1"
 
   printf "Validating Quera Id... "
-  status_code=$(curl -s -o /dev/null -w "%{http_code}" https://quera.org/problemset/"$quera_id"/)
+  status_code=$(curl -s -o /dev/null -w "%{http_code}" --max-time 10 https://quera.org/problemset/"$quera_id"/)
   if [ "$status_code" != "200" ]; then
     echo "Error! It seems that the ID is not valid. (Id: $quera_id, status code: $status_code)"
-    exit 1
+    return 1
   fi
   echo "done."
 }
@@ -46,7 +46,14 @@ if [ -z "$quera_id" ]; then
   printf "Quera Id: "
   read -r quera_id
 fi
-ensure_quera_id_is_valid "$quera_id"
+validate_quera_id "$quera_id"
+if [ "$?" != 0 ]; then
+  printf "Do you want to ignore this error?(Y/n) "
+  read -r ignore_error
+  if [ "$ignore_error" = 'n' ] || [ "$ignore_error" = 'N' ]; then
+    exit 0
+  fi
+fi
 
 template_dir="$2"
 if [ -z "$template_dir" ]; then
