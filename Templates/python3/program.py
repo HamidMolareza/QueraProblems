@@ -11,3 +11,6 @@ def get_inputs(num_of_lines: int) -> List[str]:
 # Sample
 num_of_inputs = 4
 inputs = list(map(float, get_inputs(num_of_inputs)))
+
+# Sample
+inputs = [int(x) for x in input().split()]
