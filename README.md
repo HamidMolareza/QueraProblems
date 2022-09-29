@@ -24,12 +24,14 @@ See [this repository](https://github.com/HamidMolareza/LeetCode)
 
 ## List of problems-solutions
 
-Number of questions solved: 138
+Number of questions solved: 140
 
-Number of solutions: 151
+Number of solutions: 153
 
 | Question | Title | Solutions | Last commit |
 | ----- | ----- | ----- | ----- |
+| [3405](https://quera.org/problemset/3405/) | چاپ برعکس | [python3](https://github.com/HamidMolareza/QueraProblems/blob/master/Solutions/3405/python3) | 29-09-2022 |
+| [2659](https://quera.org/problemset/2659/) | تست بینایی | [python3](https://github.com/HamidMolareza/QueraProblems/blob/master/Solutions/2659/python3) | 29-09-2022 |
 | [66861](https://quera.org/problemset/66861/) | عدد خوب | [python3](https://github.com/HamidMolareza/QueraProblems/blob/master/Solutions/66861/python3) - [csharp](https://github.com/HamidMolareza/QueraProblems/blob/master/Solutions/66861/csharp) | 27-09-2022 |
 | [293](https://quera.org/problemset/293/) | اعداد اول | [python3](https://github.com/HamidMolareza/QueraProblems/blob/master/Solutions/293/python3) | 26-09-2022 |
 | [15124](https://quera.org/problemset/15124/) | خواب پوپک | [python3](https://github.com/HamidMolareza/QueraProblems/blob/master/Solutions/15124/python3) - [csharp](https://github.com/HamidMolareza/QueraProblems/blob/master/Solutions/15124/csharp) | 26-09-2022 |
