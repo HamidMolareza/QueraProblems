@@ -39,6 +39,16 @@ ensure_ide_is_valid() {
     exit 1
   fi
 }
+
+question_ignore_error() {
+  if [ "$?" != 0 ]; then
+    printf "Do you want to ignore this error?(Y/n) "
+    read -r ignore_error
+    if [ "$ignore_error" = 'n' ] || [ "$ignore_error" = 'N' ]; then
+      exit 0
+    fi
+  fi
+}
 #===========================================================
 # Get Inputs
 quera_id="$1"
@@ -47,13 +57,7 @@ if [ -z "$quera_id" ]; then
   read -r quera_id
 fi
 validate_quera_id "$quera_id"
-if [ "$?" != 0 ]; then
-  printf "Do you want to ignore this error?(Y/n) "
-  read -r ignore_error
-  if [ "$ignore_error" = 'n' ] || [ "$ignore_error" = 'N' ]; then
-    exit 0
-  fi
-fi
+question_ignore_error
 
 template_dir="$2"
 if [ -z "$template_dir" ]; then

@@ -22,7 +22,7 @@ create_dir_if_is_not_exist() {
 
 ensure_quera_id_is_valid() {
   quera_id="$1"
-  
+
   printf "Validating Quera Id... "
   status_code=$(curl -s -o /dev/null -w "%{http_code}" https://quera.org/problemset/"$quera_id"/)
   if [ "$status_code" != "200" ]; then
@@ -39,6 +39,16 @@ ensure_ide_is_valid() {
     exit 1
   fi
 }
+
+question_ignore_error() {
+  if [ "$?" != 0 ]; then
+    printf "Do you want to ignore this error?(Y/n) "
+    read -r ignore_error
+    if [ "$ignore_error" = 'n' ] || [ "$ignore_error" = 'N' ]; then
+      exit 0
+    fi
+  fi
+}
 #===========================================================
 # Get Inputs
 quera_id="$1"
@@ -47,6 +57,7 @@ if [ -z "$quera_id" ]; then
   read -r quera_id
 fi
 ensure_quera_id_is_valid "$quera_id"
+question_ignore_error
 
 web_template_dir="$2"
 if [ -z "$web_template_dir" ]; then
@@ -61,18 +72,18 @@ if [ ! -d "$web_template_dir" ]; then
   exit 1
 fi
 
-download_link="$3"
-if [ -z "$download_link" ]; then
-  printf "Download link for base project (Optional): "
-  read -r download_link
-fi
-
-ide="$4"
+ide="$3"
 if [ -z "$ide" ]; then
   printf "Ide (like code, rider, etc): "
   read -r ide
 fi
 ensure_ide_is_valid "$ide"
+
+download_link="$4"
+if [ -z "$download_link" ]; then
+  printf "Download link for base project (Optional): "
+  read -r download_link
+fi
 
 solutions_dir="$5"
 if [ -z "$solutions_dir" ]; then
