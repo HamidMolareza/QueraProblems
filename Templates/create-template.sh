@@ -128,7 +128,8 @@ if [ -f "$output_file" ]; then
   if [ "$file_type" == "application/zip" ]; then
     echo "Unzip..."
     template_dir_name=$(basename "$template_dir")
-    unzip "$output_file" -d "$target_solution_dir/$template_dir_name"
+    output_file_name=$(basename "$output_file")
+    unzip "$output_file" -d "$target_solution_dir/$template_dir_name/$output_file_name"
   fi
 fi
 
