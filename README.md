@@ -26,10 +26,11 @@ See [this repository](https://github.com/HamidMolareza/LeetCode)
 
 Number of questions solved: 141
 
-Number of solutions: 157
+Number of solutions: 158
 
 | Question | Title | Solutions | Last commit |
 | ----- | ----- | ----- | ----- |
+| [9110](https://quera.org/problemset/9110/) | مجید، میلاد، رشته‌سازی | [python3](https://github.com/HamidMolareza/QueraProblems/blob/master/Solutions/9110/python3) - [csharp](https://github.com/HamidMolareza/QueraProblems/blob/master/Solutions/9110/csharp) | 08-10-2022 |
 | [2529](https://quera.org/problemset/2529/) | اسم‌ها | [python3](https://github.com/HamidMolareza/QueraProblems/blob/master/Solutions/2529/python3) - [csharp](https://github.com/HamidMolareza/QueraProblems/blob/master/Solutions/2529/csharp) | 08-10-2022 |
 | [6082](https://quera.org/problemset/6082/) | آسمان شکر آباد | [python3](https://github.com/HamidMolareza/QueraProblems/blob/master/Solutions/6082/python3) | 08-10-2022 |
 | [9109](https://quera.org/problemset/9109/) | مجید و ماژیک‌هاش | [python3](https://github.com/HamidMolareza/QueraProblems/blob/master/Solutions/9109/python3) - [csharp](https://github.com/HamidMolareza/QueraProblems/blob/master/Solutions/9109/csharp) | 07-10-2022 |
@@ -118,7 +119,6 @@ Number of solutions: 157
 | [7609](https://quera.org/problemset/7609/) | نامه‌ی بد | [csharp](https://github.com/HamidMolareza/QueraProblems/blob/master/Solutions/7609/csharp) | 23-08-2022 |
 | [7998](https://quera.org/problemset/7998/) | صفحه‌کلید انتخاباتی | [csharp](https://github.com/HamidMolareza/QueraProblems/blob/master/Solutions/7998/csharp) | 23-08-2022 |
 | [8901](https://quera.org/problemset/8901/) | لیوان بازی | [csharp](https://github.com/HamidMolareza/QueraProblems/blob/master/Solutions/8901/csharp) | 23-08-2022 |
-| [9110](https://quera.org/problemset/9110/) | مجید، میلاد، رشته‌سازی | [csharp](https://github.com/HamidMolareza/QueraProblems/blob/master/Solutions/9110/csharp) | 23-08-2022 |
 | [9773](https://quera.org/problemset/9773/) | لوزی‌های ستاره‌ای | [csharp](https://github.com/HamidMolareza/QueraProblems/blob/master/Solutions/9773/csharp) | 23-08-2022 |
 | [10163](https://quera.org/problemset/10163/) | تیم ملی نخودخوری در برره | [csharp](https://github.com/HamidMolareza/QueraProblems/blob/master/Solutions/10163/csharp) | 23-08-2022 |
 | [10166](https://quera.org/problemset/10166/) | سیکل گرفتن در برره | [csharp](https://github.com/HamidMolareza/QueraProblems/blob/master/Solutions/10166/csharp) | 23-08-2022 |
