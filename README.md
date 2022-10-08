@@ -26,10 +26,11 @@ See [this repository](https://github.com/HamidMolareza/LeetCode)
 
 Number of questions solved: 141
 
-Number of solutions: 156
+Number of solutions: 157
 
 | Question | Title | Solutions | Last commit |
 | ----- | ----- | ----- | ----- |
+| [2529](https://quera.org/problemset/2529/) | اسم‌ها | [python3](https://github.com/HamidMolareza/QueraProblems/blob/master/Solutions/2529/python3) - [csharp](https://github.com/HamidMolareza/QueraProblems/blob/master/Solutions/2529/csharp) | 08-10-2022 |
 | [6082](https://quera.org/problemset/6082/) | آسمان شکر آباد | [python3](https://github.com/HamidMolareza/QueraProblems/blob/master/Solutions/6082/python3) | 08-10-2022 |
 | [9109](https://quera.org/problemset/9109/) | مجید و ماژیک‌هاش | [python3](https://github.com/HamidMolareza/QueraProblems/blob/master/Solutions/9109/python3) - [csharp](https://github.com/HamidMolareza/QueraProblems/blob/master/Solutions/9109/csharp) | 07-10-2022 |
 | [8938](https://quera.org/problemset/8938/) | اسنپ در شکرستان | [python3](https://github.com/HamidMolareza/QueraProblems/blob/master/Solutions/8938/python3) - [csharp](https://github.com/HamidMolareza/QueraProblems/blob/master/Solutions/8938/csharp) | 05-10-2022 |
@@ -92,7 +93,6 @@ Number of solutions: 156
 | [651](https://quera.org/problemset/651/) | مبنای آینه‌ای | [csharp](https://github.com/HamidMolareza/QueraProblems/blob/master/Solutions/651/csharp) | 23-08-2022 |
 | [655](https://quera.org/problemset/655/) | فرزاد فیلم‌بین | [csharp](https://github.com/HamidMolareza/QueraProblems/blob/master/Solutions/655/csharp) | 23-08-2022 |
 | [658](https://quera.org/problemset/658/) | فرزاد کارکن | [csharp](https://github.com/HamidMolareza/QueraProblems/blob/master/Solutions/658/csharp) | 23-08-2022 |
-| [2529](https://quera.org/problemset/2529/) | اسم‌ها | [csharp](https://github.com/HamidMolareza/QueraProblems/blob/master/Solutions/2529/csharp) | 23-08-2022 |
 | [2530](https://quera.org/problemset/2530/) | لکنت | [csharp](https://github.com/HamidMolareza/QueraProblems/blob/master/Solutions/2530/csharp) | 23-08-2022 |
 | [2534](https://quera.org/problemset/2534/) | چیدمان | [csharp](https://github.com/HamidMolareza/QueraProblems/blob/master/Solutions/2534/csharp) | 23-08-2022 |
 | [2551](https://quera.org/problemset/2551/) | جمع بزرگان | [csharp](https://github.com/HamidMolareza/QueraProblems/blob/master/Solutions/2551/csharp) | 23-08-2022 |
