@@ -50,6 +50,15 @@ question_ignore_error() {
   fi
 }
 #===========================================================
+# Base validations
+script_files=("merge-into-master-branch.sh" "download.py")
+for file in "${script_files[@]}"; do
+  if [ ! -f "$file" ]; then
+    echo "Can not find $file"
+    exit 1
+  fi
+done
+
 # Get Inputs
 quera_id="$1"
 if [ -z "$quera_id" ]; then
@@ -103,6 +112,12 @@ create_dir_if_is_not_exist "$solutions_dir/$quera_id"
 result_dir="$solutions_dir/$quera_id"
 cp -r "$template_dir" "$result_dir"
 exit_if_operation_failed "$?" "Can not copy template from $template_dir to $result_dir"
+wait
+
+printf "Download link for base project (Optional): "
+read -r download_link
+output_file=$(python3 download.py "$download_link" "$result_dir")
+warning_if_operation_failed "$?" "Can not download project from '$download_link' to '$result_dir' \nMoreDetail: $output_file"
 wait
 
 echo "Directory is ready: $result_dir"
