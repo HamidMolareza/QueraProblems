@@ -109,20 +109,32 @@ exit_if_operation_failed "$?" "Can not checkout to $quera_id"
 create_dir_if_is_not_exist "$solutions_dir/$quera_id"
 
 #copy template to solution dir
-result_dir="$solutions_dir/$quera_id"
-cp -r "$template_dir" "$result_dir"
-exit_if_operation_failed "$?" "Can not copy template from $template_dir to $result_dir"
+target_solution_dir="$solutions_dir/$quera_id"
+cp -r "$template_dir" "$target_solution_dir"
+exit_if_operation_failed "$?" "Can not copy template from $template_dir to $target_solution_dir"
 wait
 
+# Download base project
 printf "Download link for base project (Optional): "
 read -r download_link
-output_file=$(python3 download.py "$download_link" "$result_dir")
-warning_if_operation_failed "$?" "Can not download project from '$download_link' to '$result_dir' \nMoreDetail: $output_file"
+echo "Downloading..."
+output_file=$(python3 download.py "$download_link" "$target_solution_dir")
+warning_if_operation_failed "$?" "Can not download project from '$download_link' to '$target_solution_dir' \nMoreDetail: $output_file"
 wait
 
-echo "Directory is ready: $result_dir"
-$ide "$result_dir" >/dev/null
-warning_if_operation_failed "$?" "Can not open your ide for $result_dir"
+#Unzip base project
+if [ -f "$output_file" ]; then
+  file_type=$(file --mime-type --brief "$output_file")
+  if [ "$file_type" == "application/zip" ]; then
+    echo "Unzip..."
+    template_dir_name=$(basename "$template_dir")
+    unzip "$output_file" -d "$target_solution_dir/$template_dir_name"
+  fi
+fi
+
+echo "Directory is ready: $target_solution_dir"
+$ide "$target_solution_dir" >/dev/null
+warning_if_operation_failed "$?" "Can not open your ide for $target_solution_dir"
 
 echo ""
 printf "Do you want merge this branch to master branch?(y/N) "
