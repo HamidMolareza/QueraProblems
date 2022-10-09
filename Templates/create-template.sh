@@ -117,10 +117,12 @@ wait
 # Download base project
 printf "Download link for base project (Optional): "
 read -r download_link
-echo "Downloading..."
-output_file=$(python3 download.py "$download_link" "$target_solution_dir")
-warning_if_operation_failed "$?" "Can not download project from '$download_link' to '$target_solution_dir' \nMoreDetail: $output_file"
-wait
+if [ -n "$download_link" ]; then # -n  =  !-z
+  echo "Downloading..."
+  output_file=$(python3 download.py "$download_link" "$target_solution_dir")
+  warning_if_operation_failed "$?" "Can not download project from '$download_link' to '$target_solution_dir' \nMoreDetail: $output_file"
+  wait
+fi
 
 #Unzip base project
 if [ -f "$output_file" ]; then
