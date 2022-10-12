@@ -26,10 +26,11 @@ See [this repository](https://github.com/HamidMolareza/LeetCode)
 
 Number of questions solved: 144
 
-Number of solutions: 163
+Number of solutions: 164
 
 | Question | Title | Solutions | Last commit |
 | ----- | ----- | ----- | ----- |
+| [18310](https://quera.org/problemset/18310/) | Joos | [python3](https://github.com/HamidMolareza/QueraProblems/blob/master/Solutions/18310/python3) - [csharp](https://github.com/HamidMolareza/QueraProblems/blob/master/Solutions/18310/csharp) | 13-10-2022 |
 | [3540](https://quera.org/problemset/3540/) | گردو شکستم | [python3](https://github.com/HamidMolareza/QueraProblems/blob/master/Solutions/3540/python3) - [csharp](https://github.com/HamidMolareza/QueraProblems/blob/master/Solutions/3540/csharp) | 13-10-2022 |
 | [3431](https://quera.org/problemset/3431/) | اوقات فراغت | [python3](https://github.com/HamidMolareza/QueraProblems/blob/master/Solutions/3431/python3) - [csharp](https://github.com/HamidMolareza/QueraProblems/blob/master/Solutions/3431/csharp) | 12-10-2022 |
 | [49606](https://quera.org/problemset/49606/) | Background Color Switch | [web](https://github.com/HamidMolareza/QueraProblems/blob/master/Solutions/49606/web) | 10-10-2022 |
@@ -69,7 +70,6 @@ Number of solutions: 163
 | [6581](https://quera.org/problemset/6581/) | صدف فلزی | [csharp](https://github.com/HamidMolareza/QueraProblems/blob/master/Solutions/6581/csharp) | 06-09-2022 |
 | [18850](https://quera.org/problemset/18850/) | جدول‌بازی | [web](https://github.com/HamidMolareza/QueraProblems/blob/master/Solutions/18850/web) | 05-09-2022 |
 | [33043](https://quera.org/problemset/33043/) | صفحه‌ی پاسخگو | [web](https://github.com/HamidMolareza/QueraProblems/blob/master/Solutions/33043/web) | 05-09-2022 |
-| [18310](https://quera.org/problemset/18310/) | Joos | [csharp](https://github.com/HamidMolareza/QueraProblems/blob/master/Solutions/18310/csharp) | 05-09-2022 |
 | [109570](https://quera.org/problemset/109570/) | اسنپ‌شاپ | [web](https://github.com/HamidMolareza/QueraProblems/blob/master/Solutions/109570/web) | 01-09-2022 |
 | [141570](https://quera.org/problemset/141570/) | سیبل تیراندازی | [csharp](https://github.com/HamidMolareza/QueraProblems/blob/master/Solutions/141570/csharp) | 30-08-2022 |
 | [18212](https://quera.org/problemset/18212/) | ۷ سگمنت | [csharp](https://github.com/HamidMolareza/QueraProblems/blob/master/Solutions/18212/csharp) | 30-08-2022 |
