@@ -24,12 +24,15 @@ See [this repository](https://github.com/HamidMolareza/LeetCode)
 
 ## List of problems-solutions
 
-Number of questions solved: 142
+Number of questions solved: 144
 
-Number of solutions: 159
+Number of solutions: 162
 
 | Question | Title | Solutions | Last commit |
 | ----- | ----- | ----- | ----- |
+| [3431](https://quera.org/problemset/3431/) | اوقات فراغت | [python3](https://github.com/HamidMolareza/QueraProblems/blob/master/Solutions/3431/python3) - [csharp](https://github.com/HamidMolareza/QueraProblems/blob/master/Solutions/3431/csharp) | 12-10-2022 |
+| [49606](https://quera.org/problemset/49606/) | Background Color Switch | [web](https://github.com/HamidMolareza/QueraProblems/blob/master/Solutions/49606/web) | 10-10-2022 |
+| [3404](https://quera.org/problemset/3404/) | تو چقدر اضافه وزن داری؟ | [python3](https://github.com/HamidMolareza/QueraProblems/blob/master/Solutions/3404/python3) | 10-10-2022 |
 | [66543](https://quera.org/problemset/66543/) | انتخاب‌کننده تودرتو | [web](https://github.com/HamidMolareza/QueraProblems/blob/master/Solutions/66543/web) | 08-10-2022 |
 | [9110](https://quera.org/problemset/9110/) | مجید، میلاد، رشته‌سازی | [python3](https://github.com/HamidMolareza/QueraProblems/blob/master/Solutions/9110/python3) - [csharp](https://github.com/HamidMolareza/QueraProblems/blob/master/Solutions/9110/csharp) | 08-10-2022 |
 | [2529](https://quera.org/problemset/2529/) | اسم‌ها | [python3](https://github.com/HamidMolareza/QueraProblems/blob/master/Solutions/2529/python3) - [csharp](https://github.com/HamidMolareza/QueraProblems/blob/master/Solutions/2529/csharp) | 08-10-2022 |
@@ -69,7 +72,6 @@ Number of solutions: 159
 | [109570](https://quera.org/problemset/109570/) | اسنپ‌شاپ | [web](https://github.com/HamidMolareza/QueraProblems/blob/master/Solutions/109570/web) | 01-09-2022 |
 | [141570](https://quera.org/problemset/141570/) | سیبل تیراندازی | [csharp](https://github.com/HamidMolareza/QueraProblems/blob/master/Solutions/141570/csharp) | 30-08-2022 |
 | [18212](https://quera.org/problemset/18212/) | ۷ سگمنت | [csharp](https://github.com/HamidMolareza/QueraProblems/blob/master/Solutions/18212/csharp) | 30-08-2022 |
-| [3431](https://quera.org/problemset/3431/) | اوقات فراغت | [csharp](https://github.com/HamidMolareza/QueraProblems/blob/master/Solutions/3431/csharp) | 27-08-2022 |
 | [297](https://quera.org/problemset/297/) | تابع نمایی | [csharp](https://github.com/HamidMolareza/QueraProblems/blob/master/Solutions/297/csharp) | 27-08-2022 |
 | [34082](https://quera.org/problemset/34082/) | حسنی نگو عکاس بگو | [csharp](https://github.com/HamidMolareza/QueraProblems/blob/master/Solutions/34082/csharp) | 27-08-2022 |
 | [6402](https://quera.org/problemset/6402/) | در بند در ماندم | [csharp](https://github.com/HamidMolareza/QueraProblems/blob/master/Solutions/6402/csharp) | 25-08-2022 |
