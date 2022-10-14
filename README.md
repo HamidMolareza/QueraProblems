@@ -26,10 +26,11 @@ See [this repository](https://github.com/HamidMolareza/LeetCode)
 
 Number of questions solved: 144
 
-Number of solutions: 164
+Number of solutions: 165
 
 | Question | Title | Solutions | Last commit |
 | ----- | ----- | ----- | ----- |
+| [10233](https://quera.org/problemset/10233/) | باقر مخالف است | [python3](https://github.com/HamidMolareza/QueraProblems/blob/master/Solutions/10233/python3) - [csharp](https://github.com/HamidMolareza/QueraProblems/blob/master/Solutions/10233/csharp) | 14-10-2022 |
 | [18310](https://quera.org/problemset/18310/) | Joos | [python3](https://github.com/HamidMolareza/QueraProblems/blob/master/Solutions/18310/python3) - [csharp](https://github.com/HamidMolareza/QueraProblems/blob/master/Solutions/18310/csharp) | 13-10-2022 |
 | [3540](https://quera.org/problemset/3540/) | گردو شکستم | [python3](https://github.com/HamidMolareza/QueraProblems/blob/master/Solutions/3540/python3) - [csharp](https://github.com/HamidMolareza/QueraProblems/blob/master/Solutions/3540/csharp) | 13-10-2022 |
 | [3431](https://quera.org/problemset/3431/) | اوقات فراغت | [python3](https://github.com/HamidMolareza/QueraProblems/blob/master/Solutions/3431/python3) - [csharp](https://github.com/HamidMolareza/QueraProblems/blob/master/Solutions/3431/csharp) | 12-10-2022 |
@@ -127,7 +128,6 @@ Number of solutions: 164
 | [10166](https://quera.org/problemset/10166/) | سیکل گرفتن در برره | [csharp](https://github.com/HamidMolareza/QueraProblems/blob/master/Solutions/10166/csharp) | 23-08-2022 |
 | [10230](https://quera.org/problemset/10230/) | مشق امشب باقر | [csharp](https://github.com/HamidMolareza/QueraProblems/blob/master/Solutions/10230/csharp) | 23-08-2022 |
 | [10232](https://quera.org/problemset/10232/) | باقر خسته‌ست ولی بی‌فرهنگ نه | [csharp](https://github.com/HamidMolareza/QueraProblems/blob/master/Solutions/10232/csharp) | 23-08-2022 |
-| [10233](https://quera.org/problemset/10233/) | باقر مخالف است | [csharp](https://github.com/HamidMolareza/QueraProblems/blob/master/Solutions/10233/csharp) | 23-08-2022 |
 | [10326](https://quera.org/problemset/10326/) | استارت-آپ باکلاس | [csharp](https://github.com/HamidMolareza/QueraProblems/blob/master/Solutions/10326/csharp) | 23-08-2022 |
 | [14580](https://quera.org/problemset/14580/) | باب و کلید تلویزیون | [csharp](https://github.com/HamidMolareza/QueraProblems/blob/master/Solutions/14580/csharp) | 23-08-2022 |
 | [14581](https://quera.org/problemset/14581/) | کِوین و قدرت شالاپ | [csharp](https://github.com/HamidMolareza/QueraProblems/blob/master/Solutions/14581/csharp) | 23-08-2022 |
