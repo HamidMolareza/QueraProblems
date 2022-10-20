@@ -1,3 +1,4 @@
+// Copy from Quera
 
 import java.util.Scanner;
 
@@ -15,4 +16,3 @@ public class Main {
 
     }
 }
-
