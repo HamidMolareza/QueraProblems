@@ -1,3 +1,5 @@
+// Copy from Quera
+
 #include <iostream>
 using namespace std;
 

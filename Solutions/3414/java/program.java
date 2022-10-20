@@ -1,4 +1,4 @@
-//package com.company;
+// Copy from Quera
 
 import java.util.Scanner;
 
