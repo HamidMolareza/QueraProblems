@@ -24,12 +24,13 @@ See [this repository](https://github.com/HamidMolareza/LeetCode)
 
 ## List of problems-solutions
 
-Number of questions solved: 144
+Number of questions solved: 145
 
-Number of solutions: 166
+Number of solutions: 167
 
 | Question | Title | Solutions | Last commit |
 | ----- | ----- | ----- | ----- |
+| [20257](https://quera.org/problemset/20257/) | قطار کامیابی | [python3](https://github.com/HamidMolareza/QueraProblems/blob/master/Solutions/20257/python3) | 20-10-2022 |
 | [8901](https://quera.org/problemset/8901/) | لیوان بازی | [python3](https://github.com/HamidMolareza/QueraProblems/blob/master/Solutions/8901/python3) - [csharp](https://github.com/HamidMolareza/QueraProblems/blob/master/Solutions/8901/csharp) | 20-10-2022 |
 | [10233](https://quera.org/problemset/10233/) | باقر مخالف است | [python3](https://github.com/HamidMolareza/QueraProblems/blob/master/Solutions/10233/python3) - [csharp](https://github.com/HamidMolareza/QueraProblems/blob/master/Solutions/10233/csharp) | 14-10-2022 |
 | [18310](https://quera.org/problemset/18310/) | Joos | [python3](https://github.com/HamidMolareza/QueraProblems/blob/master/Solutions/18310/python3) - [csharp](https://github.com/HamidMolareza/QueraProblems/blob/master/Solutions/18310/csharp) | 13-10-2022 |
