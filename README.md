@@ -26,10 +26,11 @@ See [this repository](https://github.com/HamidMolareza/LeetCode)
 
 Number of questions solved: 146
 
-Number of solutions: 231
+Number of solutions: 232
 
 | Question | Title | Solutions | Last commit |
 | ----- | ----- | ----- | ----- |
+| [17675](https://quera.org/problemset/17675/) | رشته فیبوناچی | [csharp](https://github.com/HamidMolareza/QueraProblems/blob/master/Solutions/17675/csharp) - [python3](https://github.com/HamidMolareza/QueraProblems/blob/master/Solutions/17675/python3) | 21-10-2022 |
 | [303](https://quera.org/problemset/303/) | دنباله‌ی فیبوناچی | [csharp](https://github.com/HamidMolareza/QueraProblems/blob/master/Solutions/303/csharp) - [python3](https://github.com/HamidMolareza/QueraProblems/blob/master/Solutions/303/python3) | 21-10-2022 |
 | [616](https://quera.org/problemset/616/) | توان دو | [c++](https://github.com/HamidMolareza/QueraProblems/blob/master/Solutions/616/c++) - [java](https://github.com/HamidMolareza/QueraProblems/blob/master/Solutions/616/java) - [python3](https://github.com/HamidMolareza/QueraProblems/blob/master/Solutions/616/python3) | 21-10-2022 |
 | [293](https://quera.org/problemset/293/) | اعداد اول | [c++](https://github.com/HamidMolareza/QueraProblems/blob/master/Solutions/293/c++) - [java](https://github.com/HamidMolareza/QueraProblems/blob/master/Solutions/293/java) - [python3](https://github.com/HamidMolareza/QueraProblems/blob/master/Solutions/293/python3) | 20-10-2022 |
@@ -134,7 +135,6 @@ Number of solutions: 231
 | [14580](https://quera.org/problemset/14580/) | باب و کلید تلویزیون | [csharp](https://github.com/HamidMolareza/QueraProblems/blob/master/Solutions/14580/csharp) | 23-08-2022 |
 | [14581](https://quera.org/problemset/14581/) | کِوین و قدرت شالاپ | [csharp](https://github.com/HamidMolareza/QueraProblems/blob/master/Solutions/14581/csharp) | 23-08-2022 |
 | [17245](https://quera.org/problemset/17245/) | تکسلنگ | [csharp](https://github.com/HamidMolareza/QueraProblems/blob/master/Solutions/17245/csharp) | 23-08-2022 |
-| [17675](https://quera.org/problemset/17675/) | رشته فیبوناچی | [csharp](https://github.com/HamidMolareza/QueraProblems/blob/master/Solutions/17675/csharp) | 23-08-2022 |
 | [20249](https://quera.org/problemset/20249/) | مربّاها و مشکلات اقتصادی | [csharp](https://github.com/HamidMolareza/QueraProblems/blob/master/Solutions/20249/csharp) | 23-08-2022 |
 | [26651](https://quera.org/problemset/26651/) | سوال نفس‌گیر | [csharp](https://github.com/HamidMolareza/QueraProblems/blob/master/Solutions/26651/csharp) | 23-08-2022 |
 | [28948](https://quera.org/problemset/28948/) | بتایپ | [csharp](https://github.com/HamidMolareza/QueraProblems/blob/master/Solutions/28948/csharp) | 23-08-2022 |
