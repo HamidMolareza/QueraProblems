@@ -26,11 +26,12 @@ See [this repository](https://github.com/HamidMolareza/LeetCode)
 
 Number of questions solved: 146
 
-Number of solutions: 228
+Number of solutions: 231
 
 | Question | Title | Solutions | Last commit |
 | ----- | ----- | ----- | ----- |
-| [616](https://quera.org/problemset/616/) | توان دو | [python3](https://github.com/HamidMolareza/QueraProblems/blob/master/Solutions/616/python3) | 21-10-2022 |
+| [303](https://quera.org/problemset/303/) | دنباله‌ی فیبوناچی | [csharp](https://github.com/HamidMolareza/QueraProblems/blob/master/Solutions/303/csharp) - [python3](https://github.com/HamidMolareza/QueraProblems/blob/master/Solutions/303/python3) | 21-10-2022 |
+| [616](https://quera.org/problemset/616/) | توان دو | [c++](https://github.com/HamidMolareza/QueraProblems/blob/master/Solutions/616/c++) - [java](https://github.com/HamidMolareza/QueraProblems/blob/master/Solutions/616/java) - [python3](https://github.com/HamidMolareza/QueraProblems/blob/master/Solutions/616/python3) | 21-10-2022 |
 | [293](https://quera.org/problemset/293/) | اعداد اول | [c++](https://github.com/HamidMolareza/QueraProblems/blob/master/Solutions/293/c++) - [java](https://github.com/HamidMolareza/QueraProblems/blob/master/Solutions/293/java) - [python3](https://github.com/HamidMolareza/QueraProblems/blob/master/Solutions/293/python3) | 20-10-2022 |
 | [305](https://quera.org/problemset/305/) | ب.م.م | [c++](https://github.com/HamidMolareza/QueraProblems/blob/master/Solutions/305/c++) - [java](https://github.com/HamidMolareza/QueraProblems/blob/master/Solutions/305/java) - [csharp](https://github.com/HamidMolareza/QueraProblems/blob/master/Solutions/305/csharp) | 20-10-2022 |
 | [589](https://quera.org/problemset/589/) | فاکتوریل | [c++](https://github.com/HamidMolareza/QueraProblems/blob/master/Solutions/589/c++) - [java](https://github.com/HamidMolareza/QueraProblems/blob/master/Solutions/589/java) - [csharp](https://github.com/HamidMolareza/QueraProblems/blob/master/Solutions/589/csharp) - [python3](https://github.com/HamidMolareza/QueraProblems/blob/master/Solutions/589/python3) | 20-10-2022 |
@@ -87,7 +88,6 @@ Number of solutions: 228
 | [280](https://quera.org/problemset/280/) | اعداد فیثاغورثی | [csharp](https://github.com/HamidMolareza/QueraProblems/blob/master/Solutions/280/csharp) | 23-08-2022 |
 | [283](https://quera.org/problemset/283/) | مربع توخالی | [csharp](https://github.com/HamidMolareza/QueraProblems/blob/master/Solutions/283/csharp) | 23-08-2022 |
 | [292](https://quera.org/problemset/292/) | کار با اعداد اعشاری | [csharp](https://github.com/HamidMolareza/QueraProblems/blob/master/Solutions/292/csharp) | 23-08-2022 |
-| [303](https://quera.org/problemset/303/) | دنباله‌ی فیبوناچی | [csharp](https://github.com/HamidMolareza/QueraProblems/blob/master/Solutions/303/csharp) | 23-08-2022 |
 | [590](https://quera.org/problemset/590/) | ب.م.م و ک.م.م | [csharp](https://github.com/HamidMolareza/QueraProblems/blob/master/Solutions/590/csharp) | 23-08-2022 |
 | [593](https://quera.org/problemset/593/) | یافتن عدد اول | [csharp](https://github.com/HamidMolareza/QueraProblems/blob/master/Solutions/593/csharp) | 23-08-2022 |
 | [594](https://quera.org/problemset/594/) | مبنا | [csharp](https://github.com/HamidMolareza/QueraProblems/blob/master/Solutions/594/csharp) | 23-08-2022 |
