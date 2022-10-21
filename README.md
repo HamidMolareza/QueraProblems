@@ -26,11 +26,11 @@ See [this repository](https://github.com/HamidMolareza/LeetCode)
 
 Number of questions solved: 146
 
-Number of solutions: 232
+Number of solutions: 234
 
 | Question | Title | Solutions | Last commit |
 | ----- | ----- | ----- | ----- |
-| [17675](https://quera.org/problemset/17675/) | رشته فیبوناچی | [csharp](https://github.com/HamidMolareza/QueraProblems/blob/master/Solutions/17675/csharp) - [python3](https://github.com/HamidMolareza/QueraProblems/blob/master/Solutions/17675/python3) | 21-10-2022 |
+| [17675](https://quera.org/problemset/17675/) | رشته فیبوناچی | [c++](https://github.com/HamidMolareza/QueraProblems/blob/master/Solutions/17675/c++) - [java](https://github.com/HamidMolareza/QueraProblems/blob/master/Solutions/17675/java) - [csharp](https://github.com/HamidMolareza/QueraProblems/blob/master/Solutions/17675/csharp) - [python3](https://github.com/HamidMolareza/QueraProblems/blob/master/Solutions/17675/python3) | 22-10-2022 |
 | [303](https://quera.org/problemset/303/) | دنباله‌ی فیبوناچی | [csharp](https://github.com/HamidMolareza/QueraProblems/blob/master/Solutions/303/csharp) - [python3](https://github.com/HamidMolareza/QueraProblems/blob/master/Solutions/303/python3) | 21-10-2022 |
 | [616](https://quera.org/problemset/616/) | توان دو | [c++](https://github.com/HamidMolareza/QueraProblems/blob/master/Solutions/616/c++) - [java](https://github.com/HamidMolareza/QueraProblems/blob/master/Solutions/616/java) - [python3](https://github.com/HamidMolareza/QueraProblems/blob/master/Solutions/616/python3) | 21-10-2022 |
 | [293](https://quera.org/problemset/293/) | اعداد اول | [c++](https://github.com/HamidMolareza/QueraProblems/blob/master/Solutions/293/c++) - [java](https://github.com/HamidMolareza/QueraProblems/blob/master/Solutions/293/java) - [python3](https://github.com/HamidMolareza/QueraProblems/blob/master/Solutions/293/python3) | 20-10-2022 |
