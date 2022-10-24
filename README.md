@@ -26,10 +26,11 @@ See [this repository](https://github.com/HamidMolareza/LeetCode)
 
 Number of questions solved: 146
 
-Number of solutions: 234
+Number of solutions: 235
 
 | Question | Title | Solutions | Last commit |
 | ----- | ----- | ----- | ----- |
+| [2534](https://quera.org/problemset/2534/) | چیدمان | [csharp](https://github.com/HamidMolareza/QueraProblems/blob/master/Solutions/2534/csharp) - [python3](https://github.com/HamidMolareza/QueraProblems/blob/master/Solutions/2534/python3) | 24-10-2022 |
 | [3405](https://quera.org/problemset/3405/) | چاپ برعکس | [c++](https://github.com/HamidMolareza/QueraProblems/blob/master/Solutions/3405/c++) - [java](https://github.com/HamidMolareza/QueraProblems/blob/master/Solutions/3405/java) - [python3](https://github.com/HamidMolareza/QueraProblems/blob/master/Solutions/3405/python3) | 24-10-2022 |
 | [17675](https://quera.org/problemset/17675/) | رشته فیبوناچی | [c++](https://github.com/HamidMolareza/QueraProblems/blob/master/Solutions/17675/c++) - [java](https://github.com/HamidMolareza/QueraProblems/blob/master/Solutions/17675/java) - [csharp](https://github.com/HamidMolareza/QueraProblems/blob/master/Solutions/17675/csharp) - [python3](https://github.com/HamidMolareza/QueraProblems/blob/master/Solutions/17675/python3) | 22-10-2022 |
 | [303](https://quera.org/problemset/303/) | دنباله‌ی فیبوناچی | [csharp](https://github.com/HamidMolareza/QueraProblems/blob/master/Solutions/303/csharp) - [python3](https://github.com/HamidMolareza/QueraProblems/blob/master/Solutions/303/python3) | 21-10-2022 |
@@ -104,7 +105,6 @@ Number of solutions: 234
 | [655](https://quera.org/problemset/655/) | فرزاد فیلم‌بین | [csharp](https://github.com/HamidMolareza/QueraProblems/blob/master/Solutions/655/csharp) | 23-08-2022 |
 | [658](https://quera.org/problemset/658/) | فرزاد کارکن | [csharp](https://github.com/HamidMolareza/QueraProblems/blob/master/Solutions/658/csharp) | 23-08-2022 |
 | [2530](https://quera.org/problemset/2530/) | لکنت | [csharp](https://github.com/HamidMolareza/QueraProblems/blob/master/Solutions/2530/csharp) | 23-08-2022 |
-| [2534](https://quera.org/problemset/2534/) | چیدمان | [csharp](https://github.com/HamidMolareza/QueraProblems/blob/master/Solutions/2534/csharp) | 23-08-2022 |
 | [2551](https://quera.org/problemset/2551/) | جمع بزرگان | [csharp](https://github.com/HamidMolareza/QueraProblems/blob/master/Solutions/2551/csharp) | 23-08-2022 |
 | [2596](https://quera.org/problemset/2596/) | حدس عدد | [csharp](https://github.com/HamidMolareza/QueraProblems/blob/master/Solutions/2596/csharp) | 23-08-2022 |
 | [2705](https://quera.org/problemset/2705/) | بدخواه پویان | [csharp](https://github.com/HamidMolareza/QueraProblems/blob/master/Solutions/2705/csharp) | 23-08-2022 |
