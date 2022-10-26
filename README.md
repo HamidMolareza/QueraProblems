@@ -26,10 +26,11 @@ See [this repository](https://github.com/HamidMolareza/LeetCode)
 
 Number of questions solved: 146
 
-Number of solutions: 235
+Number of solutions: 236
 
 | Question | Title | Solutions | Last commit |
 | ----- | ----- | ----- | ----- |
+| [6375](https://quera.org/problemset/6375/) | حرکت روی ظروف | [csharp](https://github.com/HamidMolareza/QueraProblems/blob/master/Solutions/6375/csharp) - [python3](https://github.com/HamidMolareza/QueraProblems/blob/master/Solutions/6375/python3) | 26-10-2022 |
 | [2534](https://quera.org/problemset/2534/) | چیدمان | [csharp](https://github.com/HamidMolareza/QueraProblems/blob/master/Solutions/2534/csharp) - [python3](https://github.com/HamidMolareza/QueraProblems/blob/master/Solutions/2534/python3) | 24-10-2022 |
 | [3405](https://quera.org/problemset/3405/) | چاپ برعکس | [c++](https://github.com/HamidMolareza/QueraProblems/blob/master/Solutions/3405/c++) - [java](https://github.com/HamidMolareza/QueraProblems/blob/master/Solutions/3405/java) - [python3](https://github.com/HamidMolareza/QueraProblems/blob/master/Solutions/3405/python3) | 24-10-2022 |
 | [17675](https://quera.org/problemset/17675/) | رشته فیبوناچی | [c++](https://github.com/HamidMolareza/QueraProblems/blob/master/Solutions/17675/c++) - [java](https://github.com/HamidMolareza/QueraProblems/blob/master/Solutions/17675/java) - [csharp](https://github.com/HamidMolareza/QueraProblems/blob/master/Solutions/17675/csharp) - [python3](https://github.com/HamidMolareza/QueraProblems/blob/master/Solutions/17675/python3) | 22-10-2022 |
@@ -60,18 +61,8 @@ Number of solutions: 235
 | [9110](https://quera.org/problemset/9110/) | مجید، میلاد، رشته‌سازی | [c++](https://github.com/HamidMolareza/QueraProblems/blob/master/Solutions/9110/c++) - [java](https://github.com/HamidMolareza/QueraProblems/blob/master/Solutions/9110/java) - [csharp](https://github.com/HamidMolareza/QueraProblems/blob/master/Solutions/9110/csharp) - [python3](https://github.com/HamidMolareza/QueraProblems/blob/master/Solutions/9110/python3) | 20-10-2022 |
 | [10233](https://quera.org/problemset/10233/) | باقر مخالف است | [c++](https://github.com/HamidMolareza/QueraProblems/blob/master/Solutions/10233/c++) - [java](https://github.com/HamidMolareza/QueraProblems/blob/master/Solutions/10233/java) - [csharp](https://github.com/HamidMolareza/QueraProblems/blob/master/Solutions/10233/csharp) - [python3](https://github.com/HamidMolareza/QueraProblems/blob/master/Solutions/10233/python3) | 20-10-2022 |
 | [15124](https://quera.org/problemset/15124/) | خواب پوپک | [c++](https://github.com/HamidMolareza/QueraProblems/blob/master/Solutions/15124/c++) - [java](https://github.com/HamidMolareza/QueraProblems/blob/master/Solutions/15124/java) - [csharp](https://github.com/HamidMolareza/QueraProblems/blob/master/Solutions/15124/csharp) - [python3](https://github.com/HamidMolareza/QueraProblems/blob/master/Solutions/15124/python3) | 20-10-2022 |
-| [17244](https://quera.org/problemset/17244/) | شارژ موبایل | [c++](https://github.com/HamidMolareza/QueraProblems/blob/master/Solutions/17244/c++) - [java](https://github.com/HamidMolareza/QueraProblems/blob/master/Solutions/17244/java) - [python3](https://github.com/HamidMolareza/QueraProblems/blob/master/Solutions/17244/python3) | 20-10-2022 |
 | [20256](https://quera.org/problemset/20256/) | رژیم سخت | [c++](https://github.com/HamidMolareza/QueraProblems/blob/master/Solutions/20256/c++) - [java](https://github.com/HamidMolareza/QueraProblems/blob/master/Solutions/20256/java) - [python3](https://github.com/HamidMolareza/QueraProblems/blob/master/Solutions/20256/python3) | 20-10-2022 |
 | [20257](https://quera.org/problemset/20257/) | قطار کامیابی | [c++](https://github.com/HamidMolareza/QueraProblems/blob/master/Solutions/20257/c++) - [java](https://github.com/HamidMolareza/QueraProblems/blob/master/Solutions/20257/java) - [python3](https://github.com/HamidMolareza/QueraProblems/blob/master/Solutions/20257/python3) | 20-10-2022 |
-| [140035](https://quera.org/problemset/140035/) | زوجیت | [c++](https://github.com/HamidMolareza/QueraProblems/blob/master/Solutions/140035/c++) - [java](https://github.com/HamidMolareza/QueraProblems/blob/master/Solutions/140035/java) - [python3](https://github.com/HamidMolareza/QueraProblems/blob/master/Solutions/140035/python3) | 20-10-2022 |
-| [18310](https://quera.org/problemset/18310/) | Joos | [csharp](https://github.com/HamidMolareza/QueraProblems/blob/master/Solutions/18310/csharp) - [python3](https://github.com/HamidMolareza/QueraProblems/blob/master/Solutions/18310/python3) | 13-10-2022 |
-| [49606](https://quera.org/problemset/49606/) | Background Color Switch | [web](https://github.com/HamidMolareza/QueraProblems/blob/master/Solutions/49606/web) | 10-10-2022 |
-| [66543](https://quera.org/problemset/66543/) | انتخاب‌کننده تودرتو | [web](https://github.com/HamidMolareza/QueraProblems/blob/master/Solutions/66543/web) | 08-10-2022 |
-| [66861](https://quera.org/problemset/66861/) | عدد خوب | [csharp](https://github.com/HamidMolareza/QueraProblems/blob/master/Solutions/66861/csharp) - [python3](https://github.com/HamidMolareza/QueraProblems/blob/master/Solutions/66861/python3) | 27-09-2022 |
-| [3539](https://quera.org/problemset/3539/) | تک‌رقمی | [csharp](https://github.com/HamidMolareza/QueraProblems/blob/master/Solutions/3539/csharp) - [python3](https://github.com/HamidMolareza/QueraProblems/blob/master/Solutions/3539/python3) | 26-09-2022 |
-| [52542](https://quera.org/problemset/52542/) | کاکتوس‌های پردردسر | [csharp](https://github.com/HamidMolareza/QueraProblems/blob/master/Solutions/52542/csharp) - [python3](https://github.com/HamidMolareza/QueraProblems/blob/master/Solutions/52542/python3) | 24-09-2022 |
-| [3429](https://quera.org/problemset/3429/) | یخدارچی | [python3](https://github.com/HamidMolareza/QueraProblems/blob/master/Solutions/3429/python3) | 18-09-2022 |
-| [87176](https://quera.org/problemset/87176/) | بازی تفاضل | [python3](https://github.com/HamidMolareza/QueraProblems/blob/master/Solutions/87176/python3) | 16-09-2022 |
 | [72878](https://quera.org/problemset/72878/) | الاغ گاونما | [csharp](https://github.com/HamidMolareza/QueraProblems/blob/master/Solutions/72878/csharp) - [python3](https://github.com/HamidMolareza/QueraProblems/blob/master/Solutions/72878/python3) | 16-09-2022 |
 | [2887](https://quera.org/problemset/2887/) | سطح اعتیاد | [csharp](https://github.com/HamidMolareza/QueraProblems/blob/master/Solutions/2887/csharp) | 11-09-2022 |
 | [123801](https://quera.org/problemset/123801/) | اتاق فرار | [csharp](https://github.com/HamidMolareza/QueraProblems/blob/master/Solutions/123801/csharp) | 07-09-2022 |
@@ -121,7 +112,6 @@ Number of solutions: 235
 | [4067](https://quera.org/problemset/4067/) | سراب | [csharp](https://github.com/HamidMolareza/QueraProblems/blob/master/Solutions/4067/csharp) | 23-08-2022 |
 | [6192](https://quera.org/problemset/6192/) | مسئله‌ی آب | [csharp](https://github.com/HamidMolareza/QueraProblems/blob/master/Solutions/6192/csharp) | 23-08-2022 |
 | [6193](https://quera.org/problemset/6193/) | مسئله‌ی امنیتی | [csharp](https://github.com/HamidMolareza/QueraProblems/blob/master/Solutions/6193/csharp) | 23-08-2022 |
-| [6375](https://quera.org/problemset/6375/) | حرکت روی ظروف | [csharp](https://github.com/HamidMolareza/QueraProblems/blob/master/Solutions/6375/csharp) | 23-08-2022 |
 | [6395](https://quera.org/problemset/6395/) | شیرکاکائو | [csharp](https://github.com/HamidMolareza/QueraProblems/blob/master/Solutions/6395/csharp) | 23-08-2022 |
 | [6580](https://quera.org/problemset/6580/) | تعمیر دیوار | [csharp](https://github.com/HamidMolareza/QueraProblems/blob/master/Solutions/6580/csharp) | 23-08-2022 |
 | [7609](https://quera.org/problemset/7609/) | نامه‌ی بد | [csharp](https://github.com/HamidMolareza/QueraProblems/blob/master/Solutions/7609/csharp) | 23-08-2022 |
@@ -131,13 +121,8 @@ Number of solutions: 235
 | [10166](https://quera.org/problemset/10166/) | سیکل گرفتن در برره | [csharp](https://github.com/HamidMolareza/QueraProblems/blob/master/Solutions/10166/csharp) | 23-08-2022 |
 | [10230](https://quera.org/problemset/10230/) | مشق امشب باقر | [csharp](https://github.com/HamidMolareza/QueraProblems/blob/master/Solutions/10230/csharp) | 23-08-2022 |
 | [10232](https://quera.org/problemset/10232/) | باقر خسته‌ست ولی بی‌فرهنگ نه | [csharp](https://github.com/HamidMolareza/QueraProblems/blob/master/Solutions/10232/csharp) | 23-08-2022 |
-| [10326](https://quera.org/problemset/10326/) | استارت-آپ باکلاس | [csharp](https://github.com/HamidMolareza/QueraProblems/blob/master/Solutions/10326/csharp) | 23-08-2022 |
-| [14580](https://quera.org/problemset/14580/) | باب و کلید تلویزیون | [csharp](https://github.com/HamidMolareza/QueraProblems/blob/master/Solutions/14580/csharp) | 23-08-2022 |
-| [14581](https://quera.org/problemset/14581/) | کِوین و قدرت شالاپ | [csharp](https://github.com/HamidMolareza/QueraProblems/blob/master/Solutions/14581/csharp) | 23-08-2022 |
 | [17245](https://quera.org/problemset/17245/) | تکسلنگ | [csharp](https://github.com/HamidMolareza/QueraProblems/blob/master/Solutions/17245/csharp) | 23-08-2022 |
 | [20249](https://quera.org/problemset/20249/) | مربّاها و مشکلات اقتصادی | [csharp](https://github.com/HamidMolareza/QueraProblems/blob/master/Solutions/20249/csharp) | 23-08-2022 |
-| [26651](https://quera.org/problemset/26651/) | سوال نفس‌گیر | [csharp](https://github.com/HamidMolareza/QueraProblems/blob/master/Solutions/26651/csharp) | 23-08-2022 |
-| [28948](https://quera.org/problemset/28948/) | بتایپ | [csharp](https://github.com/HamidMolareza/QueraProblems/blob/master/Solutions/28948/csharp) | 23-08-2022 |
 | [31020](https://quera.org/problemset/31020/) | سپیده | [csharp](https://github.com/HamidMolareza/QueraProblems/blob/master/Solutions/31020/csharp) | 23-08-2022 |
 | [31021](https://quera.org/problemset/31021/) | سلام سلام خداحافظ | [csharp](https://github.com/HamidMolareza/QueraProblems/blob/master/Solutions/31021/csharp) | 23-08-2022 |
 | [31026](https://quera.org/problemset/31026/) | اکبر در درخت کبیر | [csharp](https://github.com/HamidMolareza/QueraProblems/blob/master/Solutions/31026/csharp) | 23-08-2022 |
@@ -170,10 +155,8 @@ Number of solutions: 235
 | [110014](https://quera.org/problemset/110014/) | هندزفری‌ها | [csharp](https://github.com/HamidMolareza/QueraProblems/blob/master/Solutions/110014/csharp) | 23-08-2022 |
 | [110015](https://quera.org/problemset/110015/) | نمایشگاه مجازی | [csharp](https://github.com/HamidMolareza/QueraProblems/blob/master/Solutions/110015/csharp) | 23-08-2022 |
 | [127289](https://quera.org/problemset/127289/) | تکرار کدکاپی | [csharp](https://github.com/HamidMolareza/QueraProblems/blob/master/Solutions/127289/csharp) | 23-08-2022 |
-| [145008](https://quera.org/problemset/145008/) | قاشق و چنگال | [csharp](https://github.com/HamidMolareza/QueraProblems/blob/master/Solutions/145008/csharp) | 23-08-2022 |
 | [147193](https://quera.org/problemset/147193/) | معادله خط | [csharp](https://github.com/HamidMolareza/QueraProblems/blob/master/Solutions/147193/csharp) | 23-08-2022 |
 | [147635](https://quera.org/problemset/147635/) | کولر یا بخاری | [csharp](https://github.com/HamidMolareza/QueraProblems/blob/master/Solutions/147635/csharp) | 23-08-2022 |
-| [148099](https://quera.org/problemset/148099/) | اعداد یکتا | [csharp](https://github.com/HamidMolareza/QueraProblems/blob/master/Solutions/148099/csharp) | 23-08-2022 |
 | [148638](https://quera.org/problemset/148638/) | جمع فوتبالی | [csharp](https://github.com/HamidMolareza/QueraProblems/blob/master/Solutions/148638/csharp) | 23-08-2022 |
 | [148640](https://quera.org/problemset/148640/) | آزمون تستی | [csharp](https://github.com/HamidMolareza/QueraProblems/blob/master/Solutions/148640/csharp) | 23-08-2022 |
 
