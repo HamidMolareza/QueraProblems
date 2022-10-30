@@ -9,6 +9,7 @@ namespace Quera {
         public string QueraQuestionsUrlFormat { get; set; } = null!;
         public string ReadmeFileName { get; set; } = null!;
         public string ReadmeTemplateName { get; set; } = null!;
+        public string CacheFileName { get; set; } = null!;
         public int NumOfTry { get; set; }
     }
 }

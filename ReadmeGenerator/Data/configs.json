@@ -4,5 +4,6 @@
   "QueraQuestionsUrlFormat": "https://quera.org/problemset/{0}/",
   "ReadmeFileName": "README.md",
   "ReadmeTemplateName": "Data/ReadmeTemplate.md",
-  "NumOfTry": 2
+  "NumOfTry": 2,
+  "CacheFileName": "Data/cache.json"
 }

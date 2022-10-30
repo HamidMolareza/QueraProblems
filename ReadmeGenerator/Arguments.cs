@@ -18,7 +18,6 @@ namespace Quera {
                 }
 
                 if (string.IsNullOrEmpty(programDirectory)
-                    || !Directory.Exists(programDirectory)
                     || !Directory.Exists(Path.Combine(programDirectory, Configs.DataDirectory))) {
                     return Result<string>.Fail(
                         new BadRequestError(message: $"Program directory is not valid. (Input: {programDirectory})"));
