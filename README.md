@@ -26,10 +26,11 @@ See [this repository](https://github.com/HamidMolareza/LeetCode)
 
 Number of questions solved: 146
 
-Number of solutions: 249
+Number of solutions: 250
 
 | Question | Title | Solutions | Last commit |
 | ----- | ----- | ----- | ----- |
+| [4067](https://quera.org/problemset/4067/) | سراب | [csharp](https://github.com/HamidMolareza/QueraProblems/blob/master/Solutions/4067/csharp) - [python3](https://github.com/HamidMolareza/QueraProblems/blob/master/Solutions/4067/python3) | 30-10-2022 |
 | [14581](https://quera.org/problemset/14581/) | کِوین و قدرت شالاپ | [c++](https://github.com/HamidMolareza/QueraProblems/blob/master/Solutions/14581/c++) - [java](https://github.com/HamidMolareza/QueraProblems/blob/master/Solutions/14581/java) - [csharp](https://github.com/HamidMolareza/QueraProblems/blob/master/Solutions/14581/csharp) - [python3](https://github.com/HamidMolareza/QueraProblems/blob/master/Solutions/14581/python3) | 30-10-2022 |
 | [10232](https://quera.org/problemset/10232/) | باقر خسته‌ست ولی بی‌فرهنگ نه | [c++](https://github.com/HamidMolareza/QueraProblems/blob/master/Solutions/10232/c++) - [java](https://github.com/HamidMolareza/QueraProblems/blob/master/Solutions/10232/java) - [csharp](https://github.com/HamidMolareza/QueraProblems/blob/master/Solutions/10232/csharp) - [python3](https://github.com/HamidMolareza/QueraProblems/blob/master/Solutions/10232/python3) | 28-10-2022 |
 | [34081](https://quera.org/problemset/34081/) | دایره عجیب | [c++](https://github.com/HamidMolareza/QueraProblems/blob/master/Solutions/34081/c++) - [java](https://github.com/HamidMolareza/QueraProblems/blob/master/Solutions/34081/java) - [csharp](https://github.com/HamidMolareza/QueraProblems/blob/master/Solutions/34081/csharp) - [python3](https://github.com/HamidMolareza/QueraProblems/blob/master/Solutions/34081/python3) | 27-10-2022 |
@@ -122,7 +123,6 @@ Number of solutions: 249
 | [3538](https://quera.org/problemset/3538/) | آخ جون طرف نیست! | [csharp](https://github.com/HamidMolareza/QueraProblems/blob/master/Solutions/3538/csharp) | 23-08-2022 |
 | [3558](https://quera.org/problemset/3558/) | ارسال سنگین | [csharp](https://github.com/HamidMolareza/QueraProblems/blob/master/Solutions/3558/csharp) | 23-08-2022 |
 | [4066](https://quera.org/problemset/4066/) | پیشگویی خر | [csharp](https://github.com/HamidMolareza/QueraProblems/blob/master/Solutions/4066/csharp) | 23-08-2022 |
-| [4067](https://quera.org/problemset/4067/) | سراب | [csharp](https://github.com/HamidMolareza/QueraProblems/blob/master/Solutions/4067/csharp) | 23-08-2022 |
 | [6192](https://quera.org/problemset/6192/) | مسئله‌ی آب | [csharp](https://github.com/HamidMolareza/QueraProblems/blob/master/Solutions/6192/csharp) | 23-08-2022 |
 | [6193](https://quera.org/problemset/6193/) | مسئله‌ی امنیتی | [csharp](https://github.com/HamidMolareza/QueraProblems/blob/master/Solutions/6193/csharp) | 23-08-2022 |
 | [6395](https://quera.org/problemset/6395/) | شیرکاکائو | [csharp](https://github.com/HamidMolareza/QueraProblems/blob/master/Solutions/6395/csharp) | 23-08-2022 |
