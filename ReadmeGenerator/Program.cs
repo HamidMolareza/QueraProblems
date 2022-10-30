@@ -67,12 +67,13 @@ namespace Quera {
 
         private static Task<Result> LoadCacheAsync() =>
             TryExtensions.Try(async () => {
-                if (!File.Exists(_configs.CacheFileName)) {
+                var filePath = Path.Combine(_arguments.ProgramDirectory, _configs.CacheFileName);
+                if (!File.Exists(filePath)) {
                     _cache = new Cache();
                     return Result.Ok();
                 }
 
-                var text = await File.ReadAllTextAsync(_configs.CacheFileName);
+                var text = await File.ReadAllTextAsync(filePath);
                 var cache = JsonSerializer.Deserialize<Cache>(text);
                 if (cache is null) {
                     return Result.Fail(new ErrorDetail("Can not load cache file.",
