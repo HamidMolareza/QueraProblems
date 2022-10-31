@@ -187,7 +187,10 @@ namespace Quera {
                         return result.title;
                     })
                     .OnSuccess(title => {
-                        var solutions = problem.Solutions.Select(solution => {
+                        var solutions = problem.Solutions
+                        .OrderByDescending(solution=> solution.LastCommitDate)
+                        .ThenBy(solution=> solution.LanguageName)
+                        .Select(solution => {
                             var solutionUrl = string.Format(_configs.SolutionUrlFormat, problem.QueraId);
                             solutionUrl = Path.Combine(solutionUrl, solution.LanguageName);
 
