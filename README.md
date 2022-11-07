@@ -24,12 +24,13 @@ See [this repository](https://github.com/HamidMolareza/LeetCode)
 
 ## List of problems-solutions
 
-Number of questions solved: 146
+Number of questions solved: 147
 
-Number of solutions: 250
+Number of solutions: 251
 
 | Question | Title | Solutions | Last commit |
 | ----- | ----- | ----- | ----- |
+| [8838](https://quera.org/problemset/8838/) | کمک به کاپی | [python3](https://github.com/HamidMolareza/QueraProblems/blob/master/Solutions/8838/python3) | 07-11-2022 |
 | [4067](https://quera.org/problemset/4067/) | سراب | [python3](https://github.com/HamidMolareza/QueraProblems/blob/master/Solutions/4067/python3) - [csharp](https://github.com/HamidMolareza/QueraProblems/blob/master/Solutions/4067/csharp) | 30-10-2022 |
 | [14581](https://quera.org/problemset/14581/) | کِوین و قدرت شالاپ | [c++](https://github.com/HamidMolareza/QueraProblems/blob/master/Solutions/14581/c++) - [java](https://github.com/HamidMolareza/QueraProblems/blob/master/Solutions/14581/java) - [python3](https://github.com/HamidMolareza/QueraProblems/blob/master/Solutions/14581/python3) - [csharp](https://github.com/HamidMolareza/QueraProblems/blob/master/Solutions/14581/csharp) | 30-10-2022 |
 | [10232](https://quera.org/problemset/10232/) | باقر خسته‌ست ولی بی‌فرهنگ نه | [c++](https://github.com/HamidMolareza/QueraProblems/blob/master/Solutions/10232/c++) - [java](https://github.com/HamidMolareza/QueraProblems/blob/master/Solutions/10232/java) - [python3](https://github.com/HamidMolareza/QueraProblems/blob/master/Solutions/10232/python3) - [csharp](https://github.com/HamidMolareza/QueraProblems/blob/master/Solutions/10232/csharp) | 28-10-2022 |
