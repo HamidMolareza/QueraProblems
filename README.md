@@ -26,10 +26,11 @@ See [this repository](https://github.com/HamidMolareza/LeetCode)
 
 Number of questions solved: 147
 
-Number of solutions: 251
+Number of solutions: 252
 
 | Question | Title | Solutions | Last commit |
 | ----- | ----- | ----- | ----- |
+| [3410](https://quera.org/problemset/3410/) | مثلث خیام پاسکال | [python3](https://github.com/HamidMolareza/QueraProblems/blob/master/Solutions/3410/python3) - [csharp](https://github.com/HamidMolareza/QueraProblems/blob/master/Solutions/3410/csharp) | 17-11-2022 |
 | [8838](https://quera.org/problemset/8838/) | کمک به کاپی | [python3](https://github.com/HamidMolareza/QueraProblems/blob/master/Solutions/8838/python3) | 07-11-2022 |
 | [4067](https://quera.org/problemset/4067/) | سراب | [python3](https://github.com/HamidMolareza/QueraProblems/blob/master/Solutions/4067/python3) - [csharp](https://github.com/HamidMolareza/QueraProblems/blob/master/Solutions/4067/csharp) | 30-10-2022 |
 | [14581](https://quera.org/problemset/14581/) | کِوین و قدرت شالاپ | [c++](https://github.com/HamidMolareza/QueraProblems/blob/master/Solutions/14581/c++) - [java](https://github.com/HamidMolareza/QueraProblems/blob/master/Solutions/14581/java) - [python3](https://github.com/HamidMolareza/QueraProblems/blob/master/Solutions/14581/python3) - [csharp](https://github.com/HamidMolareza/QueraProblems/blob/master/Solutions/14581/csharp) | 30-10-2022 |
@@ -117,7 +118,6 @@ Number of solutions: 251
 | [3107](https://quera.org/problemset/3107/) | تی‌شرت برنده | [csharp](https://github.com/HamidMolareza/QueraProblems/blob/master/Solutions/3107/csharp) | 23-08-2022 |
 | [3109](https://quera.org/problemset/3109/) | سنگ برنده | [csharp](https://github.com/HamidMolareza/QueraProblems/blob/master/Solutions/3109/csharp) | 23-08-2022 |
 | [3407](https://quera.org/problemset/3407/) | بمب بازی | [csharp](https://github.com/HamidMolareza/QueraProblems/blob/master/Solutions/3407/csharp) | 23-08-2022 |
-| [3410](https://quera.org/problemset/3410/) | مثلث خیام پاسکال | [csharp](https://github.com/HamidMolareza/QueraProblems/blob/master/Solutions/3410/csharp) | 23-08-2022 |
 | [3412](https://quera.org/problemset/3412/) | وسط صندلی عقب | [csharp](https://github.com/HamidMolareza/QueraProblems/blob/master/Solutions/3412/csharp) | 23-08-2022 |
 | [3415](https://quera.org/problemset/3415/) | بازار موبایل | [csharp](https://github.com/HamidMolareza/QueraProblems/blob/master/Solutions/3415/csharp) | 23-08-2022 |
 | [3430](https://quera.org/problemset/3430/) | بلندگو | [csharp](https://github.com/HamidMolareza/QueraProblems/blob/master/Solutions/3430/csharp) | 23-08-2022 |
