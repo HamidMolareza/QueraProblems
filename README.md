@@ -30,6 +30,7 @@ Number of solutions: 252
 
 | Question | Title | Solutions | Last commit |
 | ----- | ----- | ----- | ----- |
+| [148640](https://quera.org/problemset/148640/) | آزمون تستی | [csharp](https://github.com/HamidMolareza/QueraProblems/blob/master/Solutions/148640/csharp) | 20-11-2022 |
 | [3410](https://quera.org/problemset/3410/) | مثلث خیام پاسکال | [python3](https://github.com/HamidMolareza/QueraProblems/blob/master/Solutions/3410/python3) - [csharp](https://github.com/HamidMolareza/QueraProblems/blob/master/Solutions/3410/csharp) | 17-11-2022 |
 | [8838](https://quera.org/problemset/8838/) | کمک به کاپی | [python3](https://github.com/HamidMolareza/QueraProblems/blob/master/Solutions/8838/python3) | 07-11-2022 |
 | [4067](https://quera.org/problemset/4067/) | سراب | [python3](https://github.com/HamidMolareza/QueraProblems/blob/master/Solutions/4067/python3) - [csharp](https://github.com/HamidMolareza/QueraProblems/blob/master/Solutions/4067/csharp) | 30-10-2022 |
@@ -176,7 +177,6 @@ Number of solutions: 252
 | [147635](https://quera.org/problemset/147635/) | کولر یا بخاری | [csharp](https://github.com/HamidMolareza/QueraProblems/blob/master/Solutions/147635/csharp) | 23-08-2022 |
 | [148099](https://quera.org/problemset/148099/) | اعداد یکتا | [csharp](https://github.com/HamidMolareza/QueraProblems/blob/master/Solutions/148099/csharp) | 23-08-2022 |
 | [148638](https://quera.org/problemset/148638/) | جمع فوتبالی | [csharp](https://github.com/HamidMolareza/QueraProblems/blob/master/Solutions/148638/csharp) | 23-08-2022 |
-| [148640](https://quera.org/problemset/148640/) | آزمون تستی | [csharp](https://github.com/HamidMolareza/QueraProblems/blob/master/Solutions/148640/csharp) | 23-08-2022 |
 
 
 ## Usage
