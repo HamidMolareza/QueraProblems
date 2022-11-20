@@ -5,14 +5,14 @@ using System.Linq;
 namespace Quera {
     public static class Program {
         public static void Main() {
-            var input = GetInput();
+            var inputs = GetInputs();
 
-            input.PersonsData
-                .Select(personsData => GetScore(personsData, input.Keys))
+            inputs.PersonsData
+                .Select(personAnswers => CalculateScore(personAnswers, inputs.Keys))
                 .Print();
         }
 
-        private static Input GetInput() {
+        private static Input GetInputs() {
             var numOfQuestions = GetInputs<int>(1).Single();
             var keys = GetInputs<string>(1).Single();
             var numOfPersons = GetInputs<int>(1).Single();
@@ -36,7 +36,7 @@ namespace Quera {
             return result;
         }
 
-        private static int GetScore(this IReadOnlyList<string> personAnswers, string keys) {
+        private static int CalculateScore(this IReadOnlyList<string> personAnswers, string keys) {
             var correctAnswers = 0;
             var wrongAnswers = 0;
 
