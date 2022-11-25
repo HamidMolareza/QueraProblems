@@ -26,10 +26,26 @@ See [this repository](https://github.com/HamidMolareza/LeetCode)
 
 Number of questions solved: 147
 
-Number of solutions: 264
+Number of solutions: 280
 
 | Question | Title | Solutions | Last commit |
 | ----- | ----- | ----- | ----- |
+| [590](https://quera.org/problemset/590/) | ب.م.م و ک.م.م | [c++](https://github.com/HamidMolareza/QueraProblems/blob/master/Solutions/590/c++) - [csharp](https://github.com/HamidMolareza/QueraProblems/blob/master/Solutions/590/csharp) | 25-11-2022 |
+| [593](https://quera.org/problemset/593/) | یافتن عدد اول | [c++](https://github.com/HamidMolareza/QueraProblems/blob/master/Solutions/593/c++) - [csharp](https://github.com/HamidMolareza/QueraProblems/blob/master/Solutions/593/csharp) | 25-11-2022 |
+| [594](https://quera.org/problemset/594/) | مبنا | [c++](https://github.com/HamidMolareza/QueraProblems/blob/master/Solutions/594/c++) - [csharp](https://github.com/HamidMolareza/QueraProblems/blob/master/Solutions/594/csharp) | 25-11-2022 |
+| [595](https://quera.org/problemset/595/) | مثلث خیام | [c++](https://github.com/HamidMolareza/QueraProblems/blob/master/Solutions/595/c++) - [csharp](https://github.com/HamidMolareza/QueraProblems/blob/master/Solutions/595/csharp) | 25-11-2022 |
+| [597](https://quera.org/problemset/597/) | حلزون مختصاتی | [c++](https://github.com/HamidMolareza/QueraProblems/blob/master/Solutions/597/c++) - [csharp](https://github.com/HamidMolareza/QueraProblems/blob/master/Solutions/597/csharp) | 25-11-2022 |
+| [607](https://quera.org/problemset/607/) | ضرب ماتریس‌ها | [c++](https://github.com/HamidMolareza/QueraProblems/blob/master/Solutions/607/c++) - [csharp](https://github.com/HamidMolareza/QueraProblems/blob/master/Solutions/607/csharp) | 25-11-2022 |
+| [618](https://quera.org/problemset/618/) | چاپ لوزی | [c++](https://github.com/HamidMolareza/QueraProblems/blob/master/Solutions/618/c++) - [csharp](https://github.com/HamidMolareza/QueraProblems/blob/master/Solutions/618/csharp) | 25-11-2022 |
+| [637](https://quera.org/problemset/637/) | جمع اعداد | [c++](https://github.com/HamidMolareza/QueraProblems/blob/master/Solutions/637/c++) - [csharp](https://github.com/HamidMolareza/QueraProblems/blob/master/Solutions/637/csharp) | 25-11-2022 |
+| [640](https://quera.org/problemset/640/) | نردبونی | [c++](https://github.com/HamidMolareza/QueraProblems/blob/master/Solutions/640/c++) - [csharp](https://github.com/HamidMolareza/QueraProblems/blob/master/Solutions/640/csharp) | 25-11-2022 |
+| [649](https://quera.org/problemset/649/) | اول‌بینی | [c++](https://github.com/HamidMolareza/QueraProblems/blob/master/Solutions/649/c++) - [csharp](https://github.com/HamidMolareza/QueraProblems/blob/master/Solutions/649/csharp) | 25-11-2022 |
+| [651](https://quera.org/problemset/651/) | مبنای آینه‌ای | [c++](https://github.com/HamidMolareza/QueraProblems/blob/master/Solutions/651/c++) - [csharp](https://github.com/HamidMolareza/QueraProblems/blob/master/Solutions/651/csharp) | 25-11-2022 |
+| [655](https://quera.org/problemset/655/) | فرزاد فیلم‌بین | [c++](https://github.com/HamidMolareza/QueraProblems/blob/master/Solutions/655/c++) - [csharp](https://github.com/HamidMolareza/QueraProblems/blob/master/Solutions/655/csharp) | 25-11-2022 |
+| [658](https://quera.org/problemset/658/) | فرزاد کارکن | [c++](https://github.com/HamidMolareza/QueraProblems/blob/master/Solutions/658/c++) - [csharp](https://github.com/HamidMolareza/QueraProblems/blob/master/Solutions/658/csharp) | 25-11-2022 |
+| [3430](https://quera.org/problemset/3430/) | بلندگو | [c++](https://github.com/HamidMolareza/QueraProblems/blob/master/Solutions/3430/c++) - [csharp](https://github.com/HamidMolareza/QueraProblems/blob/master/Solutions/3430/csharp) | 25-11-2022 |
+| [10163](https://quera.org/problemset/10163/) | تیم ملی نخودخوری در برره | [c++](https://github.com/HamidMolareza/QueraProblems/blob/master/Solutions/10163/c++) - [csharp](https://github.com/HamidMolareza/QueraProblems/blob/master/Solutions/10163/csharp) | 25-11-2022 |
+| [10326](https://quera.org/problemset/10326/) | استارت-آپ باکلاس | [c++](https://github.com/HamidMolareza/QueraProblems/blob/master/Solutions/10326/c++) - [csharp](https://github.com/HamidMolareza/QueraProblems/blob/master/Solutions/10326/csharp) | 25-11-2022 |
 | [280](https://quera.org/problemset/280/) | اعداد فیثاغورثی | [c++](https://github.com/HamidMolareza/QueraProblems/blob/master/Solutions/280/c++) - [csharp](https://github.com/HamidMolareza/QueraProblems/blob/master/Solutions/280/csharp) | 25-11-2022 |
 | [283](https://quera.org/problemset/283/) | مربع توخالی | [c++](https://github.com/HamidMolareza/QueraProblems/blob/master/Solutions/283/c++) - [csharp](https://github.com/HamidMolareza/QueraProblems/blob/master/Solutions/283/csharp) | 25-11-2022 |
 | [292](https://quera.org/problemset/292/) | کار با اعداد اعشاری | [c++](https://github.com/HamidMolareza/QueraProblems/blob/master/Solutions/292/c++) - [csharp](https://github.com/HamidMolareza/QueraProblems/blob/master/Solutions/292/csharp) | 25-11-2022 |
@@ -102,20 +118,7 @@ Number of solutions: 264
 | [2755](https://quera.org/problemset/2755/) | خریدار ناشی | [csharp](https://github.com/HamidMolareza/QueraProblems/blob/master/Solutions/2755/csharp) | 24-08-2022 |
 | [102261](https://quera.org/problemset/102261/) | رامین و مسئله‌ی ریاضی | [csharp](https://github.com/HamidMolareza/QueraProblems/blob/master/Solutions/102261/csharp) | 24-08-2022 |
 | [279](https://quera.org/problemset/279/) | محاسبه‌ی پیچیده | [csharp](https://github.com/HamidMolareza/QueraProblems/blob/master/Solutions/279/csharp) | 23-08-2022 |
-| [590](https://quera.org/problemset/590/) | ب.م.م و ک.م.م | [csharp](https://github.com/HamidMolareza/QueraProblems/blob/master/Solutions/590/csharp) | 23-08-2022 |
-| [593](https://quera.org/problemset/593/) | یافتن عدد اول | [csharp](https://github.com/HamidMolareza/QueraProblems/blob/master/Solutions/593/csharp) | 23-08-2022 |
-| [594](https://quera.org/problemset/594/) | مبنا | [csharp](https://github.com/HamidMolareza/QueraProblems/blob/master/Solutions/594/csharp) | 23-08-2022 |
-| [595](https://quera.org/problemset/595/) | مثلث خیام | [csharp](https://github.com/HamidMolareza/QueraProblems/blob/master/Solutions/595/csharp) | 23-08-2022 |
-| [597](https://quera.org/problemset/597/) | حلزون مختصاتی | [csharp](https://github.com/HamidMolareza/QueraProblems/blob/master/Solutions/597/csharp) | 23-08-2022 |
-| [607](https://quera.org/problemset/607/) | ضرب ماتریس‌ها | [csharp](https://github.com/HamidMolareza/QueraProblems/blob/master/Solutions/607/csharp) | 23-08-2022 |
-| [618](https://quera.org/problemset/618/) | چاپ لوزی | [csharp](https://github.com/HamidMolareza/QueraProblems/blob/master/Solutions/618/csharp) | 23-08-2022 |
-| [637](https://quera.org/problemset/637/) | جمع اعداد | [csharp](https://github.com/HamidMolareza/QueraProblems/blob/master/Solutions/637/csharp) | 23-08-2022 |
-| [640](https://quera.org/problemset/640/) | نردبونی | [csharp](https://github.com/HamidMolareza/QueraProblems/blob/master/Solutions/640/csharp) | 23-08-2022 |
 | [647](https://quera.org/problemset/647/) | سیگماگیر | [csharp](https://github.com/HamidMolareza/QueraProblems/blob/master/Solutions/647/csharp) | 23-08-2022 |
-| [649](https://quera.org/problemset/649/) | اول‌بینی | [csharp](https://github.com/HamidMolareza/QueraProblems/blob/master/Solutions/649/csharp) | 23-08-2022 |
-| [651](https://quera.org/problemset/651/) | مبنای آینه‌ای | [csharp](https://github.com/HamidMolareza/QueraProblems/blob/master/Solutions/651/csharp) | 23-08-2022 |
-| [655](https://quera.org/problemset/655/) | فرزاد فیلم‌بین | [csharp](https://github.com/HamidMolareza/QueraProblems/blob/master/Solutions/655/csharp) | 23-08-2022 |
-| [658](https://quera.org/problemset/658/) | فرزاد کارکن | [csharp](https://github.com/HamidMolareza/QueraProblems/blob/master/Solutions/658/csharp) | 23-08-2022 |
 | [2530](https://quera.org/problemset/2530/) | لکنت | [csharp](https://github.com/HamidMolareza/QueraProblems/blob/master/Solutions/2530/csharp) | 23-08-2022 |
 | [2551](https://quera.org/problemset/2551/) | جمع بزرگان | [csharp](https://github.com/HamidMolareza/QueraProblems/blob/master/Solutions/2551/csharp) | 23-08-2022 |
 | [2596](https://quera.org/problemset/2596/) | حدس عدد | [csharp](https://github.com/HamidMolareza/QueraProblems/blob/master/Solutions/2596/csharp) | 23-08-2022 |
@@ -125,7 +128,6 @@ Number of solutions: 264
 | [3407](https://quera.org/problemset/3407/) | بمب بازی | [csharp](https://github.com/HamidMolareza/QueraProblems/blob/master/Solutions/3407/csharp) | 23-08-2022 |
 | [3412](https://quera.org/problemset/3412/) | وسط صندلی عقب | [csharp](https://github.com/HamidMolareza/QueraProblems/blob/master/Solutions/3412/csharp) | 23-08-2022 |
 | [3415](https://quera.org/problemset/3415/) | بازار موبایل | [csharp](https://github.com/HamidMolareza/QueraProblems/blob/master/Solutions/3415/csharp) | 23-08-2022 |
-| [3430](https://quera.org/problemset/3430/) | بلندگو | [csharp](https://github.com/HamidMolareza/QueraProblems/blob/master/Solutions/3430/csharp) | 23-08-2022 |
 | [3558](https://quera.org/problemset/3558/) | ارسال سنگین | [csharp](https://github.com/HamidMolareza/QueraProblems/blob/master/Solutions/3558/csharp) | 23-08-2022 |
 | [6192](https://quera.org/problemset/6192/) | مسئله‌ی آب | [csharp](https://github.com/HamidMolareza/QueraProblems/blob/master/Solutions/6192/csharp) | 23-08-2022 |
 | [6193](https://quera.org/problemset/6193/) | مسئله‌ی امنیتی | [csharp](https://github.com/HamidMolareza/QueraProblems/blob/master/Solutions/6193/csharp) | 23-08-2022 |
@@ -134,9 +136,7 @@ Number of solutions: 264
 | [7609](https://quera.org/problemset/7609/) | نامه‌ی بد | [csharp](https://github.com/HamidMolareza/QueraProblems/blob/master/Solutions/7609/csharp) | 23-08-2022 |
 | [7998](https://quera.org/problemset/7998/) | صفحه‌کلید انتخاباتی | [csharp](https://github.com/HamidMolareza/QueraProblems/blob/master/Solutions/7998/csharp) | 23-08-2022 |
 | [9773](https://quera.org/problemset/9773/) | لوزی‌های ستاره‌ای | [csharp](https://github.com/HamidMolareza/QueraProblems/blob/master/Solutions/9773/csharp) | 23-08-2022 |
-| [10163](https://quera.org/problemset/10163/) | تیم ملی نخودخوری در برره | [csharp](https://github.com/HamidMolareza/QueraProblems/blob/master/Solutions/10163/csharp) | 23-08-2022 |
 | [10230](https://quera.org/problemset/10230/) | مشق امشب باقر | [csharp](https://github.com/HamidMolareza/QueraProblems/blob/master/Solutions/10230/csharp) | 23-08-2022 |
-| [10326](https://quera.org/problemset/10326/) | استارت-آپ باکلاس | [csharp](https://github.com/HamidMolareza/QueraProblems/blob/master/Solutions/10326/csharp) | 23-08-2022 |
 | [14580](https://quera.org/problemset/14580/) | باب و کلید تلویزیون | [csharp](https://github.com/HamidMolareza/QueraProblems/blob/master/Solutions/14580/csharp) | 23-08-2022 |
 | [17245](https://quera.org/problemset/17245/) | تکسلنگ | [csharp](https://github.com/HamidMolareza/QueraProblems/blob/master/Solutions/17245/csharp) | 23-08-2022 |
 | [20249](https://quera.org/problemset/20249/) | مربّاها و مشکلات اقتصادی | [csharp](https://github.com/HamidMolareza/QueraProblems/blob/master/Solutions/20249/csharp) | 23-08-2022 |
