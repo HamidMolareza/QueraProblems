@@ -26,10 +26,11 @@ See [this repository](https://github.com/HamidMolareza/LeetCode)
 
 Number of questions solved: 147
 
-Number of solutions: 280
+Number of solutions: 281
 
 | Question | Title | Solutions | Last commit |
 | ----- | ----- | ----- | ----- |
+| [20249](https://quera.org/problemset/20249/) | مربّاها و مشکلات اقتصادی | [python3](https://github.com/HamidMolareza/QueraProblems/blob/master/Solutions/20249/python3) - [csharp](https://github.com/HamidMolareza/QueraProblems/blob/master/Solutions/20249/csharp) | 28-11-2022 |
 | [590](https://quera.org/problemset/590/) | ب.م.م و ک.م.م | [c++](https://github.com/HamidMolareza/QueraProblems/blob/master/Solutions/590/c++) - [csharp](https://github.com/HamidMolareza/QueraProblems/blob/master/Solutions/590/csharp) | 25-11-2022 |
 | [593](https://quera.org/problemset/593/) | یافتن عدد اول | [c++](https://github.com/HamidMolareza/QueraProblems/blob/master/Solutions/593/c++) - [csharp](https://github.com/HamidMolareza/QueraProblems/blob/master/Solutions/593/csharp) | 25-11-2022 |
 | [594](https://quera.org/problemset/594/) | مبنا | [c++](https://github.com/HamidMolareza/QueraProblems/blob/master/Solutions/594/c++) - [csharp](https://github.com/HamidMolareza/QueraProblems/blob/master/Solutions/594/csharp) | 25-11-2022 |
@@ -139,7 +140,6 @@ Number of solutions: 280
 | [10230](https://quera.org/problemset/10230/) | مشق امشب باقر | [csharp](https://github.com/HamidMolareza/QueraProblems/blob/master/Solutions/10230/csharp) | 23-08-2022 |
 | [14580](https://quera.org/problemset/14580/) | باب و کلید تلویزیون | [csharp](https://github.com/HamidMolareza/QueraProblems/blob/master/Solutions/14580/csharp) | 23-08-2022 |
 | [17245](https://quera.org/problemset/17245/) | تکسلنگ | [csharp](https://github.com/HamidMolareza/QueraProblems/blob/master/Solutions/17245/csharp) | 23-08-2022 |
-| [20249](https://quera.org/problemset/20249/) | مربّاها و مشکلات اقتصادی | [csharp](https://github.com/HamidMolareza/QueraProblems/blob/master/Solutions/20249/csharp) | 23-08-2022 |
 | [26651](https://quera.org/problemset/26651/) | سوال نفس‌گیر | [csharp](https://github.com/HamidMolareza/QueraProblems/blob/master/Solutions/26651/csharp) | 23-08-2022 |
 | [28948](https://quera.org/problemset/28948/) | بتایپ | [csharp](https://github.com/HamidMolareza/QueraProblems/blob/master/Solutions/28948/csharp) | 23-08-2022 |
 | [31020](https://quera.org/problemset/31020/) | سپیده | [csharp](https://github.com/HamidMolareza/QueraProblems/blob/master/Solutions/31020/csharp) | 23-08-2022 |
