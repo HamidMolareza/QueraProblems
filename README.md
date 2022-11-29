@@ -24,12 +24,13 @@ See [this repository](https://github.com/HamidMolareza/LeetCode)
 
 ## List of problems-solutions
 
-Number of questions solved: 147
+Number of questions solved: 148
 
-Number of solutions: 283
+Number of solutions: 286
 
 | Question | Title | Solutions | Last commit |
 | ----- | ----- | ----- | ----- |
+| [4068](https://quera.org/problemset/4068/) | خرما | [c++](https://github.com/HamidMolareza/QueraProblems/blob/master/Solutions/4068/c++) - [java](https://github.com/HamidMolareza/QueraProblems/blob/master/Solutions/4068/java) - [python3](https://github.com/HamidMolareza/QueraProblems/blob/master/Solutions/4068/python3) | 29-11-2022 |
 | [20249](https://quera.org/problemset/20249/) | مربّاها و مشکلات اقتصادی | [c++](https://github.com/HamidMolareza/QueraProblems/blob/master/Solutions/20249/c++) - [java](https://github.com/HamidMolareza/QueraProblems/blob/master/Solutions/20249/java) - [python3](https://github.com/HamidMolareza/QueraProblems/blob/master/Solutions/20249/python3) - [csharp](https://github.com/HamidMolareza/QueraProblems/blob/master/Solutions/20249/csharp) | 28-11-2022 |
 | [590](https://quera.org/problemset/590/) | ب.م.م و ک.م.م | [c++](https://github.com/HamidMolareza/QueraProblems/blob/master/Solutions/590/c++) - [csharp](https://github.com/HamidMolareza/QueraProblems/blob/master/Solutions/590/csharp) | 25-11-2022 |
 | [593](https://quera.org/problemset/593/) | یافتن عدد اول | [c++](https://github.com/HamidMolareza/QueraProblems/blob/master/Solutions/593/c++) - [csharp](https://github.com/HamidMolareza/QueraProblems/blob/master/Solutions/593/csharp) | 25-11-2022 |
