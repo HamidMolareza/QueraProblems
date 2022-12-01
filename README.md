@@ -26,10 +26,11 @@ See [this repository](https://github.com/HamidMolareza/LeetCode)
 
 Number of questions solved: 148
 
-Number of solutions: 288
+Number of solutions: 291
 
 | Question | Title | Solutions | Last commit |
 | ----- | ----- | ----- | ----- |
+| [3407](https://quera.org/problemset/3407/) | بمب بازی | [c++](https://github.com/HamidMolareza/QueraProblems/blob/master/Solutions/3407/c++) - [java](https://github.com/HamidMolareza/QueraProblems/blob/master/Solutions/3407/java) - [python3](https://github.com/HamidMolareza/QueraProblems/blob/master/Solutions/3407/python3) - [csharp](https://github.com/HamidMolareza/QueraProblems/blob/master/Solutions/3407/csharp) | 01-12-2022 |
 | [10163](https://quera.org/problemset/10163/) | تیم ملی نخودخوری در برره | [c++](https://github.com/HamidMolareza/QueraProblems/blob/master/Solutions/10163/c++) - [java](https://github.com/HamidMolareza/QueraProblems/blob/master/Solutions/10163/java) - [python3](https://github.com/HamidMolareza/QueraProblems/blob/master/Solutions/10163/python3) - [csharp](https://github.com/HamidMolareza/QueraProblems/blob/master/Solutions/10163/csharp) | 30-11-2022 |
 | [4068](https://quera.org/problemset/4068/) | خرما | [c++](https://github.com/HamidMolareza/QueraProblems/blob/master/Solutions/4068/c++) - [java](https://github.com/HamidMolareza/QueraProblems/blob/master/Solutions/4068/java) - [python3](https://github.com/HamidMolareza/QueraProblems/blob/master/Solutions/4068/python3) | 29-11-2022 |
 | [20249](https://quera.org/problemset/20249/) | مربّاها و مشکلات اقتصادی | [c++](https://github.com/HamidMolareza/QueraProblems/blob/master/Solutions/20249/c++) - [java](https://github.com/HamidMolareza/QueraProblems/blob/master/Solutions/20249/java) - [python3](https://github.com/HamidMolareza/QueraProblems/blob/master/Solutions/20249/python3) - [csharp](https://github.com/HamidMolareza/QueraProblems/blob/master/Solutions/20249/csharp) | 28-11-2022 |
@@ -127,7 +128,6 @@ Number of solutions: 288
 | [2705](https://quera.org/problemset/2705/) | بدخواه پویان | [csharp](https://github.com/HamidMolareza/QueraProblems/blob/master/Solutions/2705/csharp) | 23-08-2022 |
 | [3107](https://quera.org/problemset/3107/) | تی‌شرت برنده | [csharp](https://github.com/HamidMolareza/QueraProblems/blob/master/Solutions/3107/csharp) | 23-08-2022 |
 | [3109](https://quera.org/problemset/3109/) | سنگ برنده | [csharp](https://github.com/HamidMolareza/QueraProblems/blob/master/Solutions/3109/csharp) | 23-08-2022 |
-| [3407](https://quera.org/problemset/3407/) | بمب بازی | [csharp](https://github.com/HamidMolareza/QueraProblems/blob/master/Solutions/3407/csharp) | 23-08-2022 |
 | [3412](https://quera.org/problemset/3412/) | وسط صندلی عقب | [csharp](https://github.com/HamidMolareza/QueraProblems/blob/master/Solutions/3412/csharp) | 23-08-2022 |
 | [3415](https://quera.org/problemset/3415/) | بازار موبایل | [csharp](https://github.com/HamidMolareza/QueraProblems/blob/master/Solutions/3415/csharp) | 23-08-2022 |
 | [3558](https://quera.org/problemset/3558/) | ارسال سنگین | [csharp](https://github.com/HamidMolareza/QueraProblems/blob/master/Solutions/3558/csharp) | 23-08-2022 |
