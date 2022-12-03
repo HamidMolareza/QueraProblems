@@ -26,10 +26,11 @@ See [this repository](https://github.com/HamidMolareza/LeetCode)
 
 Number of questions solved: 148
 
-Number of solutions: 294
+Number of solutions: 296
 
 | Question | Title | Solutions | Last commit |
 | ----- | ----- | ----- | ----- |
+| [10166](https://quera.org/problemset/10166/) | سیکل گرفتن در برره | [c++](https://github.com/HamidMolareza/QueraProblems/blob/master/Solutions/10166/c++) - [java](https://github.com/HamidMolareza/QueraProblems/blob/master/Solutions/10166/java) - [python3](https://github.com/HamidMolareza/QueraProblems/blob/master/Solutions/10166/python3) - [csharp](https://github.com/HamidMolareza/QueraProblems/blob/master/Solutions/10166/csharp) | 03-12-2022 |
 | [2596](https://quera.org/problemset/2596/) | حدس عدد | [c++](https://github.com/HamidMolareza/QueraProblems/blob/master/Solutions/2596/c++) - [java](https://github.com/HamidMolareza/QueraProblems/blob/master/Solutions/2596/java) - [python3](https://github.com/HamidMolareza/QueraProblems/blob/master/Solutions/2596/python3) - [csharp](https://github.com/HamidMolareza/QueraProblems/blob/master/Solutions/2596/csharp) | 02-12-2022 |
 | [3407](https://quera.org/problemset/3407/) | بمب بازی | [c++](https://github.com/HamidMolareza/QueraProblems/blob/master/Solutions/3407/c++) - [java](https://github.com/HamidMolareza/QueraProblems/blob/master/Solutions/3407/java) - [python3](https://github.com/HamidMolareza/QueraProblems/blob/master/Solutions/3407/python3) - [csharp](https://github.com/HamidMolareza/QueraProblems/blob/master/Solutions/3407/csharp) | 01-12-2022 |
 | [10163](https://quera.org/problemset/10163/) | تیم ملی نخودخوری در برره | [c++](https://github.com/HamidMolareza/QueraProblems/blob/master/Solutions/10163/c++) - [java](https://github.com/HamidMolareza/QueraProblems/blob/master/Solutions/10163/java) - [python3](https://github.com/HamidMolareza/QueraProblems/blob/master/Solutions/10163/python3) - [csharp](https://github.com/HamidMolareza/QueraProblems/blob/master/Solutions/10163/csharp) | 30-11-2022 |
@@ -83,7 +84,6 @@ Number of solutions: 294
 | [20256](https://quera.org/problemset/20256/) | رژیم سخت | [c++](https://github.com/HamidMolareza/QueraProblems/blob/master/Solutions/20256/c++) - [java](https://github.com/HamidMolareza/QueraProblems/blob/master/Solutions/20256/java) - [python3](https://github.com/HamidMolareza/QueraProblems/blob/master/Solutions/20256/python3) | 25-11-2022 |
 | [3538](https://quera.org/problemset/3538/) | آخ جون طرف نیست! | [c++](https://github.com/HamidMolareza/QueraProblems/blob/master/Solutions/3538/c++) - [csharp](https://github.com/HamidMolareza/QueraProblems/blob/master/Solutions/3538/csharp) | 24-11-2022 |
 | [4066](https://quera.org/problemset/4066/) | پیشگویی خر | [c++](https://github.com/HamidMolareza/QueraProblems/blob/master/Solutions/4066/c++) - [csharp](https://github.com/HamidMolareza/QueraProblems/blob/master/Solutions/4066/csharp) | 24-11-2022 |
-| [10166](https://quera.org/problemset/10166/) | سیکل گرفتن در برره | [c++](https://github.com/HamidMolareza/QueraProblems/blob/master/Solutions/10166/c++) - [csharp](https://github.com/HamidMolareza/QueraProblems/blob/master/Solutions/10166/csharp) | 24-11-2022 |
 | [148099](https://quera.org/problemset/148099/) | اعداد یکتا | [csharp](https://github.com/HamidMolareza/QueraProblems/blob/master/Solutions/148099/csharp) | 22-11-2022 |
 | [148640](https://quera.org/problemset/148640/) | آزمون تستی | [csharp](https://github.com/HamidMolareza/QueraProblems/blob/master/Solutions/148640/csharp) | 20-11-2022 |
 | [4067](https://quera.org/problemset/4067/) | سراب | [python3](https://github.com/HamidMolareza/QueraProblems/blob/master/Solutions/4067/python3) - [csharp](https://github.com/HamidMolareza/QueraProblems/blob/master/Solutions/4067/csharp) | 30-10-2022 |
