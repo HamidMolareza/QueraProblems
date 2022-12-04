@@ -24,12 +24,13 @@ See [this repository](https://github.com/HamidMolareza/LeetCode)
 
 ## List of problems-solutions
 
-Number of questions solved: 148
+Number of questions solved: 149
 
-Number of solutions: 296
+Number of solutions: 299
 
 | Question | Title | Solutions | Last commit |
 | ----- | ----- | ----- | ----- |
+| [3408](https://quera.org/problemset/3408/) | سوال برنامه نویسی برنامه نویسی سوال | [c++](https://github.com/HamidMolareza/QueraProblems/blob/master/Solutions/3408/c++) - [java](https://github.com/HamidMolareza/QueraProblems/blob/master/Solutions/3408/java) - [python3](https://github.com/HamidMolareza/QueraProblems/blob/master/Solutions/3408/python3) | 04-12-2022 |
 | [10166](https://quera.org/problemset/10166/) | سیکل گرفتن در برره | [c++](https://github.com/HamidMolareza/QueraProblems/blob/master/Solutions/10166/c++) - [java](https://github.com/HamidMolareza/QueraProblems/blob/master/Solutions/10166/java) - [python3](https://github.com/HamidMolareza/QueraProblems/blob/master/Solutions/10166/python3) - [csharp](https://github.com/HamidMolareza/QueraProblems/blob/master/Solutions/10166/csharp) | 03-12-2022 |
 | [2596](https://quera.org/problemset/2596/) | حدس عدد | [c++](https://github.com/HamidMolareza/QueraProblems/blob/master/Solutions/2596/c++) - [java](https://github.com/HamidMolareza/QueraProblems/blob/master/Solutions/2596/java) - [python3](https://github.com/HamidMolareza/QueraProblems/blob/master/Solutions/2596/python3) - [csharp](https://github.com/HamidMolareza/QueraProblems/blob/master/Solutions/2596/csharp) | 02-12-2022 |
 | [3407](https://quera.org/problemset/3407/) | بمب بازی | [c++](https://github.com/HamidMolareza/QueraProblems/blob/master/Solutions/3407/c++) - [java](https://github.com/HamidMolareza/QueraProblems/blob/master/Solutions/3407/java) - [python3](https://github.com/HamidMolareza/QueraProblems/blob/master/Solutions/3407/python3) - [csharp](https://github.com/HamidMolareza/QueraProblems/blob/master/Solutions/3407/csharp) | 01-12-2022 |
