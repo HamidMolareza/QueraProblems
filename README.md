@@ -26,11 +26,11 @@ See [this repository](https://github.com/HamidMolareza/LeetCode)
 
 Number of questions solved: 151
 
-Number of solutions: 304
+Number of solutions: 305
 
 | Question | Title | Solutions | Last commit |
 | ----- | ----- | ----- | ----- |
-| [10327](https://quera.org/problemset/10327/) | کدتخفیف | [csharp](https://github.com/HamidMolareza/QueraProblems/blob/master/Solutions/10327/csharp) - [python3](https://github.com/HamidMolareza/QueraProblems/blob/master/Solutions/10327/python3) | 11-12-2022 |
+| [10327](https://quera.org/problemset/10327/) | کدتخفیف | [csharp](https://github.com/HamidMolareza/QueraProblems/blob/master/Solutions/10327/csharp) - [python3](https://github.com/HamidMolareza/QueraProblems/blob/master/Solutions/10327/python3) - [c++](https://github.com/HamidMolareza/QueraProblems/blob/master/Solutions/10327/c++) | 11-12-2022 |
 | [605](https://quera.org/problemset/605/) | کاشی‌کاری | [c++](https://github.com/HamidMolareza/QueraProblems/blob/master/Solutions/605/c++) - [java](https://github.com/HamidMolareza/QueraProblems/blob/master/Solutions/605/java) - [python3](https://github.com/HamidMolareza/QueraProblems/blob/master/Solutions/605/python3) | 05-12-2022 |
 | [3408](https://quera.org/problemset/3408/) | سوال برنامه نویسی برنامه نویسی سوال | [c++](https://github.com/HamidMolareza/QueraProblems/blob/master/Solutions/3408/c++) - [java](https://github.com/HamidMolareza/QueraProblems/blob/master/Solutions/3408/java) - [python3](https://github.com/HamidMolareza/QueraProblems/blob/master/Solutions/3408/python3) | 04-12-2022 |
 | [10166](https://quera.org/problemset/10166/) | سیکل گرفتن در برره | [c++](https://github.com/HamidMolareza/QueraProblems/blob/master/Solutions/10166/c++) - [java](https://github.com/HamidMolareza/QueraProblems/blob/master/Solutions/10166/java) - [python3](https://github.com/HamidMolareza/QueraProblems/blob/master/Solutions/10166/python3) - [csharp](https://github.com/HamidMolareza/QueraProblems/blob/master/Solutions/10166/csharp) | 03-12-2022 |
