@@ -102,7 +102,11 @@ appreciated**.
 
 Please read [our contribution guidelines](docs/CONTRIBUTING.md), and thank you for being involved!
 
-## Authors & contributors
+## Contributors
+
+[List of contributors](https://github.com/HamidMolareza/QueraProblems/graphs/contributors)
+
+## Authors
 
 The original setup of this repository is by [Hamid Molareza](https://github.com/HamidMolareza).
 
