@@ -123,9 +123,7 @@ namespace Quera {
                     .ToList());
 
         private static DateTime GetLastCommitDateTime(this IEnumerable<Solution> solutions) =>
-            solutions.Select(solution => solution.LastCommitDate)
-                .OrderByDescending(dateTime => dateTime)
-                .First();
+            solutions.Select(solution => solution.LastCommitDate).MaxBy(dateTime => dateTime);
 
         private static Task SaveDataAsync(string outputDir, string readme, int numOfTry) =>
             TryExtensions.Try(() =>
