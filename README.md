@@ -24,12 +24,17 @@ See [this repository](https://github.com/HamidMolareza/LeetCode)
 
 ## List of problems-solutions
 
-Number of questions solved: 151
+Number of questions solved: 156
 
-Number of solutions: 305
+Number of solutions: 310
 
 | Question | Title | Solutions | Last commit |
 | ----- | ----- | ----- | ----- |
+| [157645](https://quera.org/problemset/157645/) | جمعیت خرگوش‌ها | [c++](https://github.com/HamidMolareza/QueraProblems/blob/master/Solutions/157645/c++) | 19-12-2022 |
+| [83360](https://quera.org/problemset/83360/) | نظریه ریسمان | [python3](https://github.com/HamidMolareza/QueraProblems/blob/master/Solutions/83360/python3) | 19-12-2022 |
+| [3413](https://quera.org/problemset/3413/) | نرمش جدول | [python3](https://github.com/HamidMolareza/QueraProblems/blob/master/Solutions/3413/python3) | 19-12-2022 |
+| [146465](https://quera.org/problemset/146465/) | شکلات | [c++](https://github.com/HamidMolareza/QueraProblems/blob/master/Solutions/146465/c++) | 19-12-2022 |
+| [20250](https://quera.org/problemset/20250/) | مربّاها و قفسه‌بندی | [c++](https://github.com/HamidMolareza/QueraProblems/blob/master/Solutions/20250/c++) | 19-12-2022 |
 | [10327](https://quera.org/problemset/10327/) | کدتخفیف | [c++](https://github.com/HamidMolareza/QueraProblems/blob/master/Solutions/10327/c++) - [csharp](https://github.com/HamidMolareza/QueraProblems/blob/master/Solutions/10327/csharp) - [python3](https://github.com/HamidMolareza/QueraProblems/blob/master/Solutions/10327/python3) | 11-12-2022 |
 | [605](https://quera.org/problemset/605/) | کاشی‌کاری | [c++](https://github.com/HamidMolareza/QueraProblems/blob/master/Solutions/605/c++) - [java](https://github.com/HamidMolareza/QueraProblems/blob/master/Solutions/605/java) - [python3](https://github.com/HamidMolareza/QueraProblems/blob/master/Solutions/605/python3) | 05-12-2022 |
 | [3408](https://quera.org/problemset/3408/) | سوال برنامه نویسی برنامه نویسی سوال | [c++](https://github.com/HamidMolareza/QueraProblems/blob/master/Solutions/3408/c++) - [java](https://github.com/HamidMolareza/QueraProblems/blob/master/Solutions/3408/java) - [python3](https://github.com/HamidMolareza/QueraProblems/blob/master/Solutions/3408/python3) | 04-12-2022 |
