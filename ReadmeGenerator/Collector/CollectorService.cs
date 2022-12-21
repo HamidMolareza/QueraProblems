@@ -17,18 +17,18 @@ namespace Quera.Collector;
 
 public static class CollectorService {
     public static Task<Result<List<Problem>>> CollectProblemsAsync(string solutionsDirectory, CacheModel cache,
-        string problemUrlFormat, int delayToRequestQueraInMilliSeconds, int numOfTry) =>
+        string problemUrlFormat, int delayToRequestQueraInMilliSeconds, IEnumerable<string> ignoreSolutions, int numOfTry) =>
         TryExtensions.Try(() => Directory.GetDirectories(solutionsDirectory), numOfTry)
             .OnSuccess(problemDirs =>
                 problemDirs.SelectResults(problemDir =>
                         CollectProblemAsync(problemDir, cache, delayToRequestQueraInMilliSeconds, problemUrlFormat,
-                            numOfTry))
+                            ignoreSolutions, numOfTry))
                     .OnSuccess(problems => problems.Where(problem => problem is not null).ToList())
             )!;
 
     private static Task<Result<Problem?>> CollectProblemAsync(string problemDir, CacheModel cache,
-        int delayToRequestQueraInMilliSeconds, string problemUrlFormat, int numOfTry) =>
-        GetValidSolutionDirs(problemDir, numOfTry)
+        int delayToRequestQueraInMilliSeconds, string problemUrlFormat, IEnumerable<string> ignoreSolutions, int numOfTry) =>
+        GetValidSolutionDirs(problemDir,ignoreSolutions, numOfTry)
             .OnSuccess(CollectSolutionsAsync)
             .OnSuccess(async solutions => {
                 if (!solutions.Any())
@@ -47,10 +47,13 @@ public static class CollectorService {
                     });
             }).OnFailAddMoreDetails(new {problemDir});
 
-    private static Result<IEnumerable<string>> GetValidSolutionDirs(string problemDir, int numOfTry) =>
+    private static Result<IEnumerable<string>> GetValidSolutionDirs(string problemDir, IEnumerable<string> ignoreSolutions, int numOfTry) =>
         TryExtensions.Try(() => Directory.GetDirectories(problemDir), numOfTry)
             .OnSuccess(solutions =>
-                solutions.Where(solution => !new FileInfo(solution).Name.StartsWith(".")));
+                solutions.Where(solution => IsSolutionNameValid(new FileInfo(solution).Name, ignoreSolutions)));
+
+    private static bool IsSolutionNameValid(string solutionName, IEnumerable<string> ignoreSolutions) 
+        => !solutionName.StartsWith(".") && ignoreSolutions.All(ignoreSolution => ignoreSolution != solutionName);
 
     private static Task<Result<List<Solution>>> CollectSolutionsAsync(IEnumerable<string> languageDirs) =>
         languageDirs.SelectResults(async languageDir =>

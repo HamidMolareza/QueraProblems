@@ -5,5 +5,6 @@
   "ReadmeFileName": "README.md",
   "ReadmeTemplateName": "Data/ReadmeTemplate.md",
   "NumOfTry": 2,
-  "CacheFileName": "Data/cache.json"
+  "CacheFileName": "Data/cache.json",
+  "IgnoreSolutions": ["venv"]
 }

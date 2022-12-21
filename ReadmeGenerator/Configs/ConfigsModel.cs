@@ -1,3 +1,4 @@
+using System.Collections.Generic;
 using System.IO;
 
 namespace Quera.Configs;
@@ -12,4 +13,5 @@ public class ConfigsModel {
     public string ReadmeTemplateName { get; set; } = null!;
     public string CacheFileName { get; set; } = null!;
     public int NumOfTry { get; set; }
+    public List<string> IgnoreSolutions { get; set; } = new();
 }
