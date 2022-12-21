@@ -1,9 +1,9 @@
 using System;
 using System.Collections.Generic;
 
-namespace Quera.Models;
+namespace Quera.Cache;
 
-public class Cache {
+public class CacheModel {
     public List<Titles> ProblemTitles { get; set; } = new();
 
     public class Titles {
