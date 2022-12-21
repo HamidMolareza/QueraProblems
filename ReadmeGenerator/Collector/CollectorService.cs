@@ -17,7 +17,8 @@ namespace Quera.Collector;
 
 public static class CollectorService {
     public static Task<Result<List<Problem>>> CollectProblemsAsync(string solutionsDirectory, CacheModel cache,
-        string problemUrlFormat, int delayToRequestQueraInMilliSeconds, IEnumerable<string> ignoreSolutions, int numOfTry) =>
+        string problemUrlFormat, int delayToRequestQueraInMilliSeconds, IEnumerable<string> ignoreSolutions,
+        int numOfTry) =>
         TryExtensions.Try(() => Directory.GetDirectories(solutionsDirectory), numOfTry)
             .OnSuccess(problemDirs =>
                 problemDirs.SelectResults(problemDir =>
@@ -27,8 +28,9 @@ public static class CollectorService {
             )!;
 
     private static Task<Result<Problem?>> CollectProblemAsync(string problemDir, CacheModel cache,
-        int delayToRequestQueraInMilliSeconds, string problemUrlFormat, IEnumerable<string> ignoreSolutions, int numOfTry) =>
-        GetValidSolutionDirs(problemDir,ignoreSolutions, numOfTry)
+        int delayToRequestQueraInMilliSeconds, string problemUrlFormat, IEnumerable<string> ignoreSolutions,
+        int numOfTry) =>
+        GetValidSolutionDirs(problemDir, ignoreSolutions, numOfTry)
             .OnSuccess(CollectSolutionsAsync)
             .OnSuccess(async solutions => {
                 if (!solutions.Any())
@@ -40,19 +42,22 @@ public static class CollectorService {
                         if (!result.wasCache)
                             await Task.Delay(delayToRequestQueraInMilliSeconds);
 
-                        return Result<Problem?>.Ok(new Problem(queraId: queraId.ConvertTo<string, long>(),
-                            queraTitle: result.title,
-                            lastSolutionsCommit: solutions.GetLastCommitDateTime()
-                        ) {Solutions = solutions});
+                        return await GitHelper.GetLastCommitDateAsync(problemDir)
+                            .OnSuccess(lastCommitDate => Result<Problem?>.Ok(new Problem(
+                                queraId: queraId.ConvertTo<string, long>(),
+                                queraTitle: result.title,
+                                lastSolutionsCommit: lastCommitDate
+                            ) {Solutions = solutions}));
                     });
             }).OnFailAddMoreDetails(new {problemDir});
 
-    private static Result<IEnumerable<string>> GetValidSolutionDirs(string problemDir, IEnumerable<string> ignoreSolutions, int numOfTry) =>
+    private static Result<IEnumerable<string>> GetValidSolutionDirs(string problemDir,
+        IEnumerable<string> ignoreSolutions, int numOfTry) =>
         TryExtensions.Try(() => Directory.GetDirectories(problemDir), numOfTry)
             .OnSuccess(solutions =>
                 solutions.Where(solution => IsSolutionNameValid(new FileInfo(solution).Name, ignoreSolutions)));
 
-    private static bool IsSolutionNameValid(string solutionName, IEnumerable<string> ignoreSolutions) 
+    private static bool IsSolutionNameValid(string solutionName, IEnumerable<string> ignoreSolutions)
         => !solutionName.StartsWith(".") && ignoreSolutions.All(ignoreSolution => ignoreSolution != solutionName);
 
     private static Task<Result<List<Solution>>> CollectSolutionsAsync(IEnumerable<string> languageDirs) =>
@@ -63,9 +68,6 @@ public static class CollectorService {
                     LastCommitDate = lastCommitDate
                 })
         );
-
-    private static DateTime GetLastCommitDateTime(this IEnumerable<Solution> solutions) =>
-        solutions.Select(solution => solution.LastCommitDate).MaxBy(dateTime => dateTime);
 
     private static async Task<Result<(string title, bool wasCache)>> GetProblemTitleAsync(string queraId,
         CacheModel cache, string problemUrlFormat, int numOfTry) {
