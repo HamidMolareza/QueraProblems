@@ -6,6 +6,7 @@ namespace Quera.ErrorDetails {
     public class TooManyRequestErrorDetail : ErrorDetail {
         public TooManyRequestErrorDetail(string? title = nameof(TooManyRequestErrorDetail), string? message = null,
             int? statusCode = StatusCodes.Status429TooManyRequests, Exception? exception = null,
-            object? moreDetails = null) : base(title, message, statusCode, exception, moreDetails) { }
+            object? moreDetails = null) : base(title ?? nameof(TooManyRequestErrorDetail),
+            message, statusCode, exception, moreDetails) { }
     }
 }
