@@ -11,6 +11,7 @@ the [Semantic Versioning 2.0.0](http://semver.org/) format.
 ### Updated
 
 - [Improve get last commit date](https://github.com/HamidMolareza/QueraProblems/issues/22)
+- Big refactor
 
 ## 2.1.0 - 2022-10-31
 
