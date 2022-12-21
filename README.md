@@ -24,9 +24,9 @@ See [this repository](https://github.com/HamidMolareza/LeetCode)
 
 ## List of problems-solutions
 
-Number of questions solved: 156
+Number of problems solved: **156**
 
-Number of solutions: 310
+Number of solutions: **310**
 
 | Question | Title | Solutions | Last commit |
 | ----- | ----- | ----- | ----- |
