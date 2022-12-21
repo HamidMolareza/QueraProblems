@@ -4,29 +4,28 @@ using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using OnRail;
 using OnRail.Extensions.OnFail;
-using Quera.Cache;
-using Quera.Collector;
+using OnRail.Extensions.Try;
 using Quera.Collector.Models;
 using Quera.Configs;
-using Quera.ErrorDetails;
 
 namespace Quera.Generator;
 
 public static class Generator {
     public static async Task<string> GenerateReadmeAsync(IEnumerable<Problem> problems, string programDirectory,
-        ConfigsModel configs, CacheModel cache) {
+        ConfigsModel configs) {
         var problemsList = problems.ToList();
-        var result = new StringBuilder();
+        var readme = new StringBuilder();
 
         var numOfQuestionsSolved = problemsList.Count;
-        result.AppendLine($"Number of questions solved: {problemsList.Count}\n");
+        readme.AppendLine($"Number of problems solved: **{problemsList.Count}**\n");
 
         var numOfSolutions = problemsList.Sum(problem => problem.Solutions.Count);
         if (numOfQuestionsSolved != numOfSolutions)
-            result.AppendLine($"Number of solutions: {numOfSolutions}\n");
+            readme.AppendLine($"Number of solutions: **{numOfSolutions}**\n");
 
-        result.AppendLine("| Question | Title | Solutions | Last commit |")
+        readme.AppendLine("| Question | Title | Solutions | Last commit |")
             .AppendLine("| ----- | ----- | ----- | ----- |");
 
         problemsList = problemsList.OrderByDescending(problem => problem.LastSolutionsCommit)
@@ -36,20 +35,34 @@ public static class Generator {
         foreach (var problem in problemsList) {
             Console.Write($"Processing problem {problem.QueraId}... ");
 
-            await result.AppendProblemData(problem, configs, cache)
-                .OnFailOperateWhen(failedResult => failedResult.Detail is TooManyRequestErrorDetail,
-                    failedResult => {
-                        Console.WriteLine(
-                            $"Warning: Too many request detected: {nameof(TooManyRequestErrorDetail)} error received from server. It is better if the delay be longer.");
-                        return failedResult;
-                    })
-                .OnFail(failedResult => failedResult.OnFailThrowException());
+            var result = readme.AppendProblemData(problem, configs.SolutionUrlFormat, configs.ProblemUrlFormat);
+            result.OnFailThrowException();
 
             Console.WriteLine("Done");
         }
 
         var readmeTemplate =
             await File.ReadAllTextAsync(Path.Combine(programDirectory, configs.ReadmeTemplateName));
-        return readmeTemplate.Replace("{__REPLACE_FROM_PROGRAM_0__}", result.ToString());
+        return readmeTemplate.Replace("{__REPLACE_FROM_PROGRAM_0__}", readme.ToString());
     }
+
+    private static Result AppendProblemData(this StringBuilder source,
+        Problem problem, string solutionUrlFormat, string problemUrlFormat) =>
+        TryExtensions.Try(() => {
+            var solutionLinks = problem.Solutions
+                .OrderByDescending(solution => solution.LastCommitDate)
+                .ThenBy(solution => solution.LanguageName)
+                .Select(solution => {
+                    var solutionUrl = string.Format(solutionUrlFormat, problem.QueraId);
+                    solutionUrl = Path.Combine(solutionUrl, solution.LanguageName);
+
+                    return $"[{new FileInfo(solution.LanguageName).Name}]({solutionUrl})";
+                });
+            var solutionsSection = string.Join(" - ", solutionLinks);
+
+            var lastCommitFormatted = problem.LastSolutionsCommit.ToString("dd-MM-yyyy");
+            var url = string.Format(problemUrlFormat, problem.QueraId);
+            source.AppendLine(
+                $"| [{problem.QueraId}]({url}) | {problem.QueraTitle} | {solutionsSection} | {lastCommitFormatted} |");
+        });
 }

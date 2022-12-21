@@ -40,14 +40,15 @@ public static class Program {
 
                     _cache = cache;
                 }))
-            .OnSuccess(() => CollectorService.GetProblemsAsync(_arguments.SolutionsDirectory, _configs.NumOfTry))
+            .OnSuccess(() => CollectorService.CollectProblemsAsync(_arguments.SolutionsDirectory, _cache,
+                _configs.ProblemUrlFormat, _configs.DelayToRequestQueraInMilliSeconds, _configs.NumOfTry))
             .OnSuccess(problems =>
-                Generator.Generator.GenerateReadmeAsync(problems, _arguments.ProgramDirectory, _configs, _cache))
-            .OnSuccess(readme =>
-                Utility.SaveDataAsync(Path.Combine(_arguments.OutputDirectory, _configs.ReadmeFileName), readme,
-                    _configs.NumOfTry));
-        var result2 =
-            await CacheService.SaveAsync(_cache, _arguments.ProgramDirectory, _configs.CacheFileName);
+                Generator.Generator.GenerateReadmeAsync(problems, _arguments.ProgramDirectory, _configs))
+            .OnSuccess(readme => Utility.SaveDataAsync(
+                Path.Combine(_arguments.OutputDirectory, _configs.ReadmeFileName), readme, _configs.NumOfTry));
+
+        var result2 = await CacheService.SaveAsync(_cache, _arguments.ProgramDirectory, _configs.CacheFileName)
+            .OnSuccess(filePath => Console.WriteLine($"Save cache data in {filePath}."));
 
         return !result1.IsSuccess ? result1 : result2;
     }

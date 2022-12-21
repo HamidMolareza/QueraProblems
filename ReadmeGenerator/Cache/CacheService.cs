@@ -1,4 +1,3 @@
-using System;
 using System.IO;
 using System.Text.Json;
 using System.Threading.Tasks;
@@ -25,11 +24,12 @@ public static class CacheService {
             return Result<CacheModel?>.Ok(cache);
         });
 
-    public static Task<Result> SaveAsync(CacheModel cache, string programDirectory, string cacheFileName) =>
-        TryExtensions.Try(() => {
+    /// <returns>File path</returns>
+    public static Task<Result<string>> SaveAsync(CacheModel cache, string programDirectory, string cacheFileName) =>
+        TryExtensions.Try(async () => {
             var json = JsonSerializer.Serialize(cache);
             var filePath = Path.Combine(programDirectory, cacheFileName);
-            Console.WriteLine($"Save cache data in {filePath}...");
-            return File.WriteAllTextAsync(filePath, json);
+            await File.WriteAllTextAsync(filePath, json);
+            return filePath;
         });
 }
