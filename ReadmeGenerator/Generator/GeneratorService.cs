@@ -29,8 +29,14 @@ public static class Generator {
             .ThenBy(problem => problem.QueraId)
             .ToList();
 
-        readme.AppendLine("| Question | Title | Solutions | Last commit |")
-            .AppendLine("| ----- | ----- | ----- | ----- |");
+        readme.AppendLine("<table>")
+            .AppendLine("  <tr>")
+            .AppendLine("    <th>Question</th>")
+            .AppendLine("    <th>Title</th>")
+            .AppendLine("    <th>Solutions</th>")
+            .AppendLine("    <th>Last commit</th>")
+            .AppendLine("    <th>Contributors</th>")
+            .AppendLine("  </tr>");
 
         foreach (var problem in problemsList) {
             Console.Write($"Processing problem {problem.QueraId}... ");
@@ -40,6 +46,8 @@ public static class Generator {
 
             Console.WriteLine("Done");
         }
+
+        readme.AppendLine("</table>");
 
         var readmeTemplate =
             await File.ReadAllTextAsync(Path.Combine(programDirectory, configs.ReadmeTemplateName));
@@ -56,13 +64,27 @@ public static class Generator {
                     var solutionUrl = string.Format(solutionUrlFormat, problem.QueraId);
                     solutionUrl = Path.Combine(solutionUrl, solution.LanguageName);
 
-                    return $"[{new FileInfo(solution.LanguageName).Name}]({solutionUrl})";
+                    return $"<a href=\"{solutionUrl}\">{new FileInfo(solution.LanguageName).Name}</a>";
                 });
             var solutionsSection = string.Join(" - ", solutionLinks);
 
             var lastCommitFormatted = problem.LastSolutionsCommit.ToString("dd-MM-yyyy");
             var url = string.Format(problemUrlFormat, problem.QueraId);
-            source.AppendLine(
-                $"| [{problem.QueraId}]({url}) | {problem.QueraTitle} | {solutionsSection} | {lastCommitFormatted} |");
+
+            var contributorLinks = problem.Contributors
+                .OrderByDescending(contributor => contributor.NumOfCommits)
+                .Select(contributor =>
+                    $"<a href=\"{contributor.ProfileUrl}\"><img src=\"{contributor.AvatarUrl}\" alt=\"{contributor.Name}\" style=\"border-radius:100%\" width=\"25px\" height=\"25px\"></a>");
+            var contributorDiv = $"<div style=\"display: flex; flex-direction: row;\">{string.Join(" ", contributorLinks)}</div>";
+
+            var questionLink = $"<a href=\"{url}\">{problem.QueraId}</a>";
+
+            source.AppendLine("  <tr>")
+                .AppendLine($"    <td>{questionLink}</td>")
+                .AppendLine($"    <td>{problem.QueraTitle}</td>")
+                .AppendLine($"    <td>{solutionsSection}</td>")
+                .AppendLine($"    <td>{lastCommitFormatted}</td>")
+                .AppendLine($"    <td>{contributorDiv}</td>")
+                .AppendLine("  </tr>");
         });
 }

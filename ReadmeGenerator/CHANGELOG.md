@@ -1,12 +1,13 @@
 All notable changes to this project will be documented in this file. We follow
 the [Semantic Versioning 2.0.0](http://semver.org/) format.
 
-##  
+##  2.2.0 - 
 
 ### Added
 
 - [Version and Changelog](https://github.com/HamidMolareza/QueraProblems/issues/12)
 - [Ignore extra folders](https://github.com/HamidMolareza/QueraProblems/issues/25)
+- [Display contributors for each problem in the readme table](https://github.com/HamidMolareza/QueraProblems/issues/18)
 
 ### Updated
 
