@@ -14,4 +14,5 @@ public class ConfigsModel {
     public string CacheFileName { get; set; } = null!;
     public int NumOfTry { get; set; }
     public List<string> IgnoreSolutions { get; set; } = new();
+    public List<UserModel> Users { get; set; } = new();
 }

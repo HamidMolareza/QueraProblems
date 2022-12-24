@@ -25,12 +25,12 @@ public static class Generator {
         if (numOfQuestionsSolved != numOfSolutions)
             readme.AppendLine($"Number of solutions: **{numOfSolutions}**\n");
 
-        readme.AppendLine("| Question | Title | Solutions | Last commit |")
-            .AppendLine("| ----- | ----- | ----- | ----- |");
-
         problemsList = problemsList.OrderByDescending(problem => problem.LastSolutionsCommit)
             .ThenBy(problem => problem.QueraId)
             .ToList();
+
+        readme.AppendLine("| Question | Title | Solutions | Last commit |")
+            .AppendLine("| ----- | ----- | ----- | ----- |");
 
         foreach (var problem in problemsList) {
             Console.Write($"Processing problem {problem.QueraId}... ");

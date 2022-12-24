@@ -42,7 +42,7 @@ public static class Program {
                 }))
             .OnSuccess(() => CollectorService.CollectProblemsAsync(_arguments.SolutionsDirectory, _cache,
                 _configs.ProblemUrlFormat, _configs.DelayToRequestQueraInMilliSeconds, _configs.IgnoreSolutions,
-                _configs.NumOfTry))
+                _configs.Users, _configs.NumOfTry))
             .OnSuccess(problems =>
                 Generator.Generator.GenerateReadmeAsync(problems, _arguments.ProgramDirectory, _configs))
             .OnSuccess(readme => Utility.SaveDataAsync(

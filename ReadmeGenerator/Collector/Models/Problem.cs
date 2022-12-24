@@ -19,4 +19,6 @@ public class Problem {
     public List<Solution> Solutions { get; set; } = new();
 
     public DateTime LastSolutionsCommit { get; set; }
+
+    public List<Contributor> Contributors { get; set; } = new();
 }

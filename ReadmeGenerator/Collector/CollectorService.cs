@@ -11,25 +11,26 @@ using OnRail.Extensions.SelectResults;
 using OnRail.Extensions.Try;
 using Quera.Cache;
 using Quera.Collector.Models;
+using Quera.Configs;
 using Quera.Helpers;
 
 namespace Quera.Collector;
 
 public static class CollectorService {
     public static Task<Result<List<Problem>>> CollectProblemsAsync(string solutionsDirectory, CacheModel cache,
-        string problemUrlFormat, int delayToRequestQueraInMilliSeconds, IEnumerable<string> ignoreSolutions,
-        int numOfTry) =>
+        string problemUrlFormat, int delayToRequestQueraInMilliSeconds,
+        IEnumerable<string> ignoreSolutions, IEnumerable<UserModel> users, int numOfTry) =>
         TryExtensions.Try(() => Directory.GetDirectories(solutionsDirectory), numOfTry)
             .OnSuccess(problemDirs =>
                 problemDirs.SelectResults(problemDir =>
                         CollectProblemAsync(problemDir, cache, delayToRequestQueraInMilliSeconds, problemUrlFormat,
-                            ignoreSolutions, numOfTry))
+                            ignoreSolutions, users, numOfTry))
                     .OnSuccess(problems => problems.Where(problem => problem is not null).ToList())
             )!;
 
     private static Task<Result<Problem?>> CollectProblemAsync(string problemDir, CacheModel cache,
         int delayToRequestQueraInMilliSeconds, string problemUrlFormat, IEnumerable<string> ignoreSolutions,
-        int numOfTry) =>
+        IEnumerable<UserModel> users, int numOfTry) =>
         GetValidSolutionDirs(problemDir, ignoreSolutions, numOfTry)
             .OnSuccess(CollectSolutionsAsync)
             .OnSuccess(async solutions => {
@@ -43,13 +44,33 @@ public static class CollectorService {
                             await Task.Delay(delayToRequestQueraInMilliSeconds);
 
                         return await GitHelper.GetLastCommitDateAsync(problemDir)
-                            .OnSuccess(lastCommitDate => Result<Problem?>.Ok(new Problem(
-                                queraId: queraId.ConvertTo<string, long>(),
-                                queraTitle: result.title,
-                                lastSolutionsCommit: lastCommitDate
-                            ) {Solutions = solutions}));
+                            .OnSuccess(lastCommitDate => CollectContributorsAsync(problemDir, users)
+                                .OnSuccess(contributors => Result<Problem?>.Ok(new Problem(
+                                    queraId: queraId.ConvertTo<string, long>(),
+                                    queraTitle: result.title,
+                                    lastSolutionsCommit: lastCommitDate
+                                ) {
+                                    Solutions = solutions,
+                                    Contributors = contributors
+                                })));
                     });
             }).OnFailAddMoreDetails(new {problemDir});
+
+    private static Task<Result<List<Contributor>>>
+        CollectContributorsAsync(string problemDir, IEnumerable<UserModel> users) =>
+        GitHelper.GetContributorsAsync(problemDir)
+            .OnSuccess(contributors => contributors.Select(
+                contributor => {
+                    var user = users.SingleOrDefault(user =>
+                        string.Equals(user.Email, contributor.Email, StringComparison.CurrentCultureIgnoreCase));
+                    if (user is null)
+                        return contributor;
+                    if (user.Ignore)
+                        return null;
+                    contributor.AvatarUrl = user.AvatarUrl;
+                    contributor.ProfileUrl = user.ProfileUrl;
+                    return contributor;
+                }).Where(contributor => contributor is not null).ToList())!;
 
     private static Result<IEnumerable<string>> GetValidSolutionDirs(string problemDir,
         IEnumerable<string> ignoreSolutions, int numOfTry) =>
