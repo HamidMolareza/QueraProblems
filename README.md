@@ -26,7 +26,7 @@ See [this repository](https://github.com/HamidMolareza/LeetCode)
 
 Number of problems solved: **156**
 
-Number of solutions: **311**
+Number of solutions: **312**
 
 <table>
   <tr>
@@ -35,6 +35,13 @@ Number of solutions: **311**
     <th>Solutions</th>
     <th>Last commit</th>
     <th>Contributors</th>
+  </tr>
+  <tr>
+    <td><a href="https://quera.org/problemset/20257/">20257</a></td>
+    <td>قطار کامیابی</td>
+    <td><a href="https://github.com/HamidMolareza/QueraProblems/blob/master/Solutions/20257/csharp">csharp</a> - <a href="https://github.com/HamidMolareza/QueraProblems/blob/master/Solutions/20257/c++">c++</a> - <a href="https://github.com/HamidMolareza/QueraProblems/blob/master/Solutions/20257/java">java</a> - <a href="https://github.com/HamidMolareza/QueraProblems/blob/master/Solutions/20257/python3">python3</a></td>
+    <td>30-12-2022</td>
+    <td><div style="display: flex; flex-direction: row; gap: 2px;"><a href="https://github.com/HamidMolareza"><img src="https://avatars.githubusercontent.com/u/35568753?v=4" alt="Hamid Molareza" style="border-radius:100%" width="32px" height="32px"></a></div></td>
   </tr>
   <tr>
     <td><a href="https://quera.org/problemset/140035/">140035</a></td>
@@ -586,13 +593,6 @@ Number of solutions: **311**
     <td><a href="https://quera.org/problemset/17244/">17244</a></td>
     <td>شارژ موبایل</td>
     <td><a href="https://github.com/HamidMolareza/QueraProblems/blob/master/Solutions/17244/c++">c++</a> - <a href="https://github.com/HamidMolareza/QueraProblems/blob/master/Solutions/17244/java">java</a> - <a href="https://github.com/HamidMolareza/QueraProblems/blob/master/Solutions/17244/python3">python3</a></td>
-    <td>20-10-2022</td>
-    <td><div style="display: flex; flex-direction: row; gap: 2px;"><a href="https://github.com/HamidMolareza"><img src="https://avatars.githubusercontent.com/u/35568753?v=4" alt="Hamid Molareza" style="border-radius:100%" width="32px" height="32px"></a></div></td>
-  </tr>
-  <tr>
-    <td><a href="https://quera.org/problemset/20257/">20257</a></td>
-    <td>قطار کامیابی</td>
-    <td><a href="https://github.com/HamidMolareza/QueraProblems/blob/master/Solutions/20257/c++">c++</a> - <a href="https://github.com/HamidMolareza/QueraProblems/blob/master/Solutions/20257/java">java</a> - <a href="https://github.com/HamidMolareza/QueraProblems/blob/master/Solutions/20257/python3">python3</a></td>
     <td>20-10-2022</td>
     <td><div style="display: flex; flex-direction: row; gap: 2px;"><a href="https://github.com/HamidMolareza"><img src="https://avatars.githubusercontent.com/u/35568753?v=4" alt="Hamid Molareza" style="border-radius:100%" width="32px" height="32px"></a></div></td>
   </tr>
