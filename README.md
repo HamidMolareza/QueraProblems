@@ -26,7 +26,7 @@ See [this repository](https://github.com/HamidMolareza/LeetCode)
 
 Number of problems solved: **156**
 
-Number of solutions: **313**
+Number of solutions: **315**
 
 <table>
   <tr>
@@ -35,6 +35,20 @@ Number of solutions: **313**
     <th>Solutions</th>
     <th>Last commit</th>
     <th>Contributors</th>
+  </tr>
+  <tr>
+    <td><a href="https://quera.org/problemset/20256/">20256</a></td>
+    <td>رژیم سخت</td>
+    <td><a href="https://github.com/HamidMolareza/QueraProblems/blob/master/Solutions/20256/csharp">csharp</a> - <a href="https://github.com/HamidMolareza/QueraProblems/blob/master/Solutions/20256/c++">c++</a> - <a href="https://github.com/HamidMolareza/QueraProblems/blob/master/Solutions/20256/java">java</a> - <a href="https://github.com/HamidMolareza/QueraProblems/blob/master/Solutions/20256/python3">python3</a></td>
+    <td>31-12-2022</td>
+    <td><div style="display: flex; flex-direction: row; gap: 2px;"><a href="https://github.com/HamidMolareza" title="5 commits"><img src="https://avatars.githubusercontent.com/u/35568753?v=4" alt="Hamid Molareza" style="border-radius:100%" width="32px" height="32px"></a></div></td>
+  </tr>
+  <tr>
+    <td><a href="https://quera.org/problemset/17244/">17244</a></td>
+    <td>شارژ موبایل</td>
+    <td><a href="https://github.com/HamidMolareza/QueraProblems/blob/master/Solutions/17244/csharp">csharp</a> - <a href="https://github.com/HamidMolareza/QueraProblems/blob/master/Solutions/17244/c++">c++</a> - <a href="https://github.com/HamidMolareza/QueraProblems/blob/master/Solutions/17244/java">java</a> - <a href="https://github.com/HamidMolareza/QueraProblems/blob/master/Solutions/17244/python3">python3</a></td>
+    <td>31-12-2022</td>
+    <td><div style="display: flex; flex-direction: row; gap: 2px;"><a href="https://github.com/HamidMolareza" title="4 commits"><img src="https://avatars.githubusercontent.com/u/35568753?v=4" alt="Hamid Molareza" style="border-radius:100%" width="32px" height="32px"></a></div></td>
   </tr>
   <tr>
     <td><a href="https://quera.org/problemset/607/">607</a></td>
@@ -464,13 +478,6 @@ Number of solutions: **313**
     <td><div style="display: flex; flex-direction: row; gap: 2px;"><a href="https://github.com/HamidMolareza" title="5 commits"><img src="https://avatars.githubusercontent.com/u/35568753?v=4" alt="Hamid Molareza" style="border-radius:100%" width="32px" height="32px"></a></div></td>
   </tr>
   <tr>
-    <td><a href="https://quera.org/problemset/20256/">20256</a></td>
-    <td>رژیم سخت</td>
-    <td><a href="https://github.com/HamidMolareza/QueraProblems/blob/master/Solutions/20256/c++">c++</a> - <a href="https://github.com/HamidMolareza/QueraProblems/blob/master/Solutions/20256/java">java</a> - <a href="https://github.com/HamidMolareza/QueraProblems/blob/master/Solutions/20256/python3">python3</a></td>
-    <td>25-11-2022</td>
-    <td><div style="display: flex; flex-direction: row; gap: 2px;"><a href="https://github.com/HamidMolareza" title="4 commits"><img src="https://avatars.githubusercontent.com/u/35568753?v=4" alt="Hamid Molareza" style="border-radius:100%" width="32px" height="32px"></a></div></td>
-  </tr>
-  <tr>
     <td><a href="https://quera.org/problemset/3538/">3538</a></td>
     <td>آخ جون طرف نیست!</td>
     <td><a href="https://github.com/HamidMolareza/QueraProblems/blob/master/Solutions/3538/c++">c++</a> - <a href="https://github.com/HamidMolareza/QueraProblems/blob/master/Solutions/3538/csharp">csharp</a></td>
@@ -588,13 +595,6 @@ Number of solutions: **313**
     <td><a href="https://github.com/HamidMolareza/QueraProblems/blob/master/Solutions/15124/c++">c++</a> - <a href="https://github.com/HamidMolareza/QueraProblems/blob/master/Solutions/15124/java">java</a> - <a href="https://github.com/HamidMolareza/QueraProblems/blob/master/Solutions/15124/python3">python3</a> - <a href="https://github.com/HamidMolareza/QueraProblems/blob/master/Solutions/15124/csharp">csharp</a></td>
     <td>20-10-2022</td>
     <td><div style="display: flex; flex-direction: row; gap: 2px;"><a href="https://github.com/HamidMolareza" title="5 commits"><img src="https://avatars.githubusercontent.com/u/35568753?v=4" alt="Hamid Molareza" style="border-radius:100%" width="32px" height="32px"></a></div></td>
-  </tr>
-  <tr>
-    <td><a href="https://quera.org/problemset/17244/">17244</a></td>
-    <td>شارژ موبایل</td>
-    <td><a href="https://github.com/HamidMolareza/QueraProblems/blob/master/Solutions/17244/c++">c++</a> - <a href="https://github.com/HamidMolareza/QueraProblems/blob/master/Solutions/17244/java">java</a> - <a href="https://github.com/HamidMolareza/QueraProblems/blob/master/Solutions/17244/python3">python3</a></td>
-    <td>20-10-2022</td>
-    <td><div style="display: flex; flex-direction: row; gap: 2px;"><a href="https://github.com/HamidMolareza" title="3 commits"><img src="https://avatars.githubusercontent.com/u/35568753?v=4" alt="Hamid Molareza" style="border-radius:100%" width="32px" height="32px"></a></div></td>
   </tr>
   <tr>
     <td><a href="https://quera.org/problemset/18310/">18310</a></td>
