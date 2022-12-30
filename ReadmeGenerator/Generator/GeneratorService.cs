@@ -74,7 +74,7 @@ public static class Generator {
             var contributorLinks = problem.Contributors
                 .OrderByDescending(contributor => contributor.NumOfCommits)
                 .Select(contributor =>
-                    $"<a href=\"{contributor.ProfileUrl}\"><img src=\"{contributor.AvatarUrl}\" alt=\"{contributor.Name}\" style=\"border-radius:100%\" width=\"32px\" height=\"32px\"></a>");
+                    $"<a href=\"{contributor.ProfileUrl}\" title=\"{contributor.NumOfCommits} commits\"><img src=\"{contributor.AvatarUrl}\" alt=\"{contributor.Name}\" style=\"border-radius:100%\" width=\"32px\" height=\"32px\"></a>");
             var contributorDiv =
                 $"<div style=\"display: flex; flex-direction: row; gap: 2px;\">{string.Join(" ", contributorLinks)}</div>";
 
