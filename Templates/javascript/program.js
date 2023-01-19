@@ -1,4 +1,7 @@
 class Solution {
+    /**
+     * @param {string} name
+     */
     solve(name) {
         console.log(`Hello ${name}!`);
     }
