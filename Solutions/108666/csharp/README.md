@@ -4,6 +4,8 @@ This solution has scored 100 in [Quera](https://quera.org/).
 
 🌟 If you like this solution, please give it a star.
 
+> Note: Because we have to put all the codes in one file, I used the class for classification. Classes like `Services`, `Models` are for this purpose.
+
 ## Built With
 
 C# .NET 6
