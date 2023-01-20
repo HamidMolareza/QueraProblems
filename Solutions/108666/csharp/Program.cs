@@ -11,11 +11,11 @@ namespace Quera {
                 File
             };
 
-            public const bool IsDebug = true;
+            public const bool IsDebug = false;
             public const PrintTypes PrintInDebugMode = PrintTypes.File;
             public const string OutputFilePath = "output.txt";
         }
-        
+
         public static void Main() {
             var data = new Data();
             var identicalService = new Services.IdenticalService(data);
@@ -25,7 +25,7 @@ namespace Quera {
             var markService = new Services.MarkService(data, studentService, professorService, classService);
 
             while (true) {
-                var inputs = Console.ReadLine()?.Split(" ");
+                var inputs = Console.ReadLine()?.Trim().Split(' ');
                 if (inputs == null || !inputs.Any()) continue;
                 if (inputs.First().ToLower() == "end") break;
 
@@ -109,7 +109,7 @@ namespace Quera {
             public bool Exists(string studentId) =>
                 _data.Students.Exists(student => student.IdenticalNumber == studentId);
 
-            public Models.Student? Find(string studentId) =>
+            public Models.Student Find(string studentId) =>
                 _data.Students.Find(student => student.IdenticalNumber == studentId);
 
             public Result Status(string studentId) {
@@ -119,7 +119,7 @@ namespace Quera {
 
                 var classes = GetClassNames(studentId);
 
-                var status = $"{student.Name} {student.EnteringYear} {student.Field} {string.Join(' ', classes)}";
+                var status = $"{student.Name} {student.EnteringYear} {student.Field} {string.Join(" ", classes)}";
                 return Result.Ok(status);
             }
 
@@ -167,7 +167,7 @@ namespace Quera {
             public bool Exists(string classId) =>
                 _data.Classes.Exists(@class => @class.ClassId == classId);
 
-            public Models.Class? Find(string classId) => _data.Classes.Find(@class => @class.ClassId == classId);
+            public Models.Class Find(string classId) => _data.Classes.Find(@class => @class.ClassId == classId);
 
             public Result AddStudent(string studentId, string classId) {
                 var student = _studentService.Find(studentId);
@@ -198,7 +198,7 @@ namespace Quera {
 
                 if (professor.Field != targetClass.Field)
                     return Result.Fail("professor field is not match");
-                if (targetClass.ProfessorId is not null)
+                if (targetClass.ProfessorId != null)
                     return Result.Fail("this class has a professor");
 
                 targetClass.ProfessorId = professorId;
@@ -221,7 +221,7 @@ namespace Quera {
 
                 var classes = GetStudents(classId).Select(student => student.Name);
 
-                var status = $"{professorName} {string.Join(' ', classes)}";
+                var status = $"{professorName} {string.Join(" ", classes)}";
                 return Result.Ok(status);
             }
 
@@ -250,7 +250,7 @@ namespace Quera {
                 return Result.Ok("welcome to golestan");
             }
 
-            public Models.Professor? Find(string professorId) =>
+            public Models.Professor Find(string professorId) =>
                 _data.Professors.Find(professor => professor.IdenticalNumber == professorId);
 
             public Result Status(string professorId) {
@@ -260,12 +260,12 @@ namespace Quera {
 
                 var classes = GetClasses(professorId).Select(@class => @class.Name);
 
-                var status = $"{professor.Name} {professor.Field} {string.Join(' ', classes)}";
+                var status = $"{professor.Name} {professor.Field} {string.Join(" ", classes)}";
                 return Result.Ok(status);
             }
 
             private IEnumerable<Models.Class> GetClasses(string professorId) =>
-                _data.Classes.Where(@class => @class.ProfessorId is not null && @class.ProfessorId == professorId);
+                _data.Classes.Where(@class => @class.ProfessorId != null && @class.ProfessorId == professorId);
 
             public bool Exists(string professorIdenticalNum) =>
                 _data.Professors.Exists(professor => professor.IdenticalNumber == professorIdenticalNum);
@@ -336,7 +336,7 @@ namespace Quera {
                 var mark = _data.StudentMarks.SingleOrDefault(studentMark =>
                     studentMark.StudentId == studentId && studentMark.ClassId == classId)?.Mark;
 
-                return Result.Ok(mark == null ? "None" : mark.ToString()!);
+                return Result.Ok(mark == null ? "None" : mark.ToString());
             }
 
             public Result GetClassMarkList(string classId) {
@@ -401,18 +401,18 @@ namespace Quera {
                     orderby studentMark.Mark descending
                     select studentMark.Mark;
                 int? topMark = studentMarks.FirstOrDefault();
-                return Result.Ok(topMark == null ? "None" : topMark.ToString()!);
+                return Result.Ok(topMark == null ? "None" : topMark.ToString());
             }
         }
     }
 
     public class Data {
-        public List<Models.Student> Students { get; } = new();
-        public List<string> IdenticalNumbers { get; } = new();
-        public List<Models.Professor> Professors { get; } = new();
-        public List<Models.Class> Classes { get; } = new();
-        public List<Models.StudentMark> StudentMarks { get; } = new();
-        public List<Models.ClassStudent> ClassStudents { get; } = new();
+        public List<Models.Student> Students { get; } = new List<Models.Student>();
+        public List<string> IdenticalNumbers { get; } = new List<string>();
+        public List<Models.Professor> Professors { get; } = new List<Models.Professor>();
+        public List<Models.Class> Classes { get; } = new List<Models.Class>();
+        public List<Models.StudentMark> StudentMarks { get; } = new List<Models.StudentMark>();
+        public List<Models.ClassStudent> ClassStudents { get; } = new List<Models.ClassStudent>();
     }
 
     public class Models {
@@ -452,7 +452,7 @@ namespace Quera {
             public string Name { get; set; }
             public string ClassId { get; set; }
             public string Field { get; set; }
-            public string? ProfessorId { get; set; }
+            public string ProfessorId { get; set; }
         }
 
         public class StudentMark {
@@ -489,9 +489,9 @@ namespace Quera {
             Message = message;
         }
 
-        public static Result Ok(string message) => new(message) {Success = true};
+        public static Result Ok(string message) => new Result(message) {Success = true};
 
-        public static Result Fail(string message) => new(message) {Success = false};
+        public static Result Fail(string message) => new Result(message) {Success = false};
     }
 
     public static class Utility {
@@ -499,7 +499,7 @@ namespace Quera {
             if (!Program.Configs.IsDebug || Program.Configs.PrintInDebugMode == Program.Configs.PrintTypes.Console) {
                 Console.WriteLine(content);
             }
-            else if(Program.Configs.PrintInDebugMode == Program.Configs.PrintTypes.File) {
+            else if (Program.Configs.PrintInDebugMode == Program.Configs.PrintTypes.File) {
                 File.AppendAllText(Program.Configs.OutputFilePath, content + '\n');
             }
             else {
