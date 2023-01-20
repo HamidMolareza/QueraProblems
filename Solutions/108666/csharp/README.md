@@ -22,7 +22,8 @@ For this, you need to update the `Configs` class fields.
 
 ## Built With
 
-C# .NET 6
+- .NET 6
+- C# 6
 
 # Usage
 
