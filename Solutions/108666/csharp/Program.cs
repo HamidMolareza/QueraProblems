@@ -29,7 +29,7 @@ namespace Quera {
                 if (inputs == null || !inputs.Any()) continue;
                 if (inputs.First().ToLower() == "end") break;
 
-                Result result = null;
+                Result result;
                 var command = inputs.First().ToLower();
                 switch (command) {
                     case "register_student":
@@ -79,6 +79,9 @@ namespace Quera {
                         break;
                     case "top_mark":
                         result = markService.GetTopMarkOfClassStudents(inputs[1]);
+                        break;
+                    default:
+                        result = Result.Fail("The command is not supported.");
                         break;
                 }
 
