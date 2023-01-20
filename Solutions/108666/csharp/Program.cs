@@ -12,7 +12,7 @@ namespace Quera {
             };
 
             public const bool IsDebug = false;
-            public const PrintTypes PrintInDebugMode = PrintTypes.File;
+            public const PrintTypes PrintInDebugMode = PrintTypes.Console;
             public const string OutputFilePath = "output.txt";
         }
 
@@ -29,7 +29,7 @@ namespace Quera {
                 if (inputs == null || !inputs.Any()) continue;
                 if (inputs.First().ToLower() == "end") break;
 
-                var result = Result.Ok("No Data!");
+                Result result = null;
                 var command = inputs.First().ToLower();
                 switch (command) {
                     case "register_student":
@@ -82,7 +82,8 @@ namespace Quera {
                         break;
                 }
 
-                Utility.PrintLine(result.Message);
+                if (result != null)
+                    Utility.PrintLine(result.Message);
             }
         }
     }
@@ -496,8 +497,14 @@ namespace Quera {
 
     public static class Utility {
         public static void PrintLine(string content) {
-            if (!Program.Configs.IsDebug || Program.Configs.PrintInDebugMode == Program.Configs.PrintTypes.Console) {
+            if (!Program.Configs.IsDebug) {
                 Console.WriteLine(content);
+            }
+            else if (Program.Configs.PrintInDebugMode == Program.Configs.PrintTypes.Console) {
+                var defaultColor = Console.ForegroundColor;
+                Console.ForegroundColor = ConsoleColor.Cyan;
+                Console.WriteLine(content);
+                Console.ForegroundColor = defaultColor;
             }
             else if (Program.Configs.PrintInDebugMode == Program.Configs.PrintTypes.File) {
                 File.AppendAllText(Program.Configs.OutputFilePath, content + '\n');
