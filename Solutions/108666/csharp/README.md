@@ -4,7 +4,21 @@ This solution has scored 100 in [Quera](https://quera.org/).
 
 🌟 If you like this solution, please give it a star.
 
-> Note: Because we have to put all the codes in one file, I used the class for classification. Classes like `Services`, `Models` are for this purpose.
+##
+
+Because we have to put all the codes in **one file**, I used the class for classification. Classes
+like `Services`, `Models` are for this purpose.
+
+Unfortunately, Quera uses the old version (probably 6) of C#, otherwise it can be written better in the new versions.
+Therefore, if you like, you can refactor the codes to the new version.
+
+## Debug Mode
+
+For debugging convenience, you can see the output in **color**! Or if you want, you can save the output in a **file**.
+
+For this, you need to update the `Configs` class fields.
+
+> This class was written due to the limitations of the problem (Quera), otherwise it is not reasonable in the industry.
 
 ## Built With
 
