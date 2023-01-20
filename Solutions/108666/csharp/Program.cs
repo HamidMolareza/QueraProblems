@@ -226,7 +226,7 @@ namespace Quera {
                 return Result.Ok(status);
             }
 
-            private IEnumerable<Models.Student> GetStudents(string classId) =>
+            public IEnumerable<Models.Student> GetStudents(string classId) =>
                 from cs in _data.ClassStudents
                 join student in _data.Students on cs.StudentId equals student.IdenticalNumber
                 where cs.ClassId == classId
@@ -347,9 +347,17 @@ namespace Quera {
                 if (@class.ProfessorId == null)
                     return Result.Fail("no professor");
 
-                var marks = _data.StudentMarks.Where(studentMark => studentMark.ClassId == classId)
-                    .Select(studentMark => studentMark.Mark)
+                var markList = from student in _classService.GetStudents(classId)
+                    join studentMark in _data.StudentMarks on new
+                            {StudentId = student.IdenticalNumber, ClassId = classId} equals new
+                            {StudentId = studentMark.StudentId, ClassId = studentMark.ClassId} into
+                        studentMarks
+                    from studentMark in studentMarks.DefaultIfEmpty()
+                    select studentMark;
+
+                var marks = markList.Select(studentMark => studentMark == null ? "None" : studentMark.Mark.ToString())
                     .ToList();
+
                 return Result.Ok(!marks.Any() ? "no student" : string.Join(" ", marks));
             }
 
@@ -397,12 +405,15 @@ namespace Quera {
             }
 
             public Result GetTopMarkOfClassStudents(string classId) {
-                var studentMarks = from studentMark in _data.StudentMarks
-                    where studentMark.ClassId == classId
-                    orderby studentMark.Mark descending
-                    select studentMark.Mark;
-                int? topMark = studentMarks.FirstOrDefault();
-                return Result.Ok(topMark == null ? "None" : topMark.ToString());
+                if (!_classService.Exists(classId))
+                    return Result.Fail("invalid class");
+
+                var studentMarks = (from studentMark in _data.StudentMarks
+                        where studentMark.ClassId == classId
+                        orderby studentMark.Mark descending
+                        select studentMark.Mark)
+                    .ToList();
+                return Result.Ok(!studentMarks.Any() ? "None" : studentMarks.First().ToString());
             }
         }
     }
