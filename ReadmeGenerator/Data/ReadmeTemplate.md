@@ -137,11 +137,11 @@ See [LICENSE](LICENSE) for more information.
 
 Here are some related projects:
 
+- [**modos solutions**](https://github.com/modos/quera-answers)
+- [**myp79 solutions**](https://github.com/myp79/Quera-Problem-Solution)
 - [AMK9978 solutions](https://github.com/AMK9978/ProgrammingProblems/tree/master/%D9%BE%D8%A7%D8%B3%D8%AE%20%D8%B3%D9%88%D8%A7%D9%84%D8%A7%D8%AA%20%DA%A9%D9%88%D8%A6%D8%B1%D8%A7)
 - [bestmahdi2 solutions](https://github.com/bestmahdi2/QueraSolutions)
-- [modos solutions](https://github.com/modos/quera-answers)
 - [MohammadNPak solutions](https://github.com/MohammadNPak/quera.ir)
-- [myp79 solutions](https://github.com/myp79/Quera-Problem-Solution)
 - [erfanghorbanee solutions](https://github.com/erfanghorbanee/quera-answers/)
 
 > If you want your repository to be added, send me the link in the issues.
