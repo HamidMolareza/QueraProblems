@@ -6,7 +6,24 @@ This solution has scored 100 in [Quera](https://quera.org/).
 
 # Usage
 
-In the directory, run `node program.js`
+## Prerequisites
+
+Considering that Quera uses `V8`, we need to use Docker container to run the program. Docker can be downloaded from the official website: https://www.docker.com/get-started
+
+## Run
+
+We use [hamidmolareza/d8](https://github.com/HamidMolareza/v8-docker) container to run this program.
+Use the following command to run:
+
+```shell
+docker run --rm -it -v $PWD:/src/ hamidmolareza/d8 run /src/program.js -d /src/inputs
+```
+
+For simplicity, you can also use the existing [Makefile](Makefile):
+
+```shell
+make run
+```
 
 ## Support
 
