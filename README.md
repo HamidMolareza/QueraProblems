@@ -24,9 +24,9 @@ See [this repository](https://github.com/HamidMolareza/LeetCode)
 
 ## List of problems-solutions
 
-Number of problems solved: **167**
+Number of problems solved: **168**
 
-Number of solutions: **338**
+Number of solutions: **339**
 
 <table>
   <tr>
@@ -35,6 +35,13 @@ Number of solutions: **338**
     <th>Solutions</th>
     <th>Last commit</th>
     <th>Contributors</th>
+  </tr>
+  <tr>
+    <td><a href="https://quera.org/problemset/33040/">33040</a></td>
+    <td>تردکاری - پایتون</td>
+    <td><a href="https://github.com/HamidMolareza/QueraProblems/blob/master/Solutions/33040/python3">python3</a></td>
+    <td>14-09-2023</td>
+    <td><div style="display: flex; flex-direction: row; gap: 2px;"><a href="https://github.com/HamidMolareza" title="1 commits"><img src="https://avatars.githubusercontent.com/u/35568753?v=4" alt="Hamid Molareza" style="border-radius:100%" width="32px" height="32px"></a></div></td>
   </tr>
   <tr>
     <td><a href="https://quera.org/problemset/8939/">8939</a></td>
