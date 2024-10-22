@@ -82,8 +82,8 @@ public static class CollectorService {
         => !solutionName.StartsWith(".") && ignoreSolutions.All(ignoreSolution => ignoreSolution != solutionName);
 
     private static Task<Result<List<Solution>>> CollectSolutionsAsync(IEnumerable<string> languageDirs) =>
-        languageDirs.SelectResults(async languageDir =>
-            await GitHelper.GetLastCommitDateAsync(languageDir)
+        languageDirs.SelectResults(languageDir =>
+            GitHelper.GetLastCommitDateAsync(languageDir)
                 .OnSuccess(lastCommitDate => new Solution {
                     LanguageName = new FileInfo(languageDir).Name,
                     LastCommitDate = lastCommitDate

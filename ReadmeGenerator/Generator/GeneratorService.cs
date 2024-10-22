@@ -51,7 +51,7 @@ public static class Generator {
 
         var readmeTemplate =
             await File.ReadAllTextAsync(Path.Combine(programDirectory, configs.ReadmeTemplateName));
-        return readmeTemplate.Replace("{__REPLACE_FROM_PROGRAM_0__}", readme.ToString());
+        return readmeTemplate.Replace("{__REPLACE_WITH_PROGRAM_0__}", readme.ToString());
     }
 
     private static Result AppendProblemData(this StringBuilder source,
