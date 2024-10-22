@@ -24,9 +24,9 @@ See [this repository](https://github.com/HamidMolareza/LeetCode)
 
 ## List of problems-solutions
 
-Number of problems solved: **156**
+Number of problems solved: **168**
 
-Number of solutions: **312**
+Number of solutions: **339**
 
 <table>
   <tr>
@@ -35,6 +35,153 @@ Number of solutions: **312**
     <th>Solutions</th>
     <th>Last commit</th>
     <th>Contributors</th>
+  </tr>
+  <tr>
+    <td><a href="https://quera.org/problemset/33040/">33040</a></td>
+    <td>تردکاری - پایتون</td>
+    <td><a href="https://github.com/HamidMolareza/QueraProblems/blob/master/Solutions/33040/python3">python3</a></td>
+    <td>14-09-2023</td>
+    <td><div style="display: flex; flex-direction: row; gap: 2px;"><a href="https://github.com/HamidMolareza" title="1 commits"><img src="https://avatars.githubusercontent.com/u/35568753?v=4" alt="Hamid Molareza" style="border-radius:100%" width="32px" height="32px"></a></div></td>
+  </tr>
+  <tr>
+    <td><a href="https://quera.org/problemset/8939/">8939</a></td>
+    <td>بیکاری در دربار</td>
+    <td><a href="https://github.com/HamidMolareza/QueraProblems/blob/master/Solutions/8939/python3">python3</a></td>
+    <td>13-09-2023</td>
+    <td><div style="display: flex; flex-direction: row; gap: 2px;"><a href="https://github.com/HamidMolareza" title="1 commits"><img src="https://avatars.githubusercontent.com/u/35568753?v=4" alt="Hamid Molareza" style="border-radius:100%" width="32px" height="32px"></a></div></td>
+  </tr>
+  <tr>
+    <td><a href="https://quera.org/problemset/140033/">140033</a></td>
+    <td>صدادار</td>
+    <td><a href="https://github.com/HamidMolareza/QueraProblems/blob/master/Solutions/140033/go">go</a> - <a href="https://github.com/HamidMolareza/QueraProblems/blob/master/Solutions/140033/csharp">csharp</a> - <a href="https://github.com/HamidMolareza/QueraProblems/blob/master/Solutions/140033/python3">python3</a></td>
+    <td>13-05-2023</td>
+    <td><div style="display: flex; flex-direction: row; gap: 2px;"><a href="https://github.com/HamidMolareza" title="3 commits"><img src="https://avatars.githubusercontent.com/u/35568753?v=4" alt="Hamid Molareza" style="border-radius:100%" width="32px" height="32px"></a></div></td>
+  </tr>
+  <tr>
+    <td><a href="https://quera.org/problemset/132251/">132251</a></td>
+    <td>The Departed (2006)</td>
+    <td><a href="https://github.com/HamidMolareza/QueraProblems/blob/master/Solutions/132251/go">go</a> - <a href="https://github.com/HamidMolareza/QueraProblems/blob/master/Solutions/132251/csharp">csharp</a> - <a href="https://github.com/HamidMolareza/QueraProblems/blob/master/Solutions/132251/c++">c++</a> - <a href="https://github.com/HamidMolareza/QueraProblems/blob/master/Solutions/132251/python3">python3</a></td>
+    <td>13-05-2023</td>
+    <td><div style="display: flex; flex-direction: row; gap: 2px;"><a href="https://github.com/HamidMolareza" title="4 commits"><img src="https://avatars.githubusercontent.com/u/35568753?v=4" alt="Hamid Molareza" style="border-radius:100%" width="32px" height="32px"></a></div></td>
+  </tr>
+  <tr>
+    <td><a href="https://quera.org/problemset/158166/">158166</a></td>
+    <td>نقشه گز</td>
+    <td><a href="https://github.com/HamidMolareza/QueraProblems/blob/master/Solutions/158166/python3">python3</a></td>
+    <td>11-05-2023</td>
+    <td><div style="display: flex; flex-direction: row; gap: 2px;"><a href="https://github.com/HamidMolareza" title="1 commits"><img src="https://avatars.githubusercontent.com/u/35568753?v=4" alt="Hamid Molareza" style="border-radius:100%" width="32px" height="32px"></a></div></td>
+  </tr>
+  <tr>
+    <td><a href="https://quera.org/problemset/102250/">102250</a></td>
+    <td>پیدایِش!</td>
+    <td><a href="https://github.com/HamidMolareza/QueraProblems/blob/master/Solutions/102250/python3">python3</a></td>
+    <td>21-04-2023</td>
+    <td><div style="display: flex; flex-direction: row; gap: 2px;"><a href="https://github.com/HamidMolareza" title="1 commits"><img src="https://avatars.githubusercontent.com/u/35568753?v=4" alt="Hamid Molareza" style="border-radius:100%" width="32px" height="32px"></a></div></td>
+  </tr>
+  <tr>
+    <td><a href="https://quera.org/problemset/60134/">60134</a></td>
+    <td>شطرنج میوه‌ای</td>
+    <td><a href="https://github.com/HamidMolareza/QueraProblems/blob/master/Solutions/60134/python3">python3</a></td>
+    <td>21-04-2023</td>
+    <td><div style="display: flex; flex-direction: row; gap: 2px;"><a href="https://github.com/HamidMolareza" title="1 commits"><img src="https://avatars.githubusercontent.com/u/35568753?v=4" alt="Hamid Molareza" style="border-radius:100%" width="32px" height="32px"></a></div></td>
+  </tr>
+  <tr>
+    <td><a href="https://quera.org/problemset/158165/">158165</a></td>
+    <td>خوانا برای انسان</td>
+    <td><a href="https://github.com/HamidMolareza/QueraProblems/blob/master/Solutions/158165/python3">python3</a></td>
+    <td>23-03-2023</td>
+    <td><div style="display: flex; flex-direction: row; gap: 2px;"><a href="https://github.com/HamidMolareza" title="1 commits"><img src="https://avatars.githubusercontent.com/u/35568753?v=4" alt="Hamid Molareza" style="border-radius:100%" width="32px" height="32px"></a></div></td>
+  </tr>
+  <tr>
+    <td><a href="https://quera.org/problemset/171796/">171796</a></td>
+    <td>B – Triangulum Number or rebmuN mulugnai</td>
+    <td><a href="https://github.com/HamidMolareza/QueraProblems/blob/master/Solutions/171796/python3">python3</a></td>
+    <td>14-03-2023</td>
+    <td><div style="display: flex; flex-direction: row; gap: 2px;"><a href="https://github.com/HamidMolareza" title="1 commits"><img src="https://avatars.githubusercontent.com/u/35568753?v=4" alt="Hamid Molareza" style="border-radius:100%" width="32px" height="32px"></a></div></td>
+  </tr>
+  <tr>
+    <td><a href="https://quera.org/problemset/134354/">134354</a></td>
+    <td>بشمار</td>
+    <td><a href="https://github.com/HamidMolareza/QueraProblems/blob/master/Solutions/134354/javascript">javascript</a></td>
+    <td>29-01-2023</td>
+    <td><div style="display: flex; flex-direction: row; gap: 2px;"><a href="https://github.com/HamidMolareza" title="1 commits"><img src="https://avatars.githubusercontent.com/u/35568753?v=4" alt="Hamid Molareza" style="border-radius:100%" width="32px" height="32px"></a></div></td>
+  </tr>
+  <tr>
+    <td><a href="https://quera.org/problemset/3409/">3409</a></td>
+    <td>جدول ضرب گنده</td>
+    <td><a href="https://github.com/HamidMolareza/QueraProblems/blob/master/Solutions/3409/javascript">javascript</a> - <a href="https://github.com/HamidMolareza/QueraProblems/blob/master/Solutions/3409/c++">c++</a> - <a href="https://github.com/HamidMolareza/QueraProblems/blob/master/Solutions/3409/java">java</a> - <a href="https://github.com/HamidMolareza/QueraProblems/blob/master/Solutions/3409/python3">python3</a> - <a href="https://github.com/HamidMolareza/QueraProblems/blob/master/Solutions/3409/csharp">csharp</a></td>
+    <td>24-01-2023</td>
+    <td><div style="display: flex; flex-direction: row; gap: 2px;"><a href="https://github.com/HamidMolareza" title="7 commits"><img src="https://avatars.githubusercontent.com/u/35568753?v=4" alt="Hamid Molareza" style="border-radius:100%" width="32px" height="32px"></a></div></td>
+  </tr>
+  <tr>
+    <td><a href="https://quera.org/problemset/108666/">108666</a></td>
+    <td>گلستان</td>
+    <td><a href="https://github.com/HamidMolareza/QueraProblems/blob/master/Solutions/108666/csharp">csharp</a></td>
+    <td>20-01-2023</td>
+    <td><div style="display: flex; flex-direction: row; gap: 2px;"><a href="https://github.com/HamidMolareza" title="8 commits"><img src="https://avatars.githubusercontent.com/u/35568753?v=4" alt="Hamid Molareza" style="border-radius:100%" width="32px" height="32px"></a></div></td>
+  </tr>
+  <tr>
+    <td><a href="https://quera.org/problemset/3537/">3537</a></td>
+    <td>سوال زرد</td>
+    <td><a href="https://github.com/HamidMolareza/QueraProblems/blob/master/Solutions/3537/javascript">javascript</a> - <a href="https://github.com/HamidMolareza/QueraProblems/blob/master/Solutions/3537/c++">c++</a> - <a href="https://github.com/HamidMolareza/QueraProblems/blob/master/Solutions/3537/java">java</a> - <a href="https://github.com/HamidMolareza/QueraProblems/blob/master/Solutions/3537/python3">python3</a> - <a href="https://github.com/HamidMolareza/QueraProblems/blob/master/Solutions/3537/csharp">csharp</a></td>
+    <td>19-01-2023</td>
+    <td><div style="display: flex; flex-direction: row; gap: 2px;"><a href="https://github.com/HamidMolareza" title="7 commits"><img src="https://avatars.githubusercontent.com/u/35568753?v=4" alt="Hamid Molareza" style="border-radius:100%" width="32px" height="32px"></a></div></td>
+  </tr>
+  <tr>
+    <td><a href="https://quera.org/problemset/2885/">2885</a></td>
+    <td>یک سوال ساده</td>
+    <td><a href="https://github.com/HamidMolareza/QueraProblems/blob/master/Solutions/2885/javascript">javascript</a></td>
+    <td>19-01-2023</td>
+    <td><div style="display: flex; flex-direction: row; gap: 2px;"><a href="https://github.com/HamidMolareza" title="1 commits"><img src="https://avatars.githubusercontent.com/u/35568753?v=4" alt="Hamid Molareza" style="border-radius:100%" width="32px" height="32px"></a></div></td>
+  </tr>
+  <tr>
+    <td><a href="https://quera.org/problemset/3414/">3414</a></td>
+    <td>دو نقطه خط</td>
+    <td><a href="https://github.com/HamidMolareza/QueraProblems/blob/master/Solutions/3414/javascript">javascript</a> - <a href="https://github.com/HamidMolareza/QueraProblems/blob/master/Solutions/3414/c++">c++</a> - <a href="https://github.com/HamidMolareza/QueraProblems/blob/master/Solutions/3414/java">java</a> - <a href="https://github.com/HamidMolareza/QueraProblems/blob/master/Solutions/3414/python3">python3</a></td>
+    <td>19-01-2023</td>
+    <td><div style="display: flex; flex-direction: row; gap: 2px;"><a href="https://github.com/HamidMolareza" title="5 commits"><img src="https://avatars.githubusercontent.com/u/35568753?v=4" alt="Hamid Molareza" style="border-radius:100%" width="32px" height="32px"></a></div></td>
+  </tr>
+  <tr>
+    <td><a href="https://quera.org/problemset/3430/">3430</a></td>
+    <td>بلندگو</td>
+    <td><a href="https://github.com/HamidMolareza/QueraProblems/blob/master/Solutions/3430/javascript">javascript</a> - <a href="https://github.com/HamidMolareza/QueraProblems/blob/master/Solutions/3430/c++">c++</a> - <a href="https://github.com/HamidMolareza/QueraProblems/blob/master/Solutions/3430/csharp">csharp</a></td>
+    <td>17-01-2023</td>
+    <td><div style="display: flex; flex-direction: row; gap: 2px;"><a href="https://github.com/HamidMolareza" title="4 commits"><img src="https://avatars.githubusercontent.com/u/35568753?v=4" alt="Hamid Molareza" style="border-radius:100%" width="32px" height="32px"></a></div></td>
+  </tr>
+  <tr>
+    <td><a href="https://quera.org/problemset/3538/">3538</a></td>
+    <td>آخ جون طرف نیست!</td>
+    <td><a href="https://github.com/HamidMolareza/QueraProblems/blob/master/Solutions/3538/javascript">javascript</a> - <a href="https://github.com/HamidMolareza/QueraProblems/blob/master/Solutions/3538/c++">c++</a> - <a href="https://github.com/HamidMolareza/QueraProblems/blob/master/Solutions/3538/csharp">csharp</a></td>
+    <td>17-01-2023</td>
+    <td><div style="display: flex; flex-direction: row; gap: 2px;"><a href="https://github.com/HamidMolareza" title="4 commits"><img src="https://avatars.githubusercontent.com/u/35568753?v=4" alt="Hamid Molareza" style="border-radius:100%" width="32px" height="32px"></a></div></td>
+  </tr>
+  <tr>
+    <td><a href="https://quera.org/problemset/20256/">20256</a></td>
+    <td>رژیم سخت</td>
+    <td><a href="https://github.com/HamidMolareza/QueraProblems/blob/master/Solutions/20256/javascript">javascript</a> - <a href="https://github.com/HamidMolareza/QueraProblems/blob/master/Solutions/20256/csharp">csharp</a> - <a href="https://github.com/HamidMolareza/QueraProblems/blob/master/Solutions/20256/c++">c++</a> - <a href="https://github.com/HamidMolareza/QueraProblems/blob/master/Solutions/20256/java">java</a> - <a href="https://github.com/HamidMolareza/QueraProblems/blob/master/Solutions/20256/python3">python3</a></td>
+    <td>16-01-2023</td>
+    <td><div style="display: flex; flex-direction: row; gap: 2px;"><a href="https://github.com/HamidMolareza" title="6 commits"><img src="https://avatars.githubusercontent.com/u/35568753?v=4" alt="Hamid Molareza" style="border-radius:100%" width="32px" height="32px"></a></div></td>
+  </tr>
+  <tr>
+    <td><a href="https://quera.org/problemset/8838/">8838</a></td>
+    <td>کمک به کاپی</td>
+    <td><a href="https://github.com/HamidMolareza/QueraProblems/blob/master/Solutions/8838/csharp">csharp</a> - <a href="https://github.com/HamidMolareza/QueraProblems/blob/master/Solutions/8838/c++">c++</a> - <a href="https://github.com/HamidMolareza/QueraProblems/blob/master/Solutions/8838/python3">python3</a></td>
+    <td>01-01-2023</td>
+    <td><div style="display: flex; flex-direction: row; gap: 2px;"><a href="https://github.com/HamidMolareza" title="3 commits"><img src="https://avatars.githubusercontent.com/u/35568753?v=4" alt="Hamid Molareza" style="border-radius:100%" width="32px" height="32px"></a></div></td>
+  </tr>
+  <tr>
+    <td><a href="https://quera.org/problemset/17244/">17244</a></td>
+    <td>شارژ موبایل</td>
+    <td><a href="https://github.com/HamidMolareza/QueraProblems/blob/master/Solutions/17244/csharp">csharp</a> - <a href="https://github.com/HamidMolareza/QueraProblems/blob/master/Solutions/17244/c++">c++</a> - <a href="https://github.com/HamidMolareza/QueraProblems/blob/master/Solutions/17244/java">java</a> - <a href="https://github.com/HamidMolareza/QueraProblems/blob/master/Solutions/17244/python3">python3</a></td>
+    <td>31-12-2022</td>
+    <td><div style="display: flex; flex-direction: row; gap: 2px;"><a href="https://github.com/HamidMolareza" title="4 commits"><img src="https://avatars.githubusercontent.com/u/35568753?v=4" alt="Hamid Molareza" style="border-radius:100%" width="32px" height="32px"></a></div></td>
+  </tr>
+  <tr>
+    <td><a href="https://quera.org/problemset/607/">607</a></td>
+    <td>ضرب ماتریس‌ها</td>
+    <td><a href="https://github.com/HamidMolareza/QueraProblems/blob/master/Solutions/607/python3">python3</a> - <a href="https://github.com/HamidMolareza/QueraProblems/blob/master/Solutions/607/c++">c++</a> - <a href="https://github.com/HamidMolareza/QueraProblems/blob/master/Solutions/607/csharp">csharp</a></td>
+    <td>30-12-2022</td>
+    <td><div style="display: flex; flex-direction: row; gap: 2px;"><a href="https://github.com/HamidMolareza" title="4 commits"><img src="https://avatars.githubusercontent.com/u/35568753?v=4" alt="Hamid Molareza" style="border-radius:100%" width="32px" height="32px"></a></div></td>
   </tr>
   <tr>
     <td><a href="https://quera.org/problemset/20257/">20257</a></td>
@@ -184,13 +331,6 @@ Number of solutions: **312**
     <td><div style="display: flex; flex-direction: row; gap: 2px;"><a href="https://github.com/HamidMolareza" title="3 commits"><img src="https://avatars.githubusercontent.com/u/35568753?v=4" alt="Hamid Molareza" style="border-radius:100%" width="32px" height="32px"></a></div></td>
   </tr>
   <tr>
-    <td><a href="https://quera.org/problemset/607/">607</a></td>
-    <td>ضرب ماتریس‌ها</td>
-    <td><a href="https://github.com/HamidMolareza/QueraProblems/blob/master/Solutions/607/c++">c++</a> - <a href="https://github.com/HamidMolareza/QueraProblems/blob/master/Solutions/607/csharp">csharp</a></td>
-    <td>25-11-2022</td>
-    <td><div style="display: flex; flex-direction: row; gap: 2px;"><a href="https://github.com/HamidMolareza" title="3 commits"><img src="https://avatars.githubusercontent.com/u/35568753?v=4" alt="Hamid Molareza" style="border-radius:100%" width="32px" height="32px"></a></div></td>
-  </tr>
-  <tr>
     <td><a href="https://quera.org/problemset/618/">618</a></td>
     <td>چاپ لوزی</td>
     <td><a href="https://github.com/HamidMolareza/QueraProblems/blob/master/Solutions/618/c++">c++</a> - <a href="https://github.com/HamidMolareza/QueraProblems/blob/master/Solutions/618/csharp">csharp</a></td>
@@ -236,13 +376,6 @@ Number of solutions: **312**
     <td><a href="https://quera.org/problemset/658/">658</a></td>
     <td>فرزاد کارکن</td>
     <td><a href="https://github.com/HamidMolareza/QueraProblems/blob/master/Solutions/658/c++">c++</a> - <a href="https://github.com/HamidMolareza/QueraProblems/blob/master/Solutions/658/csharp">csharp</a></td>
-    <td>25-11-2022</td>
-    <td><div style="display: flex; flex-direction: row; gap: 2px;"><a href="https://github.com/HamidMolareza" title="3 commits"><img src="https://avatars.githubusercontent.com/u/35568753?v=4" alt="Hamid Molareza" style="border-radius:100%" width="32px" height="32px"></a></div></td>
-  </tr>
-  <tr>
-    <td><a href="https://quera.org/problemset/3430/">3430</a></td>
-    <td>بلندگو</td>
-    <td><a href="https://github.com/HamidMolareza/QueraProblems/blob/master/Solutions/3430/c++">c++</a> - <a href="https://github.com/HamidMolareza/QueraProblems/blob/master/Solutions/3430/csharp">csharp</a></td>
     <td>25-11-2022</td>
     <td><div style="display: flex; flex-direction: row; gap: 2px;"><a href="https://github.com/HamidMolareza" title="3 commits"><img src="https://avatars.githubusercontent.com/u/35568753?v=4" alt="Hamid Molareza" style="border-radius:100%" width="32px" height="32px"></a></div></td>
   </tr>
@@ -373,23 +506,9 @@ Number of solutions: **312**
     <td><div style="display: flex; flex-direction: row; gap: 2px;"><a href="https://github.com/HamidMolareza" title="6 commits"><img src="https://avatars.githubusercontent.com/u/35568753?v=4" alt="Hamid Molareza" style="border-radius:100%" width="32px" height="32px"></a></div></td>
   </tr>
   <tr>
-    <td><a href="https://quera.org/problemset/3409/">3409</a></td>
-    <td>جدول ضرب گنده</td>
-    <td><a href="https://github.com/HamidMolareza/QueraProblems/blob/master/Solutions/3409/c++">c++</a> - <a href="https://github.com/HamidMolareza/QueraProblems/blob/master/Solutions/3409/java">java</a> - <a href="https://github.com/HamidMolareza/QueraProblems/blob/master/Solutions/3409/python3">python3</a> - <a href="https://github.com/HamidMolareza/QueraProblems/blob/master/Solutions/3409/csharp">csharp</a></td>
-    <td>25-11-2022</td>
-    <td><div style="display: flex; flex-direction: row; gap: 2px;"><a href="https://github.com/HamidMolareza" title="6 commits"><img src="https://avatars.githubusercontent.com/u/35568753?v=4" alt="Hamid Molareza" style="border-radius:100%" width="32px" height="32px"></a></div></td>
-  </tr>
-  <tr>
     <td><a href="https://quera.org/problemset/3410/">3410</a></td>
     <td>مثلث خیام پاسکال</td>
     <td><a href="https://github.com/HamidMolareza/QueraProblems/blob/master/Solutions/3410/c++">c++</a> - <a href="https://github.com/HamidMolareza/QueraProblems/blob/master/Solutions/3410/python3">python3</a> - <a href="https://github.com/HamidMolareza/QueraProblems/blob/master/Solutions/3410/csharp">csharp</a></td>
-    <td>25-11-2022</td>
-    <td><div style="display: flex; flex-direction: row; gap: 2px;"><a href="https://github.com/HamidMolareza" title="4 commits"><img src="https://avatars.githubusercontent.com/u/35568753?v=4" alt="Hamid Molareza" style="border-radius:100%" width="32px" height="32px"></a></div></td>
-  </tr>
-  <tr>
-    <td><a href="https://quera.org/problemset/3414/">3414</a></td>
-    <td>دو نقطه خط</td>
-    <td><a href="https://github.com/HamidMolareza/QueraProblems/blob/master/Solutions/3414/c++">c++</a> - <a href="https://github.com/HamidMolareza/QueraProblems/blob/master/Solutions/3414/java">java</a> - <a href="https://github.com/HamidMolareza/QueraProblems/blob/master/Solutions/3414/python3">python3</a></td>
     <td>25-11-2022</td>
     <td><div style="display: flex; flex-direction: row; gap: 2px;"><a href="https://github.com/HamidMolareza" title="4 commits"><img src="https://avatars.githubusercontent.com/u/35568753?v=4" alt="Hamid Molareza" style="border-radius:100%" width="32px" height="32px"></a></div></td>
   </tr>
@@ -399,13 +518,6 @@ Number of solutions: **312**
     <td><a href="https://github.com/HamidMolareza/QueraProblems/blob/master/Solutions/3429/c++">c++</a> - <a href="https://github.com/HamidMolareza/QueraProblems/blob/master/Solutions/3429/python3">python3</a></td>
     <td>25-11-2022</td>
     <td><div style="display: flex; flex-direction: row; gap: 2px;"><a href="https://github.com/HamidMolareza" title="2 commits"><img src="https://avatars.githubusercontent.com/u/35568753?v=4" alt="Hamid Molareza" style="border-radius:100%" width="32px" height="32px"></a></div></td>
-  </tr>
-  <tr>
-    <td><a href="https://quera.org/problemset/3537/">3537</a></td>
-    <td>سوال زرد</td>
-    <td><a href="https://github.com/HamidMolareza/QueraProblems/blob/master/Solutions/3537/c++">c++</a> - <a href="https://github.com/HamidMolareza/QueraProblems/blob/master/Solutions/3537/java">java</a> - <a href="https://github.com/HamidMolareza/QueraProblems/blob/master/Solutions/3537/python3">python3</a> - <a href="https://github.com/HamidMolareza/QueraProblems/blob/master/Solutions/3537/csharp">csharp</a></td>
-    <td>25-11-2022</td>
-    <td><div style="display: flex; flex-direction: row; gap: 2px;"><a href="https://github.com/HamidMolareza" title="6 commits"><img src="https://avatars.githubusercontent.com/u/35568753?v=4" alt="Hamid Molareza" style="border-radius:100%" width="32px" height="32px"></a></div></td>
   </tr>
   <tr>
     <td><a href="https://quera.org/problemset/3539/">3539</a></td>
@@ -427,13 +539,6 @@ Number of solutions: **312**
     <td><a href="https://github.com/HamidMolareza/QueraProblems/blob/master/Solutions/6082/c++">c++</a> - <a href="https://github.com/HamidMolareza/QueraProblems/blob/master/Solutions/6082/java">java</a> - <a href="https://github.com/HamidMolareza/QueraProblems/blob/master/Solutions/6082/python3">python3</a></td>
     <td>25-11-2022</td>
     <td><div style="display: flex; flex-direction: row; gap: 2px;"><a href="https://github.com/HamidMolareza" title="4 commits"><img src="https://avatars.githubusercontent.com/u/35568753?v=4" alt="Hamid Molareza" style="border-radius:100%" width="32px" height="32px"></a></div></td>
-  </tr>
-  <tr>
-    <td><a href="https://quera.org/problemset/8838/">8838</a></td>
-    <td>کمک به کاپی</td>
-    <td><a href="https://github.com/HamidMolareza/QueraProblems/blob/master/Solutions/8838/c++">c++</a> - <a href="https://github.com/HamidMolareza/QueraProblems/blob/master/Solutions/8838/python3">python3</a></td>
-    <td>25-11-2022</td>
-    <td><div style="display: flex; flex-direction: row; gap: 2px;"><a href="https://github.com/HamidMolareza" title="2 commits"><img src="https://avatars.githubusercontent.com/u/35568753?v=4" alt="Hamid Molareza" style="border-radius:100%" width="32px" height="32px"></a></div></td>
   </tr>
   <tr>
     <td><a href="https://quera.org/problemset/8938/">8938</a></td>
@@ -462,20 +567,6 @@ Number of solutions: **312**
     <td><a href="https://github.com/HamidMolareza/QueraProblems/blob/master/Solutions/17675/c++">c++</a> - <a href="https://github.com/HamidMolareza/QueraProblems/blob/master/Solutions/17675/java">java</a> - <a href="https://github.com/HamidMolareza/QueraProblems/blob/master/Solutions/17675/python3">python3</a> - <a href="https://github.com/HamidMolareza/QueraProblems/blob/master/Solutions/17675/csharp">csharp</a></td>
     <td>25-11-2022</td>
     <td><div style="display: flex; flex-direction: row; gap: 2px;"><a href="https://github.com/HamidMolareza" title="5 commits"><img src="https://avatars.githubusercontent.com/u/35568753?v=4" alt="Hamid Molareza" style="border-radius:100%" width="32px" height="32px"></a></div></td>
-  </tr>
-  <tr>
-    <td><a href="https://quera.org/problemset/20256/">20256</a></td>
-    <td>رژیم سخت</td>
-    <td><a href="https://github.com/HamidMolareza/QueraProblems/blob/master/Solutions/20256/c++">c++</a> - <a href="https://github.com/HamidMolareza/QueraProblems/blob/master/Solutions/20256/java">java</a> - <a href="https://github.com/HamidMolareza/QueraProblems/blob/master/Solutions/20256/python3">python3</a></td>
-    <td>25-11-2022</td>
-    <td><div style="display: flex; flex-direction: row; gap: 2px;"><a href="https://github.com/HamidMolareza" title="4 commits"><img src="https://avatars.githubusercontent.com/u/35568753?v=4" alt="Hamid Molareza" style="border-radius:100%" width="32px" height="32px"></a></div></td>
-  </tr>
-  <tr>
-    <td><a href="https://quera.org/problemset/3538/">3538</a></td>
-    <td>آخ جون طرف نیست!</td>
-    <td><a href="https://github.com/HamidMolareza/QueraProblems/blob/master/Solutions/3538/c++">c++</a> - <a href="https://github.com/HamidMolareza/QueraProblems/blob/master/Solutions/3538/csharp">csharp</a></td>
-    <td>24-11-2022</td>
-    <td><div style="display: flex; flex-direction: row; gap: 2px;"><a href="https://github.com/HamidMolareza" title="3 commits"><img src="https://avatars.githubusercontent.com/u/35568753?v=4" alt="Hamid Molareza" style="border-radius:100%" width="32px" height="32px"></a></div></td>
   </tr>
   <tr>
     <td><a href="https://quera.org/problemset/4066/">4066</a></td>
@@ -588,13 +679,6 @@ Number of solutions: **312**
     <td><a href="https://github.com/HamidMolareza/QueraProblems/blob/master/Solutions/15124/c++">c++</a> - <a href="https://github.com/HamidMolareza/QueraProblems/blob/master/Solutions/15124/java">java</a> - <a href="https://github.com/HamidMolareza/QueraProblems/blob/master/Solutions/15124/python3">python3</a> - <a href="https://github.com/HamidMolareza/QueraProblems/blob/master/Solutions/15124/csharp">csharp</a></td>
     <td>20-10-2022</td>
     <td><div style="display: flex; flex-direction: row; gap: 2px;"><a href="https://github.com/HamidMolareza" title="5 commits"><img src="https://avatars.githubusercontent.com/u/35568753?v=4" alt="Hamid Molareza" style="border-radius:100%" width="32px" height="32px"></a></div></td>
-  </tr>
-  <tr>
-    <td><a href="https://quera.org/problemset/17244/">17244</a></td>
-    <td>شارژ موبایل</td>
-    <td><a href="https://github.com/HamidMolareza/QueraProblems/blob/master/Solutions/17244/c++">c++</a> - <a href="https://github.com/HamidMolareza/QueraProblems/blob/master/Solutions/17244/java">java</a> - <a href="https://github.com/HamidMolareza/QueraProblems/blob/master/Solutions/17244/python3">python3</a></td>
-    <td>20-10-2022</td>
-    <td><div style="display: flex; flex-direction: row; gap: 2px;"><a href="https://github.com/HamidMolareza" title="3 commits"><img src="https://avatars.githubusercontent.com/u/35568753?v=4" alt="Hamid Molareza" style="border-radius:100%" width="32px" height="32px"></a></div></td>
   </tr>
   <tr>
     <td><a href="https://quera.org/problemset/18310/">18310</a></td>
@@ -1242,11 +1326,11 @@ See [LICENSE](LICENSE) for more information.
 
 Here are some related projects:
 
+- [**modos solutions**](https://github.com/modos/quera-answers)
+- [**myp79 solutions**](https://github.com/myp79/Quera-Problem-Solution)
 - [AMK9978 solutions](https://github.com/AMK9978/ProgrammingProblems/tree/master/%D9%BE%D8%A7%D8%B3%D8%AE%20%D8%B3%D9%88%D8%A7%D9%84%D8%A7%D8%AA%20%DA%A9%D9%88%D8%A6%D8%B1%D8%A7)
 - [bestmahdi2 solutions](https://github.com/bestmahdi2/QueraSolutions)
-- [modos solutions](https://github.com/modos/quera-answers)
 - [MohammadNPak solutions](https://github.com/MohammadNPak/quera.ir)
-- [myp79 solutions](https://github.com/myp79/Quera-Problem-Solution)
 - [erfanghorbanee solutions](https://github.com/erfanghorbanee/quera-answers/)
 
 > If you want your repository to be added, send me the link in the issues.

@@ -1,26 +1,16 @@
-<div align="center">
-  Quera Solutions
-  <br />
-  <a href="#Problems-and-Solutions"><strong>Getting Started »</strong></a>
-  <br />
-  <br />
-  <a href="https://github.com/HamidMolareza/QueraProblems/issues/new?assignees=&labels=help%20wanted&template=02_SOLVE_REQUEST.md&title=solve%20request%3A+">
-Request to solve a new question</a> or 
+# Quera Problems
+
+<a href="https://github.com/HamidMolareza/QueraProblems/issues/new?assignees=&labels=help%20wanted&template=02_SOLVE_REQUEST.md&title=solve%20request%3A+">
+Request to solve a new question</a> -
 <a href="https://github.com/HamidMolareza/QueraProblems/issues/new?assignees=&labels=question&template=04_SUPPORT_QUESTION.md&title=support%3A+">
 Ask a Question</a>
-</div>
-
-<div align="center">
-<br />
 
 ![GitHub](https://img.shields.io/github/license/HamidMolareza/QueraProblems)
 [![Pull Requests welcome](https://img.shields.io/badge/PRs-welcome-ff69b4.svg?style=flat-square)](https://github.com/HamidMolareza/QueraProblems/issues?q=is%3Aissue+is%3Aopen+label%3A%22help+wanted%22)
 
-</div>
-
 ## About
 
-The solutions to some [Quera](https://quera.org/) problems.
+The solutions to some [Quera](https://quera.org) problems.
 
 All the solutions that are here, get full score (100) in Quera. But that does not necessarily mean the best answer.
 
@@ -32,9 +22,9 @@ can [send your solution](#contributing) (in any language).
 Are you interested in **[LeetCode](leetcode.com)** site problems?
 See [this repository](https://github.com/HamidMolareza/LeetCode)
 
-## Problems and Solutions
+## List of problems-solutions
 
-{__REPLACE_WITH_PROGRAM_0__}
+{__REPLACE_FROM_PROGRAM_0__}
 
 ## Usage
 
@@ -55,19 +45,19 @@ For example, the tree structure of a problem can look like this:
 - Solutions
     - 10163
         - csharp
-            - program.cs
-            - README.md
+          - program.cs
+          - README.md
         - python
-            - program.py
-            - README.md
+          - program.py
+          - README.md
     - 10166
         - javascript
-            - program.js
-            - README.md
+          - program.js
+          - README.md
         - csharp
-            - solution1.cs
-            - solution2.cs
-            - README.md
+          - solution1.cs
+          - solution2.cs
+          - README.md
 
 For see default templates, you can see [this section](Templates).
 
@@ -85,7 +75,9 @@ Please see [this list](https://github.com/HamidMolareza/QueraProblems/issues) an
 ## Features
 
 - Automatic readme generation
-- Support multi-language
+- Clean code
+- Documentation
+- Our structure support multi-language
 - CI/CD with GitHub action
 
 ## Roadmap
@@ -145,8 +137,8 @@ See [LICENSE](LICENSE) for more information.
 
 Here are some related projects:
 
+- [**modos solutions**](https://github.com/modos/quera-answers)
 - [**myp79 solutions**](https://github.com/myp79/Quera-Problem-Solution)
-- [modos solutions](https://github.com/modos/quera-answers)
 - [AMK9978 solutions](https://github.com/AMK9978/ProgrammingProblems/tree/master/%D9%BE%D8%A7%D8%B3%D8%AE%20%D8%B3%D9%88%D8%A7%D9%84%D8%A7%D8%AA%20%DA%A9%D9%88%D8%A6%D8%B1%D8%A7)
 - [bestmahdi2 solutions](https://github.com/bestmahdi2/QueraSolutions)
 - [MohammadNPak solutions](https://github.com/MohammadNPak/quera.ir)
