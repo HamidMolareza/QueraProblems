@@ -1,5 +1,5 @@
 <div align="center">
-  Quera Solutions
+  <h2>Quera Solutions</h2>
   <br />
   <a href="#Problems-and-Solutions"><strong>Getting Started »</strong></a>
   <br />
