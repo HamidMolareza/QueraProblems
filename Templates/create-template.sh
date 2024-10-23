@@ -5,8 +5,9 @@ show_help() {
 Usage: $(basename "$0") [options]
 
 Options:
-  -i, --id        Quera ID (required)
-  -t, --template  Template directory (required)
+  -q, --quera-id        Quera ID (required)
+  -t, --template  Template directory (optional)
+  -i, --ide  IDE (e.g. code, rider) (optional)
   -o, --output    Solutions directory (optional, default: Solutions or ../Solutions)
   -d, --download  Download link for base project (optional)
   -h, --help      Display this help message
@@ -107,7 +108,7 @@ file_type=$(file --mime-type -b "$file")
 # Parse Command-Line Options
 while [[ $# -gt 0 ]]; do
   case "$1" in
-    -i|--id)
+    -q|--quera-id)
       quera_id="$2"
       shift 2
       ;;
@@ -121,6 +122,10 @@ while [[ $# -gt 0 ]]; do
       ;;
     -d|--download)
       download_link="$2"
+      shift 2
+      ;;
+    -i|--ide)
+      ide="$2"
       shift 2
       ;;
     -h|--help)
@@ -148,8 +153,9 @@ if [ -z "$solutions_dir" ] || [ ! -d "$solutions_dir" ]; then
   exit 1
 fi
 
-read -rp "IDE (e.g., code, rider): " ide
-ensure_command_exists "$ide"
+if [ -n "$ide" ]; then
+  ensure_command_exists "$ide"
+fi
 
 #===========================================================
 
@@ -176,8 +182,11 @@ fi
 decompress_if_need "$output_file" "$target_solution_dir"
 
 echo "Directory is ready: $target_solution_dir"
-"$ide" "$target_solution_dir" >/dev/null
-warn_if_failed "$?" "Failed to open IDE for $target_solution_dir"
+
+if [ -n "$ide" ]; then
+  "$ide" "$target_solution_dir" &
+  warn_if_failed "$?" "Failed to open IDE for $target_solution_dir"
+fi
 
 # Push to master branch (optional)
 read -rp "Do you want to push to the master branch? (y/N) " push_confirm
