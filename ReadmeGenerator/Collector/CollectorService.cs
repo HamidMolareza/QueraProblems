@@ -54,7 +54,7 @@ public static class CollectorService {
                                     Contributors = contributors
                                 })));
                     });
-            }).OnFailAddMoreDetails(new {problemDir});
+            }).OnFailAddMoreDetails(new { problemDir });
 
     private static Task<Result<List<Contributor>>>
         CollectContributorsAsync(string problemDir, IEnumerable<UserModel> users) =>
@@ -115,11 +115,9 @@ public static class CollectorService {
             }, numOfTry)
             .OnSuccess(html => html
                 .DocumentNode
-                .Descendants("div")
-                .Single(div => div.GetAttributeValue("class", "") == "ui segment qu-problem-segment")
-                .Descendants("h1")
-                .First()
-                .InnerText)
+                .SelectSingleNode("//aside/div/div[1]/div[1]/div/div[1]/h1")
+                .InnerText
+            )
             .OnFailAddMoreDetails(new {
                 queraId, problemUrlFormat
             });
