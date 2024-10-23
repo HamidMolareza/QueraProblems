@@ -1,0 +1,7 @@
+python3 manage.py migrate
+
+python manage.py createsuperuser
+
+python3 manage.py runserver
+
+zip -r project.zip . -x ".venv/*" ".idea/*"
