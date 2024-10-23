@@ -1,154 +1,186 @@
 #!/bin/bash
 
-#functions:
-exit_if_operation_failed() {
-  if [ "$1" != 0 ]; then
-    echo "Error! Operation exit with code $1: $2"
+show_help() {
+  cat <<EOF
+Usage: $(basename "$0") [options]
+
+Options:
+  -i, --id        Quera ID (required)
+  -t, --template  Template directory (required)
+  -o, --output    Solutions directory (optional, default: Solutions or ../Solutions)
+  -d, --download  Download link for base project (optional)
+  -h, --help      Display this help message
+
+Example:
+  $(basename "$0") -i 12345 -t /path/to/template -o /path/to/solutions -d http://example.com/project.zip
+EOF
+  exit 0
+}
+
+# Functions:
+exit_if_failed() {
+  if [ "$1" -ne 0 ]; then
+    echo "Error! Operation failed with code $1: $2"
     exit "$1"
   fi
 }
 
-warning_if_operation_failed() {
-  if [ "$1" != 0 ]; then
-    echo "Warning! Operation exit with code $1: $2"
+warn_if_failed() {
+  if [ "$1" -ne 0 ]; then
+    echo "Warning! Operation failed with code $1: $2"
   fi
 }
 
-create_dir_if_is_not_exist() {
-  if [ ! -d "$1" ]; then
-    mkdir "$1"
-  fi
+create_dir_if_missing() {
+  [ ! -d "$1" ] && mkdir -p "$1"
 }
 
 validate_quera_id() {
-  quera_id="$1"
+  local quera_id="$1"
+  printf "Validating Quera ID... "
+  status_code=$(curl -s -o /dev/null -w "%{http_code}" --max-time 10 "https://quera.org/problemset/$quera_id")
 
-  printf "Validating Quera Id... "
-  status_code=$(curl -s -o /dev/null -w "%{http_code}" --max-time 10 https://quera.org/problemset/"$quera_id"/)
-  if [ "$status_code" != "200" ]; then
-    echo "Error! It seems that the ID is not valid. (Id: $quera_id, status code: $status_code)"
+  if [ "$status_code" -ne 200 ]; then
+    echo "Error! Invalid ID. (ID: $quera_id, Status: $status_code)"
     return 1
   fi
   echo "done."
 }
 
-ensure_ide_is_valid() {
-  ide="$1"
-  if ! command -v "$ide" &>/dev/null; then
-    echo "the ide command could not be found. (Ide: $ide)"
+ensure_command_exists() {
+  command -v "$1" &>/dev/null || {
+    echo "Command not found: $1"
     exit 1
+  }
+}
+
+ask_ignore_error() {
+  if [ "$?" -ne 0 ]; then
+    read -rp "Do you want to ignore this error? (Y/n) " ignore_error
+    [[ "$ignore_error" =~ ^[nN]$ ]] && exit 1
   fi
 }
 
-question_ignore_error() {
-  if [ "$?" != 0 ]; then
-    printf "Do you want to ignore this error?(Y/n) "
-    read -r ignore_error
-    if [ "$ignore_error" = 'n' ] || [ "$ignore_error" = 'N' ]; then
-      exit 0
-    fi
-  fi
+get_default_solution_dir() {
+  for dir in "Solutions" "../Solutions"; do
+    [ -d "$dir" ] && echo "$dir" && return
+  done
+  echo ""  # Not Found
 }
+
+decompress_if_need(){
+  local file="$1"
+  local output="$2"
+
+
+# Detect if the file is compressed (zip, rar)
+file_type=$(file --mime-type -b "$file")
+
+  case $file_type in
+      application/zip|application/x-rar)
+          read -rp "The file is compressed ($file_type). Do you want to extract it? (y/n): " choice
+          if [[ "$choice" == "y" || "$choice" == "Y" ]]; then
+              case $file_type in
+                  application/zip)
+                      unzip "$file" -d "$output"
+                      ;;
+                  application/x-rar)
+                      if ! command -v unrar &> /dev/null; then
+                          echo "unrar is not installed. Please install it with: sudo apt install unrar"
+                          return 1
+                      fi
+                      unrar x "$file" "$output/"
+                      ;;
+              esac
+              echo "Extraction completed."
+          else
+              echo "Skipping extraction."
+          fi
+          ;;
+      *)
+          echo "The file is not compressed or has an unsupported format."
+          ;;
+  esac
+}
+
 #===========================================================
-# Base validations
-script_files=("merge-into-master-branch.sh" "download.py")
-for file in "${script_files[@]}"; do
-  if [ ! -f "$file" ]; then
-    echo "Can not find $file"
-    exit 1
-  fi
+# Parse Command-Line Options
+while [[ $# -gt 0 ]]; do
+  case "$1" in
+    -i|--id)
+      quera_id="$2"
+      shift 2
+      ;;
+    -t|--template)
+      template_dir="$2"
+      shift 2
+      ;;
+    -o|--output)
+      solutions_dir="$2"
+      shift 2
+      ;;
+    -d|--download)
+      download_link="$2"
+      shift 2
+      ;;
+    -h|--help)
+      show_help
+      ;;
+    *)
+      echo "Unknown option: $1"
+      show_help
+      ;;
+  esac
 done
 
-# Get Inputs
-quera_id="$1"
-if [ -z "$quera_id" ]; then
-  printf "Quera Id: "
-  read -r quera_id
-fi
+#===========================================================
+# Validate Inputs
+[ -z "$quera_id" ] && { echo "Error: Quera ID is required."; show_help; }
 validate_quera_id "$quera_id"
-question_ignore_error
+ask_ignore_error
 
-template_dir="$2"
-if [ -z "$template_dir" ]; then
-  if [ ! -d "$template_dir" ]; then
-    printf "Template directory: "
-    read -r template_dir
-  fi
-fi
-if [ ! -d "$template_dir" ]; then
-  echo "Error! Can not find template dir in $template_dir"
+[ -z "$template_dir" ] && { echo "Error: Template directory is required."; show_help; }
+[ ! -d "$template_dir" ] && { echo "Invalid template path: $template_dir"; exit 1; }
+
+solutions_dir="${solutions_dir:-$(get_default_solution_dir)}"
+if [ -z "$solutions_dir" ] || [ ! -d "$solutions_dir" ]; then
+  echo "Solutions directory not found: $solutions_dir"
   exit 1
 fi
 
-ide="$3"
-if [ -z "$ide" ]; then
-  printf "Ide (like code, rider, etc): "
-  read -r ide
-fi
-ensure_ide_is_valid "$ide"
+read -rp "IDE (e.g., code, rider): " ide
+ensure_command_exists "$ide"
 
-solutions_dir="$4"
-if [ -z "$solutions_dir" ]; then
-  solutions_dir="../Solutions"
-  if [ ! -d "$solutions_dir" ]; then
-    printf "Solutions directory: "
-    read -r solutions_dir
-  fi
-fi
-if [ ! -d "$solutions_dir" ]; then
-  echo "Error! Can not find solutions dir in $solutions_dir"
-  exit 1
-fi
 #===========================================================
 
-#checkout
+# Checkout a new branch
 git checkout -b "$quera_id"
-exit_if_operation_failed "$?" "Can not checkout to $quera_id"
+exit_if_failed "$?" "Unable to checkout to branch $quera_id"
 
-#create solution dir
-create_dir_if_is_not_exist "$solutions_dir/$quera_id"
-
-#copy template to solution dir
+# Create solution directory
 target_solution_dir="$solutions_dir/$quera_id"
+create_dir_if_missing "$target_solution_dir"
+
+# Copy template to solution directory
 cp -r "$template_dir" "$target_solution_dir"
-exit_if_operation_failed "$?" "Can not copy template from $template_dir to $target_solution_dir"
-wait
+exit_if_failed "$?" "Failed to copy template to $target_solution_dir"
 
-# Download base project
-printf "Download link for base project (Optional): "
-read -r download_link
-if [ -n "$download_link" ]; then # -n  =  !-z
+# Download base project (optional)
+if [ -n "$download_link" ]; then
   echo "Downloading..."
-  output_file=$(python3 download.py "$download_link" "$target_solution_dir")
-  warning_if_operation_failed "$?" "Can not download project from '$download_link' to '$target_solution_dir' \nMoreDetail: $output_file"
-  wait
+  output_file=$(curl -L -o "$download_link" "$target_solution_dir" 2>&1)
+  warn_if_failed "$?" "Failed to download project from $download_link"
 fi
 
-#Unzip base project
-if [ -f "$output_file" ]; then
-  file_type=$(file --mime-type --brief "$output_file")
-  if [ "$file_type" == "application/zip" ]; then
-    echo "Unzip..."
-    template_dir_name=$(basename "$template_dir")
-    output_file_name=$(basename "$output_file")
-    unzip "$output_file" -d "$target_solution_dir/$template_dir_name/$output_file_name"
-  fi
-fi
+# Unzip base project if it's a ZIP file
+decompress_if_need "$output_file" "$target_solution_dir"
 
 echo "Directory is ready: $target_solution_dir"
-$ide "$target_solution_dir" >/dev/null
-warning_if_operation_failed "$?" "Can not open your ide for $target_solution_dir"
+"$ide" "$target_solution_dir" >/dev/null
+warn_if_failed "$?" "Failed to open IDE for $target_solution_dir"
 
-echo ""
-printf "Do you want merge this branch to master branch?(y/N) "
-read -r merge_confirm
-if [ "$merge_confirm" = 'y' ] || [ "$merge_confirm" = 'Y' ]; then
-  ./merge-into-master-branch.sh "$quera_id" "y"
-fi
-
-printf "Do you want push master branch?(y/N) "
-read -r push_confirm
-if [ "$push_confirm" = 'y' ] || [ "$push_confirm" = 'Y' ]; then
-  git pull --rebase
-  git push
+# Push to master branch (optional)
+read -rp "Do you want to push to the master branch? (y/N) " push_confirm
+if [[ "$push_confirm" =~ ^[yY]$ ]]; then
+  git pull --rebase && git push
 fi
