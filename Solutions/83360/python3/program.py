@@ -1,6 +1,7 @@
-first = input()
-second = input ()
-if first in second:
-    print (1)
+target = input()
+text = input()
+
+if target in text:
+    print(1)
 else:
-    print (0)
+    print(0)
