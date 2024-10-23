@@ -144,8 +144,10 @@ done
 validate_quera_id "$quera_id"
 ask_ignore_error
 
-[ -z "$template_dir" ] && { echo "Error: Template directory is required."; show_help; }
-[ ! -d "$template_dir" ] && { echo "Invalid template path: $template_dir"; exit 1; }
+if [ -n "$template_dir" ] && [ ! -d "$template_dir" ]; then
+  echo "Invalid template path: $template_dir"
+  exit 1;
+fi
 
 solutions_dir="${solutions_dir:-$(get_default_solution_dir)}"
 if [ -z "$solutions_dir" ] || [ ! -d "$solutions_dir" ]; then
@@ -168,8 +170,10 @@ target_solution_dir="$solutions_dir/$quera_id"
 create_dir_if_missing "$target_solution_dir"
 
 # Copy template to solution directory
-cp -r "$template_dir" "$target_solution_dir"
-exit_if_failed "$?" "Failed to copy template to $target_solution_dir"
+if [ -n "$template_dir" ]; then
+  cp -r "$template_dir" "$target_solution_dir"
+  exit_if_failed "$?" "Failed to copy template to $target_solution_dir"
+fi
 
 # Download base project (optional)
 if [ -n "$download_link" ]; then
