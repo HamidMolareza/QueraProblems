@@ -19,13 +19,8 @@ public static class Program {
     private static CacheModel _cache = null!;
 
     public static Task Main(string[] args) {
-        // configure serilog
-        Log.Logger = new LoggerConfiguration()
-            .MinimumLevel.Information() 
-            .WriteTo.Console(outputTemplate:
-                "[{Timestamp:HH:mm:ss} {Level:u3}] {Message:lj}{NewLine}{Exception}")
-            .CreateLogger();
-        
+        ConfigSerilog();
+
         return InnerMainAsync(args)
             .OnSuccess(() => Log.Information("The operation was completed successfully."))
             .OnFail(result => {
@@ -33,6 +28,14 @@ public static class Program {
                 Environment.ExitCode = -1; //for Github action: https://github.com/HamidMolareza/QueraProblems/issues/10
                 return result;
             });
+    }
+
+    private static void ConfigSerilog() {
+        Log.Logger = new LoggerConfiguration()
+            .MinimumLevel.Information()
+            .WriteTo.Console(outputTemplate:
+                "[{Timestamp:HH:mm:ss} {Level:u3}] {Message:lj}{NewLine}{Exception}")
+            .CreateLogger();
     }
 
     private static async Task<Result> InnerMainAsync(IReadOnlyCollection<string> args) {
