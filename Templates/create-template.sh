@@ -188,7 +188,7 @@ decompress_if_need "$output_file" "$target_solution_dir"
 echo "Directory is ready: $target_solution_dir"
 
 if [ -n "$ide" ]; then
-  "$ide" "$target_solution_dir" &
+  "$ide" "$target_solution_dir"
   warn_if_failed "$?" "Failed to open IDE for $target_solution_dir"
 fi
 
