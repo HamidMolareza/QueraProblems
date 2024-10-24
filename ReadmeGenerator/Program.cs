@@ -9,6 +9,7 @@ using Quera.Cache;
 using Quera.Collector;
 using Quera.Configs;
 using Quera.Helpers;
+using Serilog;
 
 namespace Quera;
 
@@ -17,14 +18,22 @@ public static class Program {
     private static Arguments _arguments = null!;
     private static CacheModel _cache = null!;
 
-    public static Task Main(string[] args) =>
-        InnerMainAsync(args)
-            .OnSuccess(() => Console.WriteLine("The operation was completed successfully."))
+    public static Task Main(string[] args) {
+        // configure serilog
+        Log.Logger = new LoggerConfiguration()
+            .MinimumLevel.Information() 
+            .WriteTo.Console(outputTemplate:
+                "[{Timestamp:HH:mm:ss} {Level:u3}] {Message:lj}{NewLine}{Exception}")
+            .CreateLogger();
+        
+        return InnerMainAsync(args)
+            .OnSuccess(() => Log.Information("The operation was completed successfully."))
             .OnFail(result => {
-                result.Detail?.Log();
+                Log.Error("{result}", result.ToStr());
                 Environment.ExitCode = -1; //for Github action: https://github.com/HamidMolareza/QueraProblems/issues/10
                 return result;
             });
+    }
 
     private static async Task<Result> InnerMainAsync(IReadOnlyCollection<string> args) {
         var result1 = await Arguments.Get(args)
@@ -34,7 +43,7 @@ public static class Program {
             .OnSuccess(() => CacheService.LoadAsync(_arguments.ProgramDirectory, _configs.CacheFileName)
                 .OnSuccess(cache => {
                     if (cache is null) {
-                        Console.WriteLine("Warning! The cache file was not found.");
+                        Log.Warning("Warning! The cache file was not found.");
                         cache = new CacheModel();
                     }
 
@@ -49,7 +58,7 @@ public static class Program {
                 Path.Combine(_arguments.OutputDirectory, _configs.ReadmeFileName), readme, _configs.NumOfTry));
 
         var result2 = await CacheService.SaveAsync(_cache, _arguments.ProgramDirectory, _configs.CacheFileName)
-            .OnSuccess(filePath => Console.WriteLine($"Save cache data in {filePath}."));
+            .OnSuccess(filePath => Log.Information("Save cache data in {filePath}.", filePath));
 
         return !result1.IsSuccess ? result1 : result2;
     }

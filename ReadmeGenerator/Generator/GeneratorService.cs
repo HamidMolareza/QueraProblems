@@ -1,4 +1,3 @@
-using System;
 using System.Collections.Generic;
 using System.IO;
 using System.Linq;
@@ -9,6 +8,7 @@ using OnRail.Extensions.OnFail;
 using OnRail.Extensions.Try;
 using Quera.Collector.Models;
 using Quera.Configs;
+using Serilog;
 
 namespace Quera.Generator;
 
@@ -39,12 +39,10 @@ public static class Generator {
             .AppendLine("  </tr>");
 
         foreach (var problem in problemsList) {
-            Console.Write($"Processing problem {problem.QueraId}... ");
+            Log.Information("Processing problem {QueraId}...", problem.QueraId);
 
             var result = readme.AppendProblemData(problem, configs.SolutionUrlFormat, configs.ProblemUrlFormat);
             result.OnFailThrowException();
-
-            Console.WriteLine("Done");
         }
 
         readme.AppendLine("</table>");
