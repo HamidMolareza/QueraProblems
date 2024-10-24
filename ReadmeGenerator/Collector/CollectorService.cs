@@ -16,44 +16,35 @@ using Quera.Helpers;
 
 namespace Quera.Collector;
 
-public static class CollectorService {
-    public static Task<Result<List<Problem>>> CollectProblemsAsync(string solutionsDirectory, CacheModel cache,
-        string problemUrlFormat, int delayToRequestQueraInMilliSeconds,
-        IEnumerable<string> ignoreSolutions, IEnumerable<UserModel> users, int numOfTry) =>
-        TryExtensions.Try(() => Directory.GetDirectories(solutionsDirectory), numOfTry)
-            .OnSuccess(problemDirs =>
-                problemDirs.SelectResults(problemDir =>
-                        CollectProblemAsync(problemDir, cache, delayToRequestQueraInMilliSeconds, problemUrlFormat,
-                            ignoreSolutions, users, numOfTry))
-                    .OnSuccess(problems => problems.Where(problem => problem is not null).ToList())
-            )!;
+public class CollectorService(AppSettings settings, CacheRepository cache) {
+    public Task<Result<List<Problem>>> CollectProblemsAsync() =>
+        TryExtensions.Try(() => Directory.GetDirectories(settings.SolutionsPath))
+            .OnSuccess(problemDirs => problemDirs.SelectResults(CollectProblemAsync)).OnSuccess(cache.JoinAsync)
+            .OnSuccess(async problems => {
+                foreach (var problem in problems.Where(problem => problem.QueraTitle is null)) {
+                    problem.QueraTitle = await GetProblemTitleAsync(problem.QueraId.ToString());
+                }
 
-    private static Task<Result<Problem?>> CollectProblemAsync(string problemDir, CacheModel cache,
-        int delayToRequestQueraInMilliSeconds, string problemUrlFormat, IEnumerable<string> ignoreSolutions,
-        IEnumerable<UserModel> users, int numOfTry) =>
-        GetValidSolutionDirs(problemDir, ignoreSolutions, numOfTry)
+                return problems;
+            });
+
+    private Task<Result<Problem?>> CollectProblemAsync(string problemDir) =>
+        GetValidSolutionDirs(problemDir, settings.IgnoreSolutions, settings.NumberOfTry)
             .OnSuccess(CollectSolutionsAsync)
             .OnSuccess(async solutions => {
-                if (!solutions.Any())
+                if (solutions.Count == 0)
                     return Result<Problem?>.Ok(null);
 
                 var queraId = new FileInfo(problemDir).Name;
-                return await GetProblemTitleAsync(queraId, cache, problemUrlFormat, numOfTry)
-                    .OnSuccess(async result => {
-                        if (!result.wasCache)
-                            await Task.Delay(delayToRequestQueraInMilliSeconds);
-
-                        return await GitHelper.GetLastCommitDateAsync(problemDir)
-                            .OnSuccess(lastCommitDate => CollectContributorsAsync(problemDir, users)
-                                .OnSuccess(contributors => Result<Problem?>.Ok(new Problem(
-                                    queraId: queraId.ConvertTo<string, long>(),
-                                    queraTitle: result.title,
-                                    lastSolutionsCommit: lastCommitDate
-                                ) {
-                                    Solutions = solutions,
-                                    Contributors = contributors
-                                })));
-                    });
+                return await GitHelper.GetLastCommitDateAsync(problemDir)
+                    .OnSuccess(lastCommitDate => CollectContributorsAsync(problemDir, settings.Users)
+                        .OnSuccess(contributors =>
+                            Result<Problem?>.Ok(new Problem {
+                                QueraId = queraId.ConvertTo<string, long>(),
+                                LastSolutionsCommit = lastCommitDate,
+                                Solutions = solutions,
+                                Contributors = contributors
+                            })));
             }).OnFailAddMoreDetails(new { problemDir });
 
     private static Task<Result<List<Contributor>>>
@@ -79,7 +70,7 @@ public static class CollectorService {
                 solutions.Where(solution => IsSolutionNameValid(new FileInfo(solution).Name, ignoreSolutions)));
 
     private static bool IsSolutionNameValid(string solutionName, IEnumerable<string> ignoreSolutions)
-        => !solutionName.StartsWith(".") && ignoreSolutions.All(ignoreSolution => ignoreSolution != solutionName);
+        => !solutionName.StartsWith('.') && ignoreSolutions.All(ignoreSolution => ignoreSolution != solutionName);
 
     private static Task<Result<List<Solution>>> CollectSolutionsAsync(IEnumerable<string> languageDirs) =>
         languageDirs.SelectResults(languageDir =>
@@ -90,35 +81,12 @@ public static class CollectorService {
                 })
         );
 
-    private static async Task<Result<(string title, bool wasCache)>> GetProblemTitleAsync(string queraId,
-        CacheModel cache, string problemUrlFormat, int numOfTry) {
-        var cachedTitle = cache.ProblemTitles.FirstOrDefault(problems =>
-            string.Equals(problems.QueraId, queraId, StringComparison.CurrentCultureIgnoreCase)
-        )?.Title;
-        if (cachedTitle is not null)
-            return Result<(string, bool)>.Ok((cachedTitle, true));
-
-
-        return await GetProblemTitleFromWebAsync(queraId, problemUrlFormat, numOfTry)
-            .OnSuccess(title => {
-                cache.ProblemTitles.Add(new CacheModel.Titles(queraId, title));
-                return (title, false);
-            });
+    private async Task<string> GetProblemTitleAsync(string queraId) {
+        var url = string.Format(settings.ProblemUrlFormat, queraId);
+        var web = new HtmlWeb();
+        return (await web.LoadFromWebAsync(url))
+            .DocumentNode
+            .SelectSingleNode("//aside/div/div[1]/div[1]/div/div[1]/h1")
+            .InnerText;
     }
-
-    private static Task<Result<string>> GetProblemTitleFromWebAsync(string queraId, string problemUrlFormat,
-        int numOfTry) =>
-        TryExtensions.Try(() => {
-                var url = string.Format(problemUrlFormat, queraId);
-                var web = new HtmlWeb();
-                return web.LoadFromWebAsync(url);
-            }, numOfTry)
-            .OnSuccess(html => html
-                .DocumentNode
-                .SelectSingleNode("//aside/div/div[1]/div[1]/div/div[1]/h1")
-                .InnerText
-            )
-            .OnFailAddMoreDetails(new {
-                queraId, problemUrlFormat
-            });
 }

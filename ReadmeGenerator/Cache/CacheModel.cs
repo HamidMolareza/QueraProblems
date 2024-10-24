@@ -4,10 +4,10 @@ using System.Collections.Generic;
 namespace Quera.Cache;
 
 public class CacheModel {
-    public List<Titles> ProblemTitles { get; set; } = new();
+    public List<QueraProblem> QueraProblems { get; set; } = [];
 
-    public class Titles {
-        public Titles(string queraId, string title) {
+    public class QueraProblem {
+        public QueraProblem(string queraId, string title) {
             if (string.IsNullOrEmpty(queraId))
                 throw new ArgumentNullException(nameof(queraId));
             if (string.IsNullOrEmpty(title))

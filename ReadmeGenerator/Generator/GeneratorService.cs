@@ -12,9 +12,8 @@ using Serilog;
 
 namespace Quera.Generator;
 
-public static class Generator {
-    public static async Task<string> GenerateReadmeAsync(IEnumerable<Problem> problems, string programDirectory,
-        ConfigsModel configs) {
+public class GeneratorService(AppSettings settings) {
+    public async Task<string> GenerateReadmeAsync(IEnumerable<Problem> problems) {
         var problemsList = problems.ToList();
         var readme = new StringBuilder();
 
@@ -41,18 +40,18 @@ public static class Generator {
         foreach (var problem in problemsList) {
             Log.Information("Processing problem {QueraId}...", problem.QueraId);
 
-            var result = readme.AppendProblemData(problem, configs.SolutionUrlFormat, configs.ProblemUrlFormat);
+            var result = AppendProblemData(readme, problem, settings.SolutionUrlFormat, settings.ProblemUrlFormat);
             result.OnFailThrowException();
         }
 
         readme.AppendLine("</table>");
 
         var readmeTemplate =
-            await File.ReadAllTextAsync(Path.Combine(programDirectory, configs.ReadmeTemplateName));
+            await File.ReadAllTextAsync(settings.ReadmeTemplatePath);
         return readmeTemplate.Replace("{__REPLACE_WITH_PROGRAM_0__}", readme.ToString());
     }
 
-    private static Result AppendProblemData(this StringBuilder source,
+    private static Result AppendProblemData(StringBuilder source,
         Problem problem, string solutionUrlFormat, string problemUrlFormat) =>
         TryExtensions.Try(() => {
             var solutionLinks = problem.Solutions

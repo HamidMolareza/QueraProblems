@@ -20,7 +20,7 @@ public static class GitHelper {
             .OnSuccess(cmd => {
                 var result = cmd.StandardOutput.Remove(0, 8);
                 return DateTime.Parse(result[..^7]);
-            }).OnFailAddMoreDetails(new {path});
+            }).OnFailAddMoreDetails(new { path });
 
     public static Task<Result<List<Contributor>>> GetContributorsAsync(string path) =>
         TryExtensions.Try(async () => (await Cli.Wrap("git").WithArguments($"shortlog HEAD -nse {path}")
@@ -40,5 +40,5 @@ public static class GitHelper {
 
                     return new Contributor(name: name, email: email, numOfCommits: numOfCommits);
                 }).Where(contributor => contributor is not null).ToList())
-            .OnFailAddMoreDetails(new {path})!;
+            .OnFailAddMoreDetails(new { path })!;
 }
