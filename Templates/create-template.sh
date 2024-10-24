@@ -193,7 +193,7 @@ if [ -n "$ide" ]; then
 fi
 
 # Push to master branch (optional)
-read -rp "Do you want to push to the master branch? (y/N) " push_confirm
+read -rp "Do you want to push to the master branch (with merge flag)? (y/N) " push_confirm
 if [[ "$push_confirm" =~ ^[yY]$ ]]; then
-  git pull --rebase && git push
+  git pull --no-rebase && git push
 fi
