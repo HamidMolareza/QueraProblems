@@ -8,7 +8,6 @@ using OnRail.Extensions.OnFail;
 using OnRail.Extensions.Try;
 using Quera.Collector.Models;
 using Quera.Configs;
-using Serilog;
 
 namespace Quera.Generator;
 
@@ -38,8 +37,6 @@ public class GeneratorService(AppSettings settings) {
             .AppendLine("  </tr>");
 
         foreach (var problem in problemsList) {
-            Log.Information("Processing problem {QueraId}...", problem.QueraId);
-
             var result = AppendProblemData(readme, problem, settings.SolutionUrlFormat, settings.ProblemUrlFormat);
             result.OnFailThrowException();
         }
