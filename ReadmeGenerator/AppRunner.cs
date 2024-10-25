@@ -7,6 +7,7 @@ using OnRail.ResultDetails.Errors;
 using Quera.Cache;
 using Quera.Collector;
 using Quera.Configs;
+using Quera.Crawler;
 using Quera.Generator;
 using Quera.Helpers;
 using Serilog;
@@ -17,14 +18,16 @@ public class AppRunner(
     AppSettings settings,
     CollectorService collector,
     GeneratorService generator,
-    CacheRepository cacheRepository) {
+    CacheRepository cacheRepository,
+    CrawlerService crawler
+) {
     public async Task<Result> RunAsync() {
         if (!EnsureInputsAreValid(out var validationResult))
             return validationResult;
         Log.Debug("App setting values checked.");
 
         // Collect problems and solutions
-        var problemsResult = await collector.CollectProblemsAsync();
+        var problemsResult = await collector.CollectProblemsFromDiskAsync();
         if (!problemsResult.IsSuccess)
             return problemsResult.Map();
         if (problemsResult.Value is null) {
@@ -32,20 +35,21 @@ public class AppRunner(
             return Result.Ok();
         }
 
-        Log.Information("{Count} problems collected.", problemsResult.Value.Count);
+        Log.Information("{Count} problems collected from disk.", problemsResult.Value.Count);
+
+        await foreach (var newProblem in crawler.CompleteProblemTitlesAsync(problemsResult.Value)) {
+            await cacheRepository.SaveAsync(new CacheProblem {
+                Id = newProblem.QueraId.ToString(),
+                Title = newProblem.QueraTitle!
+            });
+            Log.Debug("{QueraId} cached.", newProblem.QueraId);
+        }
 
         // Generate readme file and save it
-        var generateReadmeResult = problemsResult
+        return await problemsResult
             .OnSuccess(generator.GenerateReadmeAsync)
             .OnSuccess(readme => Utility.SaveDataAsync(
                 settings.ReadmeOutputPath, readme, settings.NumberOfTry));
-
-        // Cache new data
-        var cacheResult = cacheRepository.SaveNewItemsAsync(problemsResult.Value)
-            .OnSuccess(newItems => Log.Information("{Count} new items cached.", newItems.Count));
-
-        Task.WaitAll(generateReadmeResult, cacheResult);
-        return ResultHelpers.CombineResults(await generateReadmeResult, await cacheResult);
     }
 
     private bool EnsureInputsAreValid(out Result result) {

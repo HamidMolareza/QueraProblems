@@ -8,24 +8,6 @@ using Quera.Collector.Models;
 namespace Quera.Cache;
 
 public class CacheRepository(CacheDbContext db) {
-    public Task<Result<List<CacheProblem>>> SaveNewItemsAsync(IEnumerable<Problem> problems) =>
-        TryExtensions.Try(async () => {
-            var newProblemsQuery = from problem in problems
-                join cacheProblem in db.Problems on problem.QueraId.ToString() equals cacheProblem.Id into g
-                from cacheProblem in g.DefaultIfEmpty()
-                where cacheProblem == null
-                select problem;
-            var newCacheData = newProblemsQuery.Select(newItem => new CacheProblem {
-                Id = newItem.QueraId.ToString(),
-                Title = newItem.QueraTitle!
-            }).ToList();
-
-            db.Problems.AddRange(newCacheData);
-            await db.SaveChangesAsync();
-
-            return newCacheData;
-        });
-
     public Result<List<Problem>> Join(List<Problem?> problems) =>
         TryExtensions.Try(() => {
             var query = from problem in problems
@@ -42,4 +24,9 @@ public class CacheRepository(CacheDbContext db) {
                 };
             return query.ToList();
         });
+
+    public Task SaveAsync(CacheProblem cacheProblem) {
+        db.Problems.Add(cacheProblem);
+        return db.SaveChangesAsync();
+    }
 }

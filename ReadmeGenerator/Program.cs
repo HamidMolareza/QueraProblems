@@ -10,6 +10,7 @@ using OnRail.Extensions.Try;
 using Quera.Cache;
 using Quera.Collector;
 using Quera.Configs;
+using Quera.Crawler;
 using Quera.Generator;
 using Quera.Helpers;
 using Serilog;
@@ -37,6 +38,7 @@ public static class Program {
         services.AddScoped<CollectorService>();
         services.AddScoped<GeneratorService>();
         services.AddScoped<CacheRepository>();
+        services.AddScoped<CrawlerService>();
         services.AddScoped<AppRunner>();
         services.AddDbContext<CacheDbContext>(options =>
             options.UseSqlite($"Data Source={appSettings.CacheFilePath}"));

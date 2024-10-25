@@ -3,7 +3,6 @@ using System.Collections.Generic;
 using System.IO;
 using System.Linq;
 using System.Threading.Tasks;
-using HtmlAgilityPack;
 using OnRail;
 using OnRail.Extensions.OnFail;
 using OnRail.Extensions.OnSuccess;
@@ -18,7 +17,7 @@ using Serilog;
 namespace Quera.Collector;
 
 public class CollectorService(AppSettings settings, CacheRepository cache) {
-    public Task<Result<List<Problem>>> CollectProblemsAsync() =>
+    public Task<Result<List<Problem>>> CollectProblemsFromDiskAsync() =>
         GitHelper.MakeDirectorySafe(".")
             .OnSuccessTee(result => Log.Debug("{result}", result))
             .OnSuccess(() => Directory.GetDirectories(settings.SolutionsPath))
@@ -26,23 +25,7 @@ public class CollectorService(AppSettings settings, CacheRepository cache) {
             .OnSuccess(problemDirs => problemDirs.SelectResults(CollectProblemAsync))
             .OnSuccessTee(problems => Log.Debug("{Count} problems and solutions collected from hard.", problems.Count))
             .OnSuccess(cache.Join)
-            .OnSuccessTee(() => Log.Debug("Data joined with cache data."))
-            .OnSuccess(CompleteProblemTitles);
-
-    private async Task<List<Problem>> CompleteProblemTitles(List<Problem> problems) {
-        var problemsWithoutTitle = problems.Where(problem => problem.QueraTitle is null).ToList();
-        Log.Information("{Count} problems have not title.", problemsWithoutTitle.Count);
-
-        foreach (var problem in problemsWithoutTitle) {
-            Log.Information("Title for {QueraId} is not cached. Try to download it.", problem.QueraId);
-            problem.QueraTitle = await GetProblemTitleAsync(problem.QueraId.ToString());
-
-            Log.Information("Delay {delay}", settings.DelayToRequestQueraInMilliSeconds);
-            await Task.Delay(settings.DelayToRequestQueraInMilliSeconds);
-        }
-
-        return problems;
-    }
+            .OnSuccessTee(() => Log.Debug("Data joined with cache data."));
 
     private Task<Result<Problem?>> CollectProblemAsync(string problemDir) =>
         GetValidSolutionDirs(problemDir, settings.IgnoreSolutions, settings.NumberOfTry)
@@ -96,13 +79,4 @@ public class CollectorService(AppSettings settings, CacheRepository cache) {
                     LastCommitDate = lastCommitDate
                 })
         );
-
-    private async Task<string> GetProblemTitleAsync(string queraId) {
-        var url = string.Format(settings.ProblemUrlFormat, queraId);
-        var web = new HtmlWeb();
-        return (await web.LoadFromWebAsync(url))
-            .DocumentNode
-            .SelectSingleNode("//aside/div/div[1]/div[1]/div/div[1]/h1")
-            .InnerText;
-    }
 }
