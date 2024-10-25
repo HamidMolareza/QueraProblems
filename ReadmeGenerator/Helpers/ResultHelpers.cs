@@ -7,15 +7,33 @@ namespace Quera.Helpers;
 public static class ResultHelpers {
     public static string ToStr(this Result result) {
         var sb = new StringBuilder();
-        sb.AppendLine($"Success: {result.IsSuccess}");
 
-        if (result.Detail is null) {
-            sb.AppendLine($"Detail: No more data");
+        sb.AppendLine($"Success: {result.IsSuccess}")
+            .AppendLine(result.Detail.ToStr());
+
+        return sb.ToString();
+    }
+
+    public static string ToStr<T>(this Result<T> result) {
+        var sb = new StringBuilder();
+
+        sb.AppendLine($"Success: {result.IsSuccess}")
+            .AppendLine($"Value: {result.Value}")
+            .AppendLine(result.Detail.ToStr());
+
+        return sb.ToString();
+    }
+
+    public static string ToStr(this ResultDetail? detail) {
+        var sb = new StringBuilder();
+
+        if (detail is null) {
+            sb.AppendLine("Detail: No more data");
         }
         else {
             sb.AppendLine("Detail:")
-                .AppendLine(result.Detail.GetHeader())
-                .AppendLine(result.Detail.GetDetail());
+                .AppendLine(detail.GetHeader())
+                .AppendLine(detail.GetDetail());
         }
 
         return sb.ToString();
