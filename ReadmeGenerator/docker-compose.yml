@@ -5,7 +5,10 @@ services:
       context: .
       dockerfile: Dockerfile
     volumes:
-      - ..:/app/data
+      - ../.git:/app/data/.git
+      - ../Solutions:/app/data/Solutions
       - ./appsettings.json:/app/appsettings.json
+      - ./data:/app/data/
+      - ./README.md:/app/data/README.md
     entrypoint: ["dotnet", "Quera.dll"] 
     # command: ["-w", "Data/"]

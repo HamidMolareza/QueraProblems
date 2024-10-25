@@ -2,7 +2,7 @@ using Microsoft.EntityFrameworkCore;
 
 namespace Quera.Cache;
 
-public class CacheDbContext(DbContextOptions<CacheDbContext> options) : DbContext(options) {
+public class CacheDbContext(DbContextOptions options) : DbContext(options) {
     public DbSet<CacheProblem> Problems { get; set; }
 
     protected override void OnModelCreating(ModelBuilder modelBuilder) {
