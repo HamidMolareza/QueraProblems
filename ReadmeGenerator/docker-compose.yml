@@ -1,0 +1,11 @@
+services:
+  app:
+    image: readme-generator:latest 
+    build:
+      context: .
+      dockerfile: Dockerfile
+    volumes:
+      - ..:/app/data
+      - ./appsettings.json:/app/appsettings.json
+    entrypoint: ["dotnet", "Quera.dll"] 
+    # command: ["-w", "Data/"]

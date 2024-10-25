@@ -3,6 +3,8 @@ name: Update-Readme
 # Controls when the workflow will run
 on:
   push:
+    branches:
+      - master
     paths:
       - 'Solutions/**'
       - '.github/workflows/update-readme.yml'
@@ -27,11 +29,10 @@ jobs:
           ref: master
           fetch-depth: 0
 
-      - name: Build
-        run: dotnet build ReadmeGenerator/Quera.csproj
-
-      - name: Run
-        run: dotnet run --project ReadmeGenerator/Quera.csproj "ReadmeGenerator" "." "Solutions"
+      - name: Run Docker Compose
+        run: |
+          cd ReadmeGenerator
+          docker compose up
 
       - uses: stefanzweifel/git-auto-commit-action@v5
         with:
@@ -46,7 +47,7 @@ jobs:
       
           # Optional. Options used by `git-commit`.
           # See https://git-scm.com/docs/git-commit#_options
-          commit_options: '--no-verify --signoff'
+          commit_options: '--no-verify --signoff --allow-empty'
       
           # Optional glob pattern of files which should be added to the commit
           # Defaults to all (.)

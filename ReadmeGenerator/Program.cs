@@ -21,7 +21,7 @@ public static class Program {
         // Setup DI container
         var services = new ServiceCollection();
 
-        var appSettings = services.ConfigAppSettings();
+        var appSettings = services.ConfigAppSettings("appsettings.json");
         services.AddTransient<CollectorService>();
         services.AddTransient<GeneratorService>();
         services.AddTransient<CacheRepository>();
@@ -58,11 +58,6 @@ public static class Program {
             ["-t", "--readme-template"],
             () => appSettings.ReadmeTemplatePath
         );
-        readmeTemplatePathOption.AddValidator(result => {
-            var value = result.GetValueOrDefault<string>();
-            if (value is null || !File.Exists(value))
-                result.ErrorMessage = "The readme template path is not valid.";
-        });
 
         var outputOption = new Option<string>(
             ["-o", "--output"],
@@ -74,7 +69,10 @@ public static class Program {
             () => appSettings.WorkingDirectory,
             "The working directory of the application");
         workingDirectoryOption.AddValidator(result => {
-            if (!Directory.Exists(result.GetValueOrDefault<string>()))
+            var value = result.GetValueOrDefault<string>();
+            if(string.IsNullOrEmpty(value) || value == ".")
+                return;
+            if (!Directory.Exists(value))
                 result.ErrorMessage = "The working directory is not valid.";
         });
 
@@ -82,10 +80,6 @@ public static class Program {
             ["-s", "--solutions"],
             () => appSettings.SolutionsPath,
             "The solutions directory");
-        solutionsOption.AddValidator(result => {
-            if (!Directory.Exists(result.GetValueOrDefault<string>()))
-                result.ErrorMessage = "The solutions directory is not valid.";
-        });
 
         // Create root command and add options
         var rootCommand = new RootCommand {
@@ -104,10 +98,16 @@ public static class Program {
                 if (settings is null) throw new Exception("Can not get app settings from DI.");
 
                 settings.DelayToRequestQueraInMilliSeconds = delayToRequestQueraInMilliSeconds;
-                settings.ReadmeTemplatePath = readmeTemplatePath;
                 settings.WorkingDirectory = workingDirectory;
+                settings.ReadmeTemplatePath = readmeTemplatePath;
                 settings.ReadmeOutputPath = outputPath;
                 settings.SolutionsPath = solutionsPath;
+                settings.CacheFilePath = settings.CacheFilePath;
+                
+                if(!string.IsNullOrEmpty(settings.WorkingDirectory) && settings.WorkingDirectory != ".")
+                    Directory.SetCurrentDirectory(settings.WorkingDirectory);
+                
+                Log.Debug("App Settings:\n{settings}", settings.ToString());
 
                 // Call other classes/methods with DI
                 var runner = serviceProvider.GetService<AppRunner>();
@@ -127,11 +127,11 @@ public static class Program {
         return rootCommand.InvokeAsync(args);
     }
 
-    private static AppSettings ConfigAppSettings(this IServiceCollection services) {
-        // Build Configuration from appsettings.json
+    private static AppSettings ConfigAppSettings(this IServiceCollection services, string appSettingsPath) {
+        // Build Configuration from the provided appsettings.json path
         var configuration = new ConfigurationBuilder()
             .SetBasePath(Directory.GetCurrentDirectory())
-            .AddJsonFile("appsettings.json", optional: false, reloadOnChange: true)
+            .AddJsonFile(appSettingsPath, optional: false, reloadOnChange: true)
             .Build();
 
         // Bind AppSettings from Configuration
@@ -139,4 +139,5 @@ public static class Program {
         services.AddSingleton(appSettings); // Register AppSettings as singleton
         return appSettings;
     }
+
 }
