@@ -22,7 +22,7 @@ public static class GitHelper {
         }).OnSuccess(fullPath =>
             BashExecutor.RunCommandAsync($"git config --global --add safe.directory {fullPath}")
                 .OnSuccess(result => $"'{fullPath}' path was added to git safe path. {result}")
-        );
+        ).OnFailAddMoreDetails(new { path, workingDirectory });
 
     public static Task<Result<DateTime>> GetLastCommitDateAsync(string path, string? workingDirectory = null) =>
         BashExecutor.RunCommandAsync($"git log -1 --date=iso --pretty=format:'%cd' {path}", workingDirectory)

@@ -102,7 +102,8 @@ public static class Program {
         };
 
         // Set handler for root command
-        rootCommand.SetHandler(CommandHandler(serviceProvider), delayToRequestQueraInMilliSecondsOption, readmeTemplatePathOption, workingDirectoryOption, outputOption,
+        rootCommand.SetHandler(CommandHandler(serviceProvider), delayToRequestQueraInMilliSecondsOption,
+            readmeTemplatePathOption, workingDirectoryOption, outputOption,
             solutionsOption);
 
         return rootCommand.InvokeAsync(args);
@@ -111,7 +112,8 @@ public static class Program {
     private static Func<int, string, string, string, string, Task> CommandHandler(IServiceProvider serviceProvider) {
         return async (delayToRequestQueraInMilliSeconds, readmeTemplatePath,
             workingDirectory, outputPath, solutionsPath) => {
-            var settings = UpdateAppSettings(serviceProvider, delayToRequestQueraInMilliSeconds, workingDirectory, readmeTemplatePath, outputPath, solutionsPath);
+            var settings = UpdateAppSettings(serviceProvider, delayToRequestQueraInMilliSeconds, workingDirectory,
+                readmeTemplatePath, outputPath, solutionsPath);
             Log.Debug("App Settings:\n{settings}", settings.ToString());
 
             ChangeWorkingDirectory(settings);
@@ -131,7 +133,8 @@ public static class Program {
             Directory.SetCurrentDirectory(settings.WorkingDirectory);
     }
 
-    private static AppSettings UpdateAppSettings(IServiceProvider serviceProvider, int delayToRequestQueraInMilliSeconds,
+    private static AppSettings UpdateAppSettings(IServiceProvider serviceProvider,
+        int delayToRequestQueraInMilliSeconds,
         string workingDirectory, string readmeTemplatePath, string outputPath, string solutionsPath) {
         // Get AppSettings instance from DI
         var settings = serviceProvider.GetService<AppSettings>();
@@ -142,7 +145,7 @@ public static class Program {
         settings.ReadmeTemplatePath = readmeTemplatePath;
         settings.ReadmeOutputPath = outputPath;
         settings.SolutionsPath = solutionsPath;
-        
+
         return settings;
     }
 

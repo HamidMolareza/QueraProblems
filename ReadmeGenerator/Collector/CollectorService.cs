@@ -27,19 +27,22 @@ public class CollectorService(AppSettings settings, CacheRepository cache) {
             .OnSuccessTee(problems => Log.Debug("{Count} problems and solutions collected from hard.", problems.Count))
             .OnSuccess(cache.JoinAsync)
             .OnSuccessTee(() => Log.Debug("Data joined with cache data."))
-            .OnSuccess(async problems => {
-                var problemsWithoutTitle = problems.Where(problem => problem.QueraTitle is null).ToList();
-                Log.Information("{Count} problems have not title.", problemsWithoutTitle.Count);
-                foreach (var problem in problemsWithoutTitle) {
-                    Log.Information("Title for {QueraId} is not cached. Try to download it.", problem.QueraId);
-                    problem.QueraTitle = await GetProblemTitleAsync(problem.QueraId.ToString());
+            .OnSuccess(CompleteProblemTitles);
 
-                    Log.Information("Delay {delay}", settings.DelayToRequestQueraInMilliSeconds);
-                    await Task.Delay(settings.DelayToRequestQueraInMilliSeconds);
-                }
+    private async Task<List<Problem>> CompleteProblemTitles(List<Problem> problems) {
+        var problemsWithoutTitle = problems.Where(problem => problem.QueraTitle is null).ToList();
+        Log.Information("{Count} problems have not title.", problemsWithoutTitle.Count);
 
-                return problems;
-            });
+        foreach (var problem in problemsWithoutTitle) {
+            Log.Information("Title for {QueraId} is not cached. Try to download it.", problem.QueraId);
+            problem.QueraTitle = await GetProblemTitleAsync(problem.QueraId.ToString());
+
+            Log.Information("Delay {delay}", settings.DelayToRequestQueraInMilliSeconds);
+            await Task.Delay(settings.DelayToRequestQueraInMilliSeconds);
+        }
+
+        return problems;
+    }
 
     private Task<Result<Problem?>> CollectProblemAsync(string problemDir) =>
         GetValidSolutionDirs(problemDir, settings.IgnoreSolutions, settings.NumberOfTry)

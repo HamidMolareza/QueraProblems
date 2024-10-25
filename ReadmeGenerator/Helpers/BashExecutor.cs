@@ -1,15 +1,16 @@
 using System.Threading.Tasks;
 using OnRail;
+using OnRail.Extensions.OnFail;
+using OnRail.Extensions.Try;
 using OnRail.ResultDetails;
 
 namespace Quera.Helpers;
 
-using System;
 using System.Diagnostics;
 
 public static class BashExecutor {
-    public static async Task<Result<string>> RunCommandAsync(string command, string? workingDirectory = null) {
-        try {
+    public static Task<Result<string>> RunCommandAsync(string command, string? workingDirectory = null) =>
+        TryExtensions.Try(async () => {
             var process = new Process {
                 StartInfo = new ProcessStartInfo {
                     FileName = "/bin/bash",
@@ -34,9 +35,5 @@ public static class BashExecutor {
                 ? Result<string>.Ok(result)
                 : Result<string>.Fail(
                     new ErrorDetail(title: "Bash execute failed.", message: $"Command Error: {error}"));
-        }
-        catch (Exception ex) {
-            return Result<string>.Fail(new ErrorDetail(title: "Bash execute failed.", exception: ex));
-        }
-    }
+        }).OnFailAddMoreDetails(new { command, workingDirectory });
 }
