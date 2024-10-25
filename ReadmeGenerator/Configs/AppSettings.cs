@@ -1,4 +1,7 @@
 using System.Collections.Generic;
+using System.Linq;
+using System.Reflection;
+using System.Text;
 
 namespace Quera.Configs;
 
@@ -16,4 +19,29 @@ public class AppSettings {
 
     public List<UserModel> Users { get; init; } = [];
     public string CacheFilePath { get; set; } = default!;
+
+
+    public override string ToString() {
+        var sb = new StringBuilder();
+        var type = GetType();
+        var properties = type.GetProperties(BindingFlags.Public | BindingFlags.Instance);
+
+        foreach (var prop in properties) {
+            var value = prop.GetValue(this);
+            var formattedValue = FormatValue(value);
+            sb.AppendLine($"{prop.Name}: {formattedValue}");
+        }
+
+        return sb.ToString();
+    }
+
+    private static string FormatValue(object? value) {
+        return value switch {
+            null => "null",
+            string s => $"\"{s}\"",
+            IEnumerable<string> list => $"[{string.Join(", ", list.Select(s => $"\"{s}\""))}]",
+            IEnumerable<object> objList => $"[{string.Join(", ", objList)}]",
+            _ => value.ToString() ?? "null"
+        };
+    }
 }
