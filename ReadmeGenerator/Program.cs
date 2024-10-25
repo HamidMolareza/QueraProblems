@@ -5,6 +5,7 @@ using System.Threading.Tasks;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using OnRail.Extensions.OnFail;
+using OnRail.Extensions.Try;
 using Quera.Cache;
 using Quera.Collector;
 using Quera.Configs;
@@ -15,7 +16,17 @@ using Serilog;
 namespace Quera;
 
 public static class Program {
-    public static Task Main(string[] args) {
+    public static Task Main(string[] args) =>
+        TryExtensions.Try(() => InnerMain(args))
+            .OnFailTee(result => {
+                //for GitHub action: https://github.com/HamidMolareza/QueraProblems/issues/10
+                Environment.ExitCode = -1;
+
+                Log.Error("The operation failed. See the below text for more information:\n{result}",
+                    result.ToStr());
+            });
+
+    private static Task<int> InnerMain(string[] args) {
         ConfigSerilog();
 
         // Setup DI container
@@ -70,7 +81,7 @@ public static class Program {
             "The working directory of the application");
         workingDirectoryOption.AddValidator(result => {
             var value = result.GetValueOrDefault<string>();
-            if(string.IsNullOrEmpty(value) || value == ".")
+            if (string.IsNullOrEmpty(value) || value == ".")
                 return;
             if (!Directory.Exists(value))
                 result.ErrorMessage = "The working directory is not valid.";
@@ -102,25 +113,18 @@ public static class Program {
                 settings.ReadmeTemplatePath = readmeTemplatePath;
                 settings.ReadmeOutputPath = outputPath;
                 settings.SolutionsPath = solutionsPath;
-                settings.CacheFilePath = settings.CacheFilePath;
-                
-                if(!string.IsNullOrEmpty(settings.WorkingDirectory) && settings.WorkingDirectory != ".")
+
+                if (!string.IsNullOrEmpty(settings.WorkingDirectory) && settings.WorkingDirectory != ".")
                     Directory.SetCurrentDirectory(settings.WorkingDirectory);
-                
+
                 Log.Debug("App Settings:\n{settings}", settings.ToString());
 
                 // Call other classes/methods with DI
                 var runner = serviceProvider.GetService<AppRunner>();
                 if (runner is null) throw new Exception("Can not get app runner from DI.");
 
-                await runner.RunAsync()
-                    .OnFailTee(result => {
-                        //for GitHub action: https://github.com/HamidMolareza/QueraProblems/issues/10
-                        Environment.ExitCode = -1;
-
-                        Log.Error("The operation failed. See the below text for more information:\n{result}",
-                            result.ToStr());
-                    });
+                var result = await runner.RunAsync();
+                result.OnFailThrowException();
             }, delayToRequestQueraInMilliSecondsOption, readmeTemplatePathOption, workingDirectoryOption, outputOption,
             solutionsOption);
 
@@ -139,5 +143,4 @@ public static class Program {
         services.AddSingleton(appSettings); // Register AppSettings as singleton
         return appSettings;
     }
-
 }
