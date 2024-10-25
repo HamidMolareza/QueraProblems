@@ -3,6 +3,7 @@ services:
     image: readme-generator:latest 
     build:
       context: .
+      container_name: readme-generator
       dockerfile: Dockerfile
     volumes:
       - ..:/app/data

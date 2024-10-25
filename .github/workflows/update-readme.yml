@@ -28,11 +28,27 @@ jobs:
         with:
           ref: master
           fetch-depth: 0
+          
+      - name: Build Docker images with Docker Compose
+        run: |
+          cd ReadmeGenerator
+          docker compose build
 
       - name: Run Docker Compose
         run: |
           cd ReadmeGenerator
-          docker compose up
+          docker-compose up --abort-on-container-exit
+        continue-on-error: true
+        id: compose_run
+        
+      - name: Check Docker Compose Exit Code
+        run: |
+          EXIT_CODE=$(docker inspect readme-generator --format='{{.State.ExitCode}}')
+          echo "Container exit code: $EXIT_CODE"
+          if [ "$EXIT_CODE" -ne 0 ]; then
+            echo "Docker Compose service failed."
+            exit 1
+          fi
 
       - uses: stefanzweifel/git-auto-commit-action@v5
         with:
@@ -96,3 +112,9 @@ jobs:
       
           # Optional. Create given branch name in local and remote repository.
           create_branch: true
+          
+#      - name: Clean up containers
+#        if: always()
+#        run: |
+#          cd ReadmeGenerator
+#          docker-compose down
