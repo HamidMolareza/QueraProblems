@@ -2,6 +2,7 @@
 using System.CommandLine;
 using System.IO;
 using System.Threading.Tasks;
+using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using OnRail.Extensions.OnFail;
@@ -26,23 +27,29 @@ public static class Program {
                     result.ToStr());
             });
 
-    private static Task<int> InnerMain(string[] args) {
+    private static async Task<int> InnerMain(string[] args) {
         ConfigSerilog();
 
         // Setup DI container
         var services = new ServiceCollection();
 
         var appSettings = services.ConfigAppSettings("appsettings.json");
-        services.AddTransient<CollectorService>();
-        services.AddTransient<GeneratorService>();
-        services.AddTransient<CacheRepository>();
-        services.AddTransient<AppRunner>(); // Register AppRunner
+        services.AddScoped<CollectorService>();
+        services.AddScoped<GeneratorService>();
+        services.AddScoped<CacheRepository>();
+        services.AddScoped<AppRunner>();
+        services.AddDbContext<CacheDbContext>(options =>
+            options.UseSqlite($"Data Source={appSettings.CacheFilePath}"));
 
         Log.Debug("Services are registered.");
 
         var serviceProvider = services.BuildServiceProvider();
 
-        return InvokeCommandLine(args, appSettings, serviceProvider);
+        // Create database
+        var db = serviceProvider.GetRequiredService<CacheDbContext>();
+        await db.Database.EnsureCreatedAsync();
+
+        return await InvokeCommandLine(args, appSettings, serviceProvider);
     }
 
     private static void ConfigSerilog() {

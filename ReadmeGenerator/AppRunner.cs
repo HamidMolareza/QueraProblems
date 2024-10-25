@@ -35,16 +35,17 @@ public class AppRunner(
         Log.Information("{Count} problems collected.", problemsResult.Value.Count);
 
         // Generate readme file and save it
-        var result = await problemsResult
+        var generateReadmeResult = problemsResult
             .OnSuccess(generator.GenerateReadmeAsync)
             .OnSuccess(readme => Utility.SaveDataAsync(
                 settings.ReadmeOutputPath, readme, settings.NumberOfTry));
-        if (!result.IsSuccess) return result;
-        Log.Information("The readme file saved in {Path}", settings.ReadmeOutputPath);
 
         // Cache new data
-        return await cacheRepository.SaveNewItemsAsync(problemsResult.Value)
-            .OnSuccess(() => Log.Information("The cache ({Path}) updated.", settings.CacheFilePath));
+        var cacheResult = cacheRepository.SaveNewItemsAsync(problemsResult.Value)
+            .OnSuccess(newItems => Log.Information("{Count} new items cached.", newItems.Count));
+
+        Task.WaitAll(generateReadmeResult, cacheResult);
+        return ResultHelpers.CombineResults(await generateReadmeResult, await cacheResult);
     }
 
     private bool EnsureInputsAreValid(out Result result) {

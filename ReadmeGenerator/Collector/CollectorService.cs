@@ -25,7 +25,7 @@ public class CollectorService(AppSettings settings, CacheRepository cache) {
             .OnSuccessTee(problemDirs => Log.Debug("{Count} problems found.", problemDirs.Length))
             .OnSuccess(problemDirs => problemDirs.SelectResults(CollectProblemAsync))
             .OnSuccessTee(problems => Log.Debug("{Count} problems and solutions collected from hard.", problems.Count))
-            .OnSuccess(cache.JoinAsync)
+            .OnSuccess(cache.Join)
             .OnSuccessTee(() => Log.Debug("Data joined with cache data."))
             .OnSuccess(CompleteProblemTitles);
 

@@ -65,4 +65,14 @@ public static class ResultHelpers {
 
         return sb.ToString();
     }
+
+    public static Result CombineResults(Result result1, Result result2) {
+        if (result1.IsSuccess && result2.IsSuccess) return Result.Ok();
+        if (!result1.IsSuccess && !result2.IsSuccess) {
+            return Result.Fail(new ErrorDetail(message: "Two errors occured", moreDetails: new { result1, result2 }));
+        }
+
+        // One of them has failed
+        return !result1.IsSuccess ? result1 : result2;
+    }
 }
