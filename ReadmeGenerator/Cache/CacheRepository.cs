@@ -42,7 +42,7 @@ public class CacheRepository(AppSettings settings) {
                         LastSolutionsCommit = problem.LastSolutionsCommit,
                         Contributors = problem.Contributors,
                         Solutions = problem.Solutions,
-                        QueraTitle = qProblem.Title
+                        QueraTitle = qProblem?.Title
                     };
                 return query.ToList();
             }).OnFailAddMoreDetails(new { ProblemsCount = problems.Count })!;
