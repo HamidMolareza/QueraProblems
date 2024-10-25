@@ -20,20 +20,20 @@ namespace Quera.Collector;
 public class CollectorService(AppSettings settings, CacheRepository cache) {
     public Task<Result<List<Problem>>> CollectProblemsAsync() =>
         GitHelper.MakeDirectorySafe(".")
-            .OnSuccessTee(result=> Log.Debug("{result}", result))
-        .OnSuccess(() => Directory.GetDirectories(settings.SolutionsPath))
-            .OnSuccessTee(problemDirs=> Log.Debug("{Count} problems found.", problemDirs.Length))
+            .OnSuccessTee(result => Log.Debug("{result}", result))
+            .OnSuccess(() => Directory.GetDirectories(settings.SolutionsPath))
+            .OnSuccessTee(problemDirs => Log.Debug("{Count} problems found.", problemDirs.Length))
             .OnSuccess(problemDirs => problemDirs.SelectResults(CollectProblemAsync))
-            .OnSuccessTee(problems=> Log.Debug("{Count} problems and solutions collected from hard.", problems.Count))
+            .OnSuccessTee(problems => Log.Debug("{Count} problems and solutions collected from hard.", problems.Count))
             .OnSuccess(cache.JoinAsync)
-            .OnSuccessTee(()=> Log.Debug("Data joined with cache data."))
+            .OnSuccessTee(() => Log.Debug("Data joined with cache data."))
             .OnSuccess(async problems => {
                 var problemsWithoutTitle = problems.Where(problem => problem.QueraTitle is null).ToList();
                 Log.Information("{Count} problems have not title.", problemsWithoutTitle.Count);
                 foreach (var problem in problemsWithoutTitle) {
                     Log.Information("Title for {QueraId} is not cached. Try to download it.", problem.QueraId);
                     problem.QueraTitle = await GetProblemTitleAsync(problem.QueraId.ToString());
-                    
+
                     Log.Information("Delay {delay}", settings.DelayToRequestQueraInMilliSeconds);
                     await Task.Delay(settings.DelayToRequestQueraInMilliSeconds);
                 }
