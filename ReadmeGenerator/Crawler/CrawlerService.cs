@@ -2,6 +2,8 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 using HtmlAgilityPack;
+using OnRail.Extensions.OnFail;
+using OnRail.Extensions.Try;
 using Quera.Collector.Models;
 using Quera.Configs;
 using Serilog;
@@ -16,7 +18,13 @@ public class CrawlerService(AppSettings settings) {
 
         foreach (var problem in problemsWithoutTitle) {
             Log.Information("Title for {QueraId} is not cached. Try to download it.", problem.QueraId);
-            problem.QueraTitle = await GetProblemTitleAsync(problem.QueraId.ToString());
+
+            var requestResult = await TryExtensions.Try(() =>
+                    GetProblemTitleAsync(problem.QueraId.ToString()), settings.NumberOfTry
+            );
+            requestResult.OnFailThrowException();
+
+            problem.QueraTitle = requestResult.Value;
 
             yield return problem;
 
