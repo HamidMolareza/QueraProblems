@@ -37,7 +37,7 @@ jobs:
       - name: Run Docker Compose
         run: |
           cd ReadmeGenerator
-          docker-compose up --abort-on-container-exit
+          docker compose up --abort-on-container-exit
         continue-on-error: true
         id: compose_run
         
@@ -117,4 +117,4 @@ jobs:
 #        if: always()
 #        run: |
 #          cd ReadmeGenerator
-#          docker-compose down
+#          docker compose down
