@@ -19,6 +19,7 @@ public class AppSettings {
 
     public List<UserModel> Users { get; init; } = [];
     public string CacheFilePath { get; set; } = default!;
+    public string LogLevel { get; set; } = default!;
 
 
     public override string ToString() {

@@ -14,6 +14,7 @@ using Quera.Crawler;
 using Quera.Generator;
 using Quera.Helpers;
 using Serilog;
+using Serilog.Events;
 
 namespace Quera;
 
@@ -29,8 +30,6 @@ public static class Program {
             });
 
     private static async Task<int> InnerMain(string[] args) {
-        ConfigSerilog();
-
         // Setup DI container
         var services = new ServiceCollection();
 
@@ -40,6 +39,12 @@ public static class Program {
         services.AddScoped<CacheRepository>();
         services.AddScoped<CrawlerService>();
         services.AddScoped<AppRunner>();
+
+        ConfigSerilog(Utility.ParseLogLevel(appSettings.LogLevel));
+
+        ChangeWorkingDirectory(appSettings.WorkingDirectory);
+
+        Log.Debug("cache file path: {path}", appSettings.CacheFilePath);
         services.AddDbContext<CacheDbContext>(options =>
             options.UseSqlite($"Data Source={appSettings.CacheFilePath}"));
 
@@ -54,9 +59,9 @@ public static class Program {
         return await InvokeCommandLine(args, appSettings, serviceProvider);
     }
 
-    private static void ConfigSerilog() {
+    private static void ConfigSerilog(LogEventLevel minimumLevel = LogEventLevel.Debug) {
         Log.Logger = new LoggerConfiguration()
-            .MinimumLevel.Debug()
+            .MinimumLevel.Is(minimumLevel)
             .WriteTo.Console(outputTemplate:
                 "[{Timestamp:HH:mm:ss} {Level:u3}] {Message:lj}{NewLine}{Exception}")
             .CreateLogger();
@@ -84,18 +89,6 @@ public static class Program {
             () => appSettings.ReadmeOutputPath,
             "The readme output path");
 
-        var workingDirectoryOption = new Option<string>(
-            ["-w", "--working-directory"],
-            () => appSettings.WorkingDirectory,
-            "The working directory of the application");
-        workingDirectoryOption.AddValidator(result => {
-            var value = result.GetValueOrDefault<string>();
-            if (string.IsNullOrEmpty(value) || value == ".")
-                return;
-            if (!Directory.Exists(value))
-                result.ErrorMessage = "The working directory is not valid.";
-        });
-
         var solutionsOption = new Option<string>(
             ["-s", "--solutions"],
             () => appSettings.SolutionsPath,
@@ -106,27 +99,22 @@ public static class Program {
             delayToRequestQueraInMilliSecondsOption,
             readmeTemplatePathOption,
             outputOption,
-            workingDirectoryOption,
             solutionsOption
         };
 
         // Set handler for root command
         rootCommand.SetHandler(CommandHandler(serviceProvider), delayToRequestQueraInMilliSecondsOption,
-            readmeTemplatePathOption, workingDirectoryOption, outputOption,
+            readmeTemplatePathOption, outputOption,
             solutionsOption);
 
         return rootCommand.InvokeAsync(args);
     }
 
-    private static Func<int, string, string, string, string, Task> CommandHandler(IServiceProvider serviceProvider) {
-        return async (delayToRequestQueraInMilliSeconds, readmeTemplatePath,
-            workingDirectory, outputPath, solutionsPath) => {
-            var settings = UpdateAppSettings(serviceProvider, delayToRequestQueraInMilliSeconds, workingDirectory,
+    private static Func<int, string, string, string, Task> CommandHandler(IServiceProvider serviceProvider) {
+        return async (delayToRequestQueraInMilliSeconds, readmeTemplatePath, outputPath, solutionsPath) => {
+            var settings = UpdateAppSettings(serviceProvider, delayToRequestQueraInMilliSeconds,
                 readmeTemplatePath, outputPath, solutionsPath);
             Log.Debug("App Settings:\n{settings}", settings.ToString());
-
-            ChangeWorkingDirectory(settings);
-
 
             // Call other classes/methods with DI
             var runner = serviceProvider.GetService<AppRunner>();
@@ -137,20 +125,19 @@ public static class Program {
         };
     }
 
-    private static void ChangeWorkingDirectory(AppSettings settings) {
-        if (!string.IsNullOrEmpty(settings.WorkingDirectory) && settings.WorkingDirectory != ".")
-            Directory.SetCurrentDirectory(settings.WorkingDirectory);
+    private static void ChangeWorkingDirectory(string workingDirectory) {
+        if (!string.IsNullOrEmpty(workingDirectory) && workingDirectory != ".")
+            Directory.SetCurrentDirectory(workingDirectory);
     }
 
     private static AppSettings UpdateAppSettings(IServiceProvider serviceProvider,
-        int delayToRequestQueraInMilliSeconds,
-        string workingDirectory, string readmeTemplatePath, string outputPath, string solutionsPath) {
+        int delayToRequestQueraInMilliSeconds, string readmeTemplatePath,
+        string outputPath, string solutionsPath) {
         // Get AppSettings instance from DI
         var settings = serviceProvider.GetService<AppSettings>();
         if (settings is null) throw new Exception("Can not get app settings from DI.");
 
         settings.DelayToRequestQueraInMilliSeconds = delayToRequestQueraInMilliSeconds;
-        settings.WorkingDirectory = workingDirectory;
         settings.ReadmeTemplatePath = readmeTemplatePath;
         settings.ReadmeOutputPath = outputPath;
         settings.SolutionsPath = solutionsPath;
