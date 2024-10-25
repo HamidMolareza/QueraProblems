@@ -2,6 +2,7 @@ using System.IO;
 using System.Threading.Tasks;
 using OnRail;
 using OnRail.Extensions.Map;
+using OnRail.Extensions.OnFail;
 using OnRail.Extensions.OnSuccess;
 using OnRail.ResultDetails.Errors;
 using Quera.Cache;
@@ -48,8 +49,12 @@ public class AppRunner(
         // Generate readme file and save it
         return await problemsResult
             .OnSuccess(generator.GenerateReadmeAsync)
-            .OnSuccess(readme => Utility.SaveDataAsync(
-                settings.ReadmeOutputPath, readme, settings.NumberOfTry));
+            .OnSuccessTee(() => Log.Debug("The readme file generated."))
+            .OnSuccess(readme => {
+                Log.Debug("Try to save data to {path}", settings.ReadmeOutputPath);
+                return Utility.SaveDataAsync(
+                    settings.ReadmeOutputPath, readme, settings.NumberOfTry);
+            });
     }
 
     private bool EnsureInputsAreValid(out Result result) {

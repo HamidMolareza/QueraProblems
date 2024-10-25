@@ -121,7 +121,7 @@ public static class Program {
             if (runner is null) throw new Exception("Can not get app runner from DI.");
 
             var result = await runner.RunAsync();
-            result.OnFailThrowException();
+            result.OnFailThrowException(); //TODO: bug
         };
     }
 
