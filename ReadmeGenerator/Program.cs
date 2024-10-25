@@ -102,33 +102,48 @@ public static class Program {
         };
 
         // Set handler for root command
-        rootCommand.SetHandler(async (delayToRequestQueraInMilliSeconds, readmeTemplatePath,
-                workingDirectory, outputPath, solutionsPath) => {
-                // Get AppSettings instance from DI
-                var settings = serviceProvider.GetService<AppSettings>();
-                if (settings is null) throw new Exception("Can not get app settings from DI.");
-
-                settings.DelayToRequestQueraInMilliSeconds = delayToRequestQueraInMilliSeconds;
-                settings.WorkingDirectory = workingDirectory;
-                settings.ReadmeTemplatePath = readmeTemplatePath;
-                settings.ReadmeOutputPath = outputPath;
-                settings.SolutionsPath = solutionsPath;
-
-                if (!string.IsNullOrEmpty(settings.WorkingDirectory) && settings.WorkingDirectory != ".")
-                    Directory.SetCurrentDirectory(settings.WorkingDirectory);
-
-                Log.Debug("App Settings:\n{settings}", settings.ToString());
-
-                // Call other classes/methods with DI
-                var runner = serviceProvider.GetService<AppRunner>();
-                if (runner is null) throw new Exception("Can not get app runner from DI.");
-
-                var result = await runner.RunAsync();
-                result.OnFailThrowException();
-            }, delayToRequestQueraInMilliSecondsOption, readmeTemplatePathOption, workingDirectoryOption, outputOption,
+        rootCommand.SetHandler(CommandHandler(serviceProvider), delayToRequestQueraInMilliSecondsOption, readmeTemplatePathOption, workingDirectoryOption, outputOption,
             solutionsOption);
 
         return rootCommand.InvokeAsync(args);
+    }
+
+    private static Func<int, string, string, string, string, Task> CommandHandler(IServiceProvider serviceProvider) {
+        return async (delayToRequestQueraInMilliSeconds, readmeTemplatePath,
+            workingDirectory, outputPath, solutionsPath) => {
+            var settings = UpdateAppSettings(serviceProvider, delayToRequestQueraInMilliSeconds, workingDirectory, readmeTemplatePath, outputPath, solutionsPath);
+            Log.Debug("App Settings:\n{settings}", settings.ToString());
+
+            ChangeWorkingDirectory(settings);
+
+
+            // Call other classes/methods with DI
+            var runner = serviceProvider.GetService<AppRunner>();
+            if (runner is null) throw new Exception("Can not get app runner from DI.");
+
+            var result = await runner.RunAsync();
+            result.OnFailThrowException();
+        };
+    }
+
+    private static void ChangeWorkingDirectory(AppSettings settings) {
+        if (!string.IsNullOrEmpty(settings.WorkingDirectory) && settings.WorkingDirectory != ".")
+            Directory.SetCurrentDirectory(settings.WorkingDirectory);
+    }
+
+    private static AppSettings UpdateAppSettings(IServiceProvider serviceProvider, int delayToRequestQueraInMilliSeconds,
+        string workingDirectory, string readmeTemplatePath, string outputPath, string solutionsPath) {
+        // Get AppSettings instance from DI
+        var settings = serviceProvider.GetService<AppSettings>();
+        if (settings is null) throw new Exception("Can not get app settings from DI.");
+
+        settings.DelayToRequestQueraInMilliSeconds = delayToRequestQueraInMilliSeconds;
+        settings.WorkingDirectory = workingDirectory;
+        settings.ReadmeTemplatePath = readmeTemplatePath;
+        settings.ReadmeOutputPath = outputPath;
+        settings.SolutionsPath = solutionsPath;
+        
+        return settings;
     }
 
     private static AppSettings ConfigAppSettings(this IServiceCollection services, string appSettingsPath) {
