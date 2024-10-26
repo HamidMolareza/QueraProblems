@@ -34,7 +34,11 @@ See [this repository](https://github.com/HamidMolareza/LeetCode)
 
 ## Problems and Solutions
 
+See the complete list in [this page](docs/CompleteList.md).
+
 {__REPLACE_WITH_PROGRAM_0__}
+
+See the complete list in [this page](docs/CompleteList.md).
 
 ## Usage
 
