@@ -2,7 +2,6 @@ using System.IO;
 using System.Threading.Tasks;
 using OnRail;
 using OnRail.Extensions.Map;
-using OnRail.Extensions.OnFail;
 using OnRail.Extensions.OnSuccess;
 using OnRail.ResultDetails.Errors;
 using Quera.Cache;
@@ -51,7 +50,8 @@ public class AppRunner(
             .OnSuccess(generator.GenerateReadmeAsync)
             .OnSuccessTee(() => Log.Debug("The readme file generated."))
             .OnSuccess(readme => {
-                Log.Debug("Try to save data to {path}", settings.ReadmeOutputPath);
+                Log.Debug("Try to save {length} chars to {path}", readme.Length,
+                    Path.GetFullPath(settings.ReadmeOutputPath));
                 return Utility.SaveDataAsync(
                     settings.ReadmeOutputPath, readme, settings.NumberOfTry);
             });

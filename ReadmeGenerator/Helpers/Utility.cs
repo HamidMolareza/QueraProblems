@@ -14,7 +14,9 @@ public static class Utility {
         throw new Exception($"Can not convert to {typeof(TResult)}");
 
     public static Task<Result> SaveDataAsync(string path, string data, int numOfTry) =>
-        TryExtensions.Try(() => File.WriteAllTextAsync(path, data), numOfTry)
+        TryExtensions.Try(() =>
+                    File.WriteAllTextAsync(path, data),
+                numOfTry)
             .OnFailAddMoreDetails(new { path });
 
     public static LogEventLevel ParseLogLevel(string levelName,

@@ -7,8 +7,9 @@ services:
     volumes:
       - ../.git:/app/data/.git
       - ../Solutions:/app/data/Solutions
+      - ../README.md:/app/data/README.md:rw
       - ./appsettings.json:/app/appsettings.json
-      - ./data:/app/data/
-      - ./README.md:/app/data/README.md
-    entrypoint: ["dotnet", "Quera.dll"] 
+      - ./data/cache.db:/app/data/cache.db
+      - ./data/ReadmeTemplate.md:/app/data/ReadmeTemplate.md
+    entrypoint: ["dotnet", "Quera.dll"]
     # command: ["-w", "Data/"]

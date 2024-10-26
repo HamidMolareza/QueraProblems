@@ -167,7 +167,7 @@ Number of solutions: **352**
   </tr>
   <tr>
     <td><a href="https://quera.org/problemset/171796/">171796</a></td>
-    <td>B – Triangulum Number or rebmuN mulugnai</td>
+    <td>Triangulum Number or rebmuN mulugnai</td>
     <td><a href="https://github.com/HamidMolareza/QueraProblems/blob/master/Solutions/171796/python3">python3</a></td>
     <td>14-03-2023</td>
     <td><div style="display: flex; flex-direction: row; gap: 2px;"><a href="https://github.com/HamidMolareza/" title="1 commits"><img src="https://avatars.githubusercontent.com/u/35568753?v=4" alt="Hamid Molareza" style="border-radius:100%" width="32px" height="32px"></a></div></td>
