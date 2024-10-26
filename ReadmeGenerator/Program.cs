@@ -34,16 +34,17 @@ public static class Program {
         var services = new ServiceCollection();
 
         var appSettings = services.ConfigAppSettings("appsettings.json");
+
+        ConfigSerilog(Utility.ParseLogLevel(appSettings.LogLevel));
+
         services.AddScoped<CollectorService>();
         services.AddScoped<GeneratorService>();
         services.AddScoped<CacheRepository>();
         services.AddScoped<CrawlerService>();
         services.AddScoped<AppRunner>();
 
-        ConfigSerilog(Utility.ParseLogLevel(appSettings.LogLevel));
-
+        //Database
         ChangeWorkingDirectory(appSettings.WorkingDirectory);
-
         Log.Debug("cache file path: {path}", appSettings.CacheFilePath);
         services.AddDbContext<CacheDbContext>(options =>
             options.UseSqlite($"Data Source={appSettings.CacheFilePath}"));
@@ -103,9 +104,10 @@ public static class Program {
         };
 
         // Set handler for root command
-        rootCommand.SetHandler(CommandHandler(serviceProvider), delayToRequestQueraInMilliSecondsOption,
-            readmeTemplatePathOption, outputOption,
-            solutionsOption);
+        rootCommand.SetHandler(CommandHandler(serviceProvider),
+            delayToRequestQueraInMilliSecondsOption, readmeTemplatePathOption,
+            outputOption, solutionsOption
+        );
 
         return rootCommand.InvokeAsync(args);
     }
