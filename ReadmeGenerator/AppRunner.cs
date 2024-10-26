@@ -1,3 +1,4 @@
+using System.Collections.Generic;
 using System.IO;
 using System.Linq;
 using System.Threading.Tasks;
@@ -7,6 +8,7 @@ using OnRail.Extensions.OnSuccess;
 using OnRail.ResultDetails.Errors;
 using Quera.Cache;
 using Quera.Collector;
+using Quera.Collector.Models;
 using Quera.Configs;
 using Quera.Crawler;
 using Quera.Generator;
@@ -54,6 +56,11 @@ public class AppRunner(
             .ToList();
 
         // Generate readme files and save it
+        return await GenerateReadmeFiles(problems);
+    }
+
+    private async Task<Result> GenerateReadmeFiles(List<Problem> problems) {
+        // MainPage Readme
         var mainPageReadmeResult = generator.GenerateReadmeSection(problems, settings.MainPageLimit)
             .OnSuccessOperateWhen(() => !string.IsNullOrWhiteSpace(settings.MainPageFooter),
                 section => section.AppendLine($"\n{settings.MainPageFooter}"))
@@ -62,14 +69,18 @@ public class AppRunner(
             .OnSuccess(readme => Utility.SaveDataAsync(
                 settings.ReadmeOutputPath, readme, settings.NumberOfTry));
 
-        var docPageReadmeResult = generator.GenerateReadmeSection(problems)
+        //CompleteList Readme
+        var completeListReadmeResult = generator.GenerateReadmeSection(problems)
             .OnSuccess(section =>
                 section.ToString().UseTemplateAsync(settings.CompleteListTemplatePath, "{__REPLACE_WITH_PROGRAM_0__}"))
             .OnSuccess(readme => Utility.SaveDataAsync(
                 settings.CompleteListOutputPath, readme, settings.NumberOfTry));
 
-        Task.WaitAll(mainPageReadmeResult, docPageReadmeResult);
-        return ResultHelpers.CombineResults(await mainPageReadmeResult, await docPageReadmeResult);
+        // Wait to all tasks done
+        Task.WaitAll(mainPageReadmeResult, completeListReadmeResult);
+
+        // Return combined results
+        return ResultHelpers.CombineResults(await mainPageReadmeResult, await completeListReadmeResult);
     }
 
     private bool EnsureInputsAreValid(out Result result) {
