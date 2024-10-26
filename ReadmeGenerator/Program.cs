@@ -2,12 +2,15 @@
 using System.CommandLine;
 using System.IO;
 using System.Linq;
+using System.Text;
 using System.Threading.Tasks;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
+using OnRail;
 using OnRail.Extensions.OnFail;
 using OnRail.Extensions.Try;
+using OnRail.ResultDetails;
 using Quera.Cache;
 using Quera.Collector;
 using Quera.Configs;
@@ -22,13 +25,30 @@ namespace Quera;
 public static class Program {
     public static Task Main(string[] args) =>
         TryExtensions.Try(() => InnerMain(args))
-            .OnFailTee(result => {
-                //for GitHub action: https://github.com/HamidMolareza/QueraProblems/issues/10
-                Environment.ExitCode = -1;
+            .OnFailTee(GlobalErrorLog);
 
-                Log.Error("The operation failed. See the below text for more information:\n{result}",
-                    result.ToStr());
-            });
+    private static void GlobalErrorLog<T>(Result<T>? result) {
+        if (result is null || result.IsSuccess) return;
+        GlobalErrorLog(result.Detail);
+    }
+
+    private static void GlobalErrorLog(Result? result) {
+        if (result is null || result.IsSuccess) return;
+        GlobalErrorLog(result.Detail);
+    }
+
+    private static void GlobalErrorLog(ResultDetail? detail) {
+        //for GitHub action: https://github.com/HamidMolareza/QueraProblems/issues/10
+        Environment.ExitCode = -1;
+
+        var sb = new StringBuilder("The operation failed. ");
+        if (detail is null)
+            sb.AppendLine("That's all we know!");
+        else
+            sb.AppendLine($"See the below text for more information:\n{detail.ToStr()}");
+
+        Log.Error("{message}", sb.ToString());
+    }
 
     private static async Task<int> InnerMain(string[] args) {
         // Setup DI container
@@ -124,8 +144,7 @@ public static class Program {
             if (runner is null) throw new Exception("Can not get app runner from DI.");
 
             var result = await runner.RunAsync();
-            if (!result.IsSuccess)
-                throw new Exception(result.ToStr());
+            GlobalErrorLog(result);
         };
     }
 
