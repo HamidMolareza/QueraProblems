@@ -1,4 +1,5 @@
 using System.IO;
+using System.Linq;
 using System.Threading.Tasks;
 using OnRail;
 using OnRail.Extensions.Map;
@@ -37,6 +38,7 @@ public class AppRunner(
 
         Log.Information("{Count} problems collected from disk.", problemsResult.Value.Count);
 
+        // Crawl new problems
         await foreach (var newProblem in crawler.CompleteProblemTitlesAsync(problemsResult.Value)) {
             await cacheRepository.SaveAsync(new CacheProblem {
                 Id = newProblem.QueraId.ToString(),
@@ -45,16 +47,29 @@ public class AppRunner(
             Log.Debug("{QueraId} cached.", newProblem.QueraId);
         }
 
-        // Generate readme file and save it
-        return await problemsResult
-            .OnSuccess(generator.GenerateReadmeAsync)
-            .OnSuccessTee(() => Log.Debug("The readme file generated."))
-            .OnSuccess(readme => {
-                Log.Debug("Try to save {length} chars to {path}", readme.Length,
-                    Path.GetFullPath(settings.ReadmeOutputPath));
-                return Utility.SaveDataAsync(
-                    settings.ReadmeOutputPath, readme, settings.NumberOfTry);
-            });
+        // Order problems
+        var problems = problemsResult.Value
+            .OrderByDescending(problem => problem.LastSolutionsCommit)
+            .ThenBy(problem => problem.QueraId)
+            .ToList();
+
+        // Generate readme files and save it
+        var mainPageReadmeResult = generator.GenerateReadmeSection(problems, settings.MainPageLimit)
+            .OnSuccessOperateWhen(() => !string.IsNullOrWhiteSpace(settings.MainPageFooter),
+                section => section.AppendLine($"\n{settings.MainPageFooter}"))
+            .OnSuccess(section =>
+                section.ToString().UseTemplateAsync(settings.ReadmeTemplatePath, "{__REPLACE_WITH_PROGRAM_0__}"))
+            .OnSuccess(readme => Utility.SaveDataAsync(
+                settings.ReadmeOutputPath, readme, settings.NumberOfTry));
+
+        var docPageReadmeResult = generator.GenerateReadmeSection(problems)
+            .OnSuccess(section =>
+                section.ToString().UseTemplateAsync(settings.CompleteListTemplatePath, "{__REPLACE_WITH_PROGRAM_0__}"))
+            .OnSuccess(readme => Utility.SaveDataAsync(
+                settings.CompleteListOutputPath, readme, settings.NumberOfTry));
+
+        Task.WaitAll(mainPageReadmeResult, docPageReadmeResult);
+        return ResultHelpers.CombineResults(await mainPageReadmeResult, await docPageReadmeResult);
     }
 
     private bool EnsureInputsAreValid(out Result result) {

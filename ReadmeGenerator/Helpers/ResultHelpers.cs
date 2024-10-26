@@ -39,6 +39,20 @@ public static class ResultHelpers {
         return sb.ToString();
     }
 
+    public static Result CombineResults(Result result1, Result result2) {
+        if (result1.IsSuccess && result2.IsSuccess) return Result.Ok();
+        if (!result1.IsSuccess && !result2.IsSuccess) {
+            var errorDetail = new ErrorDetail(title: "Two tasks failed!",
+                message: Utility.CombineStrings(result1.Detail?.Message!, result2.Detail?.Message),
+                moreDetails: new { result1 = result1.Detail, result2 = result2.Detail }
+            );
+            return Result.Fail(errorDetail);
+        }
+
+        // One of them failed.
+        return !result1.IsSuccess ? result1 : result2;
+    }
+
     private static string GetHeader(this ResultDetail resultDetail) {
         var result = new StringBuilder();
         if (resultDetail.StatusCode is not null)

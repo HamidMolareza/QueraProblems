@@ -20,6 +20,10 @@ public class AppSettings {
     public List<UserModel> Users { get; init; } = [];
     public string CacheFilePath { get; set; } = default!;
     public string LogLevel { get; set; } = default!;
+    public int MainPageLimit { get; set; }
+    public string? MainPageFooter { get; set; }
+    public string CompleteListTemplatePath { get; set; } = default!;
+    public string CompleteListOutputPath { get; set; } = default!;
 
 
     public override string ToString() {

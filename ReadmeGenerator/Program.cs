@@ -124,7 +124,7 @@ public static class Program {
             if (runner is null) throw new Exception("Can not get app runner from DI.");
 
             var result = await runner.RunAsync();
-            if (!result.IsSuccess) 
+            if (!result.IsSuccess)
                 throw new Exception(result.ToStr());
         };
     }
@@ -145,7 +145,7 @@ public static class Program {
         settings.ReadmeTemplatePath = readmeTemplatePath;
         settings.ReadmeOutputPath = outputPath;
         settings.SolutionsPath = solutionsPath;
-        
+
         // Use the Gravatar image as default user profile
         foreach (var user in settings.Users.Where(user => string.IsNullOrEmpty(user.AvatarUrl))) {
             user.AvatarUrl = await GravatarHelper.GetGravatarUrlAsync(user.Email!);

@@ -2,9 +2,9 @@ using System.Collections.Generic;
 using System.IO;
 using System.Linq;
 using System.Text;
-using System.Threading.Tasks;
 using OnRail;
 using OnRail.Extensions.OnFail;
+using OnRail.Extensions.OnSuccess;
 using OnRail.Extensions.Try;
 using Quera.Collector.Models;
 using Quera.Configs;
@@ -12,20 +12,25 @@ using Quera.Configs;
 namespace Quera.Generator;
 
 public class GeneratorService(AppSettings settings) {
-    public async Task<string> GenerateReadmeAsync(IEnumerable<Problem> problems) {
-        var problemsList = problems.ToList();
+    public Result<StringBuilder> GenerateReadmeSection(List<Problem> problems, int? limit = null) =>
+        TryExtensions.Try(() => limit is null or < 1 ? problems : problems.Take((int)limit).ToList())
+            .OnSuccess(targetProblems =>
+                GenerateReadme(targetProblems, problems.Count, GetAllSolutions(problems))
+            );
+
+    private static int GetAllSolutions(IEnumerable<Problem> problems) =>
+        problems.Sum(p => p.Solutions.Count);
+
+    private StringBuilder GenerateReadme(List<Problem> problems, int? allProblems = null,
+        int? allSolutions = null) {
         var readme = new StringBuilder();
 
-        var numOfQuestionsSolved = problemsList.Count;
-        readme.AppendLine($"Number of problems solved: **{problemsList.Count}**\n");
+        var numberOfProblemsSolved = allProblems ?? problems.Count;
+        readme.AppendLine($"Number of problems solved: **{numberOfProblemsSolved}**\n");
 
-        var numOfSolutions = problemsList.Sum(problem => problem.Solutions.Count);
-        if (numOfQuestionsSolved != numOfSolutions)
-            readme.AppendLine($"Number of solutions: **{numOfSolutions}**\n");
-
-        problemsList = problemsList.OrderByDescending(problem => problem.LastSolutionsCommit)
-            .ThenBy(problem => problem.QueraId)
-            .ToList();
+        var numberOfSolutions = allSolutions ?? GetAllSolutions(problems);
+        if (numberOfProblemsSolved != numberOfSolutions)
+            readme.AppendLine($"Number of solutions: **{numberOfSolutions}**\n");
 
         readme.AppendLine("<table>")
             .AppendLine("  <tr>")
@@ -36,16 +41,14 @@ public class GeneratorService(AppSettings settings) {
             .AppendLine("    <th>Contributors</th>")
             .AppendLine("  </tr>");
 
-        foreach (var problem in problemsList) {
+        foreach (var problem in problems) {
             var result = AppendProblemData(readme, problem, settings.SolutionUrlFormat, settings.ProblemUrlFormat);
             result.OnFailThrowException();
         }
 
         readme.AppendLine("</table>");
 
-        var readmeTemplate =
-            await File.ReadAllTextAsync(settings.ReadmeTemplatePath);
-        return readmeTemplate.Replace("{__REPLACE_WITH_PROGRAM_0__}", readme.ToString());
+        return readme;
     }
 
     private static Result AppendProblemData(StringBuilder source,
