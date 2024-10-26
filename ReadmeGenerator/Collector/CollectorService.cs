@@ -69,8 +69,11 @@ public class CollectorService(AppSettings settings, CacheRepository cache) {
                 string.Equals(user.Email, contributor.Email, StringComparison.CurrentCultureIgnoreCase));
             if (user is null) {
                 Log.Debug("User config not found for {email}", contributor.Email);
+                
+                // Use the Gravatar image as default user profile
                 contributor.AvatarUrl = await GravatarHelper.GetGravatarUrlAsync(contributor.Email);
                 Log.Debug("The gravatar url was set for this user profile: {url}", contributor.AvatarUrl);
+                
                 return contributor;
             }
 
@@ -80,9 +83,6 @@ public class CollectorService(AppSettings settings, CacheRepository cache) {
             }
 
             contributor.AvatarUrl = user.AvatarUrl;
-            if (string.IsNullOrEmpty(contributor.AvatarUrl))
-                contributor.AvatarUrl = await GravatarHelper.GetGravatarUrlAsync(contributor.Email);
-
             contributor.ProfileUrl = user.ProfileUrl;
 
             return contributor;

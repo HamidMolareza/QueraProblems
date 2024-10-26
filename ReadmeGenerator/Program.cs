@@ -1,6 +1,7 @@
 ﻿using System;
 using System.CommandLine;
 using System.IO;
+using System.Linq;
 using System.Threading.Tasks;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
@@ -114,7 +115,7 @@ public static class Program {
 
     private static Func<int, string, string, string, Task> CommandHandler(IServiceProvider serviceProvider) {
         return async (delayToRequestQueraInMilliSeconds, readmeTemplatePath, outputPath, solutionsPath) => {
-            var settings = UpdateAppSettings(serviceProvider, delayToRequestQueraInMilliSeconds,
+            var settings = await UpdateAppSettings(serviceProvider, delayToRequestQueraInMilliSeconds,
                 readmeTemplatePath, outputPath, solutionsPath);
             Log.Debug("App Settings:\n{settings}", settings.ToString());
 
@@ -133,7 +134,7 @@ public static class Program {
             Directory.SetCurrentDirectory(workingDirectory);
     }
 
-    private static AppSettings UpdateAppSettings(IServiceProvider serviceProvider,
+    private static async Task<AppSettings> UpdateAppSettings(IServiceProvider serviceProvider,
         int delayToRequestQueraInMilliSeconds, string readmeTemplatePath,
         string outputPath, string solutionsPath) {
         // Get AppSettings instance from DI
@@ -144,6 +145,11 @@ public static class Program {
         settings.ReadmeTemplatePath = readmeTemplatePath;
         settings.ReadmeOutputPath = outputPath;
         settings.SolutionsPath = solutionsPath;
+        
+        // Use the Gravatar image as default user profile
+        foreach (var user in settings.Users.Where(user => string.IsNullOrEmpty(user.AvatarUrl))) {
+            user.AvatarUrl = await GravatarHelper.GetGravatarUrlAsync(user.Email!);
+        }
 
         return settings;
     }
